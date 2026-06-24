@@ -1,0 +1,2885 @@
+{
+  "lessons": {
+    "11": [
+      {
+        "id": "s-11-01",
+        "text": "日本にいます。",
+        "vocabularyIds": [
+          "v-0564"
+        ]
+      },
+      {
+        "id": "s-11-02",
+        "text": "子供がいます。",
+        "vocabularyIds": [
+          "v-0565"
+        ]
+      },
+      {
+        "id": "s-11-03",
+        "text": "お願いします。",
+        "vocabularyIds": [
+          "v-0593"
+        ]
+      },
+      {
+        "id": "s-11-04",
+        "text": "お出かけですか。",
+        "vocabularyIds": [
+          "v-0595"
+        ]
+      },
+      {
+        "id": "s-11-05",
+        "text": "行ってきます。",
+        "vocabularyIds": [
+          "v-0598"
+        ]
+      },
+      {
+        "id": "s-11-06",
+        "text": "会社を休みます。",
+        "vocabularyIds": [
+          "v-0609"
+        ]
+      },
+      {
+        "id": "s-11-07",
+        "text": "かしこまりました。",
+        "vocabularyIds": [
+          "v-0611"
+        ]
+      },
+      {
+        "id": "s-11-08",
+        "text": "います。",
+        "vocabularyIds": [
+          "v-0563"
+        ]
+      },
+      {
+        "id": "s-11-09",
+        "text": "かかります。",
+        "vocabularyIds": [
+          "v-0592"
+        ]
+      },
+      {
+        "id": "s-11-10",
+        "text": "休みます。",
+        "vocabularyIds": [
+          "v-0608"
+        ]
+      }
+    ],
+    "12": [
+      {
+        "id": "s-12-01",
+        "text": "わあ、すごい人ですね。",
+        "vocabularyIds": [
+          "v-0639"
+        ]
+      },
+      {
+        "id": "s-12-02",
+        "text": "疲れました。",
+        "vocabularyIds": [
+          "v-0640"
+        ]
+      },
+      {
+        "id": "s-12-03",
+        "text": "人が多い。",
+        "vocabularyIds": [
+          "v-0649"
+        ]
+      },
+      {
+        "id": "s-12-04",
+        "text": "コーヒーがいい。",
+        "vocabularyIds": [
+          "v-0675"
+        ]
+      },
+      {
+        "id": "s-12-05",
+        "text": "遅いです。",
+        "vocabularyIds": [
+          "v-0631"
+        ]
+      },
+      {
+        "id": "s-12-06",
+        "text": "涼しいです。",
+        "vocabularyIds": [
+          "v-0645"
+        ]
+      },
+      {
+        "id": "s-12-07",
+        "text": "簡単です。",
+        "vocabularyIds": [
+          "v-0650"
+        ]
+      },
+      {
+        "id": "s-12-08",
+        "text": "辛いです。",
+        "vocabularyIds": [
+          "v-0652"
+        ]
+      },
+      {
+        "id": "s-12-09",
+        "text": "重いです。",
+        "vocabularyIds": [
+          "v-0654"
+        ]
+      },
+      {
+        "id": "s-12-10",
+        "text": "近くです。",
+        "vocabularyIds": [
+          "v-0661"
+        ]
+      }
+    ],
+    "13": [
+      {
+        "id": "s-13-01",
+        "text": "ご注文は？",
+        "vocabularyIds": [
+          "v-0689"
+        ]
+      },
+      {
+        "id": "s-13-02",
+        "text": "公園を散歩します。",
+        "vocabularyIds": [
+          "v-0700"
+        ]
+      },
+      {
+        "id": "s-13-03",
+        "text": "プールで泳ぎます。",
+        "vocabularyIds": [
+          "v-0707"
+        ]
+      },
+      {
+        "id": "s-13-04",
+        "text": "そうしましょう。",
+        "vocabularyIds": [
+          "v-0714"
+        ]
+      },
+      {
+        "id": "s-13-05",
+        "text": "お腹が空きます。",
+        "vocabularyIds": [
+          "v-0717"
+        ]
+      },
+      {
+        "id": "s-13-06",
+        "text": "疲れます。",
+        "vocabularyIds": [
+          "v-0680"
+        ]
+      },
+      {
+        "id": "s-13-07",
+        "text": "結婚します。",
+        "vocabularyIds": [
+          "v-0695"
+        ]
+      },
+      {
+        "id": "s-13-08",
+        "text": "遊びます。",
+        "vocabularyIds": [
+          "v-0696"
+        ]
+      },
+      {
+        "id": "s-13-09",
+        "text": "迎えます。",
+        "vocabularyIds": [
+          "v-0698"
+        ]
+      },
+      {
+        "id": "s-13-10",
+        "text": "散歩します。",
+        "vocabularyIds": [
+          "v-0699"
+        ]
+      }
+    ],
+    "14": [
+      {
+        "id": "s-14-01",
+        "text": "住所を教えます。",
+        "vocabularyIds": [
+          "v-0726"
+        ]
+      },
+      {
+        "id": "s-14-02",
+        "text": "窓を開けます。",
+        "vocabularyIds": [
+          "v-0728"
+        ]
+      },
+      {
+        "id": "s-14-03",
+        "text": "雨が降ります。",
+        "vocabularyIds": [
+          "v-0733"
+        ]
+      },
+      {
+        "id": "s-14-04",
+        "text": "信号を右へ曲がってください。",
+        "vocabularyIds": [
+          "v-0734"
+        ]
+      },
+      {
+        "id": "s-14-05",
+        "text": "これでお願いします。",
+        "vocabularyIds": [
+          "v-0737"
+        ]
+      },
+      {
+        "id": "s-14-06",
+        "text": "アドを閉めます。",
+        "vocabularyIds": [
+          "v-0746"
+        ]
+      },
+      {
+        "id": "s-14-07",
+        "text": "エアコンをつけます。",
+        "vocabularyIds": [
+          "v-0753"
+        ]
+      },
+      {
+        "id": "s-14-08",
+        "text": "喫茶店に入ります。",
+        "vocabularyIds": [
+          "v-0757"
+        ]
+      },
+      {
+        "id": "s-14-09",
+        "text": "喫茶店を出ます。",
+        "vocabularyIds": [
+          "v-0759"
+        ]
+      },
+      {
+        "id": "s-14-10",
+        "text": "待ちます。",
+        "vocabularyIds": [
+          "v-0719"
+        ]
+      }
+    ],
+    "15": [
+      {
+        "id": "s-15-01",
+        "text": "すみません。",
+        "vocabularyIds": [
+          "v-0773"
+        ]
+      },
+      {
+        "id": "s-15-02",
+        "text": "北京に住みます。",
+        "vocabularyIds": [
+          "v-0776"
+        ]
+      },
+      {
+        "id": "s-15-03",
+        "text": "知ります。",
+        "vocabularyIds": [
+          "v-0774"
+        ]
+      },
+      {
+        "id": "s-15-04",
+        "text": "住みます。",
+        "vocabularyIds": [
+          "v-0775"
+        ]
+      },
+      {
+        "id": "s-15-05",
+        "text": "いらっしゃいます。",
+        "vocabularyIds": [
+          "v-0781"
+        ]
+      },
+      {
+        "id": "s-15-06",
+        "text": "置きます。",
+        "vocabularyIds": [
+          "v-0782"
+        ]
+      },
+      {
+        "id": "s-15-07",
+        "text": "売ります。",
+        "vocabularyIds": [
+          "v-0785"
+        ]
+      },
+      {
+        "id": "s-15-08",
+        "text": "作ります。",
+        "vocabularyIds": [
+          "v-0787"
+        ]
+      },
+      {
+        "id": "s-15-09",
+        "text": "研究します。",
+        "vocabularyIds": [
+          "v-0790"
+        ]
+      },
+      {
+        "id": "s-15-10",
+        "text": "電子辞書です。",
+        "vocabularyIds": [
+          "v-0771"
+        ]
+      }
+    ],
+    "16": [
+      {
+        "id": "s-16-01",
+        "text": "シャワーを浴びます。",
+        "vocabularyIds": [
+          "v-0802"
+        ]
+      },
+      {
+        "id": "s-16-02",
+        "text": "電車に乗ります。",
+        "vocabularyIds": [
+          "v-0807"
+        ]
+      },
+      {
+        "id": "s-16-03",
+        "text": "電車を降ります。",
+        "vocabularyIds": [
+          "v-0809"
+        ]
+      },
+      {
+        "id": "s-16-04",
+        "text": "お引き出しですか。",
+        "vocabularyIds": [
+          "v-0816"
+        ]
+      },
+      {
+        "id": "s-16-05",
+        "text": "背が高い。",
+        "vocabularyIds": [
+          "v-0827"
+        ]
+      },
+      {
+        "id": "s-16-06",
+        "text": "頭がいい。",
+        "vocabularyIds": [
+          "v-0838"
+        ]
+      },
+      {
+        "id": "s-16-07",
+        "text": "お金を下ろします。",
+        "vocabularyIds": [
+          "v-0844"
+        ]
+      },
+      {
+        "id": "s-16-08",
+        "text": "すごいですね。",
+        "vocabularyIds": [
+          "v-0852"
+        ]
+      },
+      {
+        "id": "s-16-09",
+        "text": "いいえ、まだまだです。",
+        "vocabularyIds": [
+          "v-0853"
+        ]
+      },
+      {
+        "id": "s-16-10",
+        "text": "大学に入ります。",
+        "vocabularyIds": [
+          "v-0857"
+        ]
+      }
+    ],
+    "17": [
+      {
+        "id": "s-17-01",
+        "text": "お金を払います。",
+        "vocabularyIds": [
+          "v-0866"
+        ]
+      },
+      {
+        "id": "s-17-02",
+        "text": "どうしましたか。",
+        "vocabularyIds": [
+          "v-0868"
+        ]
+      },
+      {
+        "id": "s-17-03",
+        "text": "風邪を引きます。",
+        "vocabularyIds": [
+          "v-0874"
+        ]
+      },
+      {
+        "id": "s-17-04",
+        "text": "薬を飲みます。",
+        "vocabularyIds": [
+          "v-0879"
+        ]
+      },
+      {
+        "id": "s-17-05",
+        "text": "お風呂に入ります。",
+        "vocabularyIds": [
+          "v-0883"
+        ]
+      },
+      {
+        "id": "s-17-06",
+        "text": "心配します。",
+        "vocabularyIds": [
+          "v-0863"
+        ]
+      },
+      {
+        "id": "s-17-07",
+        "text": "払います。",
+        "vocabularyIds": [
+          "v-0865"
+        ]
+      },
+      {
+        "id": "s-17-08",
+        "text": "出張します。",
+        "vocabularyIds": [
+          "v-0876"
+        ]
+      },
+      {
+        "id": "s-17-09",
+        "text": "飲みます。",
+        "vocabularyIds": [
+          "v-0878"
+        ]
+      },
+      {
+        "id": "s-17-10",
+        "text": "入ります。",
+        "vocabularyIds": [
+          "v-0882"
+        ]
+      }
+    ],
+    "18": [
+      {
+        "id": "s-18-01",
+        "text": "馬に乗ります。",
+        "vocabularyIds": [
+          "v-0912"
+        ]
+      },
+      {
+        "id": "s-18-02",
+        "text": "それはおもしろいですね。",
+        "vocabularyIds": [
+          "v-0914"
+        ]
+      },
+      {
+        "id": "s-18-03",
+        "text": "本当ですか。",
+        "vocabularyIds": [
+          "v-0916"
+        ]
+      },
+      {
+        "id": "s-18-04",
+        "text": "できます。",
+        "vocabularyIds": [
+          "v-0902"
+        ]
+      },
+      {
+        "id": "s-18-05",
+        "text": "運転します。",
+        "vocabularyIds": [
+          "v-0905"
+        ]
+      },
+      {
+        "id": "s-18-06",
+        "text": "集めます。",
+        "vocabularyIds": [
+          "v-0908"
+        ]
+      },
+      {
+        "id": "s-18-07",
+        "text": "弾きます。",
+        "vocabularyIds": [
+          "v-0919"
+        ]
+      },
+      {
+        "id": "s-18-08",
+        "text": "予約します。",
+        "vocabularyIds": [
+          "v-0920"
+        ]
+      },
+      {
+        "id": "s-18-09",
+        "text": "換えます。",
+        "vocabularyIds": [
+          "v-0922"
+        ]
+      },
+      {
+        "id": "s-18-10",
+        "text": "歌います。",
+        "vocabularyIds": [
+          "v-0924"
+        ]
+      }
+    ],
+    "19": [
+      {
+        "id": "s-19-01",
+        "text": "調子がいい。",
+        "vocabularyIds": [
+          "v-0943"
+        ]
+      },
+      {
+        "id": "s-19-02",
+        "text": "調子が悪い。",
+        "vocabularyIds": [
+          "v-0944"
+        ]
+      },
+      {
+        "id": "s-19-03",
+        "text": "体にいい。",
+        "vocabularyIds": [
+          "v-0950"
+        ]
+      },
+      {
+        "id": "s-19-04",
+        "text": "ホテルに泊まります。",
+        "vocabularyIds": [
+          "v-0954"
+        ]
+      },
+      {
+        "id": "s-19-05",
+        "text": "なります。",
+        "vocabularyIds": [
+          "v-0938"
+        ]
+      },
+      {
+        "id": "s-19-06",
+        "text": "乾杯します。",
+        "vocabularyIds": [
+          "v-0947"
+        ]
+      },
+      {
+        "id": "s-19-07",
+        "text": "泊まります。",
+        "vocabularyIds": [
+          "v-0953"
+        ]
+      },
+      {
+        "id": "s-19-08",
+        "text": "掃除します。",
+        "vocabularyIds": [
+          "v-0955"
+        ]
+      },
+      {
+        "id": "s-19-09",
+        "text": "洗濯します。",
+        "vocabularyIds": [
+          "v-0956"
+        ]
+      },
+      {
+        "id": "s-19-10",
+        "text": "無理です。",
+        "vocabularyIds": [
+          "v-0949"
+        ]
+      }
+    ],
+    "20": [
+      {
+        "id": "s-20-01",
+        "text": "お腹がいっぱいです。",
+        "vocabularyIds": [
+          "v-0974"
+        ]
+      },
+      {
+        "id": "s-20-02",
+        "text": "ビザが要ります。",
+        "vocabularyIds": [
+          "v-0987"
+        ]
+      },
+      {
+        "id": "s-20-03",
+        "text": "調べます。",
+        "vocabularyIds": [
+          "v-0981"
+        ]
+      },
+      {
+        "id": "s-20-04",
+        "text": "要ります。",
+        "vocabularyIds": [
+          "v-0986"
+        ]
+      },
+      {
+        "id": "s-20-05",
+        "text": "修理します。",
+        "vocabularyIds": [
+          "v-0991"
+        ]
+      },
+      {
+        "id": "s-20-06",
+        "text": "僕です。",
+        "vocabularyIds": [
+          "v-0969"
+        ]
+      },
+      {
+        "id": "s-20-07",
+        "text": "君です。",
+        "vocabularyIds": [
+          "v-0970"
+        ]
+      },
+      {
+        "id": "s-20-08",
+        "text": "初めです。",
+        "vocabularyIds": [
+          "v-0978"
+        ]
+      },
+      {
+        "id": "s-20-09",
+        "text": "初め頃です。",
+        "vocabularyIds": [
+          "v-0979"
+        ]
+      },
+      {
+        "id": "s-20-10",
+        "text": "着物です。",
+        "vocabularyIds": [
+          "v-0982"
+        ]
+      }
+    ],
+    "21": [
+      {
+        "id": "s-21-01",
+        "text": "お祭りがあります。",
+        "vocabularyIds": [
+          "v-1005"
+        ]
+      },
+      {
+        "id": "s-21-02",
+        "text": "久しぶりですね。",
+        "vocabularyIds": [
+          "v-1006"
+        ]
+      },
+      {
+        "id": "s-21-03",
+        "text": "もう帰らないと…。",
+        "vocabularyIds": [
+          "v-1014"
+        ]
+      },
+      {
+        "id": "s-21-04",
+        "text": "会社を辞めます。",
+        "vocabularyIds": [
+          "v-1019"
+        ]
+      },
+      {
+        "id": "s-21-05",
+        "text": "思います。",
+        "vocabularyIds": [
+          "v-0993"
+        ]
+      },
+      {
+        "id": "s-21-06",
+        "text": "留学します。",
+        "vocabularyIds": [
+          "v-0994"
+        ]
+      },
+      {
+        "id": "s-21-07",
+        "text": "言います。",
+        "vocabularyIds": [
+          "v-0995"
+        ]
+      },
+      {
+        "id": "s-21-08",
+        "text": "あります。",
+        "vocabularyIds": [
+          "v-1004"
+        ]
+      },
+      {
+        "id": "s-21-09",
+        "text": "勝ちます。",
+        "vocabularyIds": [
+          "v-1010"
+        ]
+      },
+      {
+        "id": "s-21-10",
+        "text": "負けます。",
+        "vocabularyIds": [
+          "v-1011"
+        ]
+      }
+    ],
+    "22": [
+      {
+        "id": "s-22-01",
+        "text": "着物を着ます。",
+        "vocabularyIds": [
+          "v-1050"
+        ]
+      },
+      {
+        "id": "s-22-02",
+        "text": "お探しですか。",
+        "vocabularyIds": [
+          "v-1051"
+        ]
+      },
+      {
+        "id": "s-22-03",
+        "text": "眼鏡をかけます。",
+        "vocabularyIds": [
+          "v-1062"
+        ]
+      },
+      {
+        "id": "s-22-04",
+        "text": "靴をはきます。",
+        "vocabularyIds": [
+          "v-1067"
+        ]
+      },
+      {
+        "id": "s-22-05",
+        "text": "ネクタイをします。",
+        "vocabularyIds": [
+          "v-1069"
+        ]
+      },
+      {
+        "id": "s-22-06",
+        "text": "帽子を被ります。",
+        "vocabularyIds": [
+          "v-1071"
+        ]
+      },
+      {
+        "id": "s-22-07",
+        "text": "子供が生まれます。",
+        "vocabularyIds": [
+          "v-1073"
+        ]
+      },
+      {
+        "id": "s-22-08",
+        "text": "セーターを編みます。",
+        "vocabularyIds": [
+          "v-1082"
+        ]
+      },
+      {
+        "id": "s-22-09",
+        "text": "着ます。",
+        "vocabularyIds": [
+          "v-1049"
+        ]
+      },
+      {
+        "id": "s-22-10",
+        "text": "かけます。",
+        "vocabularyIds": [
+          "v-1061"
+        ]
+      }
+    ],
+    "23": [
+      {
+        "id": "s-23-01",
+        "text": "お釣りが出ます。",
+        "vocabularyIds": [
+          "v-1091"
+        ]
+      },
+      {
+        "id": "s-23-02",
+        "text": "橋を渡ります。",
+        "vocabularyIds": [
+          "v-1099"
+        ]
+      },
+      {
+        "id": "s-23-03",
+        "text": "道を渡ります。",
+        "vocabularyIds": [
+          "v-1100"
+        ]
+      },
+      {
+        "id": "s-23-04",
+        "text": "先生に聞きます。",
+        "vocabularyIds": [
+          "v-1102"
+        ]
+      },
+      {
+        "id": "s-23-05",
+        "text": "道を聞きます。",
+        "vocabularyIds": [
+          "v-1103"
+        ]
+      },
+      {
+        "id": "s-23-06",
+        "text": "ドアに触ります。",
+        "vocabularyIds": [
+          "v-1111"
+        ]
+      },
+      {
+        "id": "s-23-07",
+        "text": "右へ曲がります。",
+        "vocabularyIds": [
+          "v-1120"
+        ]
+      },
+      {
+        "id": "s-23-08",
+        "text": "出ます。",
+        "vocabularyIds": [
+          "v-1090"
+        ]
+      },
+      {
+        "id": "s-23-09",
+        "text": "渡ります。",
+        "vocabularyIds": [
+          "v-1098"
+        ]
+      },
+      {
+        "id": "s-23-10",
+        "text": "聞きます。",
+        "vocabularyIds": [
+          "v-1101"
+        ]
+      }
+    ],
+    "24": [
+      {
+        "id": "s-24-01",
+        "text": "人を送ります。",
+        "vocabularyIds": [
+          "v-1127"
+        ]
+      },
+      {
+        "id": "s-24-02",
+        "text": "子供を連れていきます。",
+        "vocabularyIds": [
+          "v-1139"
+        ]
+      },
+      {
+        "id": "s-24-03",
+        "text": "先生を紹介します。",
+        "vocabularyIds": [
+          "v-1142"
+        ]
+      },
+      {
+        "id": "s-24-04",
+        "text": "学校を案内します。",
+        "vocabularyIds": [
+          "v-1144"
+        ]
+      },
+      {
+        "id": "s-24-05",
+        "text": "くれます。",
+        "vocabularyIds": [
+          "v-1124"
+        ]
+      },
+      {
+        "id": "s-24-06",
+        "text": "直します。",
+        "vocabularyIds": [
+          "v-1125"
+        ]
+      },
+      {
+        "id": "s-24-07",
+        "text": "送ります。",
+        "vocabularyIds": [
+          "v-1126"
+        ]
+      },
+      {
+        "id": "s-24-08",
+        "text": "連れて行きます。",
+        "vocabularyIds": [
+          "v-1138"
+        ]
+      },
+      {
+        "id": "s-24-09",
+        "text": "連れて来ます。",
+        "vocabularyIds": [
+          "v-1140"
+        ]
+      },
+      {
+        "id": "s-24-10",
+        "text": "紹介します。",
+        "vocabularyIds": [
+          "v-1141"
+        ]
+      }
+    ],
+    "25": [
+      {
+        "id": "s-25-01",
+        "text": "色々お世話になりました。",
+        "vocabularyIds": [
+          "v-1159"
+        ]
+      },
+      {
+        "id": "s-25-02",
+        "text": "どうぞお元気で。",
+        "vocabularyIds": [
+          "v-1161"
+        ]
+      },
+      {
+        "id": "s-25-03",
+        "text": "駅に着きます。",
+        "vocabularyIds": [
+          "v-1164"
+        ]
+      },
+      {
+        "id": "s-25-04",
+        "text": "年を取ります。",
+        "vocabularyIds": [
+          "v-1167"
+        ]
+      },
+      {
+        "id": "s-25-05",
+        "text": "考えます。",
+        "vocabularyIds": [
+          "v-1153"
+        ]
+      },
+      {
+        "id": "s-25-06",
+        "text": "頑張ります。",
+        "vocabularyIds": [
+          "v-1160"
+        ]
+      },
+      {
+        "id": "s-25-07",
+        "text": "着きます。",
+        "vocabularyIds": [
+          "v-1163"
+        ]
+      },
+      {
+        "id": "s-25-08",
+        "text": "足ります。",
+        "vocabularyIds": [
+          "v-1165"
+        ]
+      },
+      {
+        "id": "s-25-09",
+        "text": "取ります。",
+        "vocabularyIds": [
+          "v-1166"
+        ]
+      },
+      {
+        "id": "s-25-10",
+        "text": "億です。",
+        "vocabularyIds": [
+          "v-1152"
+        ]
+      }
+    ],
+    "26": [
+      {
+        "id": "s-26-01",
+        "text": "時間に遅れます。",
+        "vocabularyIds": [
+          "v-1175"
+        ]
+      },
+      {
+        "id": "s-26-02",
+        "text": "ごみを出します。",
+        "vocabularyIds": [
+          "v-1189"
+        ]
+      },
+      {
+        "id": "s-26-03",
+        "text": "荷物が片付きます。",
+        "vocabularyIds": [
+          "v-1191"
+        ]
+      },
+      {
+        "id": "s-26-04",
+        "text": "荷物を片付けます。",
+        "vocabularyIds": [
+          "v-1192"
+        ]
+      },
+      {
+        "id": "s-26-05",
+        "text": "時間に間に合います。",
+        "vocabularyIds": [
+          "v-1213"
+        ]
+      },
+      {
+        "id": "s-26-06",
+        "text": "遅れます。",
+        "vocabularyIds": [
+          "v-1174"
+        ]
+      },
+      {
+        "id": "s-26-07",
+        "text": "見ます。",
+        "vocabularyIds": [
+          "v-1176"
+        ]
+      },
+      {
+        "id": "s-26-08",
+        "text": "診ます。",
+        "vocabularyIds": [
+          "v-1177"
+        ]
+      },
+      {
+        "id": "s-26-09",
+        "text": "出します。",
+        "vocabularyIds": [
+          "v-1188"
+        ]
+      },
+      {
+        "id": "s-26-10",
+        "text": "片付きます。",
+        "vocabularyIds": [
+          "v-1190"
+        ]
+      }
+    ],
+    "27": [
+      {
+        "id": "s-27-01",
+        "text": "山が見えます。",
+        "vocabularyIds": [
+          "v-1234"
+        ]
+      },
+      {
+        "id": "s-27-02",
+        "text": "道が出来ます。",
+        "vocabularyIds": [
+          "v-1236"
+        ]
+      },
+      {
+        "id": "s-27-03",
+        "text": "犬を飼います。",
+        "vocabularyIds": [
+          "v-1245"
+        ]
+      },
+      {
+        "id": "s-27-04",
+        "text": "道を走ります。",
+        "vocabularyIds": [
+          "v-1255"
+        ]
+      },
+      {
+        "id": "s-27-05",
+        "text": "教室を開きます。",
+        "vocabularyIds": [
+          "v-1263"
+        ]
+      },
+      {
+        "id": "s-27-06",
+        "text": "見えます。",
+        "vocabularyIds": [
+          "v-1233"
+        ]
+      },
+      {
+        "id": "s-27-07",
+        "text": "出来ます。",
+        "vocabularyIds": [
+          "v-1235"
+        ]
+      },
+      {
+        "id": "s-27-08",
+        "text": "聞こえます。",
+        "vocabularyIds": [
+          "v-1239"
+        ]
+      },
+      {
+        "id": "s-27-09",
+        "text": "飼います。",
+        "vocabularyIds": [
+          "v-1244"
+        ]
+      },
+      {
+        "id": "s-27-10",
+        "text": "建てます。",
+        "vocabularyIds": [
+          "v-1251"
+        ]
+      }
+    ],
+    "28": [
+      {
+        "id": "s-28-01",
+        "text": "大学に通います。",
+        "vocabularyIds": [
+          "v-1319"
+        ]
+      },
+      {
+        "id": "s-28-02",
+        "text": "ちょうどいい。",
+        "vocabularyIds": [
+          "v-1326"
+        ]
+      },
+      {
+        "id": "s-28-03",
+        "text": "パンが売れます。",
+        "vocabularyIds": [
+          "v-1329"
+        ]
+      },
+      {
+        "id": "s-28-04",
+        "text": "噛みます。",
+        "vocabularyIds": [
+          "v-1290"
+        ]
+      },
+      {
+        "id": "s-28-05",
+        "text": "選びます。",
+        "vocabularyIds": [
+          "v-1297"
+        ]
+      },
+      {
+        "id": "s-28-06",
+        "text": "踊ります。",
+        "vocabularyIds": [
+          "v-1311"
+        ]
+      },
+      {
+        "id": "s-28-07",
+        "text": "メモします。",
+        "vocabularyIds": [
+          "v-1312"
+        ]
+      },
+      {
+        "id": "s-28-08",
+        "text": "通います。",
+        "vocabularyIds": [
+          "v-1318"
+        ]
+      },
+      {
+        "id": "s-28-09",
+        "text": "売れます。",
+        "vocabularyIds": [
+          "v-1328"
+        ]
+      },
+      {
+        "id": "s-28-10",
+        "text": "参加します。",
+        "vocabularyIds": [
+          "v-1341"
+        ]
+      }
+    ],
+    "29": [
+      {
+        "id": "s-29-01",
+        "text": "ドアが閉まります。",
+        "vocabularyIds": [
+          "v-1349"
+        ]
+      },
+      {
+        "id": "s-29-02",
+        "text": "鍵がかかります。",
+        "vocabularyIds": [
+          "v-1351"
+        ]
+      },
+      {
+        "id": "s-29-03",
+        "text": "ポケットが付きます。",
+        "vocabularyIds": [
+          "v-1362"
+        ]
+      },
+      {
+        "id": "s-29-04",
+        "text": "覚えていません。",
+        "vocabularyIds": [
+          "v-1364"
+        ]
+      },
+      {
+        "id": "s-29-05",
+        "text": "ドアが開きます。",
+        "vocabularyIds": [
+          "v-1370"
+        ]
+      },
+      {
+        "id": "s-29-06",
+        "text": "車が止まります。",
+        "vocabularyIds": [
+          "v-1372"
+        ]
+      },
+      {
+        "id": "s-29-07",
+        "text": "コップが割れます。",
+        "vocabularyIds": [
+          "v-1375"
+        ]
+      },
+      {
+        "id": "s-29-08",
+        "text": "紙が破れます。",
+        "vocabularyIds": [
+          "v-1378"
+        ]
+      },
+      {
+        "id": "s-29-09",
+        "text": "木が折れます。",
+        "vocabularyIds": [
+          "v-1380"
+        ]
+      },
+      {
+        "id": "s-29-10",
+        "text": "いすが壊れます。",
+        "vocabularyIds": [
+          "v-1384"
+        ]
+      }
+    ],
+    "30": [
+      {
+        "id": "s-30-01",
+        "text": "未だ使っています。",
+        "vocabularyIds": [
+          "v-1423"
+        ]
+      },
+      {
+        "id": "s-30-02",
+        "text": "壁に絵を掛けます。",
+        "vocabularyIds": [
+          "v-1434"
+        ]
+      },
+      {
+        "id": "s-30-03",
+        "text": "名前を決めます。",
+        "vocabularyIds": [
+          "v-1440"
+        ]
+      },
+      {
+        "id": "s-30-04",
+        "text": "木を植えます。",
+        "vocabularyIds": [
+          "v-1447"
+        ]
+      },
+      {
+        "id": "s-30-05",
+        "text": "貼ります。",
+        "vocabularyIds": [
+          "v-1414"
+        ]
+      },
+      {
+        "id": "s-30-06",
+        "text": "仕舞います。",
+        "vocabularyIds": [
+          "v-1416"
+        ]
+      },
+      {
+        "id": "s-30-07",
+        "text": "戻します。",
+        "vocabularyIds": [
+          "v-1419"
+        ]
+      },
+      {
+        "id": "s-30-08",
+        "text": "其の儘にします。",
+        "vocabularyIds": [
+          "v-1421"
+        ]
+      },
+      {
+        "id": "s-30-09",
+        "text": "生活します。",
+        "vocabularyIds": [
+          "v-1427"
+        ]
+      },
+      {
+        "id": "s-30-10",
+        "text": "掛けます。",
+        "vocabularyIds": [
+          "v-1432"
+        ]
+      }
+    ],
+    "31": [
+      {
+        "id": "s-31-01",
+        "text": "柔道を続けます。",
+        "vocabularyIds": [
+          "v-1473"
+        ]
+      },
+      {
+        "id": "s-31-02",
+        "text": "試験に受かります。",
+        "vocabularyIds": [
+          "v-1477"
+        ]
+      },
+      {
+        "id": "s-31-03",
+        "text": "試験を受けます。",
+        "vocabularyIds": [
+          "v-1479"
+        ]
+      },
+      {
+        "id": "s-31-04",
+        "text": "東京に残ります。",
+        "vocabularyIds": [
+          "v-1483"
+        ]
+      },
+      {
+        "id": "s-31-05",
+        "text": "仕事を見つけます。",
+        "vocabularyIds": [
+          "v-1489"
+        ]
+      },
+      {
+        "id": "s-31-06",
+        "text": "休みを取ります。",
+        "vocabularyIds": [
+          "v-1508"
+        ]
+      },
+      {
+        "id": "s-31-07",
+        "text": "目を閉じます。",
+        "vocabularyIds": [
+          "v-1520"
+        ]
+      },
+      {
+        "id": "s-31-08",
+        "text": "続きます。",
+        "vocabularyIds": [
+          "v-1471"
+        ]
+      },
+      {
+        "id": "s-31-09",
+        "text": "続けます。",
+        "vocabularyIds": [
+          "v-1472"
+        ]
+      },
+      {
+        "id": "s-31-10",
+        "text": "受かります。",
+        "vocabularyIds": [
+          "v-1476"
+        ]
+      }
+    ],
+    "32": [
+      {
+        "id": "s-32-01",
+        "text": "熱が続きます。",
+        "vocabularyIds": [
+          "v-1530"
+        ]
+      },
+      {
+        "id": "s-32-02",
+        "text": "それはいけませんね。",
+        "vocabularyIds": [
+          "v-1535"
+        ]
+      },
+      {
+        "id": "s-32-03",
+        "text": "風邪を引きます。",
+        "vocabularyIds": [
+          "v-1546"
+        ]
+      },
+      {
+        "id": "s-32-04",
+        "text": "雨が止みます。",
+        "vocabularyIds": [
+          "v-1549"
+        ]
+      },
+      {
+        "id": "s-32-05",
+        "text": "道が空きます。",
+        "vocabularyIds": [
+          "v-1554"
+        ]
+      },
+      {
+        "id": "s-32-06",
+        "text": "お釣りが出ます。",
+        "vocabularyIds": [
+          "v-1558"
+        ]
+      },
+      {
+        "id": "s-32-07",
+        "text": "試合に出ます。",
+        "vocabularyIds": [
+          "v-1559"
+        ]
+      },
+      {
+        "id": "s-32-08",
+        "text": "パーティーに出ます。",
+        "vocabularyIds": [
+          "v-1560"
+        ]
+      },
+      {
+        "id": "s-32-09",
+        "text": "道が込みます。",
+        "vocabularyIds": [
+          "v-1565"
+        ]
+      },
+      {
+        "id": "s-32-10",
+        "text": "試験に合格します。",
+        "vocabularyIds": [
+          "v-1568"
+        ]
+      }
+    ],
+    "33": [
+      {
+        "id": "s-33-01",
+        "text": "車に注意します。",
+        "vocabularyIds": [
+          "v-1620"
+        ]
+      },
+      {
+        "id": "s-33-02",
+        "text": "会議に出席します。",
+        "vocabularyIds": [
+          "v-1629"
+        ]
+      },
+      {
+        "id": "s-33-03",
+        "text": "式が始まります。",
+        "vocabularyIds": [
+          "v-1632"
+        ]
+      },
+      {
+        "id": "s-33-04",
+        "text": "電話があります。",
+        "vocabularyIds": [
+          "v-1639"
+        ]
+      },
+      {
+        "id": "s-33-05",
+        "text": "席を外します。",
+        "vocabularyIds": [
+          "v-1642"
+        ]
+      },
+      {
+        "id": "s-33-06",
+        "text": "諦めます。",
+        "vocabularyIds": [
+          "v-1598"
+        ]
+      },
+      {
+        "id": "s-33-07",
+        "text": "伝えます。",
+        "vocabularyIds": [
+          "v-1602"
+        ]
+      },
+      {
+        "id": "s-33-08",
+        "text": "逃げます。",
+        "vocabularyIds": [
+          "v-1605"
+        ]
+      },
+      {
+        "id": "s-33-09",
+        "text": "守ります。",
+        "vocabularyIds": [
+          "v-1608"
+        ]
+      },
+      {
+        "id": "s-33-10",
+        "text": "騒ぎます。",
+        "vocabularyIds": [
+          "v-1609"
+        ]
+      }
+    ],
+    "34": [
+      {
+        "id": "s-34-01",
+        "text": "歯を磨きます。",
+        "vocabularyIds": [
+          "v-1653"
+        ]
+      },
+      {
+        "id": "s-34-02",
+        "text": "醤油をつけます。",
+        "vocabularyIds": [
+          "v-1667"
+        ]
+      },
+      {
+        "id": "s-34-03",
+        "text": "お茶を立てます。",
+        "vocabularyIds": [
+          "v-1669"
+        ]
+      },
+      {
+        "id": "s-34-04",
+        "text": "これでいいですか。",
+        "vocabularyIds": [
+          "v-1672"
+        ]
+      },
+      {
+        "id": "s-34-05",
+        "text": "いかがですか。",
+        "vocabularyIds": [
+          "v-1673"
+        ]
+      },
+      {
+        "id": "s-34-06",
+        "text": "木の枝を降ります。",
+        "vocabularyIds": [
+          "v-1677"
+        ]
+      },
+      {
+        "id": "s-34-07",
+        "text": "先生に質問します。",
+        "vocabularyIds": [
+          "v-1683"
+        ]
+      },
+      {
+        "id": "s-34-08",
+        "text": "鍵が見つかります。",
+        "vocabularyIds": [
+          "v-1685"
+        ]
+      },
+      {
+        "id": "s-34-09",
+        "text": "忘れ物に気がつきます。",
+        "vocabularyIds": [
+          "v-1687"
+        ]
+      },
+      {
+        "id": "s-34-10",
+        "text": "傘をさします。",
+        "vocabularyIds": [
+          "v-1689"
+        ]
+      }
+    ],
+    "35": [
+      {
+        "id": "s-35-01",
+        "text": "花が咲きます。",
+        "vocabularyIds": [
+          "v-1712"
+        ]
+      },
+      {
+        "id": "s-35-02",
+        "text": "これで終わりましょう。",
+        "vocabularyIds": [
+          "v-1715"
+        ]
+      },
+      {
+        "id": "s-35-03",
+        "text": "色が変わります。",
+        "vocabularyIds": [
+          "v-1733"
+        ]
+      },
+      {
+        "id": "s-35-04",
+        "text": "病気が治ります。",
+        "vocabularyIds": [
+          "v-1743"
+        ]
+      },
+      {
+        "id": "s-35-05",
+        "text": "故障が直ります。",
+        "vocabularyIds": [
+          "v-1744"
+        ]
+      },
+      {
+        "id": "s-35-06",
+        "text": "丸を付けます。",
+        "vocabularyIds": [
+          "v-1750"
+        ]
+      },
+      {
+        "id": "s-35-07",
+        "text": "咲きます。",
+        "vocabularyIds": [
+          "v-1711"
+        ]
+      },
+      {
+        "id": "s-35-08",
+        "text": "変わります。",
+        "vocabularyIds": [
+          "v-1732"
+        ]
+      },
+      {
+        "id": "s-35-09",
+        "text": "治ります。",
+        "vocabularyIds": [
+          "v-1739"
+        ]
+      },
+      {
+        "id": "s-35-10",
+        "text": "直ります。",
+        "vocabularyIds": [
+          "v-1740"
+        ]
+      }
+    ],
+    "36": [
+      {
+        "id": "s-36-01",
+        "text": "仕事になれます。",
+        "vocabularyIds": [
+          "v-1774"
+        ]
+      },
+      {
+        "id": "s-36-02",
+        "text": "事故に遭います。",
+        "vocabularyIds": [
+          "v-1791"
+        ]
+      },
+      {
+        "id": "s-36-03",
+        "text": "食べ物が腐ります。",
+        "vocabularyIds": [
+          "v-1798"
+        ]
+      },
+      {
+        "id": "s-36-04",
+        "text": "７時を過ぎます。",
+        "vocabularyIds": [
+          "v-1803"
+        ]
+      },
+      {
+        "id": "s-36-05",
+        "text": "慣れます。",
+        "vocabularyIds": [
+          "v-1773"
+        ]
+      },
+      {
+        "id": "s-36-06",
+        "text": "違います。",
+        "vocabularyIds": [
+          "v-1785"
+        ]
+      },
+      {
+        "id": "s-36-07",
+        "text": "チャレンジします。",
+        "vocabularyIds": [
+          "v-1787"
+        ]
+      },
+      {
+        "id": "s-36-08",
+        "text": "遭います。",
+        "vocabularyIds": [
+          "v-1790"
+        ]
+      },
+      {
+        "id": "s-36-09",
+        "text": "貯金します。",
+        "vocabularyIds": [
+          "v-1796"
+        ]
+      },
+      {
+        "id": "s-36-10",
+        "text": "腐ります。",
+        "vocabularyIds": [
+          "v-1797"
+        ]
+      }
+    ],
+    "37": [
+      {
+        "id": "s-37-01",
+        "text": "足を踏みます。",
+        "vocabularyIds": [
+          "v-1824"
+        ]
+      },
+      {
+        "id": "s-37-02",
+        "text": "星を発見します。",
+        "vocabularyIds": [
+          "v-1828"
+        ]
+      },
+      {
+        "id": "s-37-03",
+        "text": "国際会議を行います。",
+        "vocabularyIds": [
+          "v-1848"
+        ]
+      },
+      {
+        "id": "s-37-04",
+        "text": "海を汚します。",
+        "vocabularyIds": [
+          "v-1859"
+        ]
+      },
+      {
+        "id": "s-37-05",
+        "text": "よかったですね。",
+        "vocabularyIds": [
+          "v-1873"
+        ]
+      },
+      {
+        "id": "s-37-06",
+        "text": "一匹もいません。",
+        "vocabularyIds": [
+          "v-1889"
+        ]
+      },
+      {
+        "id": "s-37-07",
+        "text": "叱ります。",
+        "vocabularyIds": [
+          "v-1822"
+        ]
+      },
+      {
+        "id": "s-37-08",
+        "text": "踏みます。",
+        "vocabularyIds": [
+          "v-1823"
+        ]
+      },
+      {
+        "id": "s-37-09",
+        "text": "注意します。",
+        "vocabularyIds": [
+          "v-1825"
+        ]
+      },
+      {
+        "id": "s-37-10",
+        "text": "発見します。",
+        "vocabularyIds": [
+          "v-1827"
+        ]
+      }
+    ],
+    "38": [
+      {
+        "id": "s-38-01",
+        "text": "旅行に参加します。",
+        "vocabularyIds": [
+          "v-1891"
+        ]
+      },
+      {
+        "id": "s-38-02",
+        "text": "判子を押します。",
+        "vocabularyIds": [
+          "v-1907"
+        ]
+      },
+      {
+        "id": "s-38-03",
+        "text": "気持ちがいい。",
+        "vocabularyIds": [
+          "v-1908"
+        ]
+      },
+      {
+        "id": "s-38-04",
+        "text": "気持ちが悪い。",
+        "vocabularyIds": [
+          "v-1909"
+        ]
+      },
+      {
+        "id": "s-38-05",
+        "text": "嘘をつきます。",
+        "vocabularyIds": [
+          "v-1920"
+        ]
+      },
+      {
+        "id": "s-38-06",
+        "text": "鍵を掛けます。",
+        "vocabularyIds": [
+          "v-1927"
+        ]
+      },
+      {
+        "id": "s-38-07",
+        "text": "お先に失礼します。",
+        "vocabularyIds": [
+          "v-1928"
+        ]
+      },
+      {
+        "id": "s-38-08",
+        "text": "電源を切ります。",
+        "vocabularyIds": [
+          "v-1931"
+        ]
+      },
+      {
+        "id": "s-38-09",
+        "text": "電源を入れます。",
+        "vocabularyIds": [
+          "v-1933"
+        ]
+      },
+      {
+        "id": "s-38-10",
+        "text": "参加します。",
+        "vocabularyIds": [
+          "v-1890"
+        ]
+      }
+    ],
+    "39": [
+      {
+        "id": "s-39-01",
+        "text": "ビルが倒れます。",
+        "vocabularyIds": [
+          "v-1955"
+        ]
+      },
+      {
+        "id": "s-39-02",
+        "text": "お疲れ様でした。",
+        "vocabularyIds": [
+          "v-1961"
+        ]
+      },
+      {
+        "id": "s-39-03",
+        "text": "質問に答えます。",
+        "vocabularyIds": [
+          "v-1977"
+        ]
+      },
+      {
+        "id": "s-39-04",
+        "text": "道を通ります。",
+        "vocabularyIds": [
+          "v-1979"
+        ]
+      },
+      {
+        "id": "s-39-05",
+        "text": "びっくりします。",
+        "vocabularyIds": [
+          "v-1952"
+        ]
+      },
+      {
+        "id": "s-39-06",
+        "text": "倒れます。",
+        "vocabularyIds": [
+          "v-1954"
+        ]
+      },
+      {
+        "id": "s-39-07",
+        "text": "がっかりします。",
+        "vocabularyIds": [
+          "v-1957"
+        ]
+      },
+      {
+        "id": "s-39-08",
+        "text": "ぶつかります。",
+        "vocabularyIds": [
+          "v-1966"
+        ]
+      },
+      {
+        "id": "s-39-09",
+        "text": "安心します。",
+        "vocabularyIds": [
+          "v-1967"
+        ]
+      },
+      {
+        "id": "s-39-10",
+        "text": "死にます。",
+        "vocabularyIds": [
+          "v-1969"
+        ]
+      }
+    ],
+    "40": [
+      {
+        "id": "s-40-01",
+        "text": "どうでしょうか。",
+        "vocabularyIds": [
+          "v-2022"
+        ]
+      },
+      {
+        "id": "s-40-02",
+        "text": "問題が出ます。",
+        "vocabularyIds": [
+          "v-2029"
+        ]
+      },
+      {
+        "id": "s-40-03",
+        "text": "サイズが合います。",
+        "vocabularyIds": [
+          "v-2051"
+        ]
+      },
+      {
+        "id": "s-40-04",
+        "text": "到着します。",
+        "vocabularyIds": [
+          "v-2011"
+        ]
+      },
+      {
+        "id": "s-40-05",
+        "text": "出発します。",
+        "vocabularyIds": [
+          "v-2012"
+        ]
+      },
+      {
+        "id": "s-40-06",
+        "text": "酔います。",
+        "vocabularyIds": [
+          "v-2014"
+        ]
+      },
+      {
+        "id": "s-40-07",
+        "text": "測ります。",
+        "vocabularyIds": [
+          "v-2017"
+        ]
+      },
+      {
+        "id": "s-40-08",
+        "text": "量ります。",
+        "vocabularyIds": [
+          "v-2018"
+        ]
+      },
+      {
+        "id": "s-40-09",
+        "text": "いらっしゃいます。",
+        "vocabularyIds": [
+          "v-2026"
+        ]
+      },
+      {
+        "id": "s-40-10",
+        "text": "出ます。",
+        "vocabularyIds": [
+          "v-2028"
+        ]
+      }
+    ],
+    "41": [
+      {
+        "id": "s-41-01",
+        "text": "いただきます。",
+        "vocabularyIds": [
+          "v-2073"
+        ]
+      },
+      {
+        "id": "s-41-02",
+        "text": "くださいます。",
+        "vocabularyIds": [
+          "v-2074"
+        ]
+      },
+      {
+        "id": "s-41-03",
+        "text": "やります。",
+        "vocabularyIds": [
+          "v-2076"
+        ]
+      },
+      {
+        "id": "s-41-04",
+        "text": "親切にします。",
+        "vocabularyIds": [
+          "v-2081"
+        ]
+      },
+      {
+        "id": "s-41-05",
+        "text": "上げます。",
+        "vocabularyIds": [
+          "v-2110"
+        ]
+      },
+      {
+        "id": "s-41-06",
+        "text": "下げます。",
+        "vocabularyIds": [
+          "v-2111"
+        ]
+      },
+      {
+        "id": "s-41-07",
+        "text": "虐めます。",
+        "vocabularyIds": [
+          "v-2123"
+        ]
+      },
+      {
+        "id": "s-41-08",
+        "text": "助けます。",
+        "vocabularyIds": [
+          "v-2125"
+        ]
+      },
+      {
+        "id": "s-41-09",
+        "text": "暮らします。",
+        "vocabularyIds": [
+          "v-2128"
+        ]
+      },
+      {
+        "id": "s-41-10",
+        "text": "可愛いです。",
+        "vocabularyIds": [
+          "v-2113"
+        ]
+      }
+    ],
+    "42": [
+      {
+        "id": "s-42-01",
+        "text": "ボーナスが出ます。",
+        "vocabularyIds": [
+          "v-2138"
+        ]
+      },
+      {
+        "id": "s-42-02",
+        "text": "お湯を沸かします。",
+        "vocabularyIds": [
+          "v-2174"
+        ]
+      },
+      {
+        "id": "s-42-03",
+        "text": "出ます。",
+        "vocabularyIds": [
+          "v-2137"
+        ]
+      },
+      {
+        "id": "s-42-04",
+        "text": "並びます。",
+        "vocabularyIds": [
+          "v-2146"
+        ]
+      },
+      {
+        "id": "s-42-05",
+        "text": "混ぜます。",
+        "vocabularyIds": [
+          "v-2154"
+        ]
+      },
+      {
+        "id": "s-42-06",
+        "text": "包みます。",
+        "vocabularyIds": [
+          "v-2156"
+        ]
+      },
+      {
+        "id": "s-42-07",
+        "text": "計算します。",
+        "vocabularyIds": [
+          "v-2157"
+        ]
+      },
+      {
+        "id": "s-42-08",
+        "text": "沸かします。",
+        "vocabularyIds": [
+          "v-2173"
+        ]
+      },
+      {
+        "id": "s-42-09",
+        "text": "広めます。",
+        "vocabularyIds": [
+          "v-2183"
+        ]
+      },
+      {
+        "id": "s-42-10",
+        "text": "割ります。",
+        "vocabularyIds": [
+          "v-2185"
+        ]
+      }
+    ],
+    "43": [
+      {
+        "id": "s-43-01",
+        "text": "ボタンが取れます。",
+        "vocabularyIds": [
+          "v-2189"
+        ]
+      },
+      {
+        "id": "s-43-02",
+        "text": "荷物が落ちます。",
+        "vocabularyIds": [
+          "v-2194"
+        ]
+      },
+      {
+        "id": "s-43-03",
+        "text": "輸出が減ります。",
+        "vocabularyIds": [
+          "v-2196"
+        ]
+      },
+      {
+        "id": "s-43-04",
+        "text": "紐が切れます。",
+        "vocabularyIds": [
+          "v-2202"
+        ]
+      },
+      {
+        "id": "s-43-05",
+        "text": "値段が上がります。",
+        "vocabularyIds": [
+          "v-2204"
+        ]
+      },
+      {
+        "id": "s-43-06",
+        "text": "値段が下がります。",
+        "vocabularyIds": [
+          "v-2206"
+        ]
+      },
+      {
+        "id": "s-43-07",
+        "text": "輸出が増えます。",
+        "vocabularyIds": [
+          "v-2208"
+        ]
+      },
+      {
+        "id": "s-43-08",
+        "text": "ガソリンが無くなります。",
+        "vocabularyIds": [
+          "v-2211"
+        ]
+      },
+      {
+        "id": "s-43-09",
+        "text": "取れます。",
+        "vocabularyIds": [
+          "v-2188"
+        ]
+      },
+      {
+        "id": "s-43-10",
+        "text": "落ちます。",
+        "vocabularyIds": [
+          "v-2193"
+        ]
+      }
+    ],
+    "44": [
+      {
+        "id": "s-44-01",
+        "text": "どうなさいますか。",
+        "vocabularyIds": [
+          "v-2229"
+        ]
+      },
+      {
+        "id": "s-44-02",
+        "text": "どういうふうになさいますか。",
+        "vocabularyIds": [
+          "v-2232"
+        ]
+      },
+      {
+        "id": "s-44-03",
+        "text": "これでよろしいでしょうか。",
+        "vocabularyIds": [
+          "v-2234"
+        ]
+      },
+      {
+        "id": "s-44-04",
+        "text": "どうもお疲れ様でした。",
+        "vocabularyIds": [
+          "v-2235"
+        ]
+      },
+      {
+        "id": "s-44-05",
+        "text": "事故が起きます。",
+        "vocabularyIds": [
+          "v-2237"
+        ]
+      },
+      {
+        "id": "s-44-06",
+        "text": "シャツが乾きます。",
+        "vocabularyIds": [
+          "v-2240"
+        ]
+      },
+      {
+        "id": "s-44-07",
+        "text": "シャツがぬれます。",
+        "vocabularyIds": [
+          "v-2242"
+        ]
+      },
+      {
+        "id": "s-44-08",
+        "text": "掃除を嫌がります。",
+        "vocabularyIds": [
+          "v-2260"
+        ]
+      },
+      {
+        "id": "s-44-09",
+        "text": "泣きます。",
+        "vocabularyIds": [
+          "v-2222"
+        ]
+      },
+      {
+        "id": "s-44-10",
+        "text": "笑います。",
+        "vocabularyIds": [
+          "v-2223"
+        ]
+      }
+    ],
+    "45": [
+      {
+        "id": "s-45-01",
+        "text": "以上です。",
+        "vocabularyIds": [
+          "v-2287"
+        ]
+      },
+      {
+        "id": "s-45-02",
+        "text": "楽しみにしています。",
+        "vocabularyIds": [
+          "v-2290"
+        ]
+      },
+      {
+        "id": "s-45-03",
+        "text": "ベルが鳴ります。",
+        "vocabularyIds": [
+          "v-2297"
+        ]
+      },
+      {
+        "id": "s-45-04",
+        "text": "優勝します。",
+        "vocabularyIds": [
+          "v-2279"
+        ]
+      },
+      {
+        "id": "s-45-05",
+        "text": "知らせます。",
+        "vocabularyIds": [
+          "v-2283"
+        ]
+      },
+      {
+        "id": "s-45-06",
+        "text": "キャンセルします。",
+        "vocabularyIds": [
+          "v-2284"
+        ]
+      },
+      {
+        "id": "s-45-07",
+        "text": "信じます。",
+        "vocabularyIds": [
+          "v-2289"
+        ]
+      },
+      {
+        "id": "s-45-08",
+        "text": "鳴ります。",
+        "vocabularyIds": [
+          "v-2296"
+        ]
+      },
+      {
+        "id": "s-45-09",
+        "text": "セットします。",
+        "vocabularyIds": [
+          "v-2298"
+        ]
+      },
+      {
+        "id": "s-45-10",
+        "text": "保証書です。",
+        "vocabularyIds": [
+          "v-2272"
+        ]
+      }
+    ],
+    "46": [
+      {
+        "id": "s-46-01",
+        "text": "今いいですか。",
+        "vocabularyIds": [
+          "v-2300"
+        ]
+      },
+      {
+        "id": "s-46-02",
+        "text": "申し訳ありません。",
+        "vocabularyIds": [
+          "v-2308"
+        ]
+      },
+      {
+        "id": "s-46-03",
+        "text": "どちら様でしょうか。",
+        "vocabularyIds": [
+          "v-2309"
+        ]
+      },
+      {
+        "id": "s-46-04",
+        "text": "お待たせしました。",
+        "vocabularyIds": [
+          "v-2310"
+        ]
+      },
+      {
+        "id": "s-46-05",
+        "text": "荷物が届きます。",
+        "vocabularyIds": [
+          "v-2317"
+        ]
+      },
+      {
+        "id": "s-46-06",
+        "text": "パンが焼けます。",
+        "vocabularyIds": [
+          "v-2320"
+        ]
+      },
+      {
+        "id": "s-46-07",
+        "text": "肉が焼けます。",
+        "vocabularyIds": [
+          "v-2321"
+        ]
+      },
+      {
+        "id": "s-46-08",
+        "text": "大学に入学します。",
+        "vocabularyIds": [
+          "v-2324"
+        ]
+      },
+      {
+        "id": "s-46-09",
+        "text": "大学を卒業します。",
+        "vocabularyIds": [
+          "v-2326"
+        ]
+      },
+      {
+        "id": "s-46-10",
+        "text": "李さんに地図を渡します。",
+        "vocabularyIds": [
+          "v-2330"
+        ]
+      }
+    ],
+    "47": [
+      {
+        "id": "s-47-01",
+        "text": "音がします。",
+        "vocabularyIds": [
+          "v-2344"
+        ]
+      },
+      {
+        "id": "s-47-02",
+        "text": "声がします。",
+        "vocabularyIds": [
+          "v-2345"
+        ]
+      },
+      {
+        "id": "s-47-03",
+        "text": "味がします。",
+        "vocabularyIds": [
+          "v-2346"
+        ]
+      },
+      {
+        "id": "s-47-04",
+        "text": "匂いがします。",
+        "vocabularyIds": [
+          "v-2347"
+        ]
+      },
+      {
+        "id": "s-47-05",
+        "text": "人が集まります。",
+        "vocabularyIds": [
+          "v-2349"
+        ]
+      },
+      {
+        "id": "s-47-06",
+        "text": "人が別れます。",
+        "vocabularyIds": [
+          "v-2371"
+        ]
+      },
+      {
+        "id": "s-47-07",
+        "text": "ごみが燃えます。",
+        "vocabularyIds": [
+          "v-2374"
+        ]
+      },
+      {
+        "id": "s-47-08",
+        "text": "風が吹きます。",
+        "vocabularyIds": [
+          "v-2376"
+        ]
+      },
+      {
+        "id": "s-47-09",
+        "text": "します。",
+        "vocabularyIds": [
+          "v-2343"
+        ]
+      },
+      {
+        "id": "s-47-10",
+        "text": "集まります。",
+        "vocabularyIds": [
+          "v-2348"
+        ]
+      }
+    ],
+    "48": [
+      {
+        "id": "s-48-01",
+        "text": "お忙しいですか。",
+        "vocabularyIds": [
+          "v-2387"
+        ]
+      },
+      {
+        "id": "s-48-02",
+        "text": "かまいません。",
+        "vocabularyIds": [
+          "v-2391"
+        ]
+      },
+      {
+        "id": "s-48-03",
+        "text": "いいことですね。",
+        "vocabularyIds": [
+          "v-2399"
+        ]
+      },
+      {
+        "id": "s-48-04",
+        "text": "楽しみます。",
+        "vocabularyIds": [
+          "v-2392"
+        ]
+      },
+      {
+        "id": "s-48-05",
+        "text": "届けます。",
+        "vocabularyIds": [
+          "v-2395"
+        ]
+      },
+      {
+        "id": "s-48-06",
+        "text": "世話をします。",
+        "vocabularyIds": [
+          "v-2396"
+        ]
+      },
+      {
+        "id": "s-48-07",
+        "text": "下ろします。",
+        "vocabularyIds": [
+          "v-2397"
+        ]
+      },
+      {
+        "id": "s-48-08",
+        "text": "降ろします。",
+        "vocabularyIds": [
+          "v-2398"
+        ]
+      },
+      {
+        "id": "s-48-09",
+        "text": "録音します。",
+        "vocabularyIds": [
+          "v-2401"
+        ]
+      },
+      {
+        "id": "s-48-10",
+        "text": "嫌です。",
+        "vocabularyIds": [
+          "v-2400"
+        ]
+      }
+    ],
+    "49": [
+      {
+        "id": "s-49-01",
+        "text": "お待ちください。",
+        "vocabularyIds": [
+          "v-2409"
+        ]
+      },
+      {
+        "id": "s-49-02",
+        "text": "会社に勤めます。",
+        "vocabularyIds": [
+          "v-2414"
+        ]
+      },
+      {
+        "id": "s-49-03",
+        "text": "熱を出します。",
+        "vocabularyIds": [
+          "v-2419"
+        ]
+      },
+      {
+        "id": "s-49-04",
+        "text": "よろしくお伝えください。",
+        "vocabularyIds": [
+          "v-2420"
+        ]
+      },
+      {
+        "id": "s-49-05",
+        "text": "失礼いたします。",
+        "vocabularyIds": [
+          "v-2421"
+        ]
+      },
+      {
+        "id": "s-49-06",
+        "text": "ご存知です。",
+        "vocabularyIds": [
+          "v-2422"
+        ]
+      },
+      {
+        "id": "s-49-07",
+        "text": "椅子に掛けます。",
+        "vocabularyIds": [
+          "v-2425"
+        ]
+      },
+      {
+        "id": "s-49-08",
+        "text": "なさいます。",
+        "vocabularyIds": [
+          "v-2408"
+        ]
+      },
+      {
+        "id": "s-49-09",
+        "text": "ご覧になります。",
+        "vocabularyIds": [
+          "v-2410"
+        ]
+      },
+      {
+        "id": "s-49-10",
+        "text": "おっしゃいます。",
+        "vocabularyIds": [
+          "v-2412"
+        ]
+      }
+    ],
+    "50": [
+      {
+        "id": "s-50-01",
+        "text": "夢が叶います。",
+        "vocabularyIds": [
+          "v-2461"
+        ]
+      },
+      {
+        "id": "s-50-02",
+        "text": "お元気でいらっしゃいますか。",
+        "vocabularyIds": [
+          "v-2478"
+        ]
+      },
+      {
+        "id": "s-50-03",
+        "text": "伺います。",
+        "vocabularyIds": [
+          "v-2448"
+        ]
+      },
+      {
+        "id": "s-50-04",
+        "text": "参ります。",
+        "vocabularyIds": [
+          "v-2450"
+        ]
+      },
+      {
+        "id": "s-50-05",
+        "text": "おります。",
+        "vocabularyIds": [
+          "v-2453"
+        ]
+      },
+      {
+        "id": "s-50-06",
+        "text": "感謝します。",
+        "vocabularyIds": [
+          "v-2455"
+        ]
+      },
+      {
+        "id": "s-50-07",
+        "text": "緊張します。",
+        "vocabularyIds": [
+          "v-2456"
+        ]
+      },
+      {
+        "id": "s-50-08",
+        "text": "叶います。",
+        "vocabularyIds": [
+          "v-2460"
+        ]
+      },
+      {
+        "id": "s-50-09",
+        "text": "応援します。",
+        "vocabularyIds": [
+          "v-2462"
+        ]
+      },
+      {
+        "id": "s-50-10",
+        "text": "いただきます。",
+        "vocabularyIds": [
+          "v-2463"
+        ]
+      }
+    ]
+  },
+  "total": 400
+}

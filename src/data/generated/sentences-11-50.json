@@ -1,0 +1,6354 @@
+[
+  {
+    "id": "s-11-01",
+    "lessonId": "lesson-11",
+    "text": "日本にいます。",
+    "reading": "にほんにいます。",
+    "meaning": "在日本。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "日本にいます",
+      "にほんにいます"
+    ],
+    "vocabularyIds": [
+      "v-0564"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-02",
+    "lessonId": "lesson-11",
+    "text": "子供がいます。",
+    "reading": "こどもがいます。",
+    "meaning": "有孩子。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "子供がいます",
+      "こどもがいます"
+    ],
+    "vocabularyIds": [
+      "v-0565"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-03",
+    "lessonId": "lesson-11",
+    "text": "お願いします。",
+    "reading": "おねがいします。",
+    "meaning": "拜托了。恳请您。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お願いします",
+      "おねがいします"
+    ],
+    "vocabularyIds": [
+      "v-0593"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-04",
+    "lessonId": "lesson-11",
+    "text": "お出かけですか。",
+    "reading": "おでかけですか。",
+    "meaning": "出门啊》（碰到附近的人打招呼）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お出かけですか",
+      "おでかけですか"
+    ],
+    "vocabularyIds": [
+      "v-0595"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-05",
+    "lessonId": "lesson-11",
+    "text": "行ってきます。",
+    "reading": "いってきます。",
+    "meaning": "我走了（自己出门时）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "行ってきます",
+      "いってきます"
+    ],
+    "vocabularyIds": [
+      "v-0598"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-06",
+    "lessonId": "lesson-11",
+    "text": "会社を休みます。",
+    "reading": "かいしゃをやすみます。",
+    "meaning": "跟公司请假。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "会社を休みます",
+      "かいしゃをやすみます"
+    ],
+    "vocabularyIds": [
+      "v-0609"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-07",
+    "lessonId": "lesson-11",
+    "text": "かしこまりました。",
+    "reading": "かしこまりました。",
+    "meaning": "明白了（服务行业的人对顾客使用）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "かしこまりました"
+    ],
+    "vocabularyIds": [
+      "v-0611"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-08",
+    "lessonId": "lesson-11",
+    "text": "います。",
+    "reading": "います。",
+    "meaning": "在、有。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "います"
+    ],
+    "vocabularyIds": [
+      "v-0563"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-09",
+    "lessonId": "lesson-11",
+    "text": "かかります。",
+    "reading": "かかります。",
+    "meaning": "花费（时间、金钱等）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "かかります"
+    ],
+    "vocabularyIds": [
+      "v-0592"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-11-10",
+    "lessonId": "lesson-11",
+    "text": "休みます。",
+    "reading": "やすみます。",
+    "meaning": "请假。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "休みます",
+      "やすみます"
+    ],
+    "vocabularyIds": [
+      "v-0608"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-01",
+    "lessonId": "lesson-12",
+    "text": "わあ、すごい人ですね。",
+    "reading": "わあ、すごいひとですね。",
+    "meaning": "哇，好多人啊。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "わあ、すごい人ですね",
+      "わあ、すごいひとですね"
+    ],
+    "vocabularyIds": [
+      "v-0639"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-02",
+    "lessonId": "lesson-12",
+    "text": "疲れました。",
+    "reading": "つかれました。",
+    "meaning": "我累了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "疲れました",
+      "つかれました"
+    ],
+    "vocabularyIds": [
+      "v-0640"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-03",
+    "lessonId": "lesson-12",
+    "text": "人が多い。",
+    "reading": "ひとがおおい。",
+    "meaning": "人多。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "人が多い",
+      "ひとがおおい"
+    ],
+    "vocabularyIds": [
+      "v-0649"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-04",
+    "lessonId": "lesson-12",
+    "text": "コーヒーがいい。",
+    "reading": "コーヒーがいい。",
+    "meaning": "咖啡好（从两种物品中选择时）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "コーヒーがいい"
+    ],
+    "vocabularyIds": [
+      "v-0675"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-05",
+    "lessonId": "lesson-12",
+    "text": "遅いです。",
+    "reading": "おそいです。",
+    "meaning": "慢。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "遅い",
+      "おそい"
+    ],
+    "vocabularyIds": [
+      "v-0631"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-06",
+    "lessonId": "lesson-12",
+    "text": "涼しいです。",
+    "reading": "すずしいです。",
+    "meaning": "凉快（天气）。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "涼しい",
+      "すずしい"
+    ],
+    "vocabularyIds": [
+      "v-0645"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-07",
+    "lessonId": "lesson-12",
+    "text": "簡単です。",
+    "reading": "かんたんです。",
+    "meaning": "简单。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "簡単",
+      "かんたん"
+    ],
+    "vocabularyIds": [
+      "v-0650"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-08",
+    "lessonId": "lesson-12",
+    "text": "辛いです。",
+    "reading": "からいです。",
+    "meaning": "辣。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "辛い",
+      "からい"
+    ],
+    "vocabularyIds": [
+      "v-0652"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-09",
+    "lessonId": "lesson-12",
+    "text": "重いです。",
+    "reading": "おもいです。",
+    "meaning": "重。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "重い",
+      "おもい"
+    ],
+    "vocabularyIds": [
+      "v-0654"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-12-10",
+    "lessonId": "lesson-12",
+    "text": "近くです。",
+    "reading": "ちかいです。",
+    "meaning": "近。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "近く",
+      "ちかい"
+    ],
+    "vocabularyIds": [
+      "v-0661"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-01",
+    "lessonId": "lesson-13",
+    "text": "ご注文は？",
+    "reading": "ごちゅうもん。",
+    "meaning": "您点什么？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ご注文は？",
+      "ごちゅうもん"
+    ],
+    "vocabularyIds": [
+      "v-0689"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-02",
+    "lessonId": "lesson-13",
+    "text": "公園を散歩します。",
+    "reading": "こうえんをさんぽします。",
+    "meaning": "在公园散步。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "公園を散歩します",
+      "こうえんをさんぽします"
+    ],
+    "vocabularyIds": [
+      "v-0700"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-03",
+    "lessonId": "lesson-13",
+    "text": "プールで泳ぎます。",
+    "reading": "プールでおよぎます。",
+    "meaning": "在泳池游泳。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "プールで泳ぎます",
+      "プールでおよぎます"
+    ],
+    "vocabularyIds": [
+      "v-0707"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-04",
+    "lessonId": "lesson-13",
+    "text": "そうしましょう。",
+    "reading": "そうしましょう。",
+    "meaning": "就这样干吧（表示同意去做对方提议的事情）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "そうしましょう"
+    ],
+    "vocabularyIds": [
+      "v-0714"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-05",
+    "lessonId": "lesson-13",
+    "text": "お腹が空きます。",
+    "reading": "おなかがすきます。",
+    "meaning": "肚子饿。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お腹が空きます",
+      "おなかがすきます"
+    ],
+    "vocabularyIds": [
+      "v-0717"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-06",
+    "lessonId": "lesson-13",
+    "text": "疲れます。",
+    "reading": "つかれます。",
+    "meaning": "累。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "疲れます",
+      "つかれます"
+    ],
+    "vocabularyIds": [
+      "v-0680"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-07",
+    "lessonId": "lesson-13",
+    "text": "結婚します。",
+    "reading": "けっこんします。",
+    "meaning": "结婚。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "結婚します",
+      "けっこんします"
+    ],
+    "vocabularyIds": [
+      "v-0695"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-08",
+    "lessonId": "lesson-13",
+    "text": "遊びます。",
+    "reading": "あそびます。",
+    "meaning": "玩、玩耍。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "遊びます",
+      "あそびます"
+    ],
+    "vocabularyIds": [
+      "v-0696"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-09",
+    "lessonId": "lesson-13",
+    "text": "迎えます。",
+    "reading": "むかえます。",
+    "meaning": "迎接。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "迎えます",
+      "むかえます"
+    ],
+    "vocabularyIds": [
+      "v-0698"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-13-10",
+    "lessonId": "lesson-13",
+    "text": "散歩します。",
+    "reading": "さんぽします。",
+    "meaning": "散步。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "散歩します",
+      "さんぽします"
+    ],
+    "vocabularyIds": [
+      "v-0699"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-01",
+    "lessonId": "lesson-14",
+    "text": "住所を教えます。",
+    "reading": "じゅうしょをおしえます。",
+    "meaning": "告诉地址。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "住所を教えます",
+      "じゅうしょをおしえます"
+    ],
+    "vocabularyIds": [
+      "v-0726"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-02",
+    "lessonId": "lesson-14",
+    "text": "窓を開けます。",
+    "reading": "まどをあけます。",
+    "meaning": "开窗户。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "窓を開けます",
+      "まどをあけます"
+    ],
+    "vocabularyIds": [
+      "v-0728"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-03",
+    "lessonId": "lesson-14",
+    "text": "雨が降ります。",
+    "reading": "あめがふります。",
+    "meaning": "下雨。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "雨が降ります",
+      "あめがふります"
+    ],
+    "vocabularyIds": [
+      "v-0733"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-04",
+    "lessonId": "lesson-14",
+    "text": "信号を右へ曲がってください。",
+    "reading": "しんごうをみぎへまがってください。",
+    "meaning": "在红绿灯处往右拐。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "信号を右へ曲がってください",
+      "しんごうをみぎへまがってください"
+    ],
+    "vocabularyIds": [
+      "v-0734"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-05",
+    "lessonId": "lesson-14",
+    "text": "これでお願いします。",
+    "reading": "これでおねがいします。",
+    "meaning": "给您（钱）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "これでお願いします",
+      "これでおねがいします"
+    ],
+    "vocabularyIds": [
+      "v-0737"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-06",
+    "lessonId": "lesson-14",
+    "text": "アドを閉めます。",
+    "reading": "アドをしめます。",
+    "meaning": "关门。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "アドを閉めます",
+      "アドをしめます"
+    ],
+    "vocabularyIds": [
+      "v-0746"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-07",
+    "lessonId": "lesson-14",
+    "text": "エアコンをつけます。",
+    "reading": "エアコンをつけます。",
+    "meaning": "开空调。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "エアコンをつけます"
+    ],
+    "vocabularyIds": [
+      "v-0753"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-08",
+    "lessonId": "lesson-14",
+    "text": "喫茶店に入ります。",
+    "reading": "きっさてんにはいります。",
+    "meaning": "进咖啡店。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "喫茶店に入ります",
+      "きっさてんにはいります"
+    ],
+    "vocabularyIds": [
+      "v-0757"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-09",
+    "lessonId": "lesson-14",
+    "text": "喫茶店を出ます。",
+    "reading": "きっさてんをでます。",
+    "meaning": "出咖啡店。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "喫茶店を出ます",
+      "きっさてんをでます"
+    ],
+    "vocabularyIds": [
+      "v-0759"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-14-10",
+    "lessonId": "lesson-14",
+    "text": "待ちます。",
+    "reading": "まちます。",
+    "meaning": "等。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "待ちます",
+      "まちます"
+    ],
+    "vocabularyIds": [
+      "v-0719"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-01",
+    "lessonId": "lesson-15",
+    "text": "すみません。",
+    "reading": "すみません。",
+    "meaning": "对不起。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "すみません"
+    ],
+    "vocabularyIds": [
+      "v-0773"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-02",
+    "lessonId": "lesson-15",
+    "text": "北京に住みます。",
+    "reading": "ぺきんにすみます。",
+    "meaning": "住在北京。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "北京に住みます",
+      "ぺきんにすみます"
+    ],
+    "vocabularyIds": [
+      "v-0776"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-03",
+    "lessonId": "lesson-15",
+    "text": "知ります。",
+    "reading": "しります。",
+    "meaning": "知道。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "知ります",
+      "しります"
+    ],
+    "vocabularyIds": [
+      "v-0774"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-04",
+    "lessonId": "lesson-15",
+    "text": "住みます。",
+    "reading": "すみます。",
+    "meaning": "住、居住。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "住みます",
+      "すみます"
+    ],
+    "vocabularyIds": [
+      "v-0775"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-05",
+    "lessonId": "lesson-15",
+    "text": "いらっしゃいます。",
+    "reading": "いらっしゃいます。",
+    "meaning": "有、在（「います」的敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いらっしゃいます"
+    ],
+    "vocabularyIds": [
+      "v-0781"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-06",
+    "lessonId": "lesson-15",
+    "text": "置きます。",
+    "reading": "おきます。",
+    "meaning": "放。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "置きます",
+      "おきます"
+    ],
+    "vocabularyIds": [
+      "v-0782"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-07",
+    "lessonId": "lesson-15",
+    "text": "売ります。",
+    "reading": "うります。",
+    "meaning": "卖。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "売ります",
+      "うります"
+    ],
+    "vocabularyIds": [
+      "v-0785"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-08",
+    "lessonId": "lesson-15",
+    "text": "作ります。",
+    "reading": "つくります。",
+    "meaning": "做、制造。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "作ります",
+      "つくります"
+    ],
+    "vocabularyIds": [
+      "v-0787"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-09",
+    "lessonId": "lesson-15",
+    "text": "研究します。",
+    "reading": "けんきゅうします。",
+    "meaning": "研究。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "研究します",
+      "けんきゅうします"
+    ],
+    "vocabularyIds": [
+      "v-0790"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-15-10",
+    "lessonId": "lesson-15",
+    "text": "電子辞書です。",
+    "reading": "でんしじしょです。",
+    "meaning": "电子辞典。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "電子辞書",
+      "でんしじしょ"
+    ],
+    "vocabularyIds": [
+      "v-0771"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-01",
+    "lessonId": "lesson-16",
+    "text": "シャワーを浴びます。",
+    "reading": "シャワーをあびます。",
+    "meaning": "淋浴。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "シャワーを浴びます",
+      "シャワーをあびます"
+    ],
+    "vocabularyIds": [
+      "v-0802"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-02",
+    "lessonId": "lesson-16",
+    "text": "電車に乗ります。",
+    "reading": "でんしゃにのります。",
+    "meaning": "乘电车。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "電車に乗ります",
+      "でんしゃにのります"
+    ],
+    "vocabularyIds": [
+      "v-0807"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-03",
+    "lessonId": "lesson-16",
+    "text": "電車を降ります。",
+    "reading": "でんしゃをおります。",
+    "meaning": "下电车。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "電車を降ります",
+      "でんしゃをおります"
+    ],
+    "vocabularyIds": [
+      "v-0809"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-04",
+    "lessonId": "lesson-16",
+    "text": "お引き出しですか。",
+    "reading": "おひきだしですか。",
+    "meaning": "您是取钱吗？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お引き出しですか",
+      "おひきだしですか"
+    ],
+    "vocabularyIds": [
+      "v-0816"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-05",
+    "lessonId": "lesson-16",
+    "text": "背が高い。",
+    "reading": "せがたかい。",
+    "meaning": "个子高。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "背が高い",
+      "せがたかい"
+    ],
+    "vocabularyIds": [
+      "v-0827"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-06",
+    "lessonId": "lesson-16",
+    "text": "頭がいい。",
+    "reading": "あたまがいい。",
+    "meaning": "聪明。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "頭がいい",
+      "あたまがいい"
+    ],
+    "vocabularyIds": [
+      "v-0838"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-07",
+    "lessonId": "lesson-16",
+    "text": "お金を下ろします。",
+    "reading": "おかねをおろします。",
+    "meaning": "取钱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お金を下ろします",
+      "おかねをおろします"
+    ],
+    "vocabularyIds": [
+      "v-0844"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-08",
+    "lessonId": "lesson-16",
+    "text": "すごいですね。",
+    "reading": "すごいですね。",
+    "meaning": "真了不起、真棒。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "すごいですね"
+    ],
+    "vocabularyIds": [
+      "v-0852"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-09",
+    "lessonId": "lesson-16",
+    "text": "いいえ、まだまだです。",
+    "reading": "いいえ、まだまだです。",
+    "meaning": "不，还差得远。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いいえ、まだまだです"
+    ],
+    "vocabularyIds": [
+      "v-0853"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-16-10",
+    "lessonId": "lesson-16",
+    "text": "大学に入ります。",
+    "reading": "だいがくにはいります。",
+    "meaning": "上大学。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "大学に入ります",
+      "だいがくにはいります"
+    ],
+    "vocabularyIds": [
+      "v-0857"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-01",
+    "lessonId": "lesson-17",
+    "text": "お金を払います。",
+    "reading": "おかねをはらいます。",
+    "meaning": "付钱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お金を払います",
+      "おかねをはらいます"
+    ],
+    "vocabularyIds": [
+      "v-0866"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-02",
+    "lessonId": "lesson-17",
+    "text": "どうしましたか。",
+    "reading": "どうしましたか。",
+    "meaning": "怎么了？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どうしましたか"
+    ],
+    "vocabularyIds": [
+      "v-0868"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-03",
+    "lessonId": "lesson-17",
+    "text": "風邪を引きます。",
+    "reading": "かぜをひきます。",
+    "meaning": "感冒。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "風邪を引きます",
+      "かぜをひきます"
+    ],
+    "vocabularyIds": [
+      "v-0874"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-04",
+    "lessonId": "lesson-17",
+    "text": "薬を飲みます。",
+    "reading": "くすりをのみます。",
+    "meaning": "吃药。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "薬を飲みます",
+      "くすりをのみます"
+    ],
+    "vocabularyIds": [
+      "v-0879"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-05",
+    "lessonId": "lesson-17",
+    "text": "お風呂に入ります。",
+    "reading": "おふろにはいります。",
+    "meaning": "洗澡。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お風呂に入ります",
+      "おふろにはいります"
+    ],
+    "vocabularyIds": [
+      "v-0883"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-06",
+    "lessonId": "lesson-17",
+    "text": "心配します。",
+    "reading": "しんぱいします。",
+    "meaning": "担心。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "心配します",
+      "しんぱいします"
+    ],
+    "vocabularyIds": [
+      "v-0863"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-07",
+    "lessonId": "lesson-17",
+    "text": "払います。",
+    "reading": "はらいます。",
+    "meaning": "付（钱）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "払います",
+      "はらいます"
+    ],
+    "vocabularyIds": [
+      "v-0865"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-08",
+    "lessonId": "lesson-17",
+    "text": "出張します。",
+    "reading": "しゅっちょうします。",
+    "meaning": "出差。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出張します",
+      "しゅっちょうします"
+    ],
+    "vocabularyIds": [
+      "v-0876"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-09",
+    "lessonId": "lesson-17",
+    "text": "飲みます。",
+    "reading": "のみます。",
+    "meaning": "吃（药）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "飲みます",
+      "のみます"
+    ],
+    "vocabularyIds": [
+      "v-0878"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-17-10",
+    "lessonId": "lesson-17",
+    "text": "入ります。",
+    "reading": "はいります。",
+    "meaning": "进、入、洗（澡）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "入ります",
+      "はいります"
+    ],
+    "vocabularyIds": [
+      "v-0882"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-01",
+    "lessonId": "lesson-18",
+    "text": "馬に乗ります。",
+    "reading": "うまにのります。",
+    "meaning": "骑马。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "馬に乗ります",
+      "うまにのります"
+    ],
+    "vocabularyIds": [
+      "v-0912"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-02",
+    "lessonId": "lesson-18",
+    "text": "それはおもしろいですね。",
+    "reading": "それはおもしろいですね。",
+    "meaning": "那很有意思啊。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "それはおもしろいですね"
+    ],
+    "vocabularyIds": [
+      "v-0914"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-03",
+    "lessonId": "lesson-18",
+    "text": "本当ですか。",
+    "reading": "ほんとうですか。",
+    "meaning": "真的吗？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "本当ですか",
+      "ほんとうですか"
+    ],
+    "vocabularyIds": [
+      "v-0916"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-04",
+    "lessonId": "lesson-18",
+    "text": "できます。",
+    "reading": "できます。",
+    "meaning": "能、会、可以。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "できます"
+    ],
+    "vocabularyIds": [
+      "v-0902"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-05",
+    "lessonId": "lesson-18",
+    "text": "運転します。",
+    "reading": "うんてんします。",
+    "meaning": "驾驶。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "運転します",
+      "うんてんします"
+    ],
+    "vocabularyIds": [
+      "v-0905"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-06",
+    "lessonId": "lesson-18",
+    "text": "集めます。",
+    "reading": "あつめます。",
+    "meaning": "收集、收藏。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "集めます",
+      "あつめます"
+    ],
+    "vocabularyIds": [
+      "v-0908"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-07",
+    "lessonId": "lesson-18",
+    "text": "弾きます。",
+    "reading": "ひきます。",
+    "meaning": "弹奏、弹。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "弾きます",
+      "ひきます"
+    ],
+    "vocabularyIds": [
+      "v-0919"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-08",
+    "lessonId": "lesson-18",
+    "text": "予約します。",
+    "reading": "よやくします。",
+    "meaning": "预订。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "予約します",
+      "よやくします"
+    ],
+    "vocabularyIds": [
+      "v-0920"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-09",
+    "lessonId": "lesson-18",
+    "text": "換えます。",
+    "reading": "かえます。",
+    "meaning": "换。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "換えます",
+      "かえます"
+    ],
+    "vocabularyIds": [
+      "v-0922"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-18-10",
+    "lessonId": "lesson-18",
+    "text": "歌います。",
+    "reading": "うたいます。",
+    "meaning": "唱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "歌います",
+      "うたいます"
+    ],
+    "vocabularyIds": [
+      "v-0924"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-01",
+    "lessonId": "lesson-19",
+    "text": "調子がいい。",
+    "reading": "ちょうしがいい。",
+    "meaning": "情况好、状态好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "調子がいい",
+      "ちょうしがいい"
+    ],
+    "vocabularyIds": [
+      "v-0943"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-02",
+    "lessonId": "lesson-19",
+    "text": "調子が悪い。",
+    "reading": "ちょうしがわるい。",
+    "meaning": "情况不好、状态不好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "調子が悪い",
+      "ちょうしがわるい"
+    ],
+    "vocabularyIds": [
+      "v-0944"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-03",
+    "lessonId": "lesson-19",
+    "text": "体にいい。",
+    "reading": "からだにいい。",
+    "meaning": "对身体好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "体にいい",
+      "からだにいい"
+    ],
+    "vocabularyIds": [
+      "v-0950"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-04",
+    "lessonId": "lesson-19",
+    "text": "ホテルに泊まります。",
+    "reading": "ホテルにとまります。",
+    "meaning": "住酒店。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ホテルに泊まります",
+      "ホテルにとまります"
+    ],
+    "vocabularyIds": [
+      "v-0954"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-05",
+    "lessonId": "lesson-19",
+    "text": "なります。",
+    "reading": "なります。",
+    "meaning": "变成、成为。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "なります"
+    ],
+    "vocabularyIds": [
+      "v-0938"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-06",
+    "lessonId": "lesson-19",
+    "text": "乾杯します。",
+    "reading": "かんぱいします。",
+    "meaning": "干杯。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "乾杯します",
+      "かんぱいします"
+    ],
+    "vocabularyIds": [
+      "v-0947"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-07",
+    "lessonId": "lesson-19",
+    "text": "泊まります。",
+    "reading": "とまります。",
+    "meaning": "住（短期）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "泊まります",
+      "とまります"
+    ],
+    "vocabularyIds": [
+      "v-0953"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-08",
+    "lessonId": "lesson-19",
+    "text": "掃除します。",
+    "reading": "そうじします。",
+    "meaning": "打扫。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "掃除します",
+      "そうじします"
+    ],
+    "vocabularyIds": [
+      "v-0955"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-09",
+    "lessonId": "lesson-19",
+    "text": "洗濯します。",
+    "reading": "せんたくします。",
+    "meaning": "洗衣服。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "洗濯します",
+      "せんたくします"
+    ],
+    "vocabularyIds": [
+      "v-0956"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-19-10",
+    "lessonId": "lesson-19",
+    "text": "無理です。",
+    "reading": "むりです。",
+    "meaning": "勉强。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "無理",
+      "むり"
+    ],
+    "vocabularyIds": [
+      "v-0949"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-01",
+    "lessonId": "lesson-20",
+    "text": "お腹がいっぱいです。",
+    "reading": "おなかがいっぱいです。",
+    "meaning": "肚子饱了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お腹がいっぱいです",
+      "おなかがいっぱいです"
+    ],
+    "vocabularyIds": [
+      "v-0974"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-02",
+    "lessonId": "lesson-20",
+    "text": "ビザが要ります。",
+    "reading": "ビザがいります。",
+    "meaning": "要签证。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ビザが要ります",
+      "ビザがいります"
+    ],
+    "vocabularyIds": [
+      "v-0987"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-03",
+    "lessonId": "lesson-20",
+    "text": "調べます。",
+    "reading": "しらべます。",
+    "meaning": "查、调查。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "調べます",
+      "しらべます"
+    ],
+    "vocabularyIds": [
+      "v-0981"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-04",
+    "lessonId": "lesson-20",
+    "text": "要ります。",
+    "reading": "いります。",
+    "meaning": "要。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "要ります",
+      "いります"
+    ],
+    "vocabularyIds": [
+      "v-0986"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-05",
+    "lessonId": "lesson-20",
+    "text": "修理します。",
+    "reading": "しゅうりします。",
+    "meaning": "修理。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "修理します",
+      "しゅうりします"
+    ],
+    "vocabularyIds": [
+      "v-0991"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-06",
+    "lessonId": "lesson-20",
+    "text": "僕です。",
+    "reading": "ぼくです。",
+    "meaning": "我（男子用语，比「私」随意）。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "僕",
+      "ぼく"
+    ],
+    "vocabularyIds": [
+      "v-0969"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-07",
+    "lessonId": "lesson-20",
+    "text": "君です。",
+    "reading": "きみです。",
+    "meaning": "你（用于同辈、部下、晚辈、比「あなた」随意）。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "君",
+      "きみ"
+    ],
+    "vocabularyIds": [
+      "v-0970"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-08",
+    "lessonId": "lesson-20",
+    "text": "初めです。",
+    "reading": "はじめです。",
+    "meaning": "开始。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "初め",
+      "はじめ"
+    ],
+    "vocabularyIds": [
+      "v-0978"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-09",
+    "lessonId": "lesson-20",
+    "text": "初め頃です。",
+    "reading": "はじめごろです。",
+    "meaning": "开始的时候。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "初め頃",
+      "はじめごろ"
+    ],
+    "vocabularyIds": [
+      "v-0979"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-20-10",
+    "lessonId": "lesson-20",
+    "text": "着物です。",
+    "reading": "きものです。",
+    "meaning": "和服。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "着物",
+      "きもの"
+    ],
+    "vocabularyIds": [
+      "v-0982"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-01",
+    "lessonId": "lesson-21",
+    "text": "お祭りがあります。",
+    "reading": "おまつりがあります。",
+    "meaning": "有节庆活动。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お祭りがあります",
+      "おまつりがあります"
+    ],
+    "vocabularyIds": [
+      "v-1005"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-02",
+    "lessonId": "lesson-21",
+    "text": "久しぶりですね。",
+    "reading": "ひさしぶりですね。",
+    "meaning": "好久不见。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "久しぶりですね",
+      "ひさしぶりですね"
+    ],
+    "vocabularyIds": [
+      "v-1006"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-03",
+    "lessonId": "lesson-21",
+    "text": "もう帰らないと…。",
+    "reading": "もうかえらないと。",
+    "meaning": "该回去了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "もう帰らないと…",
+      "もうかえらないと"
+    ],
+    "vocabularyIds": [
+      "v-1014"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-04",
+    "lessonId": "lesson-21",
+    "text": "会社を辞めます。",
+    "reading": "かいしゃをやめます。",
+    "meaning": "跟公司辞职。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "会社を辞めます",
+      "かいしゃをやめます"
+    ],
+    "vocabularyIds": [
+      "v-1019"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-05",
+    "lessonId": "lesson-21",
+    "text": "思います。",
+    "reading": "おもいます。",
+    "meaning": "想、觉得。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "思います",
+      "おもいます"
+    ],
+    "vocabularyIds": [
+      "v-0993"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-06",
+    "lessonId": "lesson-21",
+    "text": "留学します。",
+    "reading": "りゅうがくします。",
+    "meaning": "留学。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "留学します",
+      "りゅうがくします"
+    ],
+    "vocabularyIds": [
+      "v-0994"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-07",
+    "lessonId": "lesson-21",
+    "text": "言います。",
+    "reading": "いいます。",
+    "meaning": "说、讲。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "言います",
+      "いいます"
+    ],
+    "vocabularyIds": [
+      "v-0995"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-08",
+    "lessonId": "lesson-21",
+    "text": "あります。",
+    "reading": "あります。",
+    "meaning": "举行、有。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "あります"
+    ],
+    "vocabularyIds": [
+      "v-1004"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-09",
+    "lessonId": "lesson-21",
+    "text": "勝ちます。",
+    "reading": "かちます。",
+    "meaning": "赢。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "勝ちます",
+      "かちます"
+    ],
+    "vocabularyIds": [
+      "v-1010"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-21-10",
+    "lessonId": "lesson-21",
+    "text": "負けます。",
+    "reading": "まけます。",
+    "meaning": "输。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "負けます",
+      "まけます"
+    ],
+    "vocabularyIds": [
+      "v-1011"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-01",
+    "lessonId": "lesson-22",
+    "text": "着物を着ます。",
+    "reading": "きものをきます。",
+    "meaning": "穿和服。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "着物を着ます",
+      "きものをきます"
+    ],
+    "vocabularyIds": [
+      "v-1050"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-02",
+    "lessonId": "lesson-22",
+    "text": "お探しですか。",
+    "reading": "お探しですか。",
+    "meaning": "您在找～吗？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お探しですか"
+    ],
+    "vocabularyIds": [
+      "v-1051"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-03",
+    "lessonId": "lesson-22",
+    "text": "眼鏡をかけます。",
+    "reading": "めがねをかけます。",
+    "meaning": "戴眼镜。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "眼鏡をかけます",
+      "めがねをかけます"
+    ],
+    "vocabularyIds": [
+      "v-1062"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-04",
+    "lessonId": "lesson-22",
+    "text": "靴をはきます。",
+    "reading": "くつをはきます。",
+    "meaning": "穿鞋。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "靴をはきます",
+      "くつをはきます"
+    ],
+    "vocabularyIds": [
+      "v-1067"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-05",
+    "lessonId": "lesson-22",
+    "text": "ネクタイをします。",
+    "reading": "ネクタイをします。",
+    "meaning": "系领带。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ネクタイをします"
+    ],
+    "vocabularyIds": [
+      "v-1069"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-06",
+    "lessonId": "lesson-22",
+    "text": "帽子を被ります。",
+    "reading": "ぼうしをかぶります。",
+    "meaning": "戴帽子。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "帽子を被ります",
+      "ぼうしをかぶります"
+    ],
+    "vocabularyIds": [
+      "v-1071"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-07",
+    "lessonId": "lesson-22",
+    "text": "子供が生まれます。",
+    "reading": "こどもがうまれます。",
+    "meaning": "孩子出生。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "子供が生まれます",
+      "こどもがうまれます"
+    ],
+    "vocabularyIds": [
+      "v-1073"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-08",
+    "lessonId": "lesson-22",
+    "text": "セーターを編みます。",
+    "reading": "せーたーをあみます。",
+    "meaning": "织毛衣。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "セーターを編みます",
+      "せーたーをあみます"
+    ],
+    "vocabularyIds": [
+      "v-1082"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-09",
+    "lessonId": "lesson-22",
+    "text": "着ます。",
+    "reading": "きます。",
+    "meaning": "穿（衬衫等上衣、外衣）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "着ます",
+      "きます"
+    ],
+    "vocabularyIds": [
+      "v-1049"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-22-10",
+    "lessonId": "lesson-22",
+    "text": "かけます。",
+    "reading": "かけます。",
+    "meaning": "戴、佩戴。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "かけます"
+    ],
+    "vocabularyIds": [
+      "v-1061"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-01",
+    "lessonId": "lesson-23",
+    "text": "お釣りが出ます。",
+    "reading": "おつりがでます。",
+    "meaning": "找零钱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お釣りが出ます",
+      "おつりがでます"
+    ],
+    "vocabularyIds": [
+      "v-1091"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-02",
+    "lessonId": "lesson-23",
+    "text": "橋を渡ります。",
+    "reading": "はしをわたります。",
+    "meaning": "过桥。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "橋を渡ります",
+      "はしをわたります"
+    ],
+    "vocabularyIds": [
+      "v-1099"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-03",
+    "lessonId": "lesson-23",
+    "text": "道を渡ります。",
+    "reading": "みちをわたります。",
+    "meaning": "过马路。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道を渡ります",
+      "みちをわたります"
+    ],
+    "vocabularyIds": [
+      "v-1100"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-04",
+    "lessonId": "lesson-23",
+    "text": "先生に聞きます。",
+    "reading": "せんせいにききます。",
+    "meaning": "问老师。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "先生に聞きます",
+      "せんせいにききます"
+    ],
+    "vocabularyIds": [
+      "v-1102"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-05",
+    "lessonId": "lesson-23",
+    "text": "道を聞きます。",
+    "reading": "みちをききます。",
+    "meaning": "问路。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道を聞きます",
+      "みちをききます"
+    ],
+    "vocabularyIds": [
+      "v-1103"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-06",
+    "lessonId": "lesson-23",
+    "text": "ドアに触ります。",
+    "reading": "どあにさわります。",
+    "meaning": "碰到门。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ドアに触ります",
+      "どあにさわります"
+    ],
+    "vocabularyIds": [
+      "v-1111"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-07",
+    "lessonId": "lesson-23",
+    "text": "右へ曲がります。",
+    "reading": "みぎへまがりなす。",
+    "meaning": "往右拐。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "右へ曲がります",
+      "みぎへまがりなす"
+    ],
+    "vocabularyIds": [
+      "v-1120"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-08",
+    "lessonId": "lesson-23",
+    "text": "出ます。",
+    "reading": "でます。",
+    "meaning": "找（钱）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出ます",
+      "でます"
+    ],
+    "vocabularyIds": [
+      "v-1090"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-09",
+    "lessonId": "lesson-23",
+    "text": "渡ります。",
+    "reading": "わたります。",
+    "meaning": "渡过、过。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "渡ります",
+      "わたります"
+    ],
+    "vocabularyIds": [
+      "v-1098"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-23-10",
+    "lessonId": "lesson-23",
+    "text": "聞きます。",
+    "reading": "ききます。",
+    "meaning": "问。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "聞きます",
+      "ききます"
+    ],
+    "vocabularyIds": [
+      "v-1101"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-01",
+    "lessonId": "lesson-24",
+    "text": "人を送ります。",
+    "reading": "ひとをおくります。",
+    "meaning": "送人。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "人を送ります",
+      "ひとをおくります"
+    ],
+    "vocabularyIds": [
+      "v-1127"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-02",
+    "lessonId": "lesson-24",
+    "text": "子供を連れていきます。",
+    "reading": "こどもをつれていきます。",
+    "meaning": "带孩子去。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "子供を連れていきます",
+      "こどもをつれていきます"
+    ],
+    "vocabularyIds": [
+      "v-1139"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-03",
+    "lessonId": "lesson-24",
+    "text": "先生を紹介します。",
+    "reading": "せんせいをしょうかいします。",
+    "meaning": "介绍老师。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "先生を紹介します",
+      "せんせいをしょうかいします"
+    ],
+    "vocabularyIds": [
+      "v-1142"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-04",
+    "lessonId": "lesson-24",
+    "text": "学校を案内します。",
+    "reading": "がくこうをあんないします。",
+    "meaning": "陪同参观学校。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "学校を案内します",
+      "がくこうをあんないします"
+    ],
+    "vocabularyIds": [
+      "v-1144"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-05",
+    "lessonId": "lesson-24",
+    "text": "くれます。",
+    "reading": "くれます。",
+    "meaning": "给（我、我方）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "くれます"
+    ],
+    "vocabularyIds": [
+      "v-1124"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-06",
+    "lessonId": "lesson-24",
+    "text": "直します。",
+    "reading": "なおします。",
+    "meaning": "修理、修改。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "直します",
+      "なおします"
+    ],
+    "vocabularyIds": [
+      "v-1125"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-07",
+    "lessonId": "lesson-24",
+    "text": "送ります。",
+    "reading": "おくります。",
+    "meaning": "送。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "送ります",
+      "おくります"
+    ],
+    "vocabularyIds": [
+      "v-1126"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-08",
+    "lessonId": "lesson-24",
+    "text": "連れて行きます。",
+    "reading": "つれていきます。",
+    "meaning": "领着去（人、动物）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "連れて行きます",
+      "つれていきます"
+    ],
+    "vocabularyIds": [
+      "v-1138"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-09",
+    "lessonId": "lesson-24",
+    "text": "連れて来ます。",
+    "reading": "連れてきます。",
+    "meaning": "领着来（人、动物）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "連れて来ます",
+      "連れてきます"
+    ],
+    "vocabularyIds": [
+      "v-1140"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-24-10",
+    "lessonId": "lesson-24",
+    "text": "紹介します。",
+    "reading": "しょうかいします。",
+    "meaning": "介绍。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "紹介します",
+      "しょうかいします"
+    ],
+    "vocabularyIds": [
+      "v-1141"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-01",
+    "lessonId": "lesson-25",
+    "text": "色々お世話になりました。",
+    "reading": "いろいろおせわになりました。",
+    "meaning": "承蒙（多方）关照。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "色々お世話になりました",
+      "いろいろおせわになりました"
+    ],
+    "vocabularyIds": [
+      "v-1159"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-02",
+    "lessonId": "lesson-25",
+    "text": "どうぞお元気で。",
+    "reading": "どうぞおげんきで。",
+    "meaning": "请多保重。祝你健康（长期分别时使用）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どうぞお元気で",
+      "どうぞおげんきで"
+    ],
+    "vocabularyIds": [
+      "v-1161"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-03",
+    "lessonId": "lesson-25",
+    "text": "駅に着きます。",
+    "reading": "えきにつきます。",
+    "meaning": "到达车站。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "駅に着きます",
+      "えきにつきます"
+    ],
+    "vocabularyIds": [
+      "v-1164"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-04",
+    "lessonId": "lesson-25",
+    "text": "年を取ります。",
+    "reading": "としをとります。",
+    "meaning": "上年纪。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "年を取ります",
+      "としをとります"
+    ],
+    "vocabularyIds": [
+      "v-1167"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-05",
+    "lessonId": "lesson-25",
+    "text": "考えます。",
+    "reading": "かんがえます。",
+    "meaning": "考虑、想。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "考えます",
+      "かんがえます"
+    ],
+    "vocabularyIds": [
+      "v-1153"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-06",
+    "lessonId": "lesson-25",
+    "text": "頑張ります。",
+    "reading": "がんばります。",
+    "meaning": "加油、努力。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "頑張ります",
+      "がんばります"
+    ],
+    "vocabularyIds": [
+      "v-1160"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-07",
+    "lessonId": "lesson-25",
+    "text": "着きます。",
+    "reading": "つきます。",
+    "meaning": "到、到达。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "着きます",
+      "つきます"
+    ],
+    "vocabularyIds": [
+      "v-1163"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-08",
+    "lessonId": "lesson-25",
+    "text": "足ります。",
+    "reading": "たります。",
+    "meaning": "够。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "足ります",
+      "たります"
+    ],
+    "vocabularyIds": [
+      "v-1165"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-09",
+    "lessonId": "lesson-25",
+    "text": "取ります。",
+    "reading": "とります。",
+    "meaning": "上（年纪）；拿。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "取ります",
+      "とります"
+    ],
+    "vocabularyIds": [
+      "v-1166"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-25-10",
+    "lessonId": "lesson-25",
+    "text": "億です。",
+    "reading": "おくです。",
+    "meaning": "亿。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "億",
+      "おく"
+    ],
+    "vocabularyIds": [
+      "v-1152"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-01",
+    "lessonId": "lesson-26",
+    "text": "時間に遅れます。",
+    "reading": "じかんにおくれます。",
+    "meaning": "没赶上时间。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "時間に遅れます",
+      "じかんにおくれます"
+    ],
+    "vocabularyIds": [
+      "v-1175"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-02",
+    "lessonId": "lesson-26",
+    "text": "ごみを出します。",
+    "reading": "ごみをだします。",
+    "meaning": "扔垃圾。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ごみを出します",
+      "ごみをだします"
+    ],
+    "vocabularyIds": [
+      "v-1189"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-03",
+    "lessonId": "lesson-26",
+    "text": "荷物が片付きます。",
+    "reading": "にもつがかたづきます。",
+    "meaning": "收拾行李（状态）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "荷物が片付きます",
+      "にもつがかたづきます"
+    ],
+    "vocabularyIds": [
+      "v-1191"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-04",
+    "lessonId": "lesson-26",
+    "text": "荷物を片付けます。",
+    "reading": "にもつをかたづけます。",
+    "meaning": "收拾行李（动作）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "荷物を片付けます",
+      "にもつをかたづけます"
+    ],
+    "vocabularyIds": [
+      "v-1192"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-05",
+    "lessonId": "lesson-26",
+    "text": "時間に間に合います。",
+    "reading": "じかんにまにあいます。",
+    "meaning": "赶上时间。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "時間に間に合います",
+      "じかんにまにあいます"
+    ],
+    "vocabularyIds": [
+      "v-1213"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-06",
+    "lessonId": "lesson-26",
+    "text": "遅れます。",
+    "reading": "おくれます。",
+    "meaning": "晚了、没赶上。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "遅れます",
+      "おくれます"
+    ],
+    "vocabularyIds": [
+      "v-1174"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-07",
+    "lessonId": "lesson-26",
+    "text": "見ます。",
+    "reading": "みます。",
+    "meaning": "看、诊断。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "見ます",
+      "みます"
+    ],
+    "vocabularyIds": [
+      "v-1176"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-08",
+    "lessonId": "lesson-26",
+    "text": "診ます。",
+    "reading": "みます。",
+    "meaning": "看、诊断。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "診ます",
+      "みます"
+    ],
+    "vocabularyIds": [
+      "v-1177"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-09",
+    "lessonId": "lesson-26",
+    "text": "出します。",
+    "reading": "だします。",
+    "meaning": "扔。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出します",
+      "だします"
+    ],
+    "vocabularyIds": [
+      "v-1188"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-26-10",
+    "lessonId": "lesson-26",
+    "text": "片付きます。",
+    "reading": "かたずきます。",
+    "meaning": "收拾。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "片付きます",
+      "かたずきます"
+    ],
+    "vocabularyIds": [
+      "v-1190"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-01",
+    "lessonId": "lesson-27",
+    "text": "山が見えます。",
+    "reading": "やまがみえます。",
+    "meaning": "看见山。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "山が見えます",
+      "やまがみえます"
+    ],
+    "vocabularyIds": [
+      "v-1234"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-02",
+    "lessonId": "lesson-27",
+    "text": "道が出来ます。",
+    "reading": "みちができます。",
+    "meaning": "建好道路。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道が出来ます",
+      "みちができます"
+    ],
+    "vocabularyIds": [
+      "v-1236"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-03",
+    "lessonId": "lesson-27",
+    "text": "犬を飼います。",
+    "reading": "いぬがかいます。",
+    "meaning": "养狗。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "犬を飼います",
+      "いぬがかいます"
+    ],
+    "vocabularyIds": [
+      "v-1245"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-04",
+    "lessonId": "lesson-27",
+    "text": "道を走ります。",
+    "reading": "みちをはしります。",
+    "meaning": "奔跑在路上。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道を走ります",
+      "みちをはしります"
+    ],
+    "vocabularyIds": [
+      "v-1255"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-05",
+    "lessonId": "lesson-27",
+    "text": "教室を開きます。",
+    "reading": "きょうしつをひらきます。",
+    "meaning": "开设教室。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "教室を開きます",
+      "きょうしつをひらきます"
+    ],
+    "vocabularyIds": [
+      "v-1263"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-06",
+    "lessonId": "lesson-27",
+    "text": "見えます。",
+    "reading": "みえます。",
+    "meaning": "（能）看见。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "見えます",
+      "みえます"
+    ],
+    "vocabularyIds": [
+      "v-1233"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-07",
+    "lessonId": "lesson-27",
+    "text": "出来ます。",
+    "reading": "できます。",
+    "meaning": "建好、交上（朋友）、做好（饭）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出来ます",
+      "できます"
+    ],
+    "vocabularyIds": [
+      "v-1235"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-08",
+    "lessonId": "lesson-27",
+    "text": "聞こえます。",
+    "reading": "きこえます。",
+    "meaning": "（能）听见。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "聞こえます",
+      "きこえます"
+    ],
+    "vocabularyIds": [
+      "v-1239"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-09",
+    "lessonId": "lesson-27",
+    "text": "飼います。",
+    "reading": "かいます。",
+    "meaning": "饲养。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "飼います",
+      "かいます"
+    ],
+    "vocabularyIds": [
+      "v-1244"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-27-10",
+    "lessonId": "lesson-27",
+    "text": "建てます。",
+    "reading": "たてます。",
+    "meaning": "建、盖。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "建てます",
+      "たてます"
+    ],
+    "vocabularyIds": [
+      "v-1251"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-01",
+    "lessonId": "lesson-28",
+    "text": "大学に通います。",
+    "reading": "だいがくにかよいます。",
+    "meaning": "上大学。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "大学に通います",
+      "だいがくにかよいます"
+    ],
+    "vocabularyIds": [
+      "v-1319"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-02",
+    "lessonId": "lesson-28",
+    "text": "ちょうどいい。",
+    "reading": "ちょうどいい。",
+    "meaning": "正好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ちょうどいい"
+    ],
+    "vocabularyIds": [
+      "v-1326"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-03",
+    "lessonId": "lesson-28",
+    "text": "パンが売れます。",
+    "reading": "パンがうれます。",
+    "meaning": "面包很畅销。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "パンが売れます",
+      "パンがうれます"
+    ],
+    "vocabularyIds": [
+      "v-1329"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-04",
+    "lessonId": "lesson-28",
+    "text": "噛みます。",
+    "reading": "かみます。",
+    "meaning": "嚼、咬。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "噛みます",
+      "かみます"
+    ],
+    "vocabularyIds": [
+      "v-1290"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-05",
+    "lessonId": "lesson-28",
+    "text": "選びます。",
+    "reading": "えらびます。",
+    "meaning": "选择。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "選びます",
+      "えらびます"
+    ],
+    "vocabularyIds": [
+      "v-1297"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-06",
+    "lessonId": "lesson-28",
+    "text": "踊ります。",
+    "reading": "おどります。",
+    "meaning": "跳舞。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "踊ります",
+      "おどります"
+    ],
+    "vocabularyIds": [
+      "v-1311"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-07",
+    "lessonId": "lesson-28",
+    "text": "メモします。",
+    "reading": "メモします。",
+    "meaning": "记笔记。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "メモします"
+    ],
+    "vocabularyIds": [
+      "v-1312"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-08",
+    "lessonId": "lesson-28",
+    "text": "通います。",
+    "reading": "かよいます。",
+    "meaning": "上（学）、定期往返。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "通います",
+      "かよいます"
+    ],
+    "vocabularyIds": [
+      "v-1318"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-09",
+    "lessonId": "lesson-28",
+    "text": "売れます。",
+    "reading": "うれます。",
+    "meaning": "卖得好、畅销。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "売れます",
+      "うれます"
+    ],
+    "vocabularyIds": [
+      "v-1328"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-28-10",
+    "lessonId": "lesson-28",
+    "text": "参加します。",
+    "reading": "さんかします。",
+    "meaning": "参加。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "参加します",
+      "さんかします"
+    ],
+    "vocabularyIds": [
+      "v-1341"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-01",
+    "lessonId": "lesson-29",
+    "text": "ドアが閉まります。",
+    "reading": "どあがしまります。",
+    "meaning": "门关着。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ドアが閉まります",
+      "どあがしまります"
+    ],
+    "vocabularyIds": [
+      "v-1349"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-02",
+    "lessonId": "lesson-29",
+    "text": "鍵がかかります。",
+    "reading": "かぎがかかります。",
+    "meaning": "上着锁。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "鍵がかかります",
+      "かぎがかかります"
+    ],
+    "vocabularyIds": [
+      "v-1351"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-03",
+    "lessonId": "lesson-29",
+    "text": "ポケットが付きます。",
+    "reading": "ポケットが付きます。",
+    "meaning": "带有口袋。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ポケットが付きます"
+    ],
+    "vocabularyIds": [
+      "v-1362"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-04",
+    "lessonId": "lesson-29",
+    "text": "覚えていません。",
+    "reading": "おぼえていません。",
+    "meaning": "不记得了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "覚えていません",
+      "おぼえていません"
+    ],
+    "vocabularyIds": [
+      "v-1364"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-05",
+    "lessonId": "lesson-29",
+    "text": "ドアが開きます。",
+    "reading": "ドアをあきます。",
+    "meaning": "门开着。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ドアが開きます",
+      "ドアをあきます"
+    ],
+    "vocabularyIds": [
+      "v-1370"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-06",
+    "lessonId": "lesson-29",
+    "text": "車が止まります。",
+    "reading": "くるまがとまります。",
+    "meaning": "车停着。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "車が止まります",
+      "くるまがとまります"
+    ],
+    "vocabularyIds": [
+      "v-1372"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-07",
+    "lessonId": "lesson-29",
+    "text": "コップが割れます。",
+    "reading": "コップがわれます。",
+    "meaning": "杯子碎了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "コップが割れます",
+      "コップがわれます"
+    ],
+    "vocabularyIds": [
+      "v-1375"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-08",
+    "lessonId": "lesson-29",
+    "text": "紙が破れます。",
+    "reading": "かみがやぶれます。",
+    "meaning": "纸破了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "紙が破れます",
+      "かみがやぶれます"
+    ],
+    "vocabularyIds": [
+      "v-1378"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-09",
+    "lessonId": "lesson-29",
+    "text": "木が折れます。",
+    "reading": "きがおれます。",
+    "meaning": "树折断了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "木が折れます",
+      "きがおれます"
+    ],
+    "vocabularyIds": [
+      "v-1380"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-29-10",
+    "lessonId": "lesson-29",
+    "text": "いすが壊れます。",
+    "reading": "いすがこわれます。",
+    "meaning": "椅子坏了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いすが壊れます",
+      "いすがこわれます"
+    ],
+    "vocabularyIds": [
+      "v-1384"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-01",
+    "lessonId": "lesson-30",
+    "text": "未だ使っています。",
+    "reading": "まだつかっています。",
+    "meaning": "还在使用。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "未だ使っています",
+      "まだつかっています"
+    ],
+    "vocabularyIds": [
+      "v-1423"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-02",
+    "lessonId": "lesson-30",
+    "text": "壁に絵を掛けます。",
+    "reading": "かべにえをかけます。",
+    "meaning": "把画挂在墙上。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "壁に絵を掛けます",
+      "かべにえをかけます"
+    ],
+    "vocabularyIds": [
+      "v-1434"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-03",
+    "lessonId": "lesson-30",
+    "text": "名前を決めます。",
+    "reading": "なまえをきめます。",
+    "meaning": "决定名字。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "名前を決めます",
+      "なまえをきめます"
+    ],
+    "vocabularyIds": [
+      "v-1440"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-04",
+    "lessonId": "lesson-30",
+    "text": "木を植えます。",
+    "reading": "きをうえます。",
+    "meaning": "植树。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "木を植えます",
+      "きをうえます"
+    ],
+    "vocabularyIds": [
+      "v-1447"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-05",
+    "lessonId": "lesson-30",
+    "text": "貼ります。",
+    "reading": "はります。",
+    "meaning": "贴。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "貼ります",
+      "はります"
+    ],
+    "vocabularyIds": [
+      "v-1414"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-06",
+    "lessonId": "lesson-30",
+    "text": "仕舞います。",
+    "reading": "しまいます。",
+    "meaning": "收拾整理。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "仕舞います",
+      "しまいます"
+    ],
+    "vocabularyIds": [
+      "v-1416"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-07",
+    "lessonId": "lesson-30",
+    "text": "戻します。",
+    "reading": "もどします。",
+    "meaning": "返还、还原。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "戻します",
+      "もどします"
+    ],
+    "vocabularyIds": [
+      "v-1419"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-08",
+    "lessonId": "lesson-30",
+    "text": "其の儘にします。",
+    "reading": "そのままにします。",
+    "meaning": "保持原状。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "其の儘にします",
+      "そのままにします"
+    ],
+    "vocabularyIds": [
+      "v-1421"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-09",
+    "lessonId": "lesson-30",
+    "text": "生活します。",
+    "reading": "せいかつします。",
+    "meaning": "生活。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "生活します",
+      "せいかつします"
+    ],
+    "vocabularyIds": [
+      "v-1427"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-30-10",
+    "lessonId": "lesson-30",
+    "text": "掛けます。",
+    "reading": "かけます。",
+    "meaning": "挂。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "掛けます",
+      "かけます"
+    ],
+    "vocabularyIds": [
+      "v-1432"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-01",
+    "lessonId": "lesson-31",
+    "text": "柔道を続けます。",
+    "reading": "じゅうどうをつづけます。",
+    "meaning": "继续练柔道。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "柔道を続けます",
+      "じゅうどうをつづけます"
+    ],
+    "vocabularyIds": [
+      "v-1473"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-02",
+    "lessonId": "lesson-31",
+    "text": "試験に受かります。",
+    "reading": "しけんにうかります。",
+    "meaning": "通过考试。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "試験に受かります",
+      "しけんにうかります"
+    ],
+    "vocabularyIds": [
+      "v-1477"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-03",
+    "lessonId": "lesson-31",
+    "text": "試験を受けます。",
+    "reading": "しけんをうけます。",
+    "meaning": "参加考试。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "試験を受けます",
+      "しけんをうけます"
+    ],
+    "vocabularyIds": [
+      "v-1479"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-04",
+    "lessonId": "lesson-31",
+    "text": "東京に残ります。",
+    "reading": "とうきょうにのこります。",
+    "meaning": "留在东京。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "東京に残ります",
+      "とうきょうにのこります"
+    ],
+    "vocabularyIds": [
+      "v-1483"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-05",
+    "lessonId": "lesson-31",
+    "text": "仕事を見つけます。",
+    "reading": "しごとをみつけます。",
+    "meaning": "找到工作。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "仕事を見つけます",
+      "しごとをみつけます"
+    ],
+    "vocabularyIds": [
+      "v-1489"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-06",
+    "lessonId": "lesson-31",
+    "text": "休みを取ります。",
+    "reading": "やすみをとります。",
+    "meaning": "取得休假。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "休みを取ります",
+      "やすみをとります"
+    ],
+    "vocabularyIds": [
+      "v-1508"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-07",
+    "lessonId": "lesson-31",
+    "text": "目を閉じます。",
+    "reading": "めをとじます。",
+    "meaning": "闭上眼睛。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "目を閉じます",
+      "めをとじます"
+    ],
+    "vocabularyIds": [
+      "v-1520"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-08",
+    "lessonId": "lesson-31",
+    "text": "続きます。",
+    "reading": "つづきます。",
+    "meaning": "继续、持续。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "続きます",
+      "つづきます"
+    ],
+    "vocabularyIds": [
+      "v-1471"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-09",
+    "lessonId": "lesson-31",
+    "text": "続けます。",
+    "reading": "つづけます。",
+    "meaning": "继续。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "続けます",
+      "つづけます"
+    ],
+    "vocabularyIds": [
+      "v-1472"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-31-10",
+    "lessonId": "lesson-31",
+    "text": "受かります。",
+    "reading": "うかります。",
+    "meaning": "考上～、合格。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "受かります",
+      "うかります"
+    ],
+    "vocabularyIds": [
+      "v-1476"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-01",
+    "lessonId": "lesson-32",
+    "text": "熱が続きます。",
+    "reading": "ねつがつづきます。",
+    "meaning": "持续发烧。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "熱が続きます",
+      "ねつがつづきます"
+    ],
+    "vocabularyIds": [
+      "v-1530"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-02",
+    "lessonId": "lesson-32",
+    "text": "それはいけませんね。",
+    "reading": "それはいけませんね。",
+    "meaning": "那可不太好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "それはいけませんね"
+    ],
+    "vocabularyIds": [
+      "v-1535"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-03",
+    "lessonId": "lesson-32",
+    "text": "風邪を引きます。",
+    "reading": "かぜをひきます。",
+    "meaning": "得感冒。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "風邪を引きます",
+      "かぜをひきます"
+    ],
+    "vocabularyIds": [
+      "v-1546"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-04",
+    "lessonId": "lesson-32",
+    "text": "雨が止みます。",
+    "reading": "あめがやみます。",
+    "meaning": "雨停了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "雨が止みます",
+      "あめがやみます"
+    ],
+    "vocabularyIds": [
+      "v-1549"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-05",
+    "lessonId": "lesson-32",
+    "text": "道が空きます。",
+    "reading": "みちがすきます。",
+    "meaning": "道路通畅。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道が空きます",
+      "みちがすきます"
+    ],
+    "vocabularyIds": [
+      "v-1554"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-06",
+    "lessonId": "lesson-32",
+    "text": "お釣りが出ます。",
+    "reading": "おつりがでます。",
+    "meaning": "找零钱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お釣りが出ます",
+      "おつりがでます"
+    ],
+    "vocabularyIds": [
+      "v-1558"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-07",
+    "lessonId": "lesson-32",
+    "text": "試合に出ます。",
+    "reading": "しあいにでます。",
+    "meaning": "参加比赛。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "試合に出ます",
+      "しあいにでます"
+    ],
+    "vocabularyIds": [
+      "v-1559"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-08",
+    "lessonId": "lesson-32",
+    "text": "パーティーに出ます。",
+    "reading": "ぱーてぃーにでます。",
+    "meaning": "参加宴会。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "パーティーに出ます",
+      "ぱーてぃーにでます"
+    ],
+    "vocabularyIds": [
+      "v-1560"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-09",
+    "lessonId": "lesson-32",
+    "text": "道が込みます。",
+    "reading": "みちがこみます。",
+    "meaning": "道路拥挤。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道が込みます",
+      "みちがこみます"
+    ],
+    "vocabularyIds": [
+      "v-1565"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-32-10",
+    "lessonId": "lesson-32",
+    "text": "試験に合格します。",
+    "reading": "しけんにごうかくします。",
+    "meaning": "考试合格。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "試験に合格します",
+      "しけんにごうかくします"
+    ],
+    "vocabularyIds": [
+      "v-1568"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-01",
+    "lessonId": "lesson-33",
+    "text": "車に注意します。",
+    "reading": "くるまにちゅういします。",
+    "meaning": "小心汽车。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "車に注意します",
+      "くるまにちゅういします"
+    ],
+    "vocabularyIds": [
+      "v-1620"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-02",
+    "lessonId": "lesson-33",
+    "text": "会議に出席します。",
+    "reading": "かいぎにしゅっせきします。",
+    "meaning": "出席会议。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "会議に出席します",
+      "かいぎにしゅっせきします"
+    ],
+    "vocabularyIds": [
+      "v-1629"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-03",
+    "lessonId": "lesson-33",
+    "text": "式が始まります。",
+    "reading": "しきがはじまります。",
+    "meaning": "典礼开始。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "式が始まります",
+      "しきがはじまります"
+    ],
+    "vocabularyIds": [
+      "v-1632"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-04",
+    "lessonId": "lesson-33",
+    "text": "電話があります。",
+    "reading": "でんわがあります。",
+    "meaning": "有电话。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "電話があります",
+      "でんわがあります"
+    ],
+    "vocabularyIds": [
+      "v-1639"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-05",
+    "lessonId": "lesson-33",
+    "text": "席を外します。",
+    "reading": "せきをはずします。",
+    "meaning": "离开座位。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "席を外します",
+      "せきをはずします"
+    ],
+    "vocabularyIds": [
+      "v-1642"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-06",
+    "lessonId": "lesson-33",
+    "text": "諦めます。",
+    "reading": "あきらめます。",
+    "meaning": "放弃、死心。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "諦めます",
+      "あきらめます"
+    ],
+    "vocabularyIds": [
+      "v-1598"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-07",
+    "lessonId": "lesson-33",
+    "text": "伝えます。",
+    "reading": "つたえます。",
+    "meaning": "传达、转告。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "伝えます",
+      "つたえます"
+    ],
+    "vocabularyIds": [
+      "v-1602"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-08",
+    "lessonId": "lesson-33",
+    "text": "逃げます。",
+    "reading": "にげます。",
+    "meaning": "逃走。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "逃げます",
+      "にげます"
+    ],
+    "vocabularyIds": [
+      "v-1605"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-09",
+    "lessonId": "lesson-33",
+    "text": "守ります。",
+    "reading": "まもります。",
+    "meaning": "遵守。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "守ります",
+      "まもります"
+    ],
+    "vocabularyIds": [
+      "v-1608"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-33-10",
+    "lessonId": "lesson-33",
+    "text": "騒ぎます。",
+    "reading": "さわぎます。",
+    "meaning": "吵闹、吵嚷。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "騒ぎます",
+      "さわぎます"
+    ],
+    "vocabularyIds": [
+      "v-1609"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-01",
+    "lessonId": "lesson-34",
+    "text": "歯を磨きます。",
+    "reading": "はをみがきます。",
+    "meaning": "刷牙。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "歯を磨きます",
+      "はをみがきます"
+    ],
+    "vocabularyIds": [
+      "v-1653"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-02",
+    "lessonId": "lesson-34",
+    "text": "醤油をつけます。",
+    "reading": "しょうゆをつけます。",
+    "meaning": "蘸酱油。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "醤油をつけます",
+      "しょうゆをつけます"
+    ],
+    "vocabularyIds": [
+      "v-1667"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-03",
+    "lessonId": "lesson-34",
+    "text": "お茶を立てます。",
+    "reading": "おちゃをたてます。",
+    "meaning": "（茶道的）泡茶、沏茶。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お茶を立てます",
+      "おちゃをたてます"
+    ],
+    "vocabularyIds": [
+      "v-1669"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-04",
+    "lessonId": "lesson-34",
+    "text": "これでいいですか。",
+    "reading": "これでいいですか。",
+    "meaning": "这样可以吗？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "これでいいですか"
+    ],
+    "vocabularyIds": [
+      "v-1672"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-05",
+    "lessonId": "lesson-34",
+    "text": "いかがですか。",
+    "reading": "いかがですか。",
+    "meaning": "怎么样？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いかがですか"
+    ],
+    "vocabularyIds": [
+      "v-1673"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-06",
+    "lessonId": "lesson-34",
+    "text": "木の枝を降ります。",
+    "reading": "きのえだをおります。",
+    "meaning": "折断树枝。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "木の枝を降ります",
+      "きのえだをおります"
+    ],
+    "vocabularyIds": [
+      "v-1677"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-07",
+    "lessonId": "lesson-34",
+    "text": "先生に質問します。",
+    "reading": "せんせいにしつもんします。",
+    "meaning": "向老师提问。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "先生に質問します",
+      "せんせいにしつもんします"
+    ],
+    "vocabularyIds": [
+      "v-1683"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-08",
+    "lessonId": "lesson-34",
+    "text": "鍵が見つかります。",
+    "reading": "かぎがみつかります。",
+    "meaning": "找到钥匙。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "鍵が見つかります",
+      "かぎがみつかります"
+    ],
+    "vocabularyIds": [
+      "v-1685"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-09",
+    "lessonId": "lesson-34",
+    "text": "忘れ物に気がつきます。",
+    "reading": "わすれものにきがつきます。",
+    "meaning": "发现忘了东西。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "忘れ物に気がつきます",
+      "わすれものにきがつきます"
+    ],
+    "vocabularyIds": [
+      "v-1687"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-34-10",
+    "lessonId": "lesson-34",
+    "text": "傘をさします。",
+    "reading": "かさをさします。",
+    "meaning": "打伞。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "傘をさします",
+      "かさをさします"
+    ],
+    "vocabularyIds": [
+      "v-1689"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-01",
+    "lessonId": "lesson-35",
+    "text": "花が咲きます。",
+    "reading": "はながさきます。",
+    "meaning": "开花。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "花が咲きます",
+      "はながさきます"
+    ],
+    "vocabularyIds": [
+      "v-1712"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-02",
+    "lessonId": "lesson-35",
+    "text": "これで終わりましょう。",
+    "reading": "これでおわりましょう。",
+    "meaning": "到此结束吧。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "これで終わりましょう",
+      "これでおわりましょう"
+    ],
+    "vocabularyIds": [
+      "v-1715"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-03",
+    "lessonId": "lesson-35",
+    "text": "色が変わります。",
+    "reading": "いろがかわります。",
+    "meaning": "变色。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "色が変わります",
+      "いろがかわります"
+    ],
+    "vocabularyIds": [
+      "v-1733"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-04",
+    "lessonId": "lesson-35",
+    "text": "病気が治ります。",
+    "reading": "びょうきがなおります。",
+    "meaning": "病治好了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "病気が治ります",
+      "びょうきがなおります"
+    ],
+    "vocabularyIds": [
+      "v-1743"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-05",
+    "lessonId": "lesson-35",
+    "text": "故障が直ります。",
+    "reading": "こしょうがなおります。",
+    "meaning": "故障修好了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "故障が直ります",
+      "こしょうがなおります"
+    ],
+    "vocabularyIds": [
+      "v-1744"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-06",
+    "lessonId": "lesson-35",
+    "text": "丸を付けます。",
+    "reading": "まるをつけます。",
+    "meaning": "画圈。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "丸を付けます",
+      "まるをつけます"
+    ],
+    "vocabularyIds": [
+      "v-1750"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-07",
+    "lessonId": "lesson-35",
+    "text": "咲きます。",
+    "reading": "さきます。",
+    "meaning": "开（花）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "咲きます",
+      "さきます"
+    ],
+    "vocabularyIds": [
+      "v-1711"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-08",
+    "lessonId": "lesson-35",
+    "text": "変わります。",
+    "reading": "かわります。",
+    "meaning": "变。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "変わります",
+      "かわります"
+    ],
+    "vocabularyIds": [
+      "v-1732"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-09",
+    "lessonId": "lesson-35",
+    "text": "治ります。",
+    "reading": "なおります。",
+    "meaning": "治好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "治ります",
+      "なおります"
+    ],
+    "vocabularyIds": [
+      "v-1739"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-35-10",
+    "lessonId": "lesson-35",
+    "text": "直ります。",
+    "reading": "なおります。",
+    "meaning": "治好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "直ります",
+      "なおります"
+    ],
+    "vocabularyIds": [
+      "v-1740"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-01",
+    "lessonId": "lesson-36",
+    "text": "仕事になれます。",
+    "reading": "しごとになれます。",
+    "meaning": "习惯工作。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "仕事になれます",
+      "しごとになれます"
+    ],
+    "vocabularyIds": [
+      "v-1774"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-02",
+    "lessonId": "lesson-36",
+    "text": "事故に遭います。",
+    "reading": "じこにあいます。",
+    "meaning": "遇到事故。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "事故に遭います",
+      "じこにあいます"
+    ],
+    "vocabularyIds": [
+      "v-1791"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-03",
+    "lessonId": "lesson-36",
+    "text": "食べ物が腐ります。",
+    "reading": "たべものがくさります。",
+    "meaning": "食物腐败。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "食べ物が腐ります",
+      "たべものがくさります"
+    ],
+    "vocabularyIds": [
+      "v-1798"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-04",
+    "lessonId": "lesson-36",
+    "text": "７時を過ぎます。",
+    "reading": "しちじをすぎます。",
+    "meaning": "7点多。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "７時を過ぎます",
+      "しちじをすぎます"
+    ],
+    "vocabularyIds": [
+      "v-1803"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-05",
+    "lessonId": "lesson-36",
+    "text": "慣れます。",
+    "reading": "なれます。",
+    "meaning": "习惯。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "慣れます",
+      "なれます"
+    ],
+    "vocabularyIds": [
+      "v-1773"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-06",
+    "lessonId": "lesson-36",
+    "text": "違います。",
+    "reading": "ちがいます。",
+    "meaning": "不同、不一样、不对。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "違います",
+      "ちがいます"
+    ],
+    "vocabularyIds": [
+      "v-1785"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-07",
+    "lessonId": "lesson-36",
+    "text": "チャレンジします。",
+    "reading": "チャレンジします。",
+    "meaning": "挑战。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "チャレンジします"
+    ],
+    "vocabularyIds": [
+      "v-1787"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-08",
+    "lessonId": "lesson-36",
+    "text": "遭います。",
+    "reading": "あいます。",
+    "meaning": "遇到。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "遭います",
+      "あいます"
+    ],
+    "vocabularyIds": [
+      "v-1790"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-09",
+    "lessonId": "lesson-36",
+    "text": "貯金します。",
+    "reading": "ちょきんします。",
+    "meaning": "存钱。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "貯金します",
+      "ちょきんします"
+    ],
+    "vocabularyIds": [
+      "v-1796"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-36-10",
+    "lessonId": "lesson-36",
+    "text": "腐ります。",
+    "reading": "くさります。",
+    "meaning": "腐败。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "腐ります",
+      "くさります"
+    ],
+    "vocabularyIds": [
+      "v-1797"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-01",
+    "lessonId": "lesson-37",
+    "text": "足を踏みます。",
+    "reading": "あしをふみます。",
+    "meaning": "踩到脚。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "足を踏みます",
+      "あしをふみます"
+    ],
+    "vocabularyIds": [
+      "v-1824"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-02",
+    "lessonId": "lesson-37",
+    "text": "星を発見します。",
+    "reading": "ほしをはっけんします。",
+    "meaning": "发现星星。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "星を発見します",
+      "ほしをはっけんします"
+    ],
+    "vocabularyIds": [
+      "v-1828"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-03",
+    "lessonId": "lesson-37",
+    "text": "国際会議を行います。",
+    "reading": "こくさいかいぎをおこないます。",
+    "meaning": "举办国际会议。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "国際会議を行います",
+      "こくさいかいぎをおこないます"
+    ],
+    "vocabularyIds": [
+      "v-1848"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-04",
+    "lessonId": "lesson-37",
+    "text": "海を汚します。",
+    "reading": "うみをよごします。",
+    "meaning": "污染大海。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "海を汚します",
+      "うみをよごします"
+    ],
+    "vocabularyIds": [
+      "v-1859"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-05",
+    "lessonId": "lesson-37",
+    "text": "よかったですね。",
+    "reading": "よかったですね。",
+    "meaning": "太好了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "よかったですね"
+    ],
+    "vocabularyIds": [
+      "v-1873"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-06",
+    "lessonId": "lesson-37",
+    "text": "一匹もいません。",
+    "reading": "いっぴきもいません。",
+    "meaning": "一只也没有。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "一匹もいません",
+      "いっぴきもいません"
+    ],
+    "vocabularyIds": [
+      "v-1889"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-07",
+    "lessonId": "lesson-37",
+    "text": "叱ります。",
+    "reading": "しかります。",
+    "meaning": "批评。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "叱ります",
+      "しかります"
+    ],
+    "vocabularyIds": [
+      "v-1822"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-08",
+    "lessonId": "lesson-37",
+    "text": "踏みます。",
+    "reading": "ふみます。",
+    "meaning": "踩。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "踏みます",
+      "ふみます"
+    ],
+    "vocabularyIds": [
+      "v-1823"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-09",
+    "lessonId": "lesson-37",
+    "text": "注意します。",
+    "reading": "ちゅういします。",
+    "meaning": "提醒、警告。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "注意します",
+      "ちゅういします"
+    ],
+    "vocabularyIds": [
+      "v-1825"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-37-10",
+    "lessonId": "lesson-37",
+    "text": "発見します。",
+    "reading": "はっけんします。",
+    "meaning": "发现。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "発見します",
+      "はっけんします"
+    ],
+    "vocabularyIds": [
+      "v-1827"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-01",
+    "lessonId": "lesson-38",
+    "text": "旅行に参加します。",
+    "reading": "りょこうにさんかします。",
+    "meaning": "参加旅行。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "旅行に参加します",
+      "りょこうにさんかします"
+    ],
+    "vocabularyIds": [
+      "v-1891"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-02",
+    "lessonId": "lesson-38",
+    "text": "判子を押します。",
+    "reading": "はんこをおします。",
+    "meaning": "盖章。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "判子を押します",
+      "はんこをおします"
+    ],
+    "vocabularyIds": [
+      "v-1907"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-03",
+    "lessonId": "lesson-38",
+    "text": "気持ちがいい。",
+    "reading": "きもちがいい。",
+    "meaning": "舒服。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "気持ちがいい",
+      "きもちがいい"
+    ],
+    "vocabularyIds": [
+      "v-1908"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-04",
+    "lessonId": "lesson-38",
+    "text": "気持ちが悪い。",
+    "reading": "きもちがわるい。",
+    "meaning": "不舒服。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "気持ちが悪い",
+      "きもちがわるい"
+    ],
+    "vocabularyIds": [
+      "v-1909"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-05",
+    "lessonId": "lesson-38",
+    "text": "嘘をつきます。",
+    "reading": "うそをつきます。",
+    "meaning": "说谎。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "嘘をつきます",
+      "うそをつきます"
+    ],
+    "vocabularyIds": [
+      "v-1920"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-06",
+    "lessonId": "lesson-38",
+    "text": "鍵を掛けます。",
+    "reading": "かぎをかけます。",
+    "meaning": "上锁。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "鍵を掛けます",
+      "かぎをかけます"
+    ],
+    "vocabularyIds": [
+      "v-1927"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-07",
+    "lessonId": "lesson-38",
+    "text": "お先に失礼します。",
+    "reading": "おさきにしつれいします。",
+    "meaning": "我先告辞了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お先に失礼します",
+      "おさきにしつれいします"
+    ],
+    "vocabularyIds": [
+      "v-1928"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-08",
+    "lessonId": "lesson-38",
+    "text": "電源を切ります。",
+    "reading": "でんげんをきります。",
+    "meaning": "切断电源。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "電源を切ります",
+      "でんげんをきります"
+    ],
+    "vocabularyIds": [
+      "v-1931"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-09",
+    "lessonId": "lesson-38",
+    "text": "電源を入れます。",
+    "reading": "でんげんをいれます。",
+    "meaning": "打开电源。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "電源を入れます",
+      "でんげんをいれます"
+    ],
+    "vocabularyIds": [
+      "v-1933"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-38-10",
+    "lessonId": "lesson-38",
+    "text": "参加します。",
+    "reading": "さんかします。",
+    "meaning": "参加。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "参加します",
+      "さんかします"
+    ],
+    "vocabularyIds": [
+      "v-1890"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-01",
+    "lessonId": "lesson-39",
+    "text": "ビルが倒れます。",
+    "reading": "ビルがたおれます。",
+    "meaning": "大厦倒塌。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ビルが倒れます",
+      "ビルがたおれます"
+    ],
+    "vocabularyIds": [
+      "v-1955"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-02",
+    "lessonId": "lesson-39",
+    "text": "お疲れ様でした。",
+    "reading": "おつかれさまでした。",
+    "meaning": "辛苦了（慰劳同事或部下时用的话）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お疲れ様でした",
+      "おつかれさまでした"
+    ],
+    "vocabularyIds": [
+      "v-1961"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-03",
+    "lessonId": "lesson-39",
+    "text": "質問に答えます。",
+    "reading": "しつもんにこたえます。",
+    "meaning": "回答问题。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "質問に答えます",
+      "しつもんにこたえます"
+    ],
+    "vocabularyIds": [
+      "v-1977"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-04",
+    "lessonId": "lesson-39",
+    "text": "道を通ります。",
+    "reading": "みちをとおります。",
+    "meaning": "过路。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "道を通ります",
+      "みちをとおります"
+    ],
+    "vocabularyIds": [
+      "v-1979"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-05",
+    "lessonId": "lesson-39",
+    "text": "びっくりします。",
+    "reading": "びっくりします。",
+    "meaning": "吃惊。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "びっくりします"
+    ],
+    "vocabularyIds": [
+      "v-1952"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-06",
+    "lessonId": "lesson-39",
+    "text": "倒れます。",
+    "reading": "たおれます。",
+    "meaning": "倒、倒下来、倒塌。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "倒れます",
+      "たおれます"
+    ],
+    "vocabularyIds": [
+      "v-1954"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-07",
+    "lessonId": "lesson-39",
+    "text": "がっかりします。",
+    "reading": "がっかりします。",
+    "meaning": "失望。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "がっかりします"
+    ],
+    "vocabularyIds": [
+      "v-1957"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-08",
+    "lessonId": "lesson-39",
+    "text": "ぶつかります。",
+    "reading": "ぶつかります。",
+    "meaning": "撞、碰。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ぶつかります"
+    ],
+    "vocabularyIds": [
+      "v-1966"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-09",
+    "lessonId": "lesson-39",
+    "text": "安心します。",
+    "reading": "あんしんします。",
+    "meaning": "安心、放心。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "安心します",
+      "あんしんします"
+    ],
+    "vocabularyIds": [
+      "v-1967"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-39-10",
+    "lessonId": "lesson-39",
+    "text": "死にます。",
+    "reading": "しにます。",
+    "meaning": "死。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "死にます",
+      "しにます"
+    ],
+    "vocabularyIds": [
+      "v-1969"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-01",
+    "lessonId": "lesson-40",
+    "text": "どうでしょうか。",
+    "reading": "どうでしょうか。",
+    "meaning": "怎么样？（「どうですか」的礼貌形」）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どうでしょうか"
+    ],
+    "vocabularyIds": [
+      "v-2022"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-02",
+    "lessonId": "lesson-40",
+    "text": "問題が出ます。",
+    "reading": "もんだいがでます。",
+    "meaning": "出考题。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "問題が出ます",
+      "もんだいがでます"
+    ],
+    "vocabularyIds": [
+      "v-2029"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-03",
+    "lessonId": "lesson-40",
+    "text": "サイズが合います。",
+    "reading": "サイズがあいます。",
+    "meaning": "尺码合适。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "サイズが合います",
+      "サイズがあいます"
+    ],
+    "vocabularyIds": [
+      "v-2051"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-04",
+    "lessonId": "lesson-40",
+    "text": "到着します。",
+    "reading": "とうちゃくします。",
+    "meaning": "到达。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "到着します",
+      "とうちゃくします"
+    ],
+    "vocabularyIds": [
+      "v-2011"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-05",
+    "lessonId": "lesson-40",
+    "text": "出発します。",
+    "reading": "しゅっぱつします。",
+    "meaning": "出发。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出発します",
+      "しゅっぱつします"
+    ],
+    "vocabularyIds": [
+      "v-2012"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-06",
+    "lessonId": "lesson-40",
+    "text": "酔います。",
+    "reading": "よいます。",
+    "meaning": "醉。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "酔います",
+      "よいます"
+    ],
+    "vocabularyIds": [
+      "v-2014"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-07",
+    "lessonId": "lesson-40",
+    "text": "測ります。",
+    "reading": "はかります。",
+    "meaning": "测量、量、称。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "測ります",
+      "はかります"
+    ],
+    "vocabularyIds": [
+      "v-2017"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-08",
+    "lessonId": "lesson-40",
+    "text": "量ります。",
+    "reading": "はかります。",
+    "meaning": "测量、量、称。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "量ります",
+      "はかります"
+    ],
+    "vocabularyIds": [
+      "v-2018"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-09",
+    "lessonId": "lesson-40",
+    "text": "いらっしゃいます。",
+    "reading": "いらっしゃいます。",
+    "meaning": "来（「来ます」的尊敬用语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いらっしゃいます"
+    ],
+    "vocabularyIds": [
+      "v-2026"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-40-10",
+    "lessonId": "lesson-40",
+    "text": "出ます。",
+    "reading": "でます。",
+    "meaning": "出。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出ます",
+      "でます"
+    ],
+    "vocabularyIds": [
+      "v-2028"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-01",
+    "lessonId": "lesson-41",
+    "text": "いただきます。",
+    "reading": "いただきます。",
+    "meaning": "得到、收到（「もらいます」的谦逊语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いただきます"
+    ],
+    "vocabularyIds": [
+      "v-2073"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-02",
+    "lessonId": "lesson-41",
+    "text": "くださいます。",
+    "reading": "くださいます。",
+    "meaning": "给我（「くれます」的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "くださいます"
+    ],
+    "vocabularyIds": [
+      "v-2074"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-03",
+    "lessonId": "lesson-41",
+    "text": "やります。",
+    "reading": "やります。",
+    "meaning": "给（用于给比自己年纪小、职位低的人或动植物等某物时）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "やります"
+    ],
+    "vocabularyIds": [
+      "v-2076"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-04",
+    "lessonId": "lesson-41",
+    "text": "親切にします。",
+    "reading": "しんせつにします。",
+    "meaning": "和气、热情。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "親切にします",
+      "しんせつにします"
+    ],
+    "vocabularyIds": [
+      "v-2081"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-05",
+    "lessonId": "lesson-41",
+    "text": "上げます。",
+    "reading": "あげます。",
+    "meaning": "调高、提高、改善。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "上げます",
+      "あげます"
+    ],
+    "vocabularyIds": [
+      "v-2110"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-06",
+    "lessonId": "lesson-41",
+    "text": "下げます。",
+    "reading": "さげます。",
+    "meaning": "调低、降低、放低。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "下げます",
+      "さげます"
+    ],
+    "vocabularyIds": [
+      "v-2111"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-07",
+    "lessonId": "lesson-41",
+    "text": "虐めます。",
+    "reading": "いじめます。",
+    "meaning": "欺负。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "虐めます",
+      "いじめます"
+    ],
+    "vocabularyIds": [
+      "v-2123"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-08",
+    "lessonId": "lesson-41",
+    "text": "助けます。",
+    "reading": "たすけます。",
+    "meaning": "帮助、救助。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "助けます",
+      "たすけます"
+    ],
+    "vocabularyIds": [
+      "v-2125"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-09",
+    "lessonId": "lesson-41",
+    "text": "暮らします。",
+    "reading": "くらします。",
+    "meaning": "生活、度日。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "暮らします",
+      "くらします"
+    ],
+    "vocabularyIds": [
+      "v-2128"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-41-10",
+    "lessonId": "lesson-41",
+    "text": "可愛いです。",
+    "reading": "かわいいです。",
+    "meaning": "可爱。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "可愛い",
+      "かわいい"
+    ],
+    "vocabularyIds": [
+      "v-2113"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-01",
+    "lessonId": "lesson-42",
+    "text": "ボーナスが出ます。",
+    "reading": "ボーナスがでます。",
+    "meaning": "发奖金。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ボーナスが出ます",
+      "ボーナスがでます"
+    ],
+    "vocabularyIds": [
+      "v-2138"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-02",
+    "lessonId": "lesson-42",
+    "text": "お湯を沸かします。",
+    "reading": "おゆをわかします。",
+    "meaning": "烧开水。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お湯を沸かします",
+      "おゆをわかします"
+    ],
+    "vocabularyIds": [
+      "v-2174"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-03",
+    "lessonId": "lesson-42",
+    "text": "出ます。",
+    "reading": "でます。",
+    "meaning": "发（钱）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "出ます",
+      "でます"
+    ],
+    "vocabularyIds": [
+      "v-2137"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-04",
+    "lessonId": "lesson-42",
+    "text": "並びます。",
+    "reading": "ならびます。",
+    "meaning": "排列。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "並びます",
+      "ならびます"
+    ],
+    "vocabularyIds": [
+      "v-2146"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-05",
+    "lessonId": "lesson-42",
+    "text": "混ぜます。",
+    "reading": "まぜます。",
+    "meaning": "搅拌、混合。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "混ぜます",
+      "まぜます"
+    ],
+    "vocabularyIds": [
+      "v-2154"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-06",
+    "lessonId": "lesson-42",
+    "text": "包みます。",
+    "reading": "つつみます。",
+    "meaning": "包、包上。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "包みます",
+      "つつみます"
+    ],
+    "vocabularyIds": [
+      "v-2156"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-07",
+    "lessonId": "lesson-42",
+    "text": "計算します。",
+    "reading": "けいさんします。",
+    "meaning": "计算。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "計算します",
+      "けいさんします"
+    ],
+    "vocabularyIds": [
+      "v-2157"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-08",
+    "lessonId": "lesson-42",
+    "text": "沸かします。",
+    "reading": "わかします。",
+    "meaning": "烧开。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "沸かします",
+      "わかします"
+    ],
+    "vocabularyIds": [
+      "v-2173"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-09",
+    "lessonId": "lesson-42",
+    "text": "広めます。",
+    "reading": "ひろめます。",
+    "meaning": "扩大、推广。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "広めます",
+      "ひろめます"
+    ],
+    "vocabularyIds": [
+      "v-2183"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-42-10",
+    "lessonId": "lesson-42",
+    "text": "割ります。",
+    "reading": "わります。",
+    "meaning": "分、割、切。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "割ります",
+      "わります"
+    ],
+    "vocabularyIds": [
+      "v-2185"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-01",
+    "lessonId": "lesson-43",
+    "text": "ボタンが取れます。",
+    "reading": "ブタンがとれます。",
+    "meaning": "纽扣脱落。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ボタンが取れます",
+      "ブタンがとれます"
+    ],
+    "vocabularyIds": [
+      "v-2189"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-02",
+    "lessonId": "lesson-43",
+    "text": "荷物が落ちます。",
+    "reading": "にもつがおちます。",
+    "meaning": "行李掉下来。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "荷物が落ちます",
+      "にもつがおちます"
+    ],
+    "vocabularyIds": [
+      "v-2194"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-03",
+    "lessonId": "lesson-43",
+    "text": "輸出が減ります。",
+    "reading": "ゆしゅつがへります。",
+    "meaning": "出口减少。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "輸出が減ります",
+      "ゆしゅつがへります"
+    ],
+    "vocabularyIds": [
+      "v-2196"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-04",
+    "lessonId": "lesson-43",
+    "text": "紐が切れます。",
+    "reading": "ひもがきれます。",
+    "meaning": "绳子断了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "紐が切れます",
+      "ひもがきれます"
+    ],
+    "vocabularyIds": [
+      "v-2202"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-05",
+    "lessonId": "lesson-43",
+    "text": "値段が上がります。",
+    "reading": "ねだんがあがります。",
+    "meaning": "价格上涨。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "値段が上がります",
+      "ねだんがあがります"
+    ],
+    "vocabularyIds": [
+      "v-2204"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-06",
+    "lessonId": "lesson-43",
+    "text": "値段が下がります。",
+    "reading": "ねだんがさがります。",
+    "meaning": "价格下降。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "値段が下がります",
+      "ねだんがさがります"
+    ],
+    "vocabularyIds": [
+      "v-2206"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-07",
+    "lessonId": "lesson-43",
+    "text": "輸出が増えます。",
+    "reading": "ゆしゅつがふえます。",
+    "meaning": "出口增加。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "輸出が増えます",
+      "ゆしゅつがふえます"
+    ],
+    "vocabularyIds": [
+      "v-2208"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-08",
+    "lessonId": "lesson-43",
+    "text": "ガソリンが無くなります。",
+    "reading": "ガソリンがなくなります。",
+    "meaning": "汽油用光了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ガソリンが無くなります",
+      "ガソリンがなくなります"
+    ],
+    "vocabularyIds": [
+      "v-2211"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-09",
+    "lessonId": "lesson-43",
+    "text": "取れます。",
+    "reading": "とれます。",
+    "meaning": "脱落。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "取れます",
+      "とれます"
+    ],
+    "vocabularyIds": [
+      "v-2188"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-43-10",
+    "lessonId": "lesson-43",
+    "text": "落ちます。",
+    "reading": "おちます。",
+    "meaning": "掉下来。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "落ちます",
+      "おちます"
+    ],
+    "vocabularyIds": [
+      "v-2193"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-01",
+    "lessonId": "lesson-44",
+    "text": "どうなさいますか。",
+    "reading": "どうなさいますか。",
+    "meaning": "您要怎么做？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どうなさいますか"
+    ],
+    "vocabularyIds": [
+      "v-2229"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-02",
+    "lessonId": "lesson-44",
+    "text": "どういうふうになさいますか。",
+    "reading": "どういうふうになさいますか。",
+    "meaning": "给您怎么做（剪）呢？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どういうふうになさいますか"
+    ],
+    "vocabularyIds": [
+      "v-2232"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-03",
+    "lessonId": "lesson-44",
+    "text": "これでよろしいでしょうか。",
+    "reading": "これでよろしいでしょうか。",
+    "meaning": "这样可以吗？（礼貌的说法）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "これでよろしいでしょうか"
+    ],
+    "vocabularyIds": [
+      "v-2234"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-04",
+    "lessonId": "lesson-44",
+    "text": "どうもお疲れ様でした。",
+    "reading": "どうもおつかれさまでしら。",
+    "meaning": "您辛苦了（在美容院，电源最后对顾客说的客气话）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どうもお疲れ様でした",
+      "どうもおつかれさまでしら"
+    ],
+    "vocabularyIds": [
+      "v-2235"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-05",
+    "lessonId": "lesson-44",
+    "text": "事故が起きます。",
+    "reading": "じこがおきます。",
+    "meaning": "发生事故。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "事故が起きます",
+      "じこがおきます"
+    ],
+    "vocabularyIds": [
+      "v-2237"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-06",
+    "lessonId": "lesson-44",
+    "text": "シャツが乾きます。",
+    "reading": "シャツがかわきます。",
+    "meaning": "衬衫干了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "シャツが乾きます",
+      "シャツがかわきます"
+    ],
+    "vocabularyIds": [
+      "v-2240"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-07",
+    "lessonId": "lesson-44",
+    "text": "シャツがぬれます。",
+    "reading": "シャツがねれます。",
+    "meaning": "衬衫湿了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "シャツがぬれます",
+      "シャツがねれます"
+    ],
+    "vocabularyIds": [
+      "v-2242"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-08",
+    "lessonId": "lesson-44",
+    "text": "掃除を嫌がります。",
+    "reading": "そうじをいやがります。",
+    "meaning": "讨厌扫地。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "掃除を嫌がります",
+      "そうじをいやがります"
+    ],
+    "vocabularyIds": [
+      "v-2260"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-09",
+    "lessonId": "lesson-44",
+    "text": "泣きます。",
+    "reading": "なきます。",
+    "meaning": "哭。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "泣きます",
+      "なきます"
+    ],
+    "vocabularyIds": [
+      "v-2222"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-44-10",
+    "lessonId": "lesson-44",
+    "text": "笑います。",
+    "reading": "わらいます。",
+    "meaning": "笑。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "笑います",
+      "わらいます"
+    ],
+    "vocabularyIds": [
+      "v-2223"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-01",
+    "lessonId": "lesson-45",
+    "text": "以上です。",
+    "reading": "いじょうです。",
+    "meaning": "到此结束。我的话讲完了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "以上です",
+      "いじょうです"
+    ],
+    "vocabularyIds": [
+      "v-2287"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-02",
+    "lessonId": "lesson-45",
+    "text": "楽しみにしています。",
+    "reading": "たのしみにしています。",
+    "meaning": "期待着、盼望者。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "楽しみにしています",
+      "たのしみにしています"
+    ],
+    "vocabularyIds": [
+      "v-2290"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-03",
+    "lessonId": "lesson-45",
+    "text": "ベルが鳴ります。",
+    "reading": "ベルがなります。",
+    "meaning": "铃响了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ベルが鳴ります",
+      "ベルがなります"
+    ],
+    "vocabularyIds": [
+      "v-2297"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-04",
+    "lessonId": "lesson-45",
+    "text": "優勝します。",
+    "reading": "ゆうしょうします。",
+    "meaning": "获得冠军。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "優勝します",
+      "ゆうしょうします"
+    ],
+    "vocabularyIds": [
+      "v-2279"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-05",
+    "lessonId": "lesson-45",
+    "text": "知らせます。",
+    "reading": "しらせます。",
+    "meaning": "通知。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "知らせます",
+      "しらせます"
+    ],
+    "vocabularyIds": [
+      "v-2283"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-06",
+    "lessonId": "lesson-45",
+    "text": "キャンセルします。",
+    "reading": "キャンセルします。",
+    "meaning": "取消。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "キャンセルします"
+    ],
+    "vocabularyIds": [
+      "v-2284"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-07",
+    "lessonId": "lesson-45",
+    "text": "信じます。",
+    "reading": "しんじます。",
+    "meaning": "相信。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "信じます",
+      "しんじます"
+    ],
+    "vocabularyIds": [
+      "v-2289"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-08",
+    "lessonId": "lesson-45",
+    "text": "鳴ります。",
+    "reading": "なります。",
+    "meaning": "响。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "鳴ります",
+      "なります"
+    ],
+    "vocabularyIds": [
+      "v-2296"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-09",
+    "lessonId": "lesson-45",
+    "text": "セットします。",
+    "reading": "セットします。",
+    "meaning": "上（闹钟）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "セットします"
+    ],
+    "vocabularyIds": [
+      "v-2298"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-45-10",
+    "lessonId": "lesson-45",
+    "text": "保証書です。",
+    "reading": "ほしょうしょです。",
+    "meaning": "保证书。",
+    "clozeText": "＿＿です。",
+    "answers": [
+      "保証書",
+      "ほしょうしょ"
+    ],
+    "vocabularyIds": [
+      "v-2272"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-01",
+    "lessonId": "lesson-46",
+    "text": "今いいですか。",
+    "reading": "いまいいですか。",
+    "meaning": "现在可以吗？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "今いいですか",
+      "いまいいですか"
+    ],
+    "vocabularyIds": [
+      "v-2300"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-02",
+    "lessonId": "lesson-46",
+    "text": "申し訳ありません。",
+    "reading": "もうしわけありません。",
+    "meaning": "对不起。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "申し訳ありません",
+      "もうしわけありません"
+    ],
+    "vocabularyIds": [
+      "v-2308"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-03",
+    "lessonId": "lesson-46",
+    "text": "どちら様でしょうか。",
+    "reading": "どちらさまでしょか。",
+    "meaning": "您是哪位？",
+    "clozeText": "＿＿。",
+    "answers": [
+      "どちら様でしょうか",
+      "どちらさまでしょか"
+    ],
+    "vocabularyIds": [
+      "v-2309"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-04",
+    "lessonId": "lesson-46",
+    "text": "お待たせしました。",
+    "reading": "おまたせました。",
+    "meaning": "让您久等了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お待たせしました",
+      "おまたせました"
+    ],
+    "vocabularyIds": [
+      "v-2310"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-05",
+    "lessonId": "lesson-46",
+    "text": "荷物が届きます。",
+    "reading": "にもつがとどきます。",
+    "meaning": "行李送达。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "荷物が届きます",
+      "にもつがとどきます"
+    ],
+    "vocabularyIds": [
+      "v-2317"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-06",
+    "lessonId": "lesson-46",
+    "text": "パンが焼けます。",
+    "reading": "パンがやけます。",
+    "meaning": "面包烤好了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "パンが焼けます",
+      "パンがやけます"
+    ],
+    "vocabularyIds": [
+      "v-2320"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-07",
+    "lessonId": "lesson-46",
+    "text": "肉が焼けます。",
+    "reading": "にくがやけます。",
+    "meaning": "肉烤熟了。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "肉が焼けます",
+      "にくがやけます"
+    ],
+    "vocabularyIds": [
+      "v-2321"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-08",
+    "lessonId": "lesson-46",
+    "text": "大学に入学します。",
+    "reading": "だいがくににゅうがくします。",
+    "meaning": "大学入学。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "大学に入学します",
+      "だいがくににゅうがくします"
+    ],
+    "vocabularyIds": [
+      "v-2324"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-09",
+    "lessonId": "lesson-46",
+    "text": "大学を卒業します。",
+    "reading": "だいがくをそつぎょうします。",
+    "meaning": "大学毕业。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "大学を卒業します",
+      "だいがくをそつぎょうします"
+    ],
+    "vocabularyIds": [
+      "v-2326"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-46-10",
+    "lessonId": "lesson-46",
+    "text": "李さんに地図を渡します。",
+    "reading": "りさんにちずをわたします。",
+    "meaning": "交给小李地图。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "李さんに地図を渡します",
+      "りさんにちずをわたします"
+    ],
+    "vocabularyIds": [
+      "v-2330"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-01",
+    "lessonId": "lesson-47",
+    "text": "音がします。",
+    "reading": "おとがします。",
+    "meaning": "有声音。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "音がします",
+      "おとがします"
+    ],
+    "vocabularyIds": [
+      "v-2344"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-02",
+    "lessonId": "lesson-47",
+    "text": "声がします。",
+    "reading": "こえがします。",
+    "meaning": "有声音。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "声がします",
+      "こえがします"
+    ],
+    "vocabularyIds": [
+      "v-2345"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-03",
+    "lessonId": "lesson-47",
+    "text": "味がします。",
+    "reading": "あじがします。",
+    "meaning": "有味道。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "味がします",
+      "あじがします"
+    ],
+    "vocabularyIds": [
+      "v-2346"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-04",
+    "lessonId": "lesson-47",
+    "text": "匂いがします。",
+    "reading": "においがします。",
+    "meaning": "有气味。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "匂いがします",
+      "においがします"
+    ],
+    "vocabularyIds": [
+      "v-2347"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-05",
+    "lessonId": "lesson-47",
+    "text": "人が集まります。",
+    "reading": "人があつまります。",
+    "meaning": "聚集了好多人。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "人が集まります",
+      "人があつまります"
+    ],
+    "vocabularyIds": [
+      "v-2349"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-06",
+    "lessonId": "lesson-47",
+    "text": "人が別れます。",
+    "reading": "人がわかれます。",
+    "meaning": "与人分手。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "人が別れます",
+      "人がわかれます"
+    ],
+    "vocabularyIds": [
+      "v-2371"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-07",
+    "lessonId": "lesson-47",
+    "text": "ごみが燃えます。",
+    "reading": "ごみがもえます。",
+    "meaning": "燃烧垃圾。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ごみが燃えます",
+      "ごみがもえます"
+    ],
+    "vocabularyIds": [
+      "v-2374"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-08",
+    "lessonId": "lesson-47",
+    "text": "風が吹きます。",
+    "reading": "かぜがふきます。",
+    "meaning": "刮风。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "風が吹きます",
+      "かぜがふきます"
+    ],
+    "vocabularyIds": [
+      "v-2376"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-09",
+    "lessonId": "lesson-47",
+    "text": "します。",
+    "reading": "します。",
+    "meaning": "有（声音、味道等）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "します"
+    ],
+    "vocabularyIds": [
+      "v-2343"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-47-10",
+    "lessonId": "lesson-47",
+    "text": "集まります。",
+    "reading": "あつまります。",
+    "meaning": "聚集。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "集まります",
+      "あつまります"
+    ],
+    "vocabularyIds": [
+      "v-2348"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-01",
+    "lessonId": "lesson-48",
+    "text": "お忙しいですか。",
+    "reading": "お忙しいですか。",
+    "meaning": "您忙吗？（在和上司、长辈打招呼是使用）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お忙しいですか"
+    ],
+    "vocabularyIds": [
+      "v-2387"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-02",
+    "lessonId": "lesson-48",
+    "text": "かまいません。",
+    "reading": "かまいません。",
+    "meaning": "没关系。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "かまいません"
+    ],
+    "vocabularyIds": [
+      "v-2391"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-03",
+    "lessonId": "lesson-48",
+    "text": "いいことですね。",
+    "reading": "いいことですね。",
+    "meaning": "是件好事儿啊。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いいことですね"
+    ],
+    "vocabularyIds": [
+      "v-2399"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-04",
+    "lessonId": "lesson-48",
+    "text": "楽しみます。",
+    "reading": "たのしみます。",
+    "meaning": "享受、享乐。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "楽しみます",
+      "たのしみます"
+    ],
+    "vocabularyIds": [
+      "v-2392"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-05",
+    "lessonId": "lesson-48",
+    "text": "届けます。",
+    "reading": "とどけます。",
+    "meaning": "投递、递送。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "届けます",
+      "とどけます"
+    ],
+    "vocabularyIds": [
+      "v-2395"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-06",
+    "lessonId": "lesson-48",
+    "text": "世話をします。",
+    "reading": "せわをします。",
+    "meaning": "照顾、照料。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "世話をします",
+      "せわをします"
+    ],
+    "vocabularyIds": [
+      "v-2396"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-07",
+    "lessonId": "lesson-48",
+    "text": "下ろします。",
+    "reading": "おろします。",
+    "meaning": "卸下来。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "下ろします",
+      "おろします"
+    ],
+    "vocabularyIds": [
+      "v-2397"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-08",
+    "lessonId": "lesson-48",
+    "text": "降ろします。",
+    "reading": "おろします。",
+    "meaning": "卸下来。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "降ろします",
+      "おろします"
+    ],
+    "vocabularyIds": [
+      "v-2398"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-09",
+    "lessonId": "lesson-48",
+    "text": "録音します。",
+    "reading": "ろくおんします。",
+    "meaning": "录音。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "録音します",
+      "ろくおんします"
+    ],
+    "vocabularyIds": [
+      "v-2401"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-48-10",
+    "lessonId": "lesson-48",
+    "text": "嫌です。",
+    "reading": "いやです。",
+    "meaning": "讨厌、不喜欢。",
+    "clozeText": "これは＿＿です。",
+    "answers": [
+      "嫌",
+      "いや"
+    ],
+    "vocabularyIds": [
+      "v-2400"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-01",
+    "lessonId": "lesson-49",
+    "text": "お待ちください。",
+    "reading": "おまちください。",
+    "meaning": "请等一下。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お待ちください",
+      "おまちください"
+    ],
+    "vocabularyIds": [
+      "v-2409"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-02",
+    "lessonId": "lesson-49",
+    "text": "会社に勤めます。",
+    "reading": "かいしゃにつとめます。",
+    "meaning": "在公司工作。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "会社に勤めます",
+      "かいしゃにつとめます"
+    ],
+    "vocabularyIds": [
+      "v-2414"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-03",
+    "lessonId": "lesson-49",
+    "text": "熱を出します。",
+    "reading": "ねつをだします。",
+    "meaning": "发烧。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "熱を出します",
+      "ねつをだします"
+    ],
+    "vocabularyIds": [
+      "v-2419"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-04",
+    "lessonId": "lesson-49",
+    "text": "よろしくお伝えください。",
+    "reading": "よろしくおつたえください。",
+    "meaning": "请代我问好。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "よろしくお伝えください",
+      "よろしくおつたえください"
+    ],
+    "vocabularyIds": [
+      "v-2420"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-05",
+    "lessonId": "lesson-49",
+    "text": "失礼いたします。",
+    "reading": "しつれいいたします。",
+    "meaning": "告辞了（「失礼します」的谦逊语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "失礼いたします",
+      "しつれいいたします"
+    ],
+    "vocabularyIds": [
+      "v-2421"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-06",
+    "lessonId": "lesson-49",
+    "text": "ご存知です。",
+    "reading": "ごぞんじです。",
+    "meaning": "知道了（「しっています」的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ご存知です",
+      "ごぞんじです"
+    ],
+    "vocabularyIds": [
+      "v-2422"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-07",
+    "lessonId": "lesson-49",
+    "text": "椅子に掛けます。",
+    "reading": "いすにがけます。",
+    "meaning": "坐在椅子上。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "椅子に掛けます",
+      "いすにがけます"
+    ],
+    "vocabularyIds": [
+      "v-2425"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-08",
+    "lessonId": "lesson-49",
+    "text": "なさいます。",
+    "reading": "なさいます。",
+    "meaning": "做（ 「します」的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "なさいます"
+    ],
+    "vocabularyIds": [
+      "v-2408"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-09",
+    "lessonId": "lesson-49",
+    "text": "ご覧になります。",
+    "reading": "ごらんになります。",
+    "meaning": "看（「みます」的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "ご覧になります",
+      "ごらんになります"
+    ],
+    "vocabularyIds": [
+      "v-2410"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-49-10",
+    "lessonId": "lesson-49",
+    "text": "おっしゃいます。",
+    "reading": "おっしゃいます。",
+    "meaning": "说、叫（「いいます」的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "おっしゃいます"
+    ],
+    "vocabularyIds": [
+      "v-2412"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-01",
+    "lessonId": "lesson-50",
+    "text": "夢が叶います。",
+    "reading": "ゆめがかないます。",
+    "meaning": "实现梦想。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "夢が叶います",
+      "ゆめがかないます"
+    ],
+    "vocabularyIds": [
+      "v-2461"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-02",
+    "lessonId": "lesson-50",
+    "text": "お元気でいらっしゃいますか。",
+    "reading": "おげんきでいらっしゃいますか。",
+    "meaning": "（您）身体好吗？（「お元気ですか的尊敬语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "お元気でいらっしゃいますか",
+      "おげんきでいらっしゃいますか"
+    ],
+    "vocabularyIds": [
+      "v-2478"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-03",
+    "lessonId": "lesson-50",
+    "text": "伺います。",
+    "reading": "うかがいます。",
+    "meaning": "寻找、听、访问（「聞きます」「いきます的自谦语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "伺います",
+      "うかがいます"
+    ],
+    "vocabularyIds": [
+      "v-2448"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-04",
+    "lessonId": "lesson-50",
+    "text": "参ります。",
+    "reading": "まいります。",
+    "meaning": "去、来（「いきます」「きます」的自谦语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "参ります",
+      "まいります"
+    ],
+    "vocabularyIds": [
+      "v-2450"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-05",
+    "lessonId": "lesson-50",
+    "text": "おります。",
+    "reading": "おります。",
+    "meaning": "在（「います」的自谦语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "おります"
+    ],
+    "vocabularyIds": [
+      "v-2453"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-06",
+    "lessonId": "lesson-50",
+    "text": "感謝します。",
+    "reading": "かんしゃします。",
+    "meaning": "感谢。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "感謝します",
+      "かんしゃします"
+    ],
+    "vocabularyIds": [
+      "v-2455"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-07",
+    "lessonId": "lesson-50",
+    "text": "緊張します。",
+    "reading": "きんちょうします。",
+    "meaning": "紧张。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "緊張します",
+      "きんちょうします"
+    ],
+    "vocabularyIds": [
+      "v-2456"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-08",
+    "lessonId": "lesson-50",
+    "text": "叶います。",
+    "reading": "かないます。",
+    "meaning": "实现。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "叶います",
+      "かないます"
+    ],
+    "vocabularyIds": [
+      "v-2460"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-09",
+    "lessonId": "lesson-50",
+    "text": "応援します。",
+    "reading": "おうえんします。",
+    "meaning": "声援、支持。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "応援します",
+      "おうえんします"
+    ],
+    "vocabularyIds": [
+      "v-2462"
+    ],
+    "source": "generated"
+  },
+  {
+    "id": "s-50-10",
+    "lessonId": "lesson-50",
+    "text": "いただきます。",
+    "reading": "いただきます。",
+    "meaning": "吃、喝（「食べます」「のみます」「もらいます」的自谦语）。",
+    "clozeText": "＿＿。",
+    "answers": [
+      "いただきます"
+    ],
+    "vocabularyIds": [
+      "v-2463"
+    ],
+    "source": "generated"
+  }
+]

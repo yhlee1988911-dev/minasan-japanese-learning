@@ -1,0 +1,227 @@
+.practice-header__left {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.practice-header__left > a {
+  align-items: center;
+  color: var(--learn-ink);
+  display: flex;
+  font-size: 14px;
+  font-weight: 850;
+  gap: 6px;
+  min-height: 42px;
+  text-decoration: none;
+}
+
+.header-autoplay {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 7px;
+  position: relative;
+}
+
+.header-autoplay input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.header-autoplay i {
+  background: #cfcfcf;
+  border-radius: 999px;
+  height: 22px;
+  position: relative;
+  transition: background 160ms ease;
+  width: 38px;
+}
+
+.header-autoplay i::after {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 16px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  transition: transform 160ms ease;
+  width: 16px;
+}
+
+.header-autoplay input:checked + i {
+  background: var(--learn-green);
+}
+
+.header-autoplay input:checked + i::after {
+  transform: translateX(16px);
+}
+
+.header-autoplay span {
+  color: var(--learn-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.question-prompt .reference-peek {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(75, 75, 75, 0.12);
+  border-radius: 0;
+  color: var(--learn-muted);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+  min-height: 36px;
+  padding: 9px 0 0;
+  width: min(520px, 100%);
+}
+
+.question-prompt .reference-peek strong {
+  color: var(--learn-red);
+  font-size: 13px;
+}
+
+.question-prompt .reference-peek.is-revealed strong {
+  color: var(--learn-ink);
+}
+
+.practice-actions--compact {
+  grid-template-columns: auto minmax(180px, 1fr);
+}
+
+@media (max-width: 700px) {
+  .practice-header__left {
+    gap: 10px;
+  }
+
+  .practice-header__left > a {
+    font-size: 12px;
+  }
+
+  .header-autoplay span {
+    display: inline;
+    font-size: 11px;
+  }
+
+  .question-prompt .reference-peek {
+    align-items: center;
+    flex-direction: row;
+    min-height: 34px;
+  }
+
+  .practice-actions--compact {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .practice-actions--compact .primary,
+  .practice-actions--compact .secondary {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .practice-page--keyboard .practice-setup,
+  .practice-page--keyboard .practice-header {
+    display: none;
+  }
+
+  .practice-page--keyboard {
+    padding-top: 0;
+  }
+
+  .practice-page--keyboard .practice-stage {
+    padding-top: 8px;
+  }
+
+  .practice-page--keyboard .practice-progress {
+    padding-bottom: 4px;
+  }
+
+  .practice-page--keyboard .question-prompt {
+    margin: 6px 0 8px;
+    min-height: 118px;
+    padding: 10px 12px;
+  }
+
+  .practice-page--keyboard .question-prompt h1 {
+    font-size: 22px;
+    margin: 7px 0;
+  }
+
+  .practice-page--keyboard .question-prompt .listen-command {
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .practice-page--keyboard .question-prompt .listen-link {
+    padding: 4px 8px;
+  }
+
+  .practice-page--keyboard .question-prompt .reference-peek {
+    margin-top: 5px;
+    min-height: 28px;
+    padding-top: 5px;
+  }
+
+  .practice-page--keyboard .answer-control {
+    margin-top: 8px;
+  }
+
+  .practice-page--keyboard .answer-control input {
+    min-height: 50px;
+  }
+
+  .practice-page--keyboard .practice-actions {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-autoplay span {
+    display: none;
+  }
+}
+
+.word-card {
+  position: relative;
+}
+
+.word-list article > .word-card__tags {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.word-tag {
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1;
+  padding: 5px 7px;
+  white-space: nowrap;
+}
+
+.word-tag--accent {
+  background: #fff2bd;
+  color: #7a5a00 !important;
+}
+
+.word-tag--pos {
+  background: #ddf4ff;
+  color: var(--learn-blue-dark) !important;
+}
+
+@media (max-width: 700px) {
+  .word-list article > .word-card__tags {
+    align-items: flex-end;
+    grid-column: 2;
+    grid-row: 2 / 4;
+  }
+}
