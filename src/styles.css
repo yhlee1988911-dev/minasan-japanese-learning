@@ -740,8 +740,10 @@ body {
 }
 
 .reference-peek strong {
-  color: var(--learn-red);
-  font-size: 14px;
+  color: #ad6f69;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -817,7 +819,7 @@ body {
   }
 
   .reference-peek strong {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .answer-control {
@@ -1153,7 +1155,7 @@ html.eye-care .reference-peek {
 }
 
 html.eye-care .reference-peek strong {
-  color: #d99f8f !important;
+  color: #c18f84 !important;
 }
 
 html.eye-care .reference-peek.is-revealed strong {
@@ -1226,4 +1228,3 @@ html.eye-care .metrics {
     border-bottom-color: var(--ec-border) !important;
   }
 }
-

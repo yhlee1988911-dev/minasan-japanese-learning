@@ -6,7 +6,8 @@ require 'rexml/xpath'
 require 'time'
 
 ROOT = File.expand_path('..', __dir__)
-SOURCE_FILE = File.join(ROOT, 'data', 'ci.xlsx')
+SOURCE_FILE = File.expand_path(ARGV.first || File.join('data', 'newci.xlsx'), ROOT)
+SOURCE_LABEL = SOURCE_FILE.start_with?("#{ROOT}/") ? SOURCE_FILE.delete_prefix("#{ROOT}/") : File.basename(SOURCE_FILE)
 OUTPUT_DIR = File.join(ROOT, 'src', 'data', 'generated')
 
 def read_archive(path)
@@ -62,7 +63,7 @@ REXML::XPath.each(sheet, '//*[local-name()="sheetData"]/*[local-name()="row"]') 
 end
 
 report = {
-  source: 'data/ci.xlsx',
+  source: SOURCE_LABEL,
   importedAt: Time.now.utc.iso8601,
   sourceRows: rows.length - 1,
   importedVocabulary: 0,

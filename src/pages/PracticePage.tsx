@@ -68,6 +68,7 @@ export function PracticePage() {
   const [keyboardActive, setKeyboardActive] = useState(false);
   const referenceTimerRef = useRef<number | null>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
+  const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
 
@@ -140,7 +141,7 @@ export function PracticePage() {
     await speakJapanese(current.speech);
   }, [current]);
 
-  const playFeedback = (correct: boolean) => {
+  const playSyntheticFeedback = (correct: boolean) => {
     const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (!AudioContextClass) return;
     const context = audioContextRef.current || new AudioContextClass();
@@ -164,6 +165,22 @@ export function PracticePage() {
     });
   };
 
+  const playFeedback = (correct: boolean) => {
+    if (!feedbackAudioRef.current) {
+      feedbackAudioRef.current = {
+        correct: new Audio('/sounds/right.wav'),
+        incorrect: new Audio('/sounds/wrong.wav')
+      };
+    }
+    const sounds = feedbackAudioRef.current;
+    sounds.correct.pause();
+    sounds.incorrect.pause();
+    const audio = correct ? sounds.correct : sounds.incorrect;
+    audio.currentTime = 0;
+    audio.volume = 0.78;
+    void audio.play().catch(() => playSyntheticFeedback(correct));
+  };
+
   useEffect(() => {
     if (activeMode !== 'dictation' || !autoSpeak || !current) return;
     const timer = window.setTimeout(speak, 260);
@@ -180,7 +197,7 @@ export function PracticePage() {
         setIndex(value => questions.length ? (value + 1) % questions.length : 0);
         resetQuestion();
       }
-    }, 1000);
+    }, 1500);
     return () => window.clearTimeout(timer);
   }, [current, isReview, questions.length, resetQuestion, result]);
 
@@ -199,6 +216,8 @@ export function PracticePage() {
   useEffect(() => () => {
     if (referenceTimerRef.current !== null) window.clearTimeout(referenceTimerRef.current);
     stopJapaneseSpeech();
+    feedbackAudioRef.current?.correct.pause();
+    feedbackAudioRef.current?.incorrect.pause();
     void audioContextRef.current?.close();
   }, []);
 
@@ -302,8 +321,8 @@ export function PracticePage() {
             <small>{activeMode === 'dictation' ? '听写词汇' : activeMode === 'translation' ? '根据中文写日文' : '补全短句'}</small>
             {activeMode === 'dictation' ? <button className="listen-command" type="button" onClick={speak}><Headphones size={24} />播放发音</button> : <h1>{current.prompt}</h1>}
             {activeMode !== 'dictation' && <button className="listen-link" type="button" onClick={speak}><Volume2 size={18} />播放发音</button>}
-            <button className={`reference-peek ${showReference ? 'is-revealed' : ''}`} type="button" onClick={revealReference}>
-              <span>参考答案</span><strong>{showReference ? `${current.answers.join(' / ')} · ${current.meaning}` : '＊＊＊＊＊＊'}</strong>
+            <button className={`reference-peek ${showReference || result === 'correct' ? 'is-revealed' : ''}`} type="button" onClick={revealReference}>
+              <span>参考答案</span><strong>{showReference || result === 'correct' ? `${current.answers.join(' / ')} · ${current.meaning}` : '＊＊＊＊＊＊'}</strong>
             </button>
           </div>
 
