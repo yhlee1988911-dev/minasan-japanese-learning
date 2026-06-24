@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
 import type { PracticeMode } from '../domain/models';
+import { speakJapanese, stopJapaneseSpeech } from '../services/speech';
 import { recordMasteryAttempt } from '../storage/mastery';
 import { readMistakes, recordMistake, removeMistake, type MistakeRecord } from '../storage/mistakes';
 
@@ -134,13 +135,9 @@ export function PracticePage() {
     }
   }, []);
 
-  const speak = useCallback(() => {
-    if (!current || !('speechSynthesis' in window)) return;
-    const utterance = new SpeechSynthesisUtterance(current.speech);
-    utterance.lang = 'ja-JP';
-    utterance.rate = 0.84;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+  const speak = useCallback(async () => {
+    if (!current) return;
+    await speakJapanese(current.speech);
   }, [current]);
 
   const playFeedback = (correct: boolean) => {
@@ -201,7 +198,7 @@ export function PracticePage() {
 
   useEffect(() => () => {
     if (referenceTimerRef.current !== null) window.clearTimeout(referenceTimerRef.current);
-    window.speechSynthesis?.cancel();
+    stopJapaneseSpeech();
     void audioContextRef.current?.close();
   }, []);
 
