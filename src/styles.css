@@ -570,6 +570,384 @@ summary:focus-visible {
   }
 }
 
+/* Completion summary and basic kana practice */
+.practice-complete {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 42px 28px;
+  text-align: center;
+}
+
+.practice-complete h1 {
+  color: var(--learn-ink);
+  font-size: 38px;
+  margin: 0;
+}
+
+.star-rating {
+  color: #e0b94f;
+  display: flex;
+  gap: 6px;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(92px, 1fr));
+  width: min(560px, 100%);
+}
+
+.summary-grid div {
+  background: #f7f9f5;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 5px;
+  padding: 14px 10px;
+}
+
+.summary-grid span {
+  color: var(--learn-muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.summary-grid strong {
+  color: #5a9f52;
+  font-size: 25px;
+}
+
+.practice-complete p {
+  color: var(--learn-muted);
+  margin: 0;
+}
+
+.complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.complete-actions a {
+  align-items: center;
+  background: #70b96b;
+  border-radius: 8px;
+  box-shadow: inset 0 -3px 0 #579852;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 850;
+  gap: 7px;
+  min-height: 44px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+.complete-actions a:last-child {
+  background: #69a9cf;
+  box-shadow: inset 0 -3px 0 #4d8eb3;
+}
+
+.mode-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mode-card:nth-child(4) {
+  border-top: 4px solid #b98bd6;
+}
+
+.mode-card:nth-child(4) svg {
+  color: #9b70b8;
+}
+
+.basic-page {
+  max-width: 900px;
+}
+
+.basic-mode-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 12px;
+}
+
+.basic-mode-grid button {
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  color: var(--learn-ink);
+  display: grid;
+  gap: 5px;
+  min-height: 104px;
+  padding: 16px;
+  text-align: left;
+}
+
+.basic-mode-grid button svg {
+  color: #438ab6;
+}
+
+.basic-mode-grid button strong {
+  font-size: 15px;
+}
+
+.basic-mode-grid button span {
+  color: var(--learn-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.basic-mode-grid button.active {
+  background: #edf7e9;
+  border-color: #70b96b;
+  box-shadow: inset 0 -3px 0 rgba(87, 152, 82, 0.25);
+}
+
+.basic-filter {
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: flex;
+  gap: 7px;
+  margin-bottom: 12px;
+  padding: 8px;
+}
+
+.basic-filter button {
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  color: var(--learn-muted);
+  font-weight: 850;
+  min-height: 38px;
+  padding: 0 14px;
+}
+
+.basic-filter button.active {
+  background: #e8f4fb;
+  color: #438ab6;
+}
+
+.basic-stage {
+  background: #fff;
+}
+
+.basic-card {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 18px 0;
+  min-height: 220px;
+  padding: 24px;
+  text-align: center;
+}
+
+.basic-card small {
+  color: #8a7777;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.basic-card h1 {
+  color: var(--learn-ink);
+  font-size: 74px;
+  line-height: 1;
+  margin: 16px 0;
+}
+
+.basic-card p {
+  color: var(--learn-muted);
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+.basic-card .listen-command {
+  align-items: center;
+  background: #69a9cf;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 -4px 0 #4d8eb3;
+  color: #fff;
+  display: flex;
+  font-size: 17px;
+  font-weight: 850;
+  gap: 8px;
+  min-height: 58px;
+  padding: 0 24px;
+}
+
+.kana-choice-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.kana-choice-grid button {
+  background: #fff;
+  border: 2px solid var(--learn-border);
+  border-radius: 8px;
+  color: var(--learn-ink);
+  font-size: 32px;
+  font-weight: 900;
+  min-height: 72px;
+}
+
+.kana-choice-grid button:active {
+  background: #edf7e9;
+  border-color: #70b96b;
+}
+
+html.eye-care .practice-complete,
+html.eye-care .summary-grid div,
+html.eye-care .basic-mode-grid button,
+html.eye-care .basic-filter,
+html.eye-care .basic-stage,
+html.eye-care .kana-choice-grid button {
+  background: var(--ec-surface) !important;
+  border-color: var(--ec-border) !important;
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .practice-complete h1,
+html.eye-care .basic-card h1,
+html.eye-care .kana-choice-grid button {
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .basic-mode-grid button.active,
+html.eye-care .basic-filter button.active {
+  background: rgba(107, 143, 126, 0.16) !important;
+  border-color: var(--ec-accent) !important;
+}
+
+html.eye-care .summary-grid span,
+html.eye-care .practice-complete p,
+html.eye-care .basic-mode-grid button span,
+html.eye-care .basic-card p {
+  color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .complete-actions a,
+html.eye-care .basic-card .listen-command {
+  background: var(--ec-accent) !important;
+  box-shadow: none !important;
+}
+
+@media (min-width: 701px) and (max-width: 1180px) {
+  main {
+    max-width: min(100% - 32px, 980px);
+  }
+
+  .overview-band {
+    min-height: 196px;
+    padding: 30px;
+  }
+
+  .overview-band h1,
+  .page-heading h1 {
+    font-size: 40px;
+  }
+
+  .mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mode-card {
+    min-height: 176px;
+  }
+
+  .practice-page {
+    max-width: min(100% - 28px, 820px);
+  }
+
+  .lesson-row {
+    grid-template-columns: 52px minmax(0, 1fr) 160px 128px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+  .practice-page {
+    max-width: 920px;
+  }
+
+  .practice-stage {
+    padding: 26px 30px;
+  }
+
+  .question-prompt,
+  .basic-card {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mode-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-complete {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding: 34px 16px;
+  }
+
+  .practice-complete h1 {
+    font-size: 30px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basic-mode-grid {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+  }
+
+  .basic-mode-grid button {
+    min-height: 82px;
+  }
+
+  .basic-filter {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    overflow-x: auto;
+  }
+
+  .basic-filter button {
+    flex: 1 0 auto;
+  }
+
+  .basic-card {
+    min-height: 168px;
+    padding: 18px 12px;
+  }
+
+  .basic-card h1 {
+    font-size: 58px;
+  }
+
+  .kana-choice-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .kana-choice-grid button {
+    font-size: 28px;
+    min-height: 64px;
+  }
+}
+
 @media (max-width: 380px) {
   .practice-toolbar button {
     font-size: 11px;

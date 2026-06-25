@@ -1,4 +1,4 @@
-import { Check, ChevronDown, Headphones, Home, RotateCcw, SkipForward, Volume2 } from 'lucide-react';
+import { Check, ChevronDown, Headphones, Home, RotateCcw, SkipForward, Star, Volume2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
@@ -63,12 +63,14 @@ export function PracticePage() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<'idle' | 'correct' | 'incorrect'>('idle');
+  const [summary, setSummary] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [autoSpeak, setAutoSpeak] = useState(true);
   const [showReference, setShowReference] = useState(false);
   const [keyboardActive, setKeyboardActive] = useState(false);
   const referenceTimerRef = useRef<number | null>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
+  const completionPlayedRef = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
 
@@ -113,9 +115,12 @@ export function PracticePage() {
     setAnswer('');
     setResult('idle');
     setShowReference(false);
+    setSummary({ correct: 0, incorrect: 0, skipped: 0 });
+    completionPlayedRef.current = false;
   }, [sourceQuestions]);
 
-  const current = questions.length ? questions[index % questions.length] : null;
+  const completed = questions.length > 0 && index >= questions.length;
+  const current = !completed && questions.length ? questions[index] : null;
   const activeMode = current?.mode || requestedMode;
   const allSelected = selectedLessons.size === lessons.length;
   const selectedLabel = isReview
@@ -182,6 +187,12 @@ export function PracticePage() {
   };
 
   useEffect(() => {
+    if (!completed || completionPlayedRef.current) return;
+    completionPlayedRef.current = true;
+    playFeedback(true);
+  }, [completed]);
+
+  useEffect(() => {
     if (!['dictation', 'cloze'].includes(activeMode) || !autoSpeak || !current) return;
     const timer = window.setTimeout(speak, 260);
     return () => window.clearTimeout(timer);
@@ -194,7 +205,7 @@ export function PracticePage() {
         removeMistake(current.key);
         setReviewItems(items => items.filter(item => item.key !== current.key));
       } else {
-        setIndex(value => questions.length ? (value + 1) % questions.length : 0);
+        setIndex(value => value + 1);
         resetQuestion();
       }
     }, 1500);
@@ -247,6 +258,11 @@ export function PracticePage() {
     const normalized = normalizeAnswer(answer);
     const correct = current.answers.some(item => normalizeAnswer(item) === normalized);
     setResult(correct ? 'correct' : 'incorrect');
+    setSummary(value => ({
+      ...value,
+      correct: value.correct + (correct ? 1 : 0),
+      incorrect: value.incorrect + (correct ? 0 : 1)
+    }));
     playFeedback(correct);
     if (!isReview) {
       recordMasteryAttempt({
@@ -269,7 +285,8 @@ export function PracticePage() {
   };
 
   const skipQuestion = () => {
-    if (questions.length) setIndex(value => (value + 1) % questions.length);
+    setSummary(value => ({ ...value, skipped: value.skipped + 1 }));
+    if (questions.length) setIndex(value => value + 1);
     resetQuestion();
   };
 
@@ -290,7 +307,7 @@ export function PracticePage() {
             </label>
           )}
         </div>
-        <div><span>{isReview ? '错题巩固' : modeNames[activeMode]}</span><strong>{current ? `${index % questions.length + 1} / ${questions.length}` : '0 / 0'}</strong></div>
+        <div><span>{isReview ? '错题巩固' : modeNames[activeMode]}</span><strong>{questions.length ? `${Math.min(index + 1, questions.length)} / ${questions.length}` : '0 / 0'}</strong></div>
       </header>
 
       {!isReview && (
@@ -307,7 +324,28 @@ export function PracticePage() {
         </section>
       )}
 
-      {!current ? (
+      {completed ? (
+        <section className="practice-complete">
+          <p className="eyebrow">SESSION COMPLETE</p>
+          <h1>お疲れ様でした！！</h1>
+          <div className="star-rating" aria-label={`本轮评分 ${Math.round((summary.correct / Math.max(questions.length, 1)) * 5)} 星`}>
+            {Array.from({ length: 5 }, (_, starIndex) => (
+              <Star key={starIndex} size={28} fill={starIndex < Math.round((summary.correct / Math.max(questions.length, 1)) * 5) ? 'currentColor' : 'none'} />
+            ))}
+          </div>
+          <div className="summary-grid">
+            <div><span>答对</span><strong>{summary.correct}</strong></div>
+            <div><span>答错</span><strong>{summary.incorrect}</strong></div>
+            <div><span>跳过</span><strong>{summary.skipped}</strong></div>
+            <div><span>正确率</span><strong>{Math.round((summary.correct / Math.max(questions.length, 1)) * 100)}%</strong></div>
+          </div>
+          <p>{summary.correct === questions.length ? '这一轮完成得很稳，继续保持。' : '可以回到首页换一个范围，或者进入错题本加强。'}</p>
+          <div className="complete-actions">
+            <Link to="/"><Home size={18} />返回首页</Link>
+            <Link to="/review">查看错题本</Link>
+          </div>
+        </section>
+      ) : !current ? (
         <section className="practice-empty">
           <h1>{isReview ? '错题已经全部巩固' : '当前范围没有可练习内容'}</h1>
           <p>{isReview ? '答对的内容已从错题本自动消除。' : '请至少选择一个包含当前题型的课程。'}</p>
