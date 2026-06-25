@@ -1228,3 +1228,447 @@ html.eye-care .metrics {
     border-bottom-color: var(--ec-border) !important;
   }
 }
+
+/* Final mobile-first polish for the Minasan study flow */
+:root {
+  --learn-green: #63b55a;
+  --learn-green-dark: #4f9548;
+  --learn-blue: #5aa8d8;
+  --learn-blue-dark: #438ab6;
+  --learn-yellow: #e8c65b;
+  --learn-yellow-dark: #c9a649;
+  --learn-red: #d97878;
+  --learn-red-dark: #b95f5f;
+  --answer-pink: #be7d83;
+  --answer-pink-soft: #f8e8ea;
+}
+
+.overview-band {
+  background: #70b96b;
+  box-shadow: inset 0 -4px 0 #579852;
+  min-height: 214px;
+  padding: 32px 38px;
+}
+
+.overview-band p:not(.eyebrow) {
+  line-height: 1.55;
+}
+
+.primary-command,
+.review-entry > a,
+.review-summary > a,
+.review-empty > a,
+.practice-empty > a,
+.lesson-row > a {
+  border-radius: 8px;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.primary-command {
+  background: #e7c55c;
+}
+
+.review-entry {
+  border-left-color: #d97878;
+}
+
+.review-entry > a,
+.review-summary > a,
+.review-empty > a,
+.practice-empty > a {
+  background: #69a9cf;
+  box-shadow: inset 0 -3px 0 #4d8eb3;
+}
+
+.review-entry svg,
+.review-summary svg,
+.review-entry b {
+  color: #bf6868;
+}
+
+.metrics {
+  background: #fff;
+}
+
+.metrics > a {
+  align-items: baseline;
+  border-right: 1px solid var(--learn-border);
+  color: var(--learn-ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 28px;
+  text-decoration: none;
+}
+
+.metrics > a:last-child {
+  border-right: 0;
+}
+
+.metrics > a:hover {
+  background: #fbfcfa;
+}
+
+.metrics span {
+  color: #6e7773;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.metrics strong {
+  font-size: 28px;
+}
+
+.metrics .mastery-count,
+.mastery-progress__heading strong {
+  color: #b96d6d;
+}
+
+.mastery-progress__track > div {
+  background: #70b96b;
+  border-bottom-color: #579852;
+}
+
+.question-prompt .reference-peek strong,
+.reference-peek strong {
+  color: var(--answer-pink);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.question-prompt .reference-peek.is-revealed strong,
+.reference-peek.is-revealed strong {
+  color: var(--answer-pink);
+}
+
+.question-prompt .reference-peek span {
+  color: #8c7476;
+}
+
+.practice-header__left > a,
+.practice-progress button,
+.header-autoplay span,
+.question-prompt .listen-command,
+.question-prompt .listen-link,
+.practice-actions button {
+  font-size: 15px;
+}
+
+.practice-progress button {
+  min-height: 42px;
+}
+
+.practice-actions button {
+  min-height: 52px;
+}
+
+.question-prompt {
+  border-radius: 8px;
+}
+
+.question-prompt--translation {
+  background: #edf7e9;
+}
+
+.question-prompt--dictation {
+  background: #e8f4fb;
+}
+
+.question-prompt--cloze {
+  background: #fff5d8;
+}
+
+.mastery-page .page-heading {
+  position: relative;
+}
+
+.back-link {
+  align-items: center;
+  color: var(--learn-muted);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 850;
+  gap: 6px;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+
+.mastery-tabs {
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px 0 14px;
+  padding: 6px;
+}
+
+.mastery-tabs a {
+  align-items: center;
+  border-radius: 6px;
+  color: var(--learn-muted);
+  display: flex;
+  font-weight: 850;
+  gap: 7px;
+  justify-content: center;
+  min-height: 42px;
+  text-decoration: none;
+}
+
+.mastery-tabs a.active {
+  background: #edf7e9;
+  color: #4f9548;
+}
+
+.mastery-list {
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mastery-list__item {
+  align-items: center;
+  border-bottom: 1px solid var(--learn-border);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  padding: 15px 18px;
+}
+
+.mastery-list__item:last-child {
+  border-bottom: 0;
+}
+
+.mastery-list__item > svg {
+  color: #63a95b;
+}
+
+.mastery-list__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.mastery-list__item strong,
+.mastery-list__item span {
+  overflow-wrap: anywhere;
+}
+
+.mastery-list__item span {
+  color: var(--learn-muted);
+  font-size: 13px;
+}
+
+.mastery-list__item button,
+.mastery-list__item a {
+  align-items: center;
+  background: var(--answer-pink-soft);
+  border: 0;
+  border-radius: 7px;
+  color: #a85f66;
+  display: inline-flex;
+  font-weight: 850;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 12px;
+  text-decoration: none;
+}
+
+.mastery-empty {
+  align-items: center;
+  background: #fff;
+  border: 1px dashed #cfd7d3;
+  border-radius: 8px;
+  color: var(--learn-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 52px 20px;
+}
+
+.mastery-empty svg {
+  color: #80a879;
+}
+
+html.eye-care .metrics > a {
+  border-right-color: var(--ec-border) !important;
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .metrics > a:hover,
+html.eye-care .mastery-tabs,
+html.eye-care .mastery-list,
+html.eye-care .mastery-empty {
+  background: var(--ec-surface) !important;
+}
+
+html.eye-care .metrics .mastery-count,
+html.eye-care .review-entry b {
+  color: #bd8b86 !important;
+}
+
+html.eye-care .review-entry > a,
+html.eye-care .review-summary > a,
+html.eye-care .review-empty > a,
+html.eye-care .practice-empty > a {
+  background: #596f78 !important;
+  box-shadow: none !important;
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .mastery-tabs,
+html.eye-care .mastery-list {
+  border-color: var(--ec-border) !important;
+}
+
+html.eye-care .mastery-tabs a {
+  color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .mastery-tabs a.active {
+  background: rgba(107, 143, 126, 0.16) !important;
+  color: var(--ec-accent) !important;
+}
+
+html.eye-care .mastery-list__item {
+  border-bottom-color: var(--ec-border) !important;
+}
+
+html.eye-care .mastery-list__item span,
+html.eye-care .back-link,
+html.eye-care .mastery-empty {
+  color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .mastery-list__item button,
+html.eye-care .mastery-list__item a {
+  background: rgba(143, 103, 103, 0.22) !important;
+  color: #caa19e !important;
+}
+
+html.eye-care .question-prompt .reference-peek strong,
+html.eye-care .reference-peek strong,
+html.eye-care .question-prompt .reference-peek.is-revealed strong,
+html.eye-care .reference-peek.is-revealed strong {
+  color: #d1a4a4 !important;
+}
+
+html.eye-care .header-autoplay input:checked + i {
+  background: var(--ec-accent) !important;
+}
+
+html.eye-care .header-autoplay span,
+html.eye-care .practice-header__left > a {
+  color: var(--ec-text-muted) !important;
+}
+
+@media (max-width: 700px) {
+  main {
+    max-width: none;
+  }
+
+  .overview-band {
+    gap: 14px;
+    min-height: 192px;
+    padding: 22px 16px 20px;
+  }
+
+  .overview-band h1,
+  .page-heading h1 {
+    font-size: 31px;
+  }
+
+  .overview-band p:not(.eyebrow) {
+    font-size: 14px;
+    margin: 10px 0 0;
+  }
+
+  .primary-command {
+    min-height: 46px;
+    padding: 0 15px;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .metrics > a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 13px 10px;
+  }
+
+  .metrics strong {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .metrics .mastery-count {
+    font-size: 11px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .review-entry {
+    border-left-width: 4px;
+  }
+
+  .mode-card {
+    padding: 18px;
+  }
+
+  .practice-header__left > a,
+  .practice-progress button,
+  .header-autoplay span,
+  .question-prompt .listen-command,
+  .question-prompt .listen-link,
+  .practice-actions button {
+    font-size: 14px;
+  }
+
+  .question-prompt .reference-peek,
+  .reference-peek {
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    min-height: 42px;
+  }
+
+  .question-prompt .reference-peek strong,
+  .reference-peek strong {
+    font-size: 17px;
+  }
+
+  .mastery-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mastery-tabs {
+    gap: 4px;
+    margin-top: 16px;
+  }
+
+  .mastery-tabs a {
+    font-size: 13px;
+    gap: 5px;
+  }
+
+  .mastery-list__item {
+    gap: 10px;
+    grid-template-columns: 22px minmax(0, 1fr);
+    padding: 14px 12px;
+  }
+
+  .mastery-list__item button,
+  .mastery-list__item a {
+    grid-column: 2;
+    justify-content: center;
+    width: fit-content;
+  }
+}

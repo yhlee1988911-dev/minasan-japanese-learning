@@ -182,7 +182,7 @@ export function PracticePage() {
   };
 
   useEffect(() => {
-    if (activeMode !== 'dictation' || !autoSpeak || !current) return;
+    if (!['dictation', 'cloze'].includes(activeMode) || !autoSpeak || !current) return;
     const timer = window.setTimeout(speak, 260);
     return () => window.clearTimeout(timer);
   }, [activeMode, autoSpeak, current, speak]);
@@ -283,7 +283,7 @@ export function PracticePage() {
       <header className="practice-header">
         <div className="practice-header__left">
           <Link to="/"><Home size={18} />返回首页</Link>
-          {activeMode === 'dictation' && !isReview && (
+          {['dictation', 'cloze'].includes(activeMode) && !isReview && (
             <label className="header-autoplay">
               <input type="checkbox" checked={autoSpeak} onChange={event => setAutoSpeak(event.target.checked)} />
               <i aria-hidden="true" /><span>自动播放</span>

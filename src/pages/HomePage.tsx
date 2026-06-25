@@ -59,9 +59,9 @@ export function HomePage() {
       </section>
 
       <section className="metrics" aria-label="课程统计">
-        <div><span>课程</span><strong>{lessons.length}</strong><small className="mastery-count">已掌握 {mastery.courses}</small></div>
-        <div><span>词汇</span><strong>{vocabulary.length}</strong><small className="mastery-count">已掌握 {mastery.vocabulary}</small></div>
-        <div><span>短句</span><strong>{sentences.length}</strong><small className="mastery-count">已掌握 {mastery.sentences}</small></div>
+        <Link to="/mastery/courses"><span>课程</span><strong>{lessons.length}</strong><small className="mastery-count">已掌握 {mastery.courses}</small></Link>
+        <Link to="/mastery/vocabulary"><span>词汇</span><strong>{vocabulary.length}</strong><small className="mastery-count">已掌握 {mastery.vocabulary}</small></Link>
+        <Link to="/mastery/sentences"><span>短句</span><strong>{sentences.length}</strong><small className="mastery-count">已掌握 {mastery.sentences}</small></Link>
       </section>
 
       <section className="mastery-progress" aria-label="词汇掌握进度">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="96" fill="#176b5b"/>
   <circle cx="256" cy="256" r="164" fill="#f7f7f2"/>
-  <text x="256" y="326" text-anchor="middle" font-family="sans-serif" font-size="210" font-weight="700" fill="#17211f">語</text>
+  <text x="256" y="330" text-anchor="middle" font-family="sans-serif" font-size="230" font-weight="800" fill="#17211f">み</text>
 </svg>

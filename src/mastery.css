@@ -1,4 +1,4 @@
-.metrics > div {
+.metrics > a {
   flex-wrap: wrap;
 }
 
@@ -79,7 +79,7 @@ html.eye-care .mastery-progress p {
 }
 
 @media (max-width: 700px) {
-  .metrics > div {
+  .metrics > a {
     align-items: flex-start;
     min-width: 0;
     padding: 14px 10px;

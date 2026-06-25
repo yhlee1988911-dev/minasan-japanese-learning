@@ -44,3 +44,9 @@ export const recordMasteryAttempt = (
   localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
   window.dispatchEvent(new Event('minasan:mastery-changed'));
 };
+
+export const removeMasteryRecord = (kind: MasteryKind, id: string) => {
+  const records = readMastery().filter(record => !(record.kind === kind && record.id === id));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+  window.dispatchEvent(new Event('minasan:mastery-changed'));
+};
