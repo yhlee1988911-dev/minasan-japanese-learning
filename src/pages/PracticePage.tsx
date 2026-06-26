@@ -4,9 +4,9 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
 import type { PracticeMode } from '../domain/models';
 import type { Lesson, Vocabulary } from '../domain/models';
-import { loadDuolingoCourse, sendProgressAttempt } from '../services/api';
+import { loadDuolingoCourse, onVisible, sendProgressAttempt } from '../services/api';
 import { speakJapanese, stopJapaneseSpeech } from '../services/speech';
-import { recordMasteryAttempt } from '../storage/mastery';
+import { mergeMasteryRecord, recordMasteryAttempt } from '../storage/mastery';
 import { readMistakes, recordMistake, removeMistake, type MistakeRecord } from '../storage/mistakes';
 
 const modeNames: Record<PracticeMode, string> = {
@@ -85,7 +85,7 @@ export function PracticePage() {
   const allVocabulary = useMemo(() => [...vocabulary, ...extraVocabulary], [extraVocabulary]);
 
   useEffect(() => {
-    loadDuolingoCourse().then(data => {
+    const refresh = () => loadDuolingoCourse().then(data => {
       setExtraLessons(data.lessons);
       setExtraVocabulary(data.vocabulary);
       setSelectedLessons(previous => {
@@ -93,6 +93,8 @@ export function PracticePage() {
         return new Set([data.lessons[0].id]);
       });
     });
+    refresh();
+    return onVisible(refresh);
   }, []);
 
   const regularQuestions = useMemo<PracticeQuestion[]>(() => {
@@ -324,7 +326,7 @@ export function PracticePage() {
         courseId,
         kind: current.id.startsWith('s-') ? 'sentence' : 'vocabulary',
         correct
-      }).catch(() => undefined);
+      }).then(response => mergeMasteryRecord(response.record)).catch(() => undefined);
     }
     if (!correct) {
       recordMistake({

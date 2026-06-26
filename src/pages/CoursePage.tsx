@@ -3,13 +3,17 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { lessons } from '../data/catalog';
 import type { Lesson } from '../domain/models';
-import { loadDuolingoCourse } from '../services/api';
+import { loadDuolingoCourse, onVisible } from '../services/api';
 
 export function CoursePage() {
   const [duolingoLessons, setDuolingoLessons] = useState<Lesson[]>([]);
 
   useEffect(() => {
-    loadDuolingoCourse().then(data => setDuolingoLessons(data.lessons));
+    const refresh = () => {
+      loadDuolingoCourse().then(data => setDuolingoLessons(data.lessons));
+    };
+    refresh();
+    return onVisible(refresh);
   }, []);
 
   return (

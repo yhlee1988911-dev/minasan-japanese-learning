@@ -2,6 +2,7 @@ import { ArrowLeft, BookOpenText, CheckCircle2, MessageSquareText, Rows3, Trash2
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
+import { sendLessonProgress, sendRemoveMastery } from '../services/api';
 import { isMastered, readMastery, removeMasteryRecord, type MasteryKind } from '../storage/mastery';
 
 type MasteryView = 'courses' | 'vocabulary' | 'sentences';
@@ -31,6 +32,15 @@ const getVocabularyLessonTitle = (sourceLesson: string) => {
   return getLessonTitle(`lesson-${String(order).padStart(2, '0')}`);
 };
 
+const getVocabularyLessonId = (id: string) => {
+  const word = vocabulary.find(item => item.id === id);
+  if (!word) return '';
+  if (word.sourceLesson.startsWith('duolingo-')) return word.sourceLesson;
+  return `lesson-${String(Number(word.sourceLesson.replace('补充', ''))).padStart(2, '0')}`;
+};
+
+const getSentenceLessonId = (id: string) => sentences.find(item => item.id === id)?.lessonId || '';
+
 export function MasteryPage() {
   const { view = 'vocabulary' } = useParams();
   const activeView = (['courses', 'vocabulary', 'sentences'].includes(view) ? view : 'vocabulary') as MasteryView;
@@ -53,8 +63,32 @@ export function MasteryPage() {
     };
   }, [version]);
 
+  const syncLessonAfterRemoval = (lessonId: string) => {
+    if (!lessonId || lessonId.startsWith('duolingo-')) return;
+    const records = readMastery();
+    const masteredVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && isMastered(record)).map(record => record.id));
+    const masteredSentenceIds = new Set(records.filter(record => record.kind === 'sentence' && isMastered(record)).map(record => record.id));
+    const lesson = lessons.find(item => item.id === lessonId);
+    if (!lesson) return;
+    void sendLessonProgress({
+      lessonId,
+      courseId: 'beginner-01',
+      vocabularyMasteredCount: lesson.vocabularyIds.filter(item => masteredVocabularyIds.has(item)).length,
+      sentenceMasteredCount: lesson.sentenceIds.filter(item => masteredSentenceIds.has(item)).length,
+      completed: lesson.vocabularyIds.length + lesson.sentenceIds.length > 0
+        && lesson.vocabularyIds.every(item => masteredVocabularyIds.has(item))
+        && lesson.sentenceIds.every(item => masteredSentenceIds.has(item))
+    }).catch(() => undefined);
+  };
+
   const removeItem = (kind: MasteryKind, id: string) => {
-    removeMasteryRecord(kind, id);
+    const removed = removeMasteryRecord(kind, id);
+    const lessonId = removed?.lessonId || (kind === 'sentence' ? getSentenceLessonId(id) : getVocabularyLessonId(id));
+    const courseId = removed?.courseId || (lessonId.startsWith('duolingo-') ? 'duolingo' : 'beginner-01');
+    if (lessonId) {
+      void sendRemoveMastery({ id, lessonId, courseId, kind }).catch(() => undefined);
+      syncLessonAfterRemoval(lessonId);
+    }
     setVersion(value => value + 1);
   };
 

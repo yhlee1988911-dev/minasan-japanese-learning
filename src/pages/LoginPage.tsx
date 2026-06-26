@@ -2,7 +2,7 @@ import { LockKeyhole } from 'lucide-react';
 import { FormEvent, useState } from 'react';
 import { getDeviceId, getDeviceName, login, type AuthUser } from '../services/api';
 
-export function LoginPage({ onLogin }: { onLogin: (user: AuthUser) => void }) {
+export function LoginPage({ admin = false, onLogin }: { admin?: boolean; onLogin: (user: AuthUser) => void }) {
   const [username, setUsername] = useState('root');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -28,8 +28,8 @@ export function LoginPage({ onLogin }: { onLogin: (user: AuthUser) => void }) {
     <main className="login-page">
       <form className="login-card" onSubmit={submit}>
         <div className="login-card__icon"><LockKeyhole size={26} /></div>
-        <p className="eyebrow">MINASAN LOGIN</p>
-        <h1>登录学习档案</h1>
+        <p className="eyebrow">{admin ? 'ROOT ADMIN' : 'MINASAN LOGIN'}</p>
+        <h1>{admin ? '登录后台管理' : '登录学习档案'}</h1>
         <label>
           <span>用户名</span>
           <input value={username} onChange={event => setUsername(event.target.value)} autoComplete="username" />

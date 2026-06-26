@@ -1,8 +1,9 @@
-import { BookOpenText, House, Moon, Sun } from 'lucide-react';
+import { BookOpenText, House, Moon, ShieldCheck, Sun } from 'lucide-react';
 import { type PropsWithChildren, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import type { AuthUser } from '../services/api';
 
-export function AppShell({ children }: PropsWithChildren) {
+export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser | null }>) {
   const location = useLocation();
   const isPractice = location.pathname === '/practice';
   const [eyeCare, setEyeCare] = useState(() => localStorage.getItem('minasan:eye-care') === 'true');
@@ -21,6 +22,7 @@ export function AppShell({ children }: PropsWithChildren) {
             <nav aria-label="主导航">
               <NavLink to="/"><House size={18} />首页</NavLink>
               <NavLink to="/course"><BookOpenText size={18} />课程</NavLink>
+              {user?.username === 'root' && <NavLink to="/admin"><ShieldCheck size={18} />后台</NavLink>}
             </nav>
           )}
           <button
@@ -37,4 +39,3 @@ export function AppShell({ children }: PropsWithChildren) {
     </div>
   );
 }
-

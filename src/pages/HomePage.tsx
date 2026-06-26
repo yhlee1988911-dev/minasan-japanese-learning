@@ -2,7 +2,7 @@ import { ArrowRight, BookMarked, BookOpenText, Headphones, Languages, Sparkles, 
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { course, lessons, sentences, vocabulary } from '../data/catalog';
-import { loadDuolingoCourse, sendLessonProgress } from '../services/api';
+import { loadDuolingoCourse, onVisible, sendLessonProgress } from '../services/api';
 import { isMastered, readMastery } from '../storage/mastery';
 import { readMistakes } from '../storage/mistakes';
 
@@ -30,9 +30,13 @@ export function HomePage() {
   }, []);
 
   useEffect(() => {
-    loadDuolingoCourse()
-      .then(data => setDuolingoTotal(data.vocabulary.length))
-      .catch(() => setDuolingoTotal(0));
+    const refresh = () => {
+      loadDuolingoCourse()
+        .then(data => setDuolingoTotal(data.vocabulary.length))
+        .catch(() => setDuolingoTotal(0));
+    };
+    refresh();
+    return onVisible(refresh);
   }, []);
 
   const mastery = useMemo(() => {

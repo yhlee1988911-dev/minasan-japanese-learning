@@ -1,5 +1,5 @@
 const MAX_TEXT_LENGTH = 200;
-const ROOT_PASSWORD_HASH = '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2';
+const ROOT_PASSWORD_HASH = 'a28373767b16f998af23afbd173e12fdecc355b3cd5a6f25ec80756bf39c82e5';
 const SESSION_DAYS = 30;
 const MAX_DEVICES_PER_USER = 3;
 
@@ -10,8 +10,16 @@ const jsonResponse = (message, status) => new Response(JSON.stringify({ error: m
 
 const dataResponse = (data, status = 200) => new Response(JSON.stringify(data), {
   status,
-  headers: { 'Content-Type': 'application/json; charset=utf-8' }
+  headers: {
+    'Cache-Control': 'no-store',
+    'Content-Type': 'application/json; charset=utf-8'
+  }
 });
+
+const isResponse = (value) => value && typeof value === 'object'
+  && typeof value.status === 'number'
+  && typeof value.headers?.get === 'function'
+  && typeof value.clone === 'function';
 
 const requireDb = (env) => {
   if (!env.DB) throw new Response(JSON.stringify({ error: 'D1 database is not configured' }), {
@@ -43,7 +51,9 @@ const parseJson = async (request) => {
 
 const ensureRootUser = async (db) => {
   await db.prepare(
-    'INSERT OR IGNORE INTO users (id, username, password_hash, created_at) VALUES (?, ?, ?, CURRENT_TIMESTAMP)'
+    `INSERT INTO users (id, username, password_hash, created_at)
+      VALUES (?, ?, ?, CURRENT_TIMESTAMP)
+      ON CONFLICT(username) DO UPDATE SET password_hash = excluded.password_hash`
   ).bind('user-root', 'root', ROOT_PASSWORD_HASH).run();
 };
 
@@ -62,6 +72,25 @@ const requireUser = async (request, env) => {
   ).bind(tokenHash).first();
   if (!session) throw jsonResponse('Unauthorized', 401);
   return { db, user: session };
+};
+
+const requireAdmin = async (request, env) => {
+  const { db, user } = await requireUser(request, env);
+  if (user.username !== 'root') throw jsonResponse('需要管理员权限', 403);
+  return { db, user };
+};
+
+const ensureDuolingoAdminSchema = async (db) => {
+  const columns = await db.prepare('PRAGMA table_info(vocabulary)').all();
+  const names = new Set((columns.results || []).map(item => item.name));
+  if (!names.has('is_active')) {
+    await db.prepare('ALTER TABLE vocabulary ADD COLUMN is_active INTEGER NOT NULL DEFAULT 1').run();
+  }
+  if (!names.has('deleted_at')) {
+    await db.prepare('ALTER TABLE vocabulary ADD COLUMN deleted_at TEXT').run();
+  }
+  await db.prepare('CREATE INDEX IF NOT EXISTS idx_vocabulary_duolingo_lookup ON vocabulary(course_id, term, reading)').run();
+  await db.prepare('CREATE INDEX IF NOT EXISTS idx_vocabulary_active_lesson ON vocabulary(course_id, is_active, lesson_id)').run();
 };
 
 const handleTts = async (request, context) => {
@@ -148,6 +177,10 @@ const handleLogin = async (request, env) => {
     await db.prepare('UPDATE user_devices SET device_name = ?, user_agent = ?, last_seen_at = CURRENT_TIMESTAMP WHERE user_id = ? AND device_id = ?')
       .bind(deviceName, userAgent, user.id, deviceId)
       .run();
+  } else if (user.username === 'root') {
+    await db.prepare('INSERT INTO user_devices (id, user_id, device_id, device_name, user_agent, first_seen_at, last_seen_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)')
+      .bind(`device-${crypto.randomUUID()}`, user.id, deviceId, deviceName, userAgent)
+      .run();
   } else {
     const deviceCount = await db.prepare('SELECT COUNT(*) AS count FROM user_devices WHERE user_id = ?')
       .bind(user.id)
@@ -184,6 +217,348 @@ const handleLogout = async (request, env) => {
   return dataResponse({ ok: true });
 };
 
+const listAdminUsers = async (db) => {
+  const users = await db.prepare(`SELECT
+      users.id,
+      users.username,
+      users.created_at,
+      users.last_login_at,
+      COUNT(DISTINCT user_devices.id) AS device_count,
+      COUNT(DISTINCT sessions.id) AS session_count
+    FROM users
+    LEFT JOIN user_devices ON user_devices.user_id = users.id
+    LEFT JOIN sessions ON sessions.user_id = users.id AND sessions.expires_at > CURRENT_TIMESTAMP
+    GROUP BY users.id, users.username, users.created_at, users.last_login_at
+    ORDER BY CASE WHEN users.username = 'root' THEN 0 ELSE 1 END, users.created_at ASC`).all();
+
+  const devices = await db.prepare(`SELECT
+      user_devices.id,
+      user_devices.user_id,
+      user_devices.device_id,
+      user_devices.device_name,
+      user_devices.user_agent,
+      user_devices.first_seen_at,
+      user_devices.last_seen_at
+    FROM user_devices
+    ORDER BY user_devices.last_seen_at DESC`).all();
+
+  return dataResponse({
+    users: users.results || [],
+    devices: devices.results || []
+  });
+};
+
+const handleAdminUsers = async (request, env) => {
+  if (request.method !== 'GET' && request.method !== 'POST') return jsonResponse('Method not allowed', 405);
+  const { db } = await requireAdmin(request, env);
+  await ensureRootUser(db);
+
+  if (request.method === 'GET') return listAdminUsers(db);
+
+  const payload = await parseJson(request);
+  const action = typeof payload.action === 'string' ? payload.action : '';
+
+  if (action === 'create') {
+    const username = typeof payload.username === 'string' ? payload.username.trim() : '';
+    const password = typeof payload.password === 'string' ? payload.password : '';
+    if (!/^[A-Za-z0-9_-]{3,32}$/.test(username)) return jsonResponse('用户名需为 3-32 位字母、数字、下划线或短横线', 400);
+    if (password.length < 8) return jsonResponse('密码至少需要 8 位', 400);
+    const passwordHash = await sha256(password);
+    try {
+      await db.prepare('INSERT INTO users (id, username, password_hash, created_at) VALUES (?, ?, ?, CURRENT_TIMESTAMP)')
+        .bind(`user-${crypto.randomUUID()}`, username, passwordHash)
+        .run();
+    } catch {
+      return jsonResponse('账户已存在', 409);
+    }
+    return listAdminUsers(db);
+  }
+
+  const userId = typeof payload.userId === 'string' ? payload.userId : '';
+  if (!userId) return jsonResponse('缺少账户 ID', 400);
+
+  if (action === 'clearDevices') {
+    await db.prepare('DELETE FROM user_devices WHERE user_id = ?').bind(userId).run();
+    return listAdminUsers(db);
+  }
+
+  if (action === 'delete') {
+    const target = await db.prepare('SELECT username FROM users WHERE id = ?').bind(userId).first();
+    if (!target) return jsonResponse('账户不存在', 404);
+    if (target.username === 'root') return jsonResponse('不能删除 root 管理员', 400);
+    await db.prepare('DELETE FROM sessions WHERE user_id = ?').bind(userId).run();
+    await db.prepare('DELETE FROM user_devices WHERE user_id = ?').bind(userId).run();
+    await db.prepare('DELETE FROM vocabulary_progress WHERE user_id = ?').bind(userId).run();
+    await db.prepare('DELETE FROM sentence_progress WHERE user_id = ?').bind(userId).run();
+    await db.prepare('DELETE FROM lesson_progress WHERE user_id = ?').bind(userId).run();
+    await db.prepare('DELETE FROM users WHERE id = ?').bind(userId).run();
+    return listAdminUsers(db);
+  }
+
+  return jsonResponse('未知管理操作', 400);
+};
+
+const normalizeLessonId = (value) => {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  if (/^duolingo-lesson-\d+$/i.test(raw)) {
+    const number = raw.match(/\d+$/)?.[0] || '1';
+    return `duolingo-lesson-${String(Number(number)).padStart(2, '0')}`;
+  }
+  const number = raw.match(/\d+/)?.[0];
+  return number ? `duolingo-lesson-${String(Number(number)).padStart(2, '0')}` : raw;
+};
+
+const normalizeCell = (value) => String(value || '').trim();
+
+const parseDuolingoRows = (text, fallbackLessonId) => {
+  const rows = String(text || '')
+    .split(/\r?\n/)
+    .filter(line => line.trim().length > 0);
+  if (!rows.length) return [];
+
+  const splitLine = (line) => line.includes('\t') ? line.split('\t') : line.split(',');
+  const first = splitLine(rows[0]).map(item => item.trim().toLowerCase());
+  const headerAliases = {
+    term: ['日文', '词汇', '單詞', '单词', 'term', 'word'],
+    reading: ['假名', '读音', '讀音', 'reading', 'kana'],
+    romaji: ['注音', '罗马音', '羅馬音', 'romaji'],
+    meaning: ['释义', '中文', '意思', 'meaning'],
+    partOfSpeech: ['词性', '詞性', 'part_of_speech', 'pos'],
+    lessonId: ['课时', '課時', 'lesson', 'lesson_id']
+  };
+  const hasHeader = first.some(cell => Object.values(headerAliases).some(names => names.includes(cell)));
+  const indexFor = (key, fallback) => {
+    const aliases = headerAliases[key];
+    const index = first.findIndex(cell => aliases.includes(cell));
+    return index >= 0 ? index : fallback;
+  };
+  const indexes = {
+    term: hasHeader ? indexFor('term', 0) : 0,
+    reading: hasHeader ? indexFor('reading', 1) : 1,
+    romaji: hasHeader ? indexFor('romaji', 2) : 2,
+    meaning: hasHeader ? indexFor('meaning', 3) : 3,
+    partOfSpeech: hasHeader ? indexFor('partOfSpeech', 4) : 4,
+    lessonId: hasHeader ? indexFor('lessonId', 5) : 5
+  };
+
+  return rows.slice(hasHeader ? 1 : 0).map((line, offset) => {
+    const cells = splitLine(line);
+    const rowNumber = offset + (hasHeader ? 2 : 1);
+    return {
+      rowNumber,
+      term: normalizeCell(cells[indexes.term]),
+      reading: normalizeCell(cells[indexes.reading]),
+      romaji: normalizeCell(cells[indexes.romaji]),
+      meaning: normalizeCell(cells[indexes.meaning]),
+      partOfSpeech: normalizeCell(cells[indexes.partOfSpeech]) || '未分类',
+      lessonId: normalizeLessonId(cells[indexes.lessonId] || fallbackLessonId)
+    };
+  });
+};
+
+const listDuolingoAdmin = async (db) => {
+  await ensureDuolingoAdminSchema(db);
+  const course = await db.prepare('SELECT id, title, description FROM courses WHERE id = ?').bind('duolingo').first();
+  const lessons = await db.prepare(`SELECT
+      lessons.id,
+      lessons.course_id,
+      lessons.title,
+      lessons.order_index,
+      lessons.description,
+      COUNT(vocabulary.id) AS vocabulary_count
+    FROM lessons
+    LEFT JOIN vocabulary ON vocabulary.lesson_id = lessons.id AND vocabulary.course_id = lessons.course_id AND vocabulary.is_active = 1
+    WHERE lessons.course_id = ?
+    GROUP BY lessons.id, lessons.course_id, lessons.title, lessons.order_index, lessons.description
+    ORDER BY lessons.order_index ASC`).bind('duolingo').all();
+  const words = await db.prepare(`SELECT
+      id,
+      course_id,
+      lesson_id,
+      term,
+      reading,
+      meaning,
+      romaji,
+      part_of_speech,
+      tags,
+      source_row,
+      updated_at,
+      is_active,
+      deleted_at
+    FROM vocabulary
+    WHERE course_id = ?
+    ORDER BY is_active DESC, lesson_id ASC, source_row ASC, id ASC`).bind('duolingo').all();
+
+  return dataResponse({
+    course,
+    lessons: lessons.results || [],
+    vocabulary: words.results || []
+  });
+};
+
+const previewDuolingoImport = async (db, payload) => {
+  await ensureDuolingoAdminSchema(db);
+  const rows = parseDuolingoRows(payload.text, payload.lessonId);
+  const existing = await db.prepare('SELECT id, term, reading, lesson_id, meaning, romaji, part_of_speech, is_active FROM vocabulary WHERE course_id = ?')
+    .bind('duolingo')
+    .all();
+  const existingMap = new Map((existing.results || []).map(item => [`${item.term}\u0000${item.reading}`, item]));
+  const lessons = await db.prepare('SELECT id FROM lessons WHERE course_id = ?').bind('duolingo').all();
+  const lessonIds = new Set((lessons.results || []).map(item => item.id));
+
+  const items = rows.map(row => {
+    const errors = [];
+    if (!row.term) errors.push('缺少日文');
+    if (!row.reading) errors.push('缺少假名');
+    if (!row.meaning) errors.push('缺少释义');
+    if (!row.lessonId) errors.push('缺少课时');
+    if (row.lessonId && !lessonIds.has(row.lessonId)) errors.push('课时不存在');
+
+    const current = existingMap.get(`${row.term}\u0000${row.reading}`);
+    const changed = current && (
+      current.lesson_id !== row.lessonId
+      || current.meaning !== row.meaning
+      || (current.romaji || '') !== row.romaji
+      || (current.part_of_speech || '未分类') !== row.partOfSpeech
+      || Number(current.is_active) !== 1
+    );
+
+    return {
+      ...row,
+      id: current?.id || '',
+      status: errors.length ? 'error' : current ? changed ? 'update' : 'same' : 'create',
+      errors,
+      previous: current || null
+    };
+  });
+
+  return dataResponse({
+    items,
+    summary: {
+      total: items.length,
+      create: items.filter(item => item.status === 'create').length,
+      update: items.filter(item => item.status === 'update').length,
+      same: items.filter(item => item.status === 'same').length,
+      error: items.filter(item => item.status === 'error').length
+    }
+  });
+};
+
+const nextDuolingoVocabularyId = async (db) => {
+  const row = await db.prepare("SELECT id FROM vocabulary WHERE course_id = 'duolingo' AND id LIKE 'duo-v-%' ORDER BY id DESC LIMIT 1").first();
+  const next = Number(String(row?.id || '').match(/\d+$/)?.[0] || 0) + 1;
+  return `duo-v-${String(next).padStart(4, '0')}`;
+};
+
+const commitDuolingoImport = async (db, payload) => {
+  await ensureDuolingoAdminSchema(db);
+  const preview = await previewDuolingoImport(db, payload);
+  const data = await preview.json();
+  const validItems = data.items.filter(item => item.status === 'create' || item.status === 'update');
+  let created = 0;
+  let updated = 0;
+
+  for (const item of validItems) {
+    if (item.status === 'update') {
+      await db.prepare(`UPDATE vocabulary
+        SET lesson_id = ?, meaning = ?, romaji = ?, part_of_speech = ?, is_active = 1, deleted_at = NULL, updated_at = CURRENT_TIMESTAMP
+        WHERE id = ? AND course_id = 'duolingo'`)
+        .bind(item.lessonId, item.meaning, item.romaji, item.partOfSpeech, item.id)
+        .run();
+      updated += 1;
+    } else {
+      const id = await nextDuolingoVocabularyId(db);
+      const maxRow = await db.prepare("SELECT COALESCE(MAX(source_row), 0) AS max_row FROM vocabulary WHERE course_id = 'duolingo'").first();
+      await db.prepare(`INSERT INTO vocabulary
+        (id, course_id, lesson_id, term, reading, meaning, romaji, part_of_speech, tags, source_row, updated_at, is_active, deleted_at)
+        VALUES (?, 'duolingo', ?, ?, ?, ?, ?, ?, '[]', ?, CURRENT_TIMESTAMP, 1, NULL)`)
+        .bind(id, item.lessonId, item.term, item.reading, item.meaning, item.romaji, item.partOfSpeech, Number(maxRow?.max_row || 0) + 1)
+        .run();
+      created += 1;
+    }
+  }
+
+  return dataResponse({ ok: true, created, updated, skipped: data.summary.same, errors: data.summary.error });
+};
+
+const createDuolingoLesson = async (db, payload) => {
+  await ensureDuolingoAdminSchema(db);
+  const title = normalizeCell(payload.title);
+  const requestedId = normalizeLessonId(payload.lessonId);
+  const maxLesson = await db.prepare("SELECT COALESCE(MAX(order_index), 0) AS max_order FROM lessons WHERE course_id = 'duolingo'").first();
+  const order = Number(payload.order || 0) || Number(maxLesson?.max_order || 0) + 1;
+  const lessonId = requestedId || `duolingo-lesson-${String(order).padStart(2, '0')}`;
+  const lessonTitle = title || `duolingo ${order}`;
+  const description = normalizeCell(payload.description) || '本课可通过后台批量导入 duolingo 词汇。';
+  try {
+    await db.prepare(`INSERT INTO lessons (id, course_id, title, order_index, description)
+      VALUES (?, 'duolingo', ?, ?, ?)`)
+      .bind(lessonId, lessonTitle, order, description)
+      .run();
+  } catch {
+    return jsonResponse('课时已存在或排序冲突', 409);
+  }
+  return listDuolingoAdmin(db);
+};
+
+const updateDuolingoWord = async (db, payload) => {
+  await ensureDuolingoAdminSchema(db);
+  const id = normalizeCell(payload.id);
+  const term = normalizeCell(payload.term);
+  const reading = normalizeCell(payload.reading);
+  const meaning = normalizeCell(payload.meaning);
+  const romaji = normalizeCell(payload.romaji);
+  const partOfSpeech = normalizeCell(payload.partOfSpeech) || '未分类';
+  const lessonId = normalizeLessonId(payload.lessonId);
+  if (!id) return jsonResponse('缺少词汇 ID', 400);
+  if (!term) return jsonResponse('缺少日文', 400);
+  if (!reading) return jsonResponse('缺少假名', 400);
+  if (!meaning) return jsonResponse('缺少释义', 400);
+  const lesson = await db.prepare("SELECT id FROM lessons WHERE course_id = 'duolingo' AND id = ?").bind(lessonId).first();
+  if (!lesson) return jsonResponse('课时不存在', 400);
+  const existing = await db.prepare("SELECT id FROM vocabulary WHERE id = ? AND course_id = 'duolingo'").bind(id).first();
+  if (!existing) return jsonResponse('词汇不存在', 404);
+  const duplicate = await db.prepare(`SELECT id FROM vocabulary
+    WHERE course_id = 'duolingo' AND id != ? AND term = ? AND reading = ? AND is_active = 1
+    LIMIT 1`)
+    .bind(id, term, reading)
+    .first();
+  if (duplicate) return jsonResponse('已有相同日文和假名的词条', 409);
+  await db.prepare(`UPDATE vocabulary
+    SET term = ?, reading = ?, meaning = ?, romaji = ?, part_of_speech = ?, lesson_id = ?, is_active = 1, deleted_at = NULL, updated_at = CURRENT_TIMESTAMP
+    WHERE id = ? AND course_id = 'duolingo'`)
+    .bind(term, reading, meaning, romaji, partOfSpeech, lessonId, id)
+    .run();
+  return listDuolingoAdmin(db);
+};
+
+const deleteDuolingoWord = async (db, payload) => {
+  await ensureDuolingoAdminSchema(db);
+  const id = typeof payload.id === 'string' ? payload.id : '';
+  if (!id) return jsonResponse('缺少词汇 ID', 400);
+  await db.prepare(`UPDATE vocabulary
+    SET is_active = 0, deleted_at = CURRENT_TIMESTAMP, updated_at = CURRENT_TIMESTAMP
+    WHERE id = ? AND course_id = 'duolingo'`)
+    .bind(id)
+    .run();
+  return dataResponse({ ok: true });
+};
+
+const handleAdminDuolingo = async (request, env) => {
+  if (request.method !== 'GET' && request.method !== 'POST') return jsonResponse('Method not allowed', 405);
+  const { db } = await requireAdmin(request, env);
+  if (request.method === 'GET') return listDuolingoAdmin(db);
+
+  const payload = await parseJson(request);
+  if (payload.action === 'createLesson') return createDuolingoLesson(db, payload);
+  if (payload.action === 'updateWord') return updateDuolingoWord(db, payload);
+  if (payload.action === 'previewImport') return previewDuolingoImport(db, payload);
+  if (payload.action === 'commitImport') return commitDuolingoImport(db, payload);
+  if (payload.action === 'deleteWord') return deleteDuolingoWord(db, payload);
+  return jsonResponse('未知 Duolingo 管理操作', 400);
+};
+
 const handleDuolingo = async (request, env) => {
   if (request.method !== 'GET') return jsonResponse('Method not allowed', 405);
   await requireUser(request, env);
@@ -193,7 +568,8 @@ const handleDuolingo = async (request, env) => {
   const lessons = await db.prepare('SELECT id, course_id, title, order_index, description FROM lessons WHERE course_id = ? ORDER BY order_index ASC')
     .bind('duolingo')
     .all();
-  const words = await db.prepare('SELECT id, course_id, lesson_id, term, reading, meaning, romaji, part_of_speech, source_row FROM vocabulary WHERE course_id = ? ORDER BY source_row ASC')
+  await ensureDuolingoAdminSchema(db);
+  const words = await db.prepare('SELECT id, course_id, lesson_id, term, reading, meaning, romaji, part_of_speech, source_row FROM vocabulary WHERE course_id = ? AND is_active = 1 ORDER BY source_row ASC')
     .bind('duolingo')
     .all();
   const lessonRows = lessons.results || [];
@@ -255,6 +631,25 @@ const progressRowsToRecords = (vocabularyRows, sentenceRows) => [
   }))
 ];
 
+const progressRowToRecord = (item, kind) => ({
+  id: kind === 'sentence' ? item.sentence_id : item.vocabulary_id,
+  lessonId: item.lesson_id,
+  courseId: item.course_id,
+  kind,
+  correctCount: item.correct_count,
+  wrongCount: item.wrong_count,
+  lastPracticedAt: item.last_practiced_at
+});
+
+const lessonRowToRecord = (item) => ({
+  lessonId: item.lesson_id,
+  courseId: item.course_id,
+  vocabularyMasteredCount: item.vocabulary_mastered_count,
+  sentenceMasteredCount: item.sentence_mastered_count,
+  completed: Boolean(item.completed),
+  lastStudiedAt: item.last_studied_at
+});
+
 const handleProgress = async (request, env) => {
   const { db, user } = await requireUser(request, env);
   if (request.method === 'GET') {
@@ -285,14 +680,36 @@ const handleProgress = async (request, env) => {
         last_studied_at = CURRENT_TIMESTAMP`)
       .bind(user.id, lessonId, courseId, Number(payload.vocabularyMasteredCount || 0), Number(payload.sentenceMasteredCount || 0), payload.completed ? 1 : 0)
       .run();
-    return dataResponse({ ok: true });
+    const lesson = await db.prepare('SELECT * FROM lesson_progress WHERE user_id = ? AND lesson_id = ?')
+      .bind(user.id, lessonId)
+      .first();
+    return dataResponse({ ok: true, lesson: lessonRowToRecord(lesson) });
   }
 
   const id = typeof payload.id === 'string' ? payload.id : '';
   if (!id) return jsonResponse('id is required', 400);
-  const correct = Boolean(payload.correct);
   const table = kind === 'sentence' ? 'sentence_progress' : 'vocabulary_progress';
   const idColumn = kind === 'sentence' ? 'sentence_id' : 'vocabulary_id';
+
+  if (payload.action === 'removeMastery') {
+    await db.prepare(`INSERT INTO ${table} (user_id, ${idColumn}, lesson_id, course_id, correct_count, wrong_count, mastered, last_practiced_at)
+      VALUES (?, ?, ?, ?, 0, 0, 0, CURRENT_TIMESTAMP)
+      ON CONFLICT(user_id, ${idColumn}) DO UPDATE SET
+        lesson_id = excluded.lesson_id,
+        course_id = excluded.course_id,
+        correct_count = 0,
+        wrong_count = 0,
+        mastered = 0,
+        last_practiced_at = CURRENT_TIMESTAMP`)
+      .bind(user.id, id, lessonId, courseId)
+      .run();
+    const row = await db.prepare(`SELECT * FROM ${table} WHERE user_id = ? AND ${idColumn} = ?`)
+      .bind(user.id, id)
+      .first();
+    return dataResponse({ ok: true, record: progressRowToRecord(row, kind) });
+  }
+
+  const correct = Boolean(payload.correct);
   await db.prepare(`INSERT INTO ${table} (user_id, ${idColumn}, lesson_id, course_id, correct_count, wrong_count, mastered, last_practiced_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
     ON CONFLICT(user_id, ${idColumn}) DO UPDATE SET
@@ -304,7 +721,10 @@ const handleProgress = async (request, env) => {
       last_practiced_at = CURRENT_TIMESTAMP`)
     .bind(user.id, id, lessonId, courseId, correct ? 1 : 0, correct ? 0 : 1, correct ? 1 : 0, correct ? 0 : 1, correct ? 1 : 0, correct ? 0 : 1)
     .run();
-  return dataResponse({ ok: true });
+  const row = await db.prepare(`SELECT * FROM ${table} WHERE user_id = ? AND ${idColumn} = ?`)
+    .bind(user.id, id)
+    .first();
+  return dataResponse({ ok: true, record: progressRowToRecord(row, kind) });
 };
 
 export default {
@@ -315,11 +735,13 @@ export default {
       if (url.pathname === '/api/login') return handleLogin(request, env);
       if (url.pathname === '/api/me') return handleMe(request, env);
       if (url.pathname === '/api/logout') return handleLogout(request, env);
+      if (url.pathname === '/api/admin/users') return handleAdminUsers(request, env);
+      if (url.pathname === '/api/admin/duolingo') return handleAdminDuolingo(request, env);
       if (url.pathname === '/api/duolingo') return handleDuolingo(request, env);
       if (url.pathname === '/api/progress') return handleProgress(request, env);
       return env.ASSETS.fetch(request);
     } catch (error) {
-      if (error instanceof Response) return error;
+      if (isResponse(error)) return error;
       return jsonResponse('Internal server error', 500);
     }
   }

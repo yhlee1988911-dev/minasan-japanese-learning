@@ -51,8 +51,28 @@ export const recordMasteryAttempt = (
   window.dispatchEvent(new Event('minasan:mastery-changed'));
 };
 
-export const removeMasteryRecord = (kind: MasteryKind, id: string) => {
-  const records = readMastery().filter(record => !(record.kind === kind && record.id === id));
+export const mergeMasteryRecord = (record: MasteryRecord) => {
+  const records = readMastery();
+  const index = records.findIndex(item => item.id === record.id && item.kind === record.kind);
+  if (index >= 0) {
+    records[index] = {
+      ...records[index],
+      ...record,
+      correctCount: Math.max(records[index].correctCount, record.correctCount),
+      wrongCount: Math.max(records[index].wrongCount, record.wrongCount),
+      lastPracticedAt: record.lastPracticedAt || records[index].lastPracticedAt
+    };
+  } else {
+    records.push(record);
+  }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
   window.dispatchEvent(new Event('minasan:mastery-changed'));
+};
+
+export const removeMasteryRecord = (kind: MasteryKind, id: string) => {
+  const records = readMastery();
+  const removed = records.find(record => record.kind === kind && record.id === id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(records.filter(record => !(record.kind === kind && record.id === id))));
+  window.dispatchEvent(new Event('minasan:mastery-changed'));
+  return removed;
 };
