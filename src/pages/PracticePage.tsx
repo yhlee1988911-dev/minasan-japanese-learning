@@ -3,6 +3,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
 import type { PracticeMode } from '../domain/models';
+import type { Lesson, Vocabulary } from '../domain/models';
+import { loadDuolingoCourse, sendProgressAttempt } from '../services/api';
 import { speakJapanese, stopJapaneseSpeech } from '../services/speech';
 import { recordMasteryAttempt } from '../storage/mastery';
 import { readMistakes, recordMistake, removeMistake, type MistakeRecord } from '../storage/mistakes';
@@ -38,6 +40,7 @@ const shuffle = <T,>(items: T[]) => {
 };
 
 const getVocabularyLessonId = (sourceLesson: string) => {
+  if (sourceLesson.startsWith('duolingo-')) return sourceLesson;
   const lesson = lessons.find(item => String(item.order) === sourceLesson.replace('补充', ''));
   return lesson?.id || `lesson-${sourceLesson.padStart(2, '0')}`;
 };
@@ -56,8 +59,11 @@ const fromMistake = (item: MistakeRecord): PracticeQuestion => ({
 export function PracticePage() {
   const [params] = useSearchParams();
   const requestedMode = (params.get('mode') || 'translation') as PracticeMode;
+  const requestedLesson = params.get('lesson');
   const isReview = params.get('review') === 'true';
-  const [selectedLessons, setSelectedLessons] = useState(() => new Set([lessons[0].id]));
+  const [selectedLessons, setSelectedLessons] = useState(() => new Set(requestedLesson ? [requestedLesson] : []));
+  const [extraLessons, setExtraLessons] = useState<Lesson[]>([]);
+  const [extraVocabulary, setExtraVocabulary] = useState<Vocabulary[]>([]);
   const [reviewItems, setReviewItems] = useState<MistakeRecord[]>(readMistakes);
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [index, setIndex] = useState(0);
@@ -70,9 +76,24 @@ export function PracticePage() {
   const referenceTimerRef = useRef<number | null>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
+  const completionAudioRef = useRef<{ success: HTMLAudioElement; fail: HTMLAudioElement } | null>(null);
   const completionPlayedRef = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
+
+  const allLessons = useMemo(() => [...lessons, ...extraLessons], [extraLessons]);
+  const allVocabulary = useMemo(() => [...vocabulary, ...extraVocabulary], [extraVocabulary]);
+
+  useEffect(() => {
+    loadDuolingoCourse().then(data => {
+      setExtraLessons(data.lessons);
+      setExtraVocabulary(data.vocabulary);
+      setSelectedLessons(previous => {
+        if (previous.size || !data.lessons.length) return previous;
+        return new Set([data.lessons[0].id]);
+      });
+    });
+  }, []);
 
   const regularQuestions = useMemo<PracticeQuestion[]>(() => {
     if (requestedMode === 'cloze') {
@@ -90,7 +111,7 @@ export function PracticePage() {
         }));
     }
 
-    return vocabulary
+    return allVocabulary
       .filter(item => selectedLessons.has(getVocabularyLessonId(item.sourceLesson)))
       .map(item => ({
         key: `${requestedMode}:${item.id}`,
@@ -102,7 +123,7 @@ export function PracticePage() {
         speech: item.reading,
         answers: [item.term, item.reading]
       }));
-  }, [requestedMode, selectedLessons]);
+  }, [allVocabulary, requestedMode, selectedLessons]);
 
   const sourceQuestions = useMemo(
     () => isReview ? reviewItems.map(fromMistake) : regularQuestions,
@@ -122,14 +143,18 @@ export function PracticePage() {
   const completed = questions.length > 0 && index >= questions.length;
   const current = !completed && questions.length ? questions[index] : null;
   const activeMode = current?.mode || requestedMode;
-  const allSelected = selectedLessons.size === lessons.length;
+  const selectedBeginnerCount = lessons.filter(lesson => selectedLessons.has(lesson.id)).length;
+  const selectedDuolingoCount = extraLessons.filter(lesson => selectedLessons.has(lesson.id)).length;
+  const activeScope = selectedDuolingoCount ? 'duolingo' : selectedBeginnerCount ? 'beginner' : 'none';
   const selectedLabel = isReview
     ? '错题巩固'
-    : allSelected
-      ? '初级全部课程'
-      : selectedLessons.size === 1
-        ? lessons.find(item => selectedLessons.has(item.id))?.title || '第 1 课'
+    : selectedLessons.size === 1
+        ? allLessons.find(item => selectedLessons.has(item.id))?.title || '第 1 课'
         : `${selectedLessons.size} 个课程`;
+  const completionTotal = Math.max(questions.length, 1);
+  const completionAccuracy = summary.correct / completionTotal;
+  const completionStars = Math.round(completionAccuracy * 5);
+  const completionPassed = completionStars >= 4;
 
   const resetQuestion = useCallback(() => {
     setAnswer('');
@@ -186,11 +211,27 @@ export function PracticePage() {
     void audio.play().catch(() => playSyntheticFeedback(correct));
   };
 
+  const playCompletionFeedback = (passed: boolean) => {
+    if (!completionAudioRef.current) {
+      completionAudioRef.current = {
+        success: new Audio('/sounds/chenggong.mp3'),
+        fail: new Audio('/sounds/shibai.mp3')
+      };
+    }
+    const sounds = completionAudioRef.current;
+    sounds.success.pause();
+    sounds.fail.pause();
+    const audio = passed ? sounds.success : sounds.fail;
+    audio.currentTime = 0;
+    audio.volume = 0.82;
+    void audio.play().catch(() => playSyntheticFeedback(passed));
+  };
+
   useEffect(() => {
     if (!completed || completionPlayedRef.current) return;
     completionPlayedRef.current = true;
-    playFeedback(true);
-  }, [completed]);
+    playCompletionFeedback(completionPassed);
+  }, [completed, completionPassed]);
 
   useEffect(() => {
     if (!['dictation', 'cloze'].includes(activeMode) || !autoSpeak || !current) return;
@@ -208,7 +249,7 @@ export function PracticePage() {
         setIndex(value => value + 1);
         resetQuestion();
       }
-    }, 1500);
+    }, 2000);
     return () => window.clearTimeout(timer);
   }, [current, isReview, questions.length, resetQuestion, result]);
 
@@ -229,6 +270,8 @@ export function PracticePage() {
     stopJapaneseSpeech();
     feedbackAudioRef.current?.correct.pause();
     feedbackAudioRef.current?.incorrect.pause();
+    completionAudioRef.current?.success.pause();
+    completionAudioRef.current?.fail.pause();
     void audioContextRef.current?.close();
   }, []);
 
@@ -241,16 +284,19 @@ export function PracticePage() {
     }, 3000);
   };
 
-  const toggleLesson = (lessonId: string) => {
+  const toggleLesson = (lessonId: string, scope: 'beginner' | 'duolingo') => {
     setSelectedLessons(previous => {
-      const next = new Set(previous);
+      const scopeLessons = scope === 'beginner' ? lessons : extraLessons;
+      const next = new Set(scopeLessons.filter(lesson => previous.has(lesson.id)).map(lesson => lesson.id));
       next.has(lessonId) ? next.delete(lessonId) : next.add(lessonId);
       return next;
     });
   };
 
-  const toggleAllLessons = () => {
-    setSelectedLessons(allSelected ? new Set() : new Set(lessons.map(item => item.id)));
+  const toggleScope = (scope: 'beginner' | 'duolingo') => {
+    const scopeLessons = scope === 'beginner' ? lessons : extraLessons;
+    const scopeSelected = scopeLessons.length > 0 && scopeLessons.every(lesson => selectedLessons.has(lesson.id));
+    setSelectedLessons(scopeSelected ? new Set() : new Set(scopeLessons.map(item => item.id)));
   };
 
   const checkAnswer = () => {
@@ -265,11 +311,20 @@ export function PracticePage() {
     }));
     playFeedback(correct);
     if (!isReview) {
+      const courseId = current.lessonId.startsWith('duolingo-') ? 'duolingo' : 'beginner-01';
       recordMasteryAttempt({
         id: current.id,
         lessonId: current.lessonId,
+        courseId,
         kind: current.id.startsWith('s-') ? 'sentence' : 'vocabulary'
       }, correct);
+      void sendProgressAttempt({
+        id: current.id,
+        lessonId: current.lessonId,
+        courseId,
+        kind: current.id.startsWith('s-') ? 'sentence' : 'vocabulary',
+        correct
+      }).catch(() => undefined);
     }
     if (!correct) {
       recordMistake({
@@ -312,34 +367,45 @@ export function PracticePage() {
 
       {!isReview && (
         <section className="practice-setup" aria-label="练习设置">
-          <details className="course-picker">
-            <summary><span>练习范围</span><strong>{selectedLabel}</strong><ChevronDown size={18} /></summary>
-            <div className="course-options">
-              <label className="select-all"><input type="checkbox" checked={allSelected} onChange={toggleAllLessons} /><span>初级全部课程</span><small>{vocabulary.length} 词 · {sentences.length} 句</small></label>
-              {lessons.map(lesson => (
-                <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id)} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
-              ))}
-            </div>
-          </details>
+          <div className="course-picker-split">
+            <details className={`course-picker ${activeScope === 'beginner' ? 'is-active' : 'is-muted'}`}>
+              <summary><span>初级日语50课</span><strong>{selectedBeginnerCount ? `${selectedBeginnerCount} 课` : '未选择'}</strong><ChevronDown size={18} /></summary>
+              <div className="course-options">
+                <label className="select-all"><input type="checkbox" checked={selectedBeginnerCount === lessons.length} onChange={() => toggleScope('beginner')} /><span>初级全部课程</span><small>{vocabulary.length} 词 · {sentences.length} 句</small></label>
+                {lessons.map(lesson => (
+                  <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id, 'beginner')} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
+                ))}
+              </div>
+            </details>
+            <details className={`course-picker ${activeScope === 'duolingo' ? 'is-active' : 'is-muted'}`}>
+              <summary><span>duolingo</span><strong>{selectedDuolingoCount ? `${selectedDuolingoCount} 课` : '未选择'}</strong><ChevronDown size={18} /></summary>
+              <div className="course-options">
+                <label className="select-all"><input type="checkbox" checked={extraLessons.length > 0 && selectedDuolingoCount === extraLessons.length} onChange={() => toggleScope('duolingo')} /><span>duolingo 全部课程</span><small>{extraVocabulary.length} 词 · 0 句</small></label>
+                {extraLessons.map(lesson => (
+                  <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id, 'duolingo')} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
+                ))}
+              </div>
+            </details>
+          </div>
         </section>
       )}
 
       {completed ? (
         <section className="practice-complete">
           <p className="eyebrow">SESSION COMPLETE</p>
-          <h1>お疲れ様でした！！</h1>
-          <div className="star-rating" aria-label={`本轮评分 ${Math.round((summary.correct / Math.max(questions.length, 1)) * 5)} 星`}>
+          <h1>{completionPassed ? 'お疲れ様でした！！' : '次こそ頑張ろう！！！'}</h1>
+          <div className="star-rating" aria-label={`本轮评分 ${completionStars} 星`}>
             {Array.from({ length: 5 }, (_, starIndex) => (
-              <Star key={starIndex} size={28} fill={starIndex < Math.round((summary.correct / Math.max(questions.length, 1)) * 5) ? 'currentColor' : 'none'} />
+              <Star key={starIndex} size={28} fill={starIndex < completionStars ? 'currentColor' : 'none'} />
             ))}
           </div>
           <div className="summary-grid">
             <div><span>答对</span><strong>{summary.correct}</strong></div>
             <div><span>答错</span><strong>{summary.incorrect}</strong></div>
             <div><span>跳过</span><strong>{summary.skipped}</strong></div>
-            <div><span>正确率</span><strong>{Math.round((summary.correct / Math.max(questions.length, 1)) * 100)}%</strong></div>
+            <div><span>正确率</span><strong>{Math.round(completionAccuracy * 100)}%</strong></div>
           </div>
-          <p>{summary.correct === questions.length ? '这一轮完成得很稳，继续保持。' : '可以回到首页换一个范围，或者进入错题本加强。'}</p>
+          <p>{completionPassed ? '这一轮完成得很稳，继续保持。' : '这轮先把错题收住，下次就会轻松很多。'}</p>
           <div className="complete-actions">
             <Link to="/"><Home size={18} />返回首页</Link>
             <Link to="/review">查看错题本</Link>

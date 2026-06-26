@@ -1,0 +1,5039 @@
+{
+  "course": {
+    "id": "duolingo",
+    "title": "duolingo",
+    "description": "来自 online.xlsx 的 duolingo 词汇课程。",
+    "lessonIds": [
+      "duolingo-lesson-01",
+      "duolingo-lesson-02",
+      "duolingo-lesson-03",
+      "duolingo-lesson-04",
+      "duolingo-lesson-05",
+      "duolingo-lesson-06",
+      "duolingo-lesson-07",
+      "duolingo-lesson-08",
+      "duolingo-lesson-09",
+      "duolingo-lesson-10"
+    ]
+  },
+  "lessons": [
+    {
+      "id": "duolingo-lesson-01",
+      "courseId": "duolingo",
+      "order": 1,
+      "title": "duolingo 1",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0001",
+        "duo-v-0002",
+        "duo-v-0003",
+        "duo-v-0004",
+        "duo-v-0005",
+        "duo-v-0006",
+        "duo-v-0007",
+        "duo-v-0008",
+        "duo-v-0009",
+        "duo-v-0010",
+        "duo-v-0011",
+        "duo-v-0012",
+        "duo-v-0013",
+        "duo-v-0014",
+        "duo-v-0015",
+        "duo-v-0016",
+        "duo-v-0017",
+        "duo-v-0018",
+        "duo-v-0019",
+        "duo-v-0020",
+        "duo-v-0021",
+        "duo-v-0022",
+        "duo-v-0023",
+        "duo-v-0024",
+        "duo-v-0025"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-02",
+      "courseId": "duolingo",
+      "order": 2,
+      "title": "duolingo 2",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0026",
+        "duo-v-0027",
+        "duo-v-0028",
+        "duo-v-0029",
+        "duo-v-0030",
+        "duo-v-0031",
+        "duo-v-0032",
+        "duo-v-0033",
+        "duo-v-0034",
+        "duo-v-0035",
+        "duo-v-0036",
+        "duo-v-0037",
+        "duo-v-0038",
+        "duo-v-0039",
+        "duo-v-0040",
+        "duo-v-0041",
+        "duo-v-0042",
+        "duo-v-0043",
+        "duo-v-0044",
+        "duo-v-0045",
+        "duo-v-0046",
+        "duo-v-0047",
+        "duo-v-0048",
+        "duo-v-0049",
+        "duo-v-0050"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-03",
+      "courseId": "duolingo",
+      "order": 3,
+      "title": "duolingo 3",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0051",
+        "duo-v-0052",
+        "duo-v-0053",
+        "duo-v-0054",
+        "duo-v-0055",
+        "duo-v-0056",
+        "duo-v-0057",
+        "duo-v-0058",
+        "duo-v-0059",
+        "duo-v-0060",
+        "duo-v-0061",
+        "duo-v-0062",
+        "duo-v-0063",
+        "duo-v-0064",
+        "duo-v-0065",
+        "duo-v-0066",
+        "duo-v-0067",
+        "duo-v-0068",
+        "duo-v-0069",
+        "duo-v-0070",
+        "duo-v-0071",
+        "duo-v-0072",
+        "duo-v-0073",
+        "duo-v-0074",
+        "duo-v-0075"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-04",
+      "courseId": "duolingo",
+      "order": 4,
+      "title": "duolingo 4",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0076",
+        "duo-v-0077",
+        "duo-v-0078",
+        "duo-v-0079",
+        "duo-v-0080",
+        "duo-v-0081",
+        "duo-v-0082",
+        "duo-v-0083",
+        "duo-v-0084",
+        "duo-v-0085",
+        "duo-v-0086",
+        "duo-v-0087",
+        "duo-v-0088",
+        "duo-v-0089",
+        "duo-v-0090",
+        "duo-v-0091",
+        "duo-v-0092",
+        "duo-v-0093",
+        "duo-v-0094",
+        "duo-v-0095",
+        "duo-v-0096",
+        "duo-v-0097",
+        "duo-v-0098",
+        "duo-v-0099",
+        "duo-v-0100"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-05",
+      "courseId": "duolingo",
+      "order": 5,
+      "title": "duolingo 5",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0101",
+        "duo-v-0102",
+        "duo-v-0103",
+        "duo-v-0104",
+        "duo-v-0105",
+        "duo-v-0106",
+        "duo-v-0107",
+        "duo-v-0108",
+        "duo-v-0109",
+        "duo-v-0110",
+        "duo-v-0111",
+        "duo-v-0112",
+        "duo-v-0113",
+        "duo-v-0114",
+        "duo-v-0115",
+        "duo-v-0116",
+        "duo-v-0117",
+        "duo-v-0118",
+        "duo-v-0119",
+        "duo-v-0120",
+        "duo-v-0121",
+        "duo-v-0122",
+        "duo-v-0123",
+        "duo-v-0124",
+        "duo-v-0125"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-06",
+      "courseId": "duolingo",
+      "order": 6,
+      "title": "duolingo 6",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0126",
+        "duo-v-0127",
+        "duo-v-0128",
+        "duo-v-0129",
+        "duo-v-0130",
+        "duo-v-0131",
+        "duo-v-0132",
+        "duo-v-0133",
+        "duo-v-0134",
+        "duo-v-0135",
+        "duo-v-0136",
+        "duo-v-0137",
+        "duo-v-0138",
+        "duo-v-0139",
+        "duo-v-0140",
+        "duo-v-0141",
+        "duo-v-0142",
+        "duo-v-0143",
+        "duo-v-0144",
+        "duo-v-0145",
+        "duo-v-0146",
+        "duo-v-0147",
+        "duo-v-0148",
+        "duo-v-0149",
+        "duo-v-0150"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-07",
+      "courseId": "duolingo",
+      "order": 7,
+      "title": "duolingo 7",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0151",
+        "duo-v-0152",
+        "duo-v-0153",
+        "duo-v-0154",
+        "duo-v-0155",
+        "duo-v-0156",
+        "duo-v-0157",
+        "duo-v-0158",
+        "duo-v-0159",
+        "duo-v-0160",
+        "duo-v-0161",
+        "duo-v-0162",
+        "duo-v-0163",
+        "duo-v-0164",
+        "duo-v-0165",
+        "duo-v-0166",
+        "duo-v-0167",
+        "duo-v-0168",
+        "duo-v-0169",
+        "duo-v-0170",
+        "duo-v-0171",
+        "duo-v-0172",
+        "duo-v-0173",
+        "duo-v-0174",
+        "duo-v-0175"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-08",
+      "courseId": "duolingo",
+      "order": 8,
+      "title": "duolingo 8",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0176",
+        "duo-v-0177",
+        "duo-v-0178",
+        "duo-v-0179",
+        "duo-v-0180",
+        "duo-v-0181",
+        "duo-v-0182",
+        "duo-v-0183",
+        "duo-v-0184",
+        "duo-v-0185",
+        "duo-v-0186",
+        "duo-v-0187",
+        "duo-v-0188",
+        "duo-v-0189",
+        "duo-v-0190",
+        "duo-v-0191",
+        "duo-v-0192",
+        "duo-v-0193",
+        "duo-v-0194",
+        "duo-v-0195",
+        "duo-v-0196",
+        "duo-v-0197",
+        "duo-v-0198",
+        "duo-v-0199",
+        "duo-v-0200"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-09",
+      "courseId": "duolingo",
+      "order": 9,
+      "title": "duolingo 9",
+      "description": "本课包含 25 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0201",
+        "duo-v-0202",
+        "duo-v-0203",
+        "duo-v-0204",
+        "duo-v-0205",
+        "duo-v-0206",
+        "duo-v-0207",
+        "duo-v-0208",
+        "duo-v-0209",
+        "duo-v-0210",
+        "duo-v-0211",
+        "duo-v-0212",
+        "duo-v-0213",
+        "duo-v-0214",
+        "duo-v-0215",
+        "duo-v-0216",
+        "duo-v-0217",
+        "duo-v-0218",
+        "duo-v-0219",
+        "duo-v-0220",
+        "duo-v-0221",
+        "duo-v-0222",
+        "duo-v-0223",
+        "duo-v-0224",
+        "duo-v-0225"
+      ],
+      "sentenceIds": [
+
+      ]
+    },
+    {
+      "id": "duolingo-lesson-10",
+      "courseId": "duolingo",
+      "order": 10,
+      "title": "duolingo 10",
+      "description": "本课包含 8 个 duolingo 词汇。",
+      "vocabularyIds": [
+        "duo-v-0226",
+        "duo-v-0227",
+        "duo-v-0228",
+        "duo-v-0229",
+        "duo-v-0230",
+        "duo-v-0231",
+        "duo-v-0232",
+        "duo-v-0233"
+      ],
+      "sentenceIds": [
+
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "duo-v-0001",
+      "courseId": "duolingo",
+      "term": "どのぐらい",
+      "reading": "どのぐらい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "多久"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 1,
+      "sourceRow": 2,
+      "romaji": "donogurai"
+    },
+    {
+      "id": "duo-v-0002",
+      "courseId": "duolingo",
+      "term": "十分",
+      "reading": "じゅっぷん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "十分钟"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 2,
+      "sourceRow": 3,
+      "romaji": "juppun"
+    },
+    {
+      "id": "duo-v-0003",
+      "courseId": "duolingo",
+      "term": "ぐらい",
+      "reading": "ぐらい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "大概"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 3,
+      "sourceRow": 4,
+      "romaji": "gurai"
+    },
+    {
+      "id": "duo-v-0004",
+      "courseId": "duolingo",
+      "term": "かかります",
+      "reading": "かかります",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "花"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 4,
+      "sourceRow": 5,
+      "romaji": "kakarimasu"
+    },
+    {
+      "id": "duo-v-0005",
+      "courseId": "duolingo",
+      "term": "はやい",
+      "reading": "はやい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "快"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 5,
+      "sourceRow": 6,
+      "romaji": "hayai"
+    },
+    {
+      "id": "duo-v-0006",
+      "courseId": "duolingo",
+      "term": "うえのこうえん",
+      "reading": "うえのこうえん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "上野公园"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 6,
+      "sourceRow": 7,
+      "romaji": "uenokouen"
+    },
+    {
+      "id": "duo-v-0007",
+      "courseId": "duolingo",
+      "term": "つぎの",
+      "reading": "つぎの",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "下一个"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 7,
+      "sourceRow": 8,
+      "romaji": "tsugino"
+    },
+    {
+      "id": "duo-v-0008",
+      "courseId": "duolingo",
+      "term": "もうすぐ",
+      "reading": "もうすぐ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "很快就会"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 8,
+      "sourceRow": 9,
+      "romaji": "mousugu"
+    },
+    {
+      "id": "duo-v-0009",
+      "courseId": "duolingo",
+      "term": "あさくさ",
+      "reading": "あさくさ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "浅草"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 9,
+      "sourceRow": 10,
+      "romaji": "asakusa"
+    },
+    {
+      "id": "duo-v-0010",
+      "courseId": "duolingo",
+      "term": "来ます",
+      "reading": "きます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "来"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 10,
+      "sourceRow": 11,
+      "romaji": "kimasu"
+    },
+    {
+      "id": "duo-v-0011",
+      "courseId": "duolingo",
+      "term": "つぎ",
+      "reading": "つぎ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "下一个"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 11,
+      "sourceRow": 12,
+      "romaji": "tsugi"
+    },
+    {
+      "id": "duo-v-0012",
+      "courseId": "duolingo",
+      "term": "バス",
+      "reading": "バス",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "公交车"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 12,
+      "sourceRow": 13,
+      "romaji": "basu"
+    },
+    {
+      "id": "duo-v-0013",
+      "courseId": "duolingo",
+      "term": "あきはばら",
+      "reading": "あきはばら",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "秋叶原"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 13,
+      "sourceRow": 14,
+      "romaji": "akihabara"
+    },
+    {
+      "id": "duo-v-0014",
+      "courseId": "duolingo",
+      "term": "でんしゃ",
+      "reading": "でんしゃ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "火车"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 14,
+      "sourceRow": 15,
+      "romaji": "densha"
+    },
+    {
+      "id": "duo-v-0015",
+      "courseId": "duolingo",
+      "term": "しぶや",
+      "reading": "しぶや",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "涩谷"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 15,
+      "sourceRow": 16,
+      "romaji": "shibuya"
+    },
+    {
+      "id": "duo-v-0016",
+      "courseId": "duolingo",
+      "term": "行きます",
+      "reading": "いきます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "去"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 16,
+      "sourceRow": 17,
+      "romaji": "ikimasu"
+    },
+    {
+      "id": "duo-v-0017",
+      "courseId": "duolingo",
+      "term": "でかけます",
+      "reading": "でかけます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "出去"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 17,
+      "sourceRow": 18,
+      "romaji": "dekakemasu"
+    },
+    {
+      "id": "duo-v-0018",
+      "courseId": "duolingo",
+      "term": "はしります",
+      "reading": "はしります",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "跑步"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 18,
+      "sourceRow": 19,
+      "romaji": "hashirimasu"
+    },
+    {
+      "id": "duo-v-0019",
+      "courseId": "duolingo",
+      "term": "飲みます",
+      "reading": "のみます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "喝"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 19,
+      "sourceRow": 20,
+      "romaji": "nomimasu"
+    },
+    {
+      "id": "duo-v-0020",
+      "courseId": "duolingo",
+      "term": "およぎます",
+      "reading": "およぎます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "游泳"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 20,
+      "sourceRow": 21,
+      "romaji": "oyogimasu"
+    },
+    {
+      "id": "duo-v-0021",
+      "courseId": "duolingo",
+      "term": "十二",
+      "reading": "じゅうに",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "12，十二个"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 21,
+      "sourceRow": 22,
+      "romaji": "juuni"
+    },
+    {
+      "id": "duo-v-0022",
+      "courseId": "duolingo",
+      "term": "ねます",
+      "reading": "ねます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "睡觉，睡"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 22,
+      "sourceRow": 23,
+      "romaji": "nemasu"
+    },
+    {
+      "id": "duo-v-0023",
+      "courseId": "duolingo",
+      "term": "からて",
+      "reading": "からて",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "空手道"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 23,
+      "sourceRow": 24,
+      "romaji": "karate"
+    },
+    {
+      "id": "duo-v-0024",
+      "courseId": "duolingo",
+      "term": "ヨガ",
+      "reading": "ヨガ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "瑜伽"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 24,
+      "sourceRow": 25,
+      "romaji": "yoga"
+    },
+    {
+      "id": "duo-v-0025",
+      "courseId": "duolingo",
+      "term": "らいしゅう",
+      "reading": "らいしゅう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "下周"
+      ],
+      "sourceLesson": "duolingo-lesson-01",
+      "sourceLessonLabel": "duolingo 1",
+      "sourceSequence": 25,
+      "sourceRow": 26,
+      "romaji": "raishuu"
+    },
+    {
+      "id": "duo-v-0026",
+      "courseId": "duolingo",
+      "term": "あした",
+      "reading": "あした",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "明天"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 26,
+      "sourceRow": 27,
+      "romaji": "ashita"
+    },
+    {
+      "id": "duo-v-0027",
+      "courseId": "duolingo",
+      "term": "買います",
+      "reading": "かいます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "买"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 27,
+      "sourceRow": 28,
+      "romaji": "kaimasu"
+    },
+    {
+      "id": "duo-v-0028",
+      "courseId": "duolingo",
+      "term": "まいしゅう",
+      "reading": "まいしゅう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "每周"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 28,
+      "sourceRow": 29,
+      "romaji": "maishuu"
+    },
+    {
+      "id": "duo-v-0029",
+      "courseId": "duolingo",
+      "term": "十一",
+      "reading": "じゅういち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "11，十一"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 29,
+      "sourceRow": 30,
+      "romaji": "juuichi"
+    },
+    {
+      "id": "duo-v-0030",
+      "courseId": "duolingo",
+      "term": "ごろ",
+      "reading": "ごろ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "左右"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 30,
+      "sourceRow": 31,
+      "romaji": "goro"
+    },
+    {
+      "id": "duo-v-0031",
+      "courseId": "duolingo",
+      "term": "バレーボール",
+      "reading": "バレーボール",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "排球"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 31,
+      "sourceRow": 32,
+      "romaji": "bareebouru"
+    },
+    {
+      "id": "duo-v-0032",
+      "courseId": "duolingo",
+      "term": "十",
+      "reading": "じゅう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "十"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 32,
+      "sourceRow": 33,
+      "romaji": "juu"
+    },
+    {
+      "id": "duo-v-0033",
+      "courseId": "duolingo",
+      "term": "つくります",
+      "reading": "つくります",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "做"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 33,
+      "sourceRow": 34,
+      "romaji": "tsukurimasu"
+    },
+    {
+      "id": "duo-v-0034",
+      "courseId": "duolingo",
+      "term": "何時",
+      "reading": "なんじ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "几点"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 34,
+      "sourceRow": 35,
+      "romaji": "nanji"
+    },
+    {
+      "id": "duo-v-0035",
+      "courseId": "duolingo",
+      "term": "いつも",
+      "reading": "いつも",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "总是"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 35,
+      "sourceRow": 36,
+      "romaji": "itsumo"
+    },
+    {
+      "id": "duo-v-0036",
+      "courseId": "duolingo",
+      "term": "ラジオ",
+      "reading": "ラジオ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "收音机"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 36,
+      "sourceRow": 37,
+      "romaji": "rajio"
+    },
+    {
+      "id": "duo-v-0037",
+      "courseId": "duolingo",
+      "term": "食べます",
+      "reading": "たべます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "吃"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 37,
+      "sourceRow": 38,
+      "romaji": "tabemasu"
+    },
+    {
+      "id": "duo-v-0038",
+      "courseId": "duolingo",
+      "term": "おきます",
+      "reading": "おきます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "起床"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 38,
+      "sourceRow": 39,
+      "romaji": "okimasu"
+    },
+    {
+      "id": "duo-v-0039",
+      "courseId": "duolingo",
+      "term": "ゲーム",
+      "reading": "ゲーム",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "电子游戏"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 39,
+      "sourceRow": 40,
+      "romaji": "geemu"
+    },
+    {
+      "id": "duo-v-0040",
+      "courseId": "duolingo",
+      "term": "コメディ",
+      "reading": "コメディ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "喜剧"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 40,
+      "sourceRow": 41,
+      "romaji": "komedi"
+    },
+    {
+      "id": "duo-v-0041",
+      "courseId": "duolingo",
+      "term": "アクション",
+      "reading": "アクション",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "动作"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 41,
+      "sourceRow": 42,
+      "romaji": "akushon"
+    },
+    {
+      "id": "duo-v-0042",
+      "courseId": "duolingo",
+      "term": "どんな",
+      "reading": "どんな",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "什么样的"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 42,
+      "sourceRow": 43,
+      "romaji": "donna"
+    },
+    {
+      "id": "duo-v-0043",
+      "courseId": "duolingo",
+      "term": "ホラー",
+      "reading": "ホラー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "恐怖"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 43,
+      "sourceRow": 44,
+      "romaji": "horaa"
+    },
+    {
+      "id": "duo-v-0044",
+      "courseId": "duolingo",
+      "term": "ドラマ",
+      "reading": "ドラマ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "电视剧"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 44,
+      "sourceRow": 45,
+      "romaji": "dorama"
+    },
+    {
+      "id": "duo-v-0045",
+      "courseId": "duolingo",
+      "term": "アメリカの",
+      "reading": "アメリカの",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "美国的"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 45,
+      "sourceRow": 46,
+      "romaji": "amerikano"
+    },
+    {
+      "id": "duo-v-0046",
+      "courseId": "duolingo",
+      "term": "日本の",
+      "reading": "にほんの",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日本的"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 46,
+      "sourceRow": 47,
+      "romaji": "nihonno"
+    },
+    {
+      "id": "duo-v-0047",
+      "courseId": "duolingo",
+      "term": "ファンタジー",
+      "reading": "ファンタジー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "奇幻"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 47,
+      "sourceRow": 48,
+      "romaji": "fantajii"
+    },
+    {
+      "id": "duo-v-0048",
+      "courseId": "duolingo",
+      "term": "すき",
+      "reading": "すき",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "喜欢"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 48,
+      "sourceRow": 49,
+      "romaji": "suki"
+    },
+    {
+      "id": "duo-v-0049",
+      "courseId": "duolingo",
+      "term": "Kポップ",
+      "reading": "けいぽっぷ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "韩国流行音乐"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 49,
+      "sourceRow": 50,
+      "romaji": "keipoppu"
+    },
+    {
+      "id": "duo-v-0050",
+      "courseId": "duolingo",
+      "term": "かのじょ",
+      "reading": "かのじょ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "女朋友"
+      ],
+      "sourceLesson": "duolingo-lesson-02",
+      "sourceLessonLabel": "duolingo 2",
+      "sourceSequence": 50,
+      "sourceRow": 51,
+      "romaji": "kanojo"
+    },
+    {
+      "id": "duo-v-0051",
+      "courseId": "duolingo",
+      "term": "さんは",
+      "reading": "さんは",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "先生是，先生为，先生作为"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 51,
+      "sourceRow": 52,
+      "romaji": "sanha"
+    },
+    {
+      "id": "duo-v-0052",
+      "courseId": "duolingo",
+      "term": "かんこく",
+      "reading": "かんこく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "韩国"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 52,
+      "sourceRow": 53,
+      "romaji": "kankoku"
+    },
+    {
+      "id": "duo-v-0053",
+      "courseId": "duolingo",
+      "term": "ちゅうごく",
+      "reading": "ちゅうごく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "中国"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 53,
+      "sourceRow": 54,
+      "romaji": "chuugoku"
+    },
+    {
+      "id": "duo-v-0054",
+      "courseId": "duolingo",
+      "term": "イギリス",
+      "reading": "イギリス",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "英国"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 54,
+      "sourceRow": 55,
+      "romaji": "igirisu"
+    },
+    {
+      "id": "duo-v-0055",
+      "courseId": "duolingo",
+      "term": "エリカ",
+      "reading": "エリカ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "艾丽卡"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 55,
+      "sourceRow": 56,
+      "romaji": "erika"
+    },
+    {
+      "id": "duo-v-0056",
+      "courseId": "duolingo",
+      "term": "ダニエル",
+      "reading": "ダニエル",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "丹尼尔"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 56,
+      "sourceRow": 57,
+      "romaji": "danieru"
+    },
+    {
+      "id": "duo-v-0057",
+      "courseId": "duolingo",
+      "term": "かれし",
+      "reading": "かれし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "男朋友"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 57,
+      "sourceRow": 58,
+      "romaji": "kareshi"
+    },
+    {
+      "id": "duo-v-0058",
+      "courseId": "duolingo",
+      "term": "こちら",
+      "reading": "こちら",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "这位"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 58,
+      "sourceRow": 59,
+      "romaji": "kochira"
+    },
+    {
+      "id": "duo-v-0059",
+      "courseId": "duolingo",
+      "term": "と言います",
+      "reading": "といいます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "叫"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 59,
+      "sourceRow": 60,
+      "romaji": "toiimasu"
+    },
+    {
+      "id": "duo-v-0060",
+      "courseId": "duolingo",
+      "term": "アンドリュー",
+      "reading": "アンドリュー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "安德鲁"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 60,
+      "sourceRow": 61,
+      "romaji": "andoryu"
+    },
+    {
+      "id": "duo-v-0061",
+      "courseId": "duolingo",
+      "term": "たかい",
+      "reading": "たかい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "贵"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 61,
+      "sourceRow": 62,
+      "romaji": "takai"
+    },
+    {
+      "id": "duo-v-0062",
+      "courseId": "duolingo",
+      "term": "みせ",
+      "reading": "みせ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "店"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 62,
+      "sourceRow": 63,
+      "romaji": "mise"
+    },
+    {
+      "id": "duo-v-0063",
+      "courseId": "duolingo",
+      "term": "ジャケット",
+      "reading": "ジャケット",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "夹克"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 63,
+      "sourceRow": 64,
+      "romaji": "jaketto"
+    },
+    {
+      "id": "duo-v-0064",
+      "courseId": "duolingo",
+      "term": "ありがとうございます",
+      "reading": "ありがとうございます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "谢谢您"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 64,
+      "sourceRow": 65,
+      "romaji": "arigatougozaimasu"
+    },
+    {
+      "id": "duo-v-0065",
+      "courseId": "duolingo",
+      "term": "くろい",
+      "reading": "くろい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "黑色的"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 65,
+      "sourceRow": 66,
+      "romaji": "kuroi"
+    },
+    {
+      "id": "duo-v-0066",
+      "courseId": "duolingo",
+      "term": "千",
+      "reading": "せん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "千"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 66,
+      "sourceRow": 67,
+      "romaji": "sen"
+    },
+    {
+      "id": "duo-v-0067",
+      "courseId": "duolingo",
+      "term": "えん",
+      "reading": "えん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日元"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 67,
+      "sourceRow": 68,
+      "romaji": "en"
+    },
+    {
+      "id": "duo-v-0068",
+      "courseId": "duolingo",
+      "term": "ネクタイ",
+      "reading": "ネクタイ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "领带"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 68,
+      "sourceRow": 69,
+      "romaji": "nekutai"
+    },
+    {
+      "id": "duo-v-0069",
+      "courseId": "duolingo",
+      "term": "いくら",
+      "reading": "いくら",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "多少钱"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 69,
+      "sourceRow": 70,
+      "romaji": "ikura"
+    },
+    {
+      "id": "duo-v-0070",
+      "courseId": "duolingo",
+      "term": "百",
+      "reading": "ひゃく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "百"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 70,
+      "sourceRow": 71,
+      "romaji": "hyaku"
+    },
+    {
+      "id": "duo-v-0071",
+      "courseId": "duolingo",
+      "term": "やすい",
+      "reading": "やすい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "便宜"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 71,
+      "sourceRow": 72,
+      "romaji": "yasui"
+    },
+    {
+      "id": "duo-v-0072",
+      "courseId": "duolingo",
+      "term": "スカート",
+      "reading": "スカート",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "裙子"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 72,
+      "sourceRow": 73,
+      "romaji": "sukaato"
+    },
+    {
+      "id": "duo-v-0073",
+      "courseId": "duolingo",
+      "term": "ね",
+      "reading": "ね",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "啊"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 73,
+      "sourceRow": 74,
+      "romaji": "ne"
+    },
+    {
+      "id": "duo-v-0074",
+      "courseId": "duolingo",
+      "term": "かわいい",
+      "reading": "かわいい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "可爱"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 74,
+      "sourceRow": 75,
+      "romaji": "kawaii"
+    },
+    {
+      "id": "duo-v-0075",
+      "courseId": "duolingo",
+      "term": "あおい",
+      "reading": "あおい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "蓝色的"
+      ],
+      "sourceLesson": "duolingo-lesson-03",
+      "sourceLessonLabel": "duolingo 3",
+      "sourceSequence": 75,
+      "sourceRow": 76,
+      "romaji": "aoi"
+    },
+    {
+      "id": "duo-v-0076",
+      "courseId": "duolingo",
+      "term": "Tシャツ",
+      "reading": "Tシャツ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "T恤"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 76,
+      "sourceRow": 77,
+      "romaji": "tiishatsu"
+    },
+    {
+      "id": "duo-v-0077",
+      "courseId": "duolingo",
+      "term": "が",
+      "reading": "が",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "但是，虽然，是"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 77,
+      "sourceRow": 78,
+      "romaji": "ga"
+    },
+    {
+      "id": "duo-v-0078",
+      "courseId": "duolingo",
+      "term": "新しい",
+      "reading": "あたらしい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "新"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 78,
+      "sourceRow": 79,
+      "romaji": "atarashii"
+    },
+    {
+      "id": "duo-v-0079",
+      "courseId": "duolingo",
+      "term": "ほしい",
+      "reading": "ほしい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "想要"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 79,
+      "sourceRow": 80,
+      "romaji": "hoshii"
+    },
+    {
+      "id": "duo-v-0080",
+      "courseId": "duolingo",
+      "term": "さいふ",
+      "reading": "さいふ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "钱包"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 80,
+      "sourceRow": 81,
+      "romaji": "saifu"
+    },
+    {
+      "id": "duo-v-0081",
+      "courseId": "duolingo",
+      "term": "ふく",
+      "reading": "ふく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "衣服"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 81,
+      "sourceRow": 82,
+      "romaji": "fuku"
+    },
+    {
+      "id": "duo-v-0082",
+      "courseId": "duolingo",
+      "term": "この",
+      "reading": "この",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "这双，这件，这家"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 82,
+      "sourceRow": 83,
+      "romaji": "kono"
+    },
+    {
+      "id": "duo-v-0083",
+      "courseId": "duolingo",
+      "term": "ちょっと",
+      "reading": "ちょっと",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "有点"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 83,
+      "sourceRow": 84,
+      "romaji": "chotto"
+    },
+    {
+      "id": "duo-v-0084",
+      "courseId": "duolingo",
+      "term": "古い",
+      "reading": "ふるい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "旧"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 84,
+      "sourceRow": 85,
+      "romaji": "furui"
+    },
+    {
+      "id": "duo-v-0085",
+      "courseId": "duolingo",
+      "term": "カレー",
+      "reading": "カレー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "咖哩"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 85,
+      "sourceRow": 86,
+      "romaji": "karee"
+    },
+    {
+      "id": "duo-v-0086",
+      "courseId": "duolingo",
+      "term": "五",
+      "reading": "ご",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "5，五"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 86,
+      "sourceRow": 87,
+      "romaji": "go"
+    },
+    {
+      "id": "duo-v-0087",
+      "courseId": "duolingo",
+      "term": "ばんごはん",
+      "reading": "ばんごはん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "晚饭"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 87,
+      "sourceRow": 88,
+      "romaji": "bangohan"
+    },
+    {
+      "id": "duo-v-0088",
+      "courseId": "duolingo",
+      "term": "まいばん",
+      "reading": "まいばん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "每天晚上"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 88,
+      "sourceRow": 89,
+      "romaji": "maiban"
+    },
+    {
+      "id": "duo-v-0089",
+      "courseId": "duolingo",
+      "term": "八",
+      "reading": "はち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "八"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 89,
+      "sourceRow": 90,
+      "romaji": "hachi"
+    },
+    {
+      "id": "duo-v-0090",
+      "courseId": "duolingo",
+      "term": "ひるごはん",
+      "reading": "ひるごはん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "午饭"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 90,
+      "sourceRow": 91,
+      "romaji": "hirugohan"
+    },
+    {
+      "id": "duo-v-0091",
+      "courseId": "duolingo",
+      "term": "パスタ",
+      "reading": "パスタ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "意大利面"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 91,
+      "sourceRow": 92,
+      "romaji": "pasuta"
+    },
+    {
+      "id": "duo-v-0092",
+      "courseId": "duolingo",
+      "term": "四時",
+      "reading": "よじ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "四点"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 92,
+      "sourceRow": 93,
+      "romaji": "yoji"
+    },
+    {
+      "id": "duo-v-0093",
+      "courseId": "duolingo",
+      "term": "べんとう",
+      "reading": "べんとう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "便当"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 93,
+      "sourceRow": 94,
+      "romaji": "bentou"
+    },
+    {
+      "id": "duo-v-0094",
+      "courseId": "duolingo",
+      "term": "七時",
+      "reading": "しちじ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "七点"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 94,
+      "sourceRow": 95,
+      "romaji": "shichiji"
+    },
+    {
+      "id": "duo-v-0095",
+      "courseId": "duolingo",
+      "term": "ジュース",
+      "reading": "ジュース",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "果汁"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 95,
+      "sourceRow": 96,
+      "romaji": "jusu"
+    },
+    {
+      "id": "duo-v-0096",
+      "courseId": "duolingo",
+      "term": "コーヒー",
+      "reading": "コーヒー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "咖啡"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 96,
+      "sourceRow": 97,
+      "romaji": "kouhii"
+    },
+    {
+      "id": "duo-v-0097",
+      "courseId": "duolingo",
+      "term": "のみます",
+      "reading": "のみます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "喝"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 97,
+      "sourceRow": 98,
+      "romaji": "nomimasu"
+    },
+    {
+      "id": "duo-v-0098",
+      "courseId": "duolingo",
+      "term": "まいあさ",
+      "reading": "まいあさ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "每天早上"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 98,
+      "sourceRow": 99,
+      "romaji": "maiasa"
+    },
+    {
+      "id": "duo-v-0099",
+      "courseId": "duolingo",
+      "term": "六",
+      "reading": "ろく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "六，6"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 99,
+      "sourceRow": 100,
+      "romaji": "roku"
+    },
+    {
+      "id": "duo-v-0100",
+      "courseId": "duolingo",
+      "term": "時",
+      "reading": "じ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "的时候，点，候"
+      ],
+      "sourceLesson": "duolingo-lesson-04",
+      "sourceLessonLabel": "duolingo 4",
+      "sourceSequence": 100,
+      "sourceRow": 101,
+      "romaji": "ji"
+    },
+    {
+      "id": "duo-v-0101",
+      "courseId": "duolingo",
+      "term": "あさごはん",
+      "reading": "あさごはん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "早饭"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 101,
+      "sourceRow": 102,
+      "romaji": "asagohan"
+    },
+    {
+      "id": "duo-v-0102",
+      "courseId": "duolingo",
+      "term": "サンドイッチ",
+      "reading": "サンドイッチ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "三明治"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 102,
+      "sourceRow": 103,
+      "romaji": "sandoicchi"
+    },
+    {
+      "id": "duo-v-0103",
+      "courseId": "duolingo",
+      "term": "まいにち",
+      "reading": "まいにち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "每天"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 103,
+      "sourceRow": 104,
+      "romaji": "mainichi"
+    },
+    {
+      "id": "duo-v-0104",
+      "courseId": "duolingo",
+      "term": "パン",
+      "reading": "パン",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "面包"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 104,
+      "sourceRow": 105,
+      "romaji": "pan"
+    },
+    {
+      "id": "duo-v-0105",
+      "courseId": "duolingo",
+      "term": "たべます",
+      "reading": "たべます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "吃"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 105,
+      "sourceRow": 106,
+      "romaji": "tabemasu"
+    },
+    {
+      "id": "duo-v-0106",
+      "courseId": "duolingo",
+      "term": "まんが",
+      "reading": "まんが",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "漫画"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 106,
+      "sourceRow": 107,
+      "romaji": "manga"
+    },
+    {
+      "id": "duo-v-0107",
+      "courseId": "duolingo",
+      "term": "やきゅう",
+      "reading": "やきゅう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "棒球"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 107,
+      "sourceRow": 108,
+      "romaji": "yakyuu"
+    },
+    {
+      "id": "duo-v-0108",
+      "courseId": "duolingo",
+      "term": "Jポップ",
+      "reading": "じぇいぽっぷ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日本流行音乐"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 108,
+      "sourceRow": 109,
+      "romaji": "jeipoppu"
+    },
+    {
+      "id": "duo-v-0109",
+      "courseId": "duolingo",
+      "term": "アニメ",
+      "reading": "アニメ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "动漫"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 109,
+      "sourceRow": 110,
+      "romaji": "anime"
+    },
+    {
+      "id": "duo-v-0110",
+      "courseId": "duolingo",
+      "term": "ニュース",
+      "reading": "ニュース",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "新闻"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 110,
+      "sourceRow": 111,
+      "romaji": "nyusu"
+    },
+    {
+      "id": "duo-v-0111",
+      "courseId": "duolingo",
+      "term": "本",
+      "reading": "ほん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "书"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 111,
+      "sourceRow": 112,
+      "romaji": "hon"
+    },
+    {
+      "id": "duo-v-0112",
+      "courseId": "duolingo",
+      "term": "ときどき",
+      "reading": "ときどき",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "有时候"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 112,
+      "sourceRow": 113,
+      "romaji": "tokidoki"
+    },
+    {
+      "id": "duo-v-0113",
+      "courseId": "duolingo",
+      "term": "ざっし",
+      "reading": "ざっし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "杂志"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 113,
+      "sourceRow": 114,
+      "romaji": "zasshi"
+    },
+    {
+      "id": "duo-v-0114",
+      "courseId": "duolingo",
+      "term": "読みます",
+      "reading": "よみます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "读"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 114,
+      "sourceRow": 115,
+      "romaji": "yomimasu"
+    },
+    {
+      "id": "duo-v-0115",
+      "courseId": "duolingo",
+      "term": "おんがく",
+      "reading": "おんがく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "音乐"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 115,
+      "sourceRow": 116,
+      "romaji": "ongaku"
+    },
+    {
+      "id": "duo-v-0116",
+      "courseId": "duolingo",
+      "term": "よく",
+      "reading": "よく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "经常"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 116,
+      "sourceRow": 117,
+      "romaji": "yoku"
+    },
+    {
+      "id": "duo-v-0117",
+      "courseId": "duolingo",
+      "term": "ジャズ",
+      "reading": "ジャズ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "爵士乐"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 117,
+      "sourceRow": 118,
+      "romaji": "jazu"
+    },
+    {
+      "id": "duo-v-0118",
+      "courseId": "duolingo",
+      "term": "ロック",
+      "reading": "ロック",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "摇滚乐"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 118,
+      "sourceRow": 119,
+      "romaji": "rokku"
+    },
+    {
+      "id": "duo-v-0119",
+      "courseId": "duolingo",
+      "term": "ききます",
+      "reading": "ききます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "听"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 119,
+      "sourceRow": 120,
+      "romaji": "kikimasu"
+    },
+    {
+      "id": "duo-v-0120",
+      "courseId": "duolingo",
+      "term": "サッカー",
+      "reading": "サッカー",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "足球"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 120,
+      "sourceRow": 121,
+      "romaji": "sakkaa"
+    },
+    {
+      "id": "duo-v-0121",
+      "courseId": "duolingo",
+      "term": "バスケットボール",
+      "reading": "バスケットボール",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "篮球"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 121,
+      "sourceRow": 122,
+      "romaji": "basukettobouru"
+    },
+    {
+      "id": "duo-v-0122",
+      "courseId": "duolingo",
+      "term": "します",
+      "reading": "します",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "做"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 122,
+      "sourceRow": 123,
+      "romaji": "shimasu"
+    },
+    {
+      "id": "duo-v-0123",
+      "courseId": "duolingo",
+      "term": "テレビ",
+      "reading": "テレビ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "电视"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 123,
+      "sourceRow": 124,
+      "romaji": "terebi"
+    },
+    {
+      "id": "duo-v-0124",
+      "courseId": "duolingo",
+      "term": "を",
+      "reading": "を",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "从，把，在"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 124,
+      "sourceRow": 125,
+      "romaji": "o"
+    },
+    {
+      "id": "duo-v-0125",
+      "courseId": "duolingo",
+      "term": "えいが",
+      "reading": "えいが",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "电影"
+      ],
+      "sourceLesson": "duolingo-lesson-05",
+      "sourceLessonLabel": "duolingo 5",
+      "sourceSequence": 125,
+      "sourceRow": 126,
+      "romaji": "eiga"
+    },
+    {
+      "id": "duo-v-0126",
+      "courseId": "duolingo",
+      "term": "見ます",
+      "reading": "みます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "看"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 126,
+      "sourceRow": 127,
+      "romaji": "mimasu"
+    },
+    {
+      "id": "duo-v-0127",
+      "courseId": "duolingo",
+      "term": "しずか",
+      "reading": "しずか",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "安静"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 127,
+      "sourceRow": 128,
+      "romaji": "shizuka"
+    },
+    {
+      "id": "duo-v-0128",
+      "courseId": "duolingo",
+      "term": "きれい",
+      "reading": "きれい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "干净"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 128,
+      "sourceRow": 129,
+      "romaji": "kirei"
+    },
+    {
+      "id": "duo-v-0129",
+      "courseId": "duolingo",
+      "term": "まち",
+      "reading": "まち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "城镇"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 129,
+      "sourceRow": 130,
+      "romaji": "machi"
+    },
+    {
+      "id": "duo-v-0130",
+      "courseId": "duolingo",
+      "term": "とても",
+      "reading": "とても",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "非常"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 130,
+      "sourceRow": 131,
+      "romaji": "totemo"
+    },
+    {
+      "id": "duo-v-0131",
+      "courseId": "duolingo",
+      "term": "とし",
+      "reading": "とし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "城市"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 131,
+      "sourceRow": 132,
+      "romaji": "toshi"
+    },
+    {
+      "id": "duo-v-0132",
+      "courseId": "duolingo",
+      "term": "にぎやか",
+      "reading": "にぎやか",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "热闹"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 132,
+      "sourceRow": 133,
+      "romaji": "nigiyaka"
+    },
+    {
+      "id": "duo-v-0133",
+      "courseId": "duolingo",
+      "term": "日本",
+      "reading": "にほん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日本"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 133,
+      "sourceRow": 134,
+      "romaji": "nihon"
+    },
+    {
+      "id": "duo-v-0134",
+      "courseId": "duolingo",
+      "term": "どう",
+      "reading": "どう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "怎么样"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 134,
+      "sourceRow": 135,
+      "romaji": "dou"
+    },
+    {
+      "id": "duo-v-0135",
+      "courseId": "duolingo",
+      "term": "おおさか",
+      "reading": "おおさか",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "大阪"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 135,
+      "sourceRow": 136,
+      "romaji": "oosaka"
+    },
+    {
+      "id": "duo-v-0136",
+      "courseId": "duolingo",
+      "term": "も",
+      "reading": "も",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "都，还，就算"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 136,
+      "sourceRow": 137,
+      "romaji": "mo"
+    },
+    {
+      "id": "duo-v-0137",
+      "courseId": "duolingo",
+      "term": "にすんでいます",
+      "reading": "にすんでいます",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "住在"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 137,
+      "sourceRow": 138,
+      "romaji": "nisundeimasu"
+    },
+    {
+      "id": "duo-v-0138",
+      "courseId": "duolingo",
+      "term": "私",
+      "reading": "わたし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "我"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 138,
+      "sourceRow": 139,
+      "romaji": "watashi"
+    },
+    {
+      "id": "duo-v-0139",
+      "courseId": "duolingo",
+      "term": "トロント",
+      "reading": "トロント",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "多伦多"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 139,
+      "sourceRow": 140,
+      "romaji": "toronto"
+    },
+    {
+      "id": "duo-v-0140",
+      "courseId": "duolingo",
+      "term": "京都",
+      "reading": "きょうと",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "京都"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 140,
+      "sourceRow": 141,
+      "romaji": "kyouto"
+    },
+    {
+      "id": "duo-v-0141",
+      "courseId": "duolingo",
+      "term": "ニューヨーク",
+      "reading": "ニューヨーク",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "纽约"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 141,
+      "sourceRow": 142,
+      "romaji": "nyuyouku"
+    },
+    {
+      "id": "duo-v-0142",
+      "courseId": "duolingo",
+      "term": "しゅっしん",
+      "reading": "しゅっしん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "来自"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 142,
+      "sourceRow": 143,
+      "romaji": "shusshin"
+    },
+    {
+      "id": "duo-v-0143",
+      "courseId": "duolingo",
+      "term": "はじめまして",
+      "reading": "はじめまして",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "很高兴认识你"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 143,
+      "sourceRow": 144,
+      "romaji": "hajimemashite"
+    },
+    {
+      "id": "duo-v-0144",
+      "courseId": "duolingo",
+      "term": "東京",
+      "reading": "とうきょう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "东京"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 144,
+      "sourceRow": 145,
+      "romaji": "toukyou"
+    },
+    {
+      "id": "duo-v-0145",
+      "courseId": "duolingo",
+      "term": "おなまえは",
+      "reading": "おなまえは",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "你的名字是"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 145,
+      "sourceRow": 146,
+      "romaji": "onamaeha"
+    },
+    {
+      "id": "duo-v-0146",
+      "courseId": "duolingo",
+      "term": "それ",
+      "reading": "それ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "那"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 146,
+      "sourceRow": 147,
+      "romaji": "sore"
+    },
+    {
+      "id": "duo-v-0147",
+      "courseId": "duolingo",
+      "term": "中山",
+      "reading": "なかやま",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "中山"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 147,
+      "sourceRow": 148,
+      "romaji": "nakayama"
+    },
+    {
+      "id": "duo-v-0148",
+      "courseId": "duolingo",
+      "term": "パスポート",
+      "reading": "パスポート",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "护照"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 148,
+      "sourceRow": 149,
+      "romaji": "pasupouto"
+    },
+    {
+      "id": "duo-v-0149",
+      "courseId": "duolingo",
+      "term": "ぼうし",
+      "reading": "ぼうし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "帽子"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 149,
+      "sourceRow": 150,
+      "romaji": "boushi"
+    },
+    {
+      "id": "duo-v-0150",
+      "courseId": "duolingo",
+      "term": "スマホ",
+      "reading": "スマホ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "手机"
+      ],
+      "sourceLesson": "duolingo-lesson-06",
+      "sourceLessonLabel": "duolingo 6",
+      "sourceSequence": 150,
+      "sourceRow": 151,
+      "romaji": "sumaho"
+    },
+    {
+      "id": "duo-v-0151",
+      "courseId": "duolingo",
+      "term": "田中",
+      "reading": "たなか",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "田中先生，田中"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 151,
+      "sourceRow": 152,
+      "romaji": "tanaka"
+    },
+    {
+      "id": "duo-v-0152",
+      "courseId": "duolingo",
+      "term": "ちず",
+      "reading": "ちず",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "地图"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 152,
+      "sourceRow": 153,
+      "romaji": "chizu"
+    },
+    {
+      "id": "duo-v-0153",
+      "courseId": "duolingo",
+      "term": "山口",
+      "reading": "やまぐち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "山口"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 153,
+      "sourceRow": 154,
+      "romaji": "yamaguchi"
+    },
+    {
+      "id": "duo-v-0154",
+      "courseId": "duolingo",
+      "term": "きっぷ",
+      "reading": "きっぷ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "票"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 154,
+      "sourceRow": 155,
+      "romaji": "kippu"
+    },
+    {
+      "id": "duo-v-0155",
+      "courseId": "duolingo",
+      "term": "かさ",
+      "reading": "かさ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "伞"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 155,
+      "sourceRow": 156,
+      "romaji": "kasa"
+    },
+    {
+      "id": "duo-v-0156",
+      "courseId": "duolingo",
+      "term": "あそこ",
+      "reading": "あそこ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "那里"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 156,
+      "sourceRow": 157,
+      "romaji": "asoko"
+    },
+    {
+      "id": "duo-v-0157",
+      "courseId": "duolingo",
+      "term": "ちかてつ",
+      "reading": "ちかてつ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "地铁"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 157,
+      "sourceRow": 158,
+      "romaji": "chikatetsu"
+    },
+    {
+      "id": "duo-v-0158",
+      "courseId": "duolingo",
+      "term": "くうこう",
+      "reading": "くうこう",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "机场"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 158,
+      "sourceRow": 159,
+      "romaji": "kuukou"
+    },
+    {
+      "id": "duo-v-0159",
+      "courseId": "duolingo",
+      "term": "三",
+      "reading": "さん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "三"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 159,
+      "sourceRow": 160,
+      "romaji": "san"
+    },
+    {
+      "id": "duo-v-0160",
+      "courseId": "duolingo",
+      "term": "すみません",
+      "reading": "すみません",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "对不起"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 160,
+      "sourceRow": 161,
+      "romaji": "sumimasen"
+    },
+    {
+      "id": "duo-v-0161",
+      "courseId": "duolingo",
+      "term": "はん",
+      "reading": "はん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "半"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 161,
+      "sourceRow": 162,
+      "romaji": "han"
+    },
+    {
+      "id": "duo-v-0162",
+      "courseId": "duolingo",
+      "term": "なんじ",
+      "reading": "なんじ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "几点"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 162,
+      "sourceRow": 163,
+      "romaji": "nanji"
+    },
+    {
+      "id": "duo-v-0163",
+      "courseId": "duolingo",
+      "term": "一",
+      "reading": "いち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "一，1"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 163,
+      "sourceRow": 164,
+      "romaji": "ichi"
+    },
+    {
+      "id": "duo-v-0164",
+      "courseId": "duolingo",
+      "term": "二",
+      "reading": "に",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "二，两，兩"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 164,
+      "sourceRow": 165,
+      "romaji": "ni"
+    },
+    {
+      "id": "duo-v-0165",
+      "courseId": "duolingo",
+      "term": "いま",
+      "reading": "いま",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "现在"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 165,
+      "sourceRow": 166,
+      "romaji": "ima"
+    },
+    {
+      "id": "duo-v-0166",
+      "courseId": "duolingo",
+      "term": "に",
+      "reading": "に",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "二"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 166,
+      "sourceRow": 167,
+      "romaji": "ni"
+    },
+    {
+      "id": "duo-v-0167",
+      "courseId": "duolingo",
+      "term": "じ",
+      "reading": "じ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "字"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 167,
+      "sourceRow": 168,
+      "romaji": "ji"
+    },
+    {
+      "id": "duo-v-0168",
+      "courseId": "duolingo",
+      "term": "いち",
+      "reading": "いち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "一"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 168,
+      "sourceRow": 169,
+      "romaji": "ichi"
+    },
+    {
+      "id": "duo-v-0169",
+      "courseId": "duolingo",
+      "term": "なかやま",
+      "reading": "なかやま",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "中山"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 169,
+      "sourceRow": 170,
+      "romaji": "nakayama"
+    },
+    {
+      "id": "duo-v-0170",
+      "courseId": "duolingo",
+      "term": "おもしろい",
+      "reading": "おもしろい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "有趣"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 170,
+      "sourceRow": 171,
+      "romaji": "omoshiroi"
+    },
+    {
+      "id": "duo-v-0171",
+      "courseId": "duolingo",
+      "term": "ともだち",
+      "reading": "ともだち",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "朋友"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 171,
+      "sourceRow": 172,
+      "romaji": "tomodachi"
+    },
+    {
+      "id": "duo-v-0172",
+      "courseId": "duolingo",
+      "term": "あかるい",
+      "reading": "あかるい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "明亮"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 172,
+      "sourceRow": 173,
+      "romaji": "akarui"
+    },
+    {
+      "id": "duo-v-0173",
+      "courseId": "duolingo",
+      "term": "たなか",
+      "reading": "たなか",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "田中"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 173,
+      "sourceRow": 174,
+      "romaji": "tanaka"
+    },
+    {
+      "id": "duo-v-0174",
+      "courseId": "duolingo",
+      "term": "くつ",
+      "reading": "くつ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "鞋"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 174,
+      "sourceRow": 175,
+      "romaji": "kutsu"
+    },
+    {
+      "id": "duo-v-0175",
+      "courseId": "duolingo",
+      "term": "の",
+      "reading": "の",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "呢，吗，之"
+      ],
+      "sourceLesson": "duolingo-lesson-07",
+      "sourceLessonLabel": "duolingo 7",
+      "sourceSequence": 175,
+      "sourceRow": 176,
+      "romaji": "no"
+    },
+    {
+      "id": "duo-v-0176",
+      "courseId": "duolingo",
+      "term": "てぶくろ",
+      "reading": "てぶくろ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "手套"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 176,
+      "sourceRow": 177,
+      "romaji": "tebukuro"
+    },
+    {
+      "id": "duo-v-0177",
+      "courseId": "duolingo",
+      "term": "しろい",
+      "reading": "しろい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "白色的"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 177,
+      "sourceRow": 178,
+      "romaji": "shiroi"
+    },
+    {
+      "id": "duo-v-0178",
+      "courseId": "duolingo",
+      "term": "かばん",
+      "reading": "かばん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "包"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 178,
+      "sourceRow": 179,
+      "romaji": "kaban"
+    },
+    {
+      "id": "duo-v-0179",
+      "courseId": "duolingo",
+      "term": "わたしの",
+      "reading": "わたしの",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "我的"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 179,
+      "sourceRow": 180,
+      "romaji": "watashino"
+    },
+    {
+      "id": "duo-v-0180",
+      "courseId": "duolingo",
+      "term": "コート",
+      "reading": "コート",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "外套"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 180,
+      "sourceRow": 181,
+      "romaji": "kouto"
+    },
+    {
+      "id": "duo-v-0181",
+      "courseId": "duolingo",
+      "term": "あかい",
+      "reading": "あかい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "红色的"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 181,
+      "sourceRow": 182,
+      "romaji": "akai"
+    },
+    {
+      "id": "duo-v-0182",
+      "courseId": "duolingo",
+      "term": "いいえ",
+      "reading": "いいえ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "不是"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 182,
+      "sourceRow": 183,
+      "romaji": "iie"
+    },
+    {
+      "id": "duo-v-0183",
+      "courseId": "duolingo",
+      "term": "だいがく",
+      "reading": "だいがく",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "大学"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 183,
+      "sourceRow": 184,
+      "romaji": "daigaku"
+    },
+    {
+      "id": "duo-v-0184",
+      "courseId": "duolingo",
+      "term": "えき",
+      "reading": "えき",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "车站"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 184,
+      "sourceRow": 185,
+      "romaji": "eki"
+    },
+    {
+      "id": "duo-v-0185",
+      "courseId": "duolingo",
+      "term": "デパート",
+      "reading": "デパート",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "百货商店"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 185,
+      "sourceRow": 186,
+      "romaji": "depaato"
+    },
+    {
+      "id": "duo-v-0186",
+      "courseId": "duolingo",
+      "term": "じゃない",
+      "reading": "じゃない",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "不是"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 186,
+      "sourceRow": 187,
+      "romaji": "janai"
+    },
+    {
+      "id": "duo-v-0187",
+      "courseId": "duolingo",
+      "term": "ここ",
+      "reading": "ここ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "这里"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 187,
+      "sourceRow": 188,
+      "romaji": "koko"
+    },
+    {
+      "id": "duo-v-0188",
+      "courseId": "duolingo",
+      "term": "バスてい",
+      "reading": "バスてい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "公交站"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 188,
+      "sourceRow": 189,
+      "romaji": "basutei"
+    },
+    {
+      "id": "duo-v-0189",
+      "courseId": "duolingo",
+      "term": "コンビニ",
+      "reading": "コンビニ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "便利店"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 189,
+      "sourceRow": 190,
+      "romaji": "konbini"
+    },
+    {
+      "id": "duo-v-0190",
+      "courseId": "duolingo",
+      "term": "どこ",
+      "reading": "どこ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "哪里"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 190,
+      "sourceRow": 191,
+      "romaji": "doko"
+    },
+    {
+      "id": "duo-v-0191",
+      "courseId": "duolingo",
+      "term": "ホテル",
+      "reading": "ホテル",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "酒店"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 191,
+      "sourceRow": 192,
+      "romaji": "hoteru"
+    },
+    {
+      "id": "duo-v-0192",
+      "courseId": "duolingo",
+      "term": "ブラジルじん",
+      "reading": "ブラジルじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "巴西人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 192,
+      "sourceRow": 193,
+      "romaji": "burajirujin"
+    },
+    {
+      "id": "duo-v-0193",
+      "courseId": "duolingo",
+      "term": "ちいさい",
+      "reading": "ちいさい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "小"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 193,
+      "sourceRow": 194,
+      "romaji": "chiisai"
+    },
+    {
+      "id": "duo-v-0194",
+      "courseId": "duolingo",
+      "term": "ブラジル",
+      "reading": "ブラジル",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "巴西"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 194,
+      "sourceRow": 195,
+      "romaji": "burajiru"
+    },
+    {
+      "id": "duo-v-0195",
+      "courseId": "duolingo",
+      "term": "ベトナム",
+      "reading": "ベトナム",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "越南"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 195,
+      "sourceRow": 196,
+      "romaji": "betonamu"
+    },
+    {
+      "id": "duo-v-0196",
+      "courseId": "duolingo",
+      "term": "ベトナムじん",
+      "reading": "ベトナムじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "越南人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 196,
+      "sourceRow": 197,
+      "romaji": "betonamujin"
+    },
+    {
+      "id": "duo-v-0197",
+      "courseId": "duolingo",
+      "term": "アメリカじん",
+      "reading": "アメリカじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "美国人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 197,
+      "sourceRow": 198,
+      "romaji": "amerikajin"
+    },
+    {
+      "id": "duo-v-0198",
+      "courseId": "duolingo",
+      "term": "カナダじん",
+      "reading": "カナダじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "加拿大人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 198,
+      "sourceRow": 199,
+      "romaji": "kanadajin"
+    },
+    {
+      "id": "duo-v-0199",
+      "courseId": "duolingo",
+      "term": "カナダじん",
+      "reading": "カナダじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "加拿大人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 199,
+      "sourceRow": 200,
+      "romaji": "kanadajin"
+    },
+    {
+      "id": "duo-v-0200",
+      "courseId": "duolingo",
+      "term": "にほんじん",
+      "reading": "にほんじん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日本人"
+      ],
+      "sourceLesson": "duolingo-lesson-08",
+      "sourceLessonLabel": "duolingo 8",
+      "sourceSequence": 200,
+      "sourceRow": 201,
+      "romaji": "nihonjin"
+    },
+    {
+      "id": "duo-v-0201",
+      "courseId": "duolingo",
+      "term": "おおきい",
+      "reading": "おおきい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "大"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 201,
+      "sourceRow": 202,
+      "romaji": "ookii"
+    },
+    {
+      "id": "duo-v-0202",
+      "courseId": "duolingo",
+      "term": "にほん",
+      "reading": "にほん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "日本"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 202,
+      "sourceRow": 203,
+      "romaji": "nihon"
+    },
+    {
+      "id": "duo-v-0203",
+      "courseId": "duolingo",
+      "term": "アメリカ",
+      "reading": "アメリカ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "美国"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 203,
+      "sourceRow": 204,
+      "romaji": "amerika"
+    },
+    {
+      "id": "duo-v-0204",
+      "courseId": "duolingo",
+      "term": "ケーキ",
+      "reading": "ケーキ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "蛋糕"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 204,
+      "sourceRow": 205,
+      "romaji": "keeki"
+    },
+    {
+      "id": "duo-v-0205",
+      "courseId": "duolingo",
+      "term": "か",
+      "reading": "か",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "吗"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 205,
+      "sourceRow": 206,
+      "romaji": "ka"
+    },
+    {
+      "id": "duo-v-0206",
+      "courseId": "duolingo",
+      "term": "ピザ",
+      "reading": "ピザ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "披萨"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 206,
+      "sourceRow": 207,
+      "romaji": "piza"
+    },
+    {
+      "id": "duo-v-0207",
+      "courseId": "duolingo",
+      "term": "はい",
+      "reading": "はい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "是的"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 207,
+      "sourceRow": 208,
+      "romaji": "hai"
+    },
+    {
+      "id": "duo-v-0208",
+      "courseId": "duolingo",
+      "term": "おいしい",
+      "reading": "おいしい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "好吃"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 208,
+      "sourceRow": 209,
+      "romaji": "oishii"
+    },
+    {
+      "id": "duo-v-0209",
+      "courseId": "duolingo",
+      "term": "サラダ",
+      "reading": "サラダ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "沙拉"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 209,
+      "sourceRow": 210,
+      "romaji": "sarada"
+    },
+    {
+      "id": "duo-v-0210",
+      "courseId": "duolingo",
+      "term": "ラーメン",
+      "reading": "ラーメン",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "拉面"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 210,
+      "sourceRow": 211,
+      "romaji": "raamen"
+    },
+    {
+      "id": "duo-v-0211",
+      "courseId": "duolingo",
+      "term": "これ",
+      "reading": "これ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "这，这个"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 211,
+      "sourceRow": 212,
+      "romaji": "kore"
+    },
+    {
+      "id": "duo-v-0212",
+      "courseId": "duolingo",
+      "term": "は",
+      "reading": "は",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "有，呢，是"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 212,
+      "sourceRow": 213,
+      "romaji": "ha"
+    },
+    {
+      "id": "duo-v-0213",
+      "courseId": "duolingo",
+      "term": "またあした",
+      "reading": "またあした",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "明天见"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 213,
+      "sourceRow": 214,
+      "romaji": "mataashita"
+    },
+    {
+      "id": "duo-v-0214",
+      "courseId": "duolingo",
+      "term": "なおみ",
+      "reading": "なおみ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "直美"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 214,
+      "sourceRow": 215,
+      "romaji": "naomi"
+    },
+    {
+      "id": "duo-v-0215",
+      "courseId": "duolingo",
+      "term": "こんばんは",
+      "reading": "こんばんは",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "晚上好"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 215,
+      "sourceRow": 216,
+      "romaji": "konbanha"
+    },
+    {
+      "id": "duo-v-0216",
+      "courseId": "duolingo",
+      "term": "さん",
+      "reading": "さん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "小姐，先生"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 216,
+      "sourceRow": 217,
+      "romaji": "san"
+    },
+    {
+      "id": "duo-v-0217",
+      "courseId": "duolingo",
+      "term": "はな",
+      "reading": "はな",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "花"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 217,
+      "sourceRow": 218,
+      "romaji": "hana"
+    },
+    {
+      "id": "duo-v-0218",
+      "courseId": "duolingo",
+      "term": "けん",
+      "reading": "けん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "健"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 218,
+      "sourceRow": 219,
+      "romaji": "ken"
+    },
+    {
+      "id": "duo-v-0219",
+      "courseId": "duolingo",
+      "term": "こんにちは",
+      "reading": "こんにちは",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "你好"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 219,
+      "sourceRow": 220,
+      "romaji": "konnichiha"
+    },
+    {
+      "id": "duo-v-0220",
+      "courseId": "duolingo",
+      "term": "がくせい",
+      "reading": "がくせい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "学生"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 220,
+      "sourceRow": 221,
+      "romaji": "gakusei"
+    },
+    {
+      "id": "duo-v-0221",
+      "courseId": "duolingo",
+      "term": "ひと",
+      "reading": "ひと",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "人"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 221,
+      "sourceRow": 222,
+      "romaji": "hito"
+    },
+    {
+      "id": "duo-v-0222",
+      "courseId": "duolingo",
+      "term": "べんごし",
+      "reading": "べんごし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "律师"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 222,
+      "sourceRow": 223,
+      "romaji": "bengoshi"
+    },
+    {
+      "id": "duo-v-0223",
+      "courseId": "duolingo",
+      "term": "せんせい",
+      "reading": "せんせい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "老师"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 223,
+      "sourceRow": 224,
+      "romaji": "sensei"
+    },
+    {
+      "id": "duo-v-0224",
+      "courseId": "duolingo",
+      "term": "かっこいい",
+      "reading": "かっこいい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "酷"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 224,
+      "sourceRow": 225,
+      "romaji": "kakkoii"
+    },
+    {
+      "id": "duo-v-0225",
+      "courseId": "duolingo",
+      "term": "いしゃ",
+      "reading": "いしゃ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "医生"
+      ],
+      "sourceLesson": "duolingo-lesson-09",
+      "sourceLessonLabel": "duolingo 9",
+      "sourceSequence": 225,
+      "sourceRow": 226,
+      "romaji": "isha"
+    },
+    {
+      "id": "duo-v-0226",
+      "courseId": "duolingo",
+      "term": "やさしい",
+      "reading": "やさしい",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "温柔"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 226,
+      "sourceRow": 227,
+      "romaji": "yasashii"
+    },
+    {
+      "id": "duo-v-0227",
+      "courseId": "duolingo",
+      "term": "です",
+      "reading": "です",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "是"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 227,
+      "sourceRow": 228,
+      "romaji": "desu"
+    },
+    {
+      "id": "duo-v-0228",
+      "courseId": "duolingo",
+      "term": "ごはん",
+      "reading": "ごはん",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "饭"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 228,
+      "sourceRow": 229,
+      "romaji": "gohan"
+    },
+    {
+      "id": "duo-v-0229",
+      "courseId": "duolingo",
+      "term": "と",
+      "reading": "と",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "要是的话，和，如果"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 229,
+      "sourceRow": 230,
+      "romaji": "to"
+    },
+    {
+      "id": "duo-v-0230",
+      "courseId": "duolingo",
+      "term": "ください",
+      "reading": "ください",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "请"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 230,
+      "sourceRow": 231,
+      "romaji": "kudasai"
+    },
+    {
+      "id": "duo-v-0231",
+      "courseId": "duolingo",
+      "term": "おちゃ",
+      "reading": "おちゃ",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "茶"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 231,
+      "sourceRow": 232,
+      "romaji": "ocha"
+    },
+    {
+      "id": "duo-v-0232",
+      "courseId": "duolingo",
+      "term": "みず",
+      "reading": "みず",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "水"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 232,
+      "sourceRow": 233,
+      "romaji": "mizu"
+    },
+    {
+      "id": "duo-v-0233",
+      "courseId": "duolingo",
+      "term": "すし",
+      "reading": "すし",
+      "accents": [
+
+      ],
+      "accentDisplay": "",
+      "partOfSpeech": "未分类",
+      "partOfSpeechCode": "",
+      "meanings": [
+        "寿司"
+      ],
+      "sourceLesson": "duolingo-lesson-10",
+      "sourceLessonLabel": "duolingo 10",
+      "sourceSequence": 233,
+      "sourceRow": 234,
+      "romaji": "sushi"
+    }
+  ],
+  "sentences": [
+
+  ]
+}

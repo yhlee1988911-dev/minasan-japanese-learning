@@ -2,6 +2,7 @@ import { ArrowRight, BookMarked, BookOpenText, Headphones, Languages, Sparkles, 
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { course, lessons, sentences, vocabulary } from '../data/catalog';
+import { loadDuolingoCourse, sendLessonProgress } from '../services/api';
 import { isMastered, readMastery } from '../storage/mastery';
 import { readMistakes } from '../storage/mistakes';
 
@@ -15,6 +16,7 @@ const modes = [
 export function HomePage() {
   const [mistakeCount, setMistakeCount] = useState(() => readMistakes().length);
   const [masteryVersion, setMasteryVersion] = useState(0);
+  const [duolingoTotal, setDuolingoTotal] = useState(0);
 
   useEffect(() => {
     const refresh = () => setMistakeCount(readMistakes().length);
@@ -27,25 +29,58 @@ export function HomePage() {
     };
   }, []);
 
+  useEffect(() => {
+    loadDuolingoCourse()
+      .then(data => setDuolingoTotal(data.vocabulary.length))
+      .catch(() => setDuolingoTotal(0));
+  }, []);
+
   const mastery = useMemo(() => {
     const records = readMastery();
-    const masteredVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && isMastered(record)).map(record => record.id));
+    const masteredBeginnerVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && record.courseId !== 'duolingo' && isMastered(record)).map(record => record.id));
+    const masteredDuolingoVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && record.courseId === 'duolingo' && isMastered(record)).map(record => record.id));
+    const masteredVocabularyIds = new Set([...masteredBeginnerVocabularyIds, ...masteredDuolingoVocabularyIds]);
     const masteredSentenceIds = new Set(records.filter(record => record.kind === 'sentence' && isMastered(record)).map(record => record.id));
-    const masteredCourses = lessons.filter(lesson => {
+    const lessonStates = lessons.map(lesson => {
       const contentIds = [...lesson.vocabularyIds, ...lesson.sentenceIds];
-      return contentIds.length > 0
-        && lesson.vocabularyIds.every(id => masteredVocabularyIds.has(id))
+      const completed = contentIds.length > 0
+        && lesson.vocabularyIds.every(id => masteredBeginnerVocabularyIds.has(id))
         && lesson.sentenceIds.every(id => masteredSentenceIds.has(id));
-    }).length;
+      return {
+        lessonId: lesson.id,
+        vocabularyMasteredCount: lesson.vocabularyIds.filter(id => masteredBeginnerVocabularyIds.has(id)).length,
+        sentenceMasteredCount: lesson.sentenceIds.filter(id => masteredSentenceIds.has(id)).length,
+        completed
+      };
+    });
+    const masteredCourses = lessonStates.filter(item => item.completed).length;
     return {
       courses: masteredCourses,
       vocabulary: masteredVocabularyIds.size,
-      sentences: masteredSentenceIds.size
+      beginnerVocabulary: masteredBeginnerVocabularyIds.size,
+      duolingoVocabulary: masteredDuolingoVocabularyIds.size,
+      sentences: masteredSentenceIds.size,
+      lessonStates
     };
   }, [masteryVersion]);
 
+  useEffect(() => {
+    mastery.lessonStates.forEach(lesson => {
+      void sendLessonProgress({
+        lessonId: lesson.lessonId,
+        courseId: 'beginner-01',
+        vocabularyMasteredCount: lesson.vocabularyMasteredCount,
+        sentenceMasteredCount: lesson.sentenceMasteredCount,
+        completed: lesson.completed
+      }).catch(() => undefined);
+    });
+  }, [mastery.lessonStates]);
+
   const vocabularyProgress = vocabulary.length
-    ? Math.round((mastery.vocabulary / vocabulary.length) * 100)
+    ? Math.round((mastery.beginnerVocabulary / vocabulary.length) * 100)
+    : 0;
+  const duolingoProgress = duolingoTotal
+    ? Math.round((mastery.duolingoVocabulary / duolingoTotal) * 100)
     : 0;
 
   return (
@@ -68,12 +103,23 @@ export function HomePage() {
       <section className="mastery-progress" aria-label="词汇掌握进度">
         <div className="mastery-progress__heading">
           <span>词汇掌握进度</span>
-          <strong>{mastery.vocabulary} / {vocabulary.length}</strong>
+          <strong>{mastery.vocabulary} / {vocabulary.length + duolingoTotal}</strong>
         </div>
-        <div className="mastery-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={vocabularyProgress}>
-          <div style={{ width: `${vocabularyProgress}%` }} />
+        <div className="mastery-progress__row">
+          <span>初级日语</span>
+          <div className="mastery-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={vocabularyProgress}>
+            <div style={{ width: `${vocabularyProgress}%` }} />
+          </div>
+          <strong>{mastery.beginnerVocabulary}/{vocabulary.length}</strong>
         </div>
-        <p>{vocabularyProgress === 0 ? '完成两次无错误作答，点亮第一个词汇进度。' : `已完成 ${vocabularyProgress}%，继续保持。`}</p>
+        <div className="mastery-progress__row mastery-progress__row--duolingo">
+          <span>duolingo</span>
+          <div className="mastery-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={duolingoProgress}>
+            <div style={{ width: `${duolingoProgress}%` }} />
+          </div>
+          <strong>{mastery.duolingoVocabulary}/{duolingoTotal}</strong>
+        </div>
+        <p>{vocabularyProgress + duolingoProgress === 0 ? '完成两次无错误作答，点亮第一个词汇进度。' : `初级 ${vocabularyProgress}% · duolingo ${duolingoProgress}%`}</p>
       </section>
 
       <section className="review-entry">

@@ -3,6 +3,7 @@ export type MasteryKind = 'vocabulary' | 'sentence';
 export interface MasteryRecord {
   id: string;
   lessonId: string;
+  courseId?: string;
   kind: MasteryKind;
   correctCount: number;
   wrongCount: number;
@@ -19,12 +20,17 @@ export const readMastery = (): MasteryRecord[] => {
   }
 };
 
+export const replaceMastery = (records: MasteryRecord[]) => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+  window.dispatchEvent(new Event('minasan:mastery-changed'));
+};
+
 export const isMastered = (record?: MasteryRecord) => Boolean(
   record && record.correctCount >= 2 && record.wrongCount === 0
 );
 
 export const recordMasteryAttempt = (
-  item: Pick<MasteryRecord, 'id' | 'lessonId' | 'kind'>,
+  item: Pick<MasteryRecord, 'id' | 'lessonId' | 'courseId' | 'kind'>,
   correct: boolean
 ) => {
   const records = readMastery();

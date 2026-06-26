@@ -6,6 +6,78 @@ body {
   color: #17211f;
 }
 
+/* Latest local polish: brighter header and two-line mastery progress */
+:root {
+  --learn-green: #83dc55;
+  --learn-green-dark: #63bd3d;
+  --learn-blue: #51c3f4;
+  --learn-blue-dark: #2fa5db;
+  --learn-yellow: #f8d954;
+  --learn-yellow-dark: #d8b937;
+  --learn-red: #e87979;
+  --learn-red-dark: #c95b5b;
+}
+
+.overview-band {
+  background: var(--learn-green);
+  box-shadow: inset 0 -5px 0 var(--learn-green-dark);
+}
+
+.brand span,
+.primary-command,
+.review-entry > a,
+.mode-card span {
+  filter: saturate(1.08);
+}
+
+.mastery-progress__row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  margin-top: 8px;
+}
+
+.mastery-progress__row > span,
+.mastery-progress__row > strong {
+  color: #66736f;
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.mastery-progress__row > strong {
+  color: #b56d6d;
+  text-align: right;
+}
+
+.mastery-progress__row--duolingo .mastery-progress__track > div {
+  background: var(--learn-blue);
+  border-bottom-color: var(--learn-blue-dark);
+}
+
+html.eye-care .mastery-progress__row > span,
+html.eye-care .mastery-progress__row > strong {
+  color: var(--ec-muted);
+}
+
+html.eye-care .mastery-progress__row .mastery-progress__track > div {
+  background: var(--ec-green);
+  border-bottom-color: var(--ec-green-strong);
+}
+
+@media (max-width: 700px) {
+  .mastery-progress__row {
+    grid-template-columns: 64px minmax(0, 1fr) 58px;
+    gap: 7px;
+  }
+
+  .mastery-progress__row > span,
+  .mastery-progress__row > strong {
+    font-size: 11px;
+  }
+}
+
 button {
   cursor: pointer;
 }
@@ -567,6 +639,325 @@ summary:focus-visible {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
+  }
+}
+
+/* Login and slightly brighter default theme */
+:root {
+  --learn-green: #70c468;
+  --learn-green-dark: #58a651;
+  --learn-blue: #62b5e4;
+  --learn-blue-dark: #4695c2;
+  --learn-yellow: #efcf62;
+  --learn-yellow-dark: #cdae4c;
+  --learn-red: #de7d7d;
+  --learn-red-dark: #be6262;
+}
+
+.login-page {
+  align-items: center;
+  background: linear-gradient(180deg, #f7fbf5 0%, #f7f7f7 100%);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-card {
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(75, 75, 75, 0.1);
+  display: grid;
+  gap: 14px;
+  max-width: 420px;
+  padding: 30px;
+  width: 100%;
+}
+
+.login-card__icon {
+  align-items: center;
+  background: #eaf8df;
+  border-radius: 8px;
+  color: var(--learn-green-dark);
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  width: 52px;
+}
+
+.login-card h1 {
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+.login-card label {
+  display: grid;
+  gap: 7px;
+}
+
+.login-card label span {
+  color: var(--learn-muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.login-card input {
+  border: 2px solid var(--learn-border);
+  border-radius: 8px;
+  font-size: 18px;
+  min-height: 50px;
+  padding: 0 12px;
+}
+
+.login-card input:focus {
+  border-color: var(--learn-blue);
+  box-shadow: 0 0 0 3px rgba(98, 181, 228, 0.16);
+  outline: 0;
+}
+
+.login-card button {
+  background: var(--learn-green);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 -3px 0 var(--learn-green-dark);
+  color: #fff;
+  font-weight: 900;
+  min-height: 50px;
+}
+
+.login-card button:disabled {
+  background: #cfd7d3;
+  box-shadow: none;
+}
+
+.login-device {
+  background: #f7f9f5;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+}
+
+.login-device span,
+.login-device small {
+  color: var(--learn-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.login-device strong {
+  color: var(--learn-ink);
+  font-size: 15px;
+}
+
+.login-error {
+  background: #ffe2e2;
+  border-radius: 7px;
+  color: var(--learn-red-dark);
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+html.eye-care .login-page {
+  background: var(--ec-bg) !important;
+}
+
+html.eye-care .login-card {
+  background: var(--ec-surface) !important;
+  border-color: var(--ec-border) !important;
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .login-card__icon {
+  background: rgba(107, 143, 126, 0.18) !important;
+  color: var(--ec-accent) !important;
+}
+
+html.eye-care .login-card input {
+  background: var(--ec-card-bg) !important;
+  border-color: var(--ec-border) !important;
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .login-device {
+  background: var(--ec-card-bg) !important;
+  border-color: var(--ec-border) !important;
+}
+
+html.eye-care .login-device strong {
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .login-card button {
+  background: var(--ec-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Local range split and brighter default color pass */
+:root {
+  --learn-green: #79cf50;
+  --learn-green-dark: #5fb23d;
+  --learn-blue: #4bb8ef;
+  --learn-blue-dark: #2e9bd1;
+  --learn-yellow: #f3d34f;
+  --learn-yellow-dark: #d0af35;
+  --learn-red: #e36f72;
+  --learn-red-dark: #c55356;
+  --answer-pink: #c86f82;
+}
+
+.course-picker-split {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.course-picker-split .course-picker {
+  background: #f2f3f1;
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.course-picker-split .course-picker.is-active {
+  background: #f3fbea;
+  border-color: var(--learn-green);
+  box-shadow: inset 0 -3px 0 rgba(95, 178, 61, 0.22);
+}
+
+.course-picker-split .course-picker.is-muted {
+  opacity: .72;
+}
+
+.course-picker-split .course-picker.is-muted summary {
+  background: #eeeeec;
+}
+
+.course-picker-split .course-picker.is-active summary span,
+.course-picker-split .course-picker.is-active summary strong {
+  color: #4f9134;
+}
+
+.course-picker-split .course-options {
+  grid-template-columns: 1fr;
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.course-picker-split .course-options label {
+  min-width: 0;
+}
+
+.course-picker-split .course-options span,
+.course-picker-split .course-options small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-columns {
+  align-items: start;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr);
+}
+
+.course-columns > section {
+  min-width: 0;
+}
+
+.course-columns .lesson-list {
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.course-columns .lesson-row {
+  gap: 12px;
+  grid-template-columns: 46px minmax(0, 1fr);
+  padding: 16px;
+}
+
+.course-columns .lesson-counts,
+.course-columns .lesson-row > a,
+.course-columns .lesson-row > .pending {
+  grid-column: 2;
+}
+
+.course-columns .lesson-row > a {
+  justify-self: start;
+}
+
+.course-columns .lesson-row h2,
+.course-columns .lesson-row p {
+  overflow-wrap: anywhere;
+}
+
+.lesson-list--duolingo .lesson-order {
+  color: #9a6fc4;
+}
+
+.lesson-list--duolingo .lesson-row > a {
+  background: #9f7ad5;
+  box-shadow: inset 0 -3px 0 #7f5db2;
+}
+
+html.eye-care .course-picker-split .course-picker {
+  background: var(--ec-card-bg) !important;
+  border-color: var(--ec-border) !important;
+  box-shadow: none !important;
+}
+
+html.eye-care .course-picker-split .course-picker.is-active {
+  background: rgba(107, 143, 126, 0.16) !important;
+  border-color: var(--ec-accent) !important;
+}
+
+html.eye-care .course-picker-split .course-picker.is-muted summary {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+html.eye-care .course-picker-split .course-picker.is-active summary span,
+html.eye-care .course-picker-split .course-picker.is-active summary strong {
+  color: var(--ec-accent) !important;
+}
+
+html.eye-care .course-columns .lesson-list {
+  background: var(--ec-surface) !important;
+  border-color: var(--ec-border) !important;
+}
+
+@media (max-width: 900px) {
+  .course-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .course-picker-split {
+    gap: 8px;
+  }
+
+  .course-picker-split .course-picker summary {
+    gap: 5px;
+    grid-template-columns: 1fr auto;
+    padding: 0 10px;
+  }
+
+  .course-picker-split .course-picker summary span {
+    grid-column: 1 / -1;
+  }
+
+  .course-picker-split .course-picker summary strong {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .course-picker-split .course-options {
+    max-height: 260px;
   }
 }
 
@@ -2048,5 +2439,77 @@ html.eye-care .practice-header__left > a {
     grid-column: 2;
     justify-content: center;
     width: fit-content;
+  }
+}
+
+/* Final override for the current local build */
+:root {
+  --learn-green: #83dc55;
+  --learn-green-dark: #63bd3d;
+  --learn-blue: #51c3f4;
+  --learn-blue-dark: #2fa5db;
+  --learn-yellow: #f8d954;
+  --learn-yellow-dark: #d8b937;
+  --learn-red: #e87979;
+  --learn-red-dark: #c95b5b;
+}
+
+.overview-band {
+  background: var(--learn-green);
+  box-shadow: inset 0 -5px 0 var(--learn-green-dark);
+}
+
+.brand span,
+.primary-command,
+.review-entry > a,
+.mode-card span {
+  filter: saturate(1.08);
+}
+
+.mastery-progress__row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  margin-top: 8px;
+}
+
+.mastery-progress__row > span,
+.mastery-progress__row > strong {
+  color: #66736f;
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.mastery-progress__row > strong {
+  color: #b56d6d;
+  text-align: right;
+}
+
+.mastery-progress__row--duolingo .mastery-progress__track > div {
+  background: var(--learn-blue);
+  border-bottom-color: var(--learn-blue-dark);
+}
+
+html.eye-care .mastery-progress__row > span,
+html.eye-care .mastery-progress__row > strong {
+  color: var(--ec-muted);
+}
+
+html.eye-care .mastery-progress__row .mastery-progress__track > div {
+  background: var(--ec-green);
+  border-bottom-color: var(--ec-green-strong);
+}
+
+@media (max-width: 700px) {
+  .mastery-progress__row {
+    grid-template-columns: 64px minmax(0, 1fr) 58px;
+    gap: 7px;
+  }
+
+  .mastery-progress__row > span,
+  .mastery-progress__row > strong {
+    font-size: 11px;
   }
 }

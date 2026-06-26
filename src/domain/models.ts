@@ -2,6 +2,7 @@ export type PracticeMode = 'dictation' | 'translation' | 'cloze';
 
 export interface Vocabulary {
   id: string;
+  courseId?: string;
   term: string;
   reading: string;
   accents: number[];
@@ -14,10 +15,12 @@ export interface Vocabulary {
   sourceRow?: number;
   accentDisplay?: string;
   partOfSpeechCode?: string;
+  romaji?: string;
 }
 
 export interface Sentence {
   id: string;
+  courseId?: string;
   lessonId: string;
   text: string;
   reading: string;
@@ -30,6 +33,7 @@ export interface Sentence {
 
 export interface Lesson {
   id: string;
+  courseId?: string;
   order: number;
   title: string;
   description: string;

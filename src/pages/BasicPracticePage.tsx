@@ -65,6 +65,7 @@ export function BasicPracticePage() {
   const [result, setResult] = useState<'idle' | 'correct' | 'incorrect'>('idle');
   const [stats, setStats] = useState({ correct: 0, incorrect: 0 });
   const inputRef = useRef<HTMLInputElement>(null);
+  const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
 
   const pool = useMemo(() => {
     if (group === 'all') return allItems;
@@ -96,21 +97,40 @@ export function BasicPracticePage() {
   }, [group, mode, nextQuestion]);
 
   useEffect(() => {
-    if (mode !== 'kana-match') {
-      const timer = window.setTimeout(speak, 260);
-      return () => window.clearTimeout(timer);
-    }
+    const timer = window.setTimeout(speak, 260);
+    return () => window.clearTimeout(timer);
   }, [current, mode, speak]);
 
-  useEffect(() => () => stopJapaneseSpeech(), []);
+  useEffect(() => () => {
+    stopJapaneseSpeech();
+    feedbackAudioRef.current?.correct.pause();
+    feedbackAudioRef.current?.incorrect.pause();
+  }, []);
+
+  const playFeedback = (correct: boolean) => {
+    if (!feedbackAudioRef.current) {
+      feedbackAudioRef.current = {
+        correct: new Audio('/sounds/right.wav'),
+        incorrect: new Audio('/sounds/wrong.wav')
+      };
+    }
+    const sounds = feedbackAudioRef.current;
+    sounds.correct.pause();
+    sounds.incorrect.pause();
+    const audio = correct ? sounds.correct : sounds.incorrect;
+    audio.currentTime = 0;
+    audio.volume = 0.78;
+    void audio.play().catch(() => undefined);
+  };
 
   const record = (correct: boolean) => {
     setResult(correct ? 'correct' : 'incorrect');
+    playFeedback(correct);
     setStats(value => ({
       correct: value.correct + (correct ? 1 : 0),
       incorrect: value.incorrect + (correct ? 0 : 1)
     }));
-    if (correct) window.setTimeout(nextQuestion, 700);
+    if (correct) window.setTimeout(nextQuestion, 2000);
   };
 
   const submitInput = () => {
@@ -158,7 +178,10 @@ export function BasicPracticePage() {
         <div className="basic-card">
           <small>{current.romaji}</small>
           {mode === 'kana-match' ? (
-            <h1>{current.hiragana}</h1>
+            <>
+              <h1>{current.hiragana}</h1>
+              <button className="listen-link" type="button" onClick={speak}><Headphones size={18} />播放发音</button>
+            </>
           ) : (
             <button className="listen-command" type="button" onClick={speak}><Headphones size={24} />播放发音</button>
           )}

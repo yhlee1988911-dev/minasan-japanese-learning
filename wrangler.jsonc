@@ -9,5 +9,12 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "minasan-learning-db",
+      "database_id": "8c25730c-883c-41ca-af15-ea4ec54d61a9"
+    }
+  ]
 }

@@ -9,7 +9,10 @@
     "deploy": "npm run build && wrangler deploy",
     "preview": "vite preview",
     "data:import": "ruby scripts/import_ci.rb",
-    "data:sentences": "ruby scripts/generate_sentences_11_50.rb"
+    "data:sentences": "ruby scripts/generate_sentences_11_50.rb",
+    "data:duolingo": "ruby scripts/import_online.rb",
+    "d1:migrate:local": "wrangler d1 migrations apply minasan-learning-db --local",
+    "d1:migrate:remote": "wrangler d1 migrations apply minasan-learning-db --remote"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
