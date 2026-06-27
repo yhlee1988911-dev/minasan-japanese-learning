@@ -7,8 +7,8 @@ import { isMastered, readMastery } from '../storage/mastery';
 import { readMistakes } from '../storage/mistakes';
 
 const modes = [
-  { id: 'dictation', title: '听写模式', text: '听日语发音，输入对应词汇。', icon: Headphones },
-  { id: 'translation', title: '翻译模式', text: '根据中文意思，写出日文。', icon: Languages },
+  { id: 'dictation', title: '随课听写训练', text: '按所选课程播放日语发音，输入对应词汇。', icon: Headphones },
+  { id: 'translation', title: '随课翻译训练', text: '按所选课程根据中文释义写出日文。', icon: Languages },
   { id: 'cloze', title: '短句填空', text: '在语境中补全缺失词汇。', icon: TextCursorInput },
   { id: 'basic', title: '基础训练', text: '平假名、片假名、拗音随进随学。', icon: Sparkles }
 ];
@@ -88,7 +88,7 @@ export function HomePage() {
       </section>
 
       <section className="content-section">
-        <div className="section-title"><BookOpenText size={20} /><h2>练习模式</h2></div>
+        <div className="section-title"><BookOpenText size={20} /><h2>日语随课词汇训练</h2></div>
         <div className="mode-grid">
           {modes.map(({ id, title, text, icon: Icon }) => (
             <Link className="mode-card" key={id} to={id === 'basic' ? '/basic' : `/practice?mode=${id}`}>
