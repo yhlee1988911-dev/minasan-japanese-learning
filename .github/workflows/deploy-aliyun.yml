@@ -1,0 +1,69 @@
+name: Deploy Alibaba ECS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Pack release
+        run: |
+          tar \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.wrangler' \
+            --exclude='.aliyun' \
+            --exclude='*.sqlite' \
+            -czf minasan-aliyun.tar.gz \
+            package.json package-lock.json index.html vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json \
+            dist public src worker migrations server deploy
+
+      - name: Upload release
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.ALIYUN_HOST }}
+          port: ${{ secrets.ALIYUN_PORT || '22' }}
+          username: ${{ secrets.ALIYUN_USER }}
+          key: ${{ secrets.ALIYUN_SSH_KEY }}
+          source: minasan-aliyun.tar.gz
+          target: /tmp
+
+      - name: Restart service
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          APP_DIR: ${{ secrets.ALIYUN_APP_DIR || '/opt/minasan' }}
+          PUBLIC_ORIGIN: ${{ secrets.ALIYUN_PUBLIC_ORIGIN }}
+        with:
+          host: ${{ secrets.ALIYUN_HOST }}
+          port: ${{ secrets.ALIYUN_PORT || '22' }}
+          username: ${{ secrets.ALIYUN_USER }}
+          key: ${{ secrets.ALIYUN_SSH_KEY }}
+          envs: APP_DIR,PUBLIC_ORIGIN
+          script: |
+            set -e
+            sudo mkdir -p "$APP_DIR"
+            sudo tar -xzf /tmp/minasan-aliyun.tar.gz -C "$APP_DIR"
+            sudo chown -R minasan:minasan "$APP_DIR"
+            cd "$APP_DIR"
+            sudo -u minasan npm ci --omit=dev
+            if [ -n "$PUBLIC_ORIGIN" ]; then
+              sudo sed -i "s#^Environment=PUBLIC_ORIGIN=.*#Environment=PUBLIC_ORIGIN=$PUBLIC_ORIGIN#" /etc/systemd/system/minasan.service
+            fi
+            sudo systemctl daemon-reload
+            sudo systemctl restart minasan
+            sudo systemctl --no-pager --full status minasan

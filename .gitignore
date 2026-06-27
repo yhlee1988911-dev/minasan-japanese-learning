@@ -11,3 +11,6 @@ vite.config.js
 vite.config.d.ts
 data/*.xlsx
 .wrangler/
+.aliyun/
+*.sqlite
+*.sqlite-*

@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "deploy": "npm run build && wrangler deploy",
     "preview": "vite preview",
+    "server:start": "node server/index.js",
+    "server:dev": "npm run build && MINASAN_SQLITE_PATH=.aliyun/local.sqlite PORT=8788 node server/index.js",
     "data:import": "ruby scripts/import_ci.rb",
     "data:sentences": "ruby scripts/generate_sentences_11_50.rb",
     "data:duolingo": "ruby scripts/import_online.rb",
@@ -18,7 +20,8 @@
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "sql.js": "^1.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
