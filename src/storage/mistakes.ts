@@ -28,19 +28,47 @@ const writeMistakes = (items: MistakeRecord[]) => {
   window.dispatchEvent(new Event('minasan:mistakes-changed'));
 };
 
-export const recordMistake = (question: Omit<MistakeRecord, 'key' | 'wrongCount' | 'lastWrongAt'>) => {
-  const key = `${question.mode}:${question.id}`;
+export const replaceMistakes = (records: MistakeRecord[]) => {
+  writeMistakes(records);
+};
+
+export const mergeMistakeRecord = (record: MistakeRecord) => {
   const items = readMistakes();
-  const existing = items.find(item => item.key === key);
-  if (existing) {
-    existing.wrongCount += 1;
-    existing.lastWrongAt = new Date().toISOString();
+  const existingIndex = items.findIndex(item => item.key === record.key);
+  if (existingIndex >= 0) {
+    items[existingIndex] = record;
   } else {
-    items.push({ ...question, key, wrongCount: 1, lastWrongAt: new Date().toISOString() });
+    items.push(record);
   }
   writeMistakes(items);
 };
 
+export const recordMistake = (question: Omit<MistakeRecord, 'key' | 'wrongCount' | 'lastWrongAt'>) => {
+  const key = `${question.mode}:${question.id}`;
+  const items = readMistakes();
+  const existing = items.find(item => item.key === key);
+  const lastWrongAt = new Date().toISOString();
+  let record: MistakeRecord;
+  if (existing) {
+    existing.wrongCount += 1;
+    existing.lastWrongAt = lastWrongAt;
+    existing.prompt = question.prompt;
+    existing.meaning = question.meaning;
+    existing.speech = question.speech;
+    existing.answers = question.answers;
+    existing.lessonId = question.lessonId;
+    record = existing;
+  } else {
+    record = { ...question, key, wrongCount: 1, lastWrongAt };
+    items.push(record);
+  }
+  writeMistakes(items);
+  return record;
+};
+
 export const removeMistake = (key: string) => {
-  writeMistakes(readMistakes().filter(item => item.key !== key));
+  const items = readMistakes();
+  const removed = items.find(item => item.key === key) || null;
+  writeMistakes(items.filter(item => item.key !== key));
+  return removed;
 };

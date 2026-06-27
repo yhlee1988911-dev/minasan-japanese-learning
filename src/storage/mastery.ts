@@ -7,6 +7,7 @@ export interface MasteryRecord {
   kind: MasteryKind;
   correctCount: number;
   wrongCount: number;
+  mastered?: boolean;
   lastPracticedAt: string;
 }
 
@@ -26,24 +27,27 @@ export const replaceMastery = (records: MasteryRecord[]) => {
 };
 
 export const isMastered = (record?: MasteryRecord) => Boolean(
-  record && record.correctCount >= 2 && record.wrongCount === 0
+  record?.mastered
 );
 
 export const recordMasteryAttempt = (
   item: Pick<MasteryRecord, 'id' | 'lessonId' | 'courseId' | 'kind'>,
-  correct: boolean
+  correct: boolean,
+  mastered = false
 ) => {
   const records = readMastery();
   const existing = records.find(record => record.id === item.id && record.kind === item.kind);
   if (existing) {
     existing.correctCount += correct ? 1 : 0;
     existing.wrongCount += correct ? 0 : 1;
+    existing.mastered = Boolean(existing.mastered || mastered);
     existing.lastPracticedAt = new Date().toISOString();
   } else {
     records.push({
       ...item,
       correctCount: correct ? 1 : 0,
       wrongCount: correct ? 0 : 1,
+      mastered,
       lastPracticedAt: new Date().toISOString()
     });
   }
@@ -58,8 +62,6 @@ export const mergeMasteryRecord = (record: MasteryRecord) => {
     records[index] = {
       ...records[index],
       ...record,
-      correctCount: Math.max(records[index].correctCount, record.correctCount),
-      wrongCount: Math.max(records[index].wrongCount, record.wrongCount),
       lastPracticedAt: record.lastPracticedAt || records[index].lastPracticedAt
     };
   } else {

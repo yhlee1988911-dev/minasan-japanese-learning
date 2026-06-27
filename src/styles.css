@@ -66,6 +66,117 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   border-bottom-color: var(--ec-green-strong);
 }
 
+.mastery-progress--link {
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.mastery-progress--link:hover {
+  border-color: #b8d7ec;
+  box-shadow: 0 10px 28px rgba(23, 33, 31, 0.08);
+}
+
+.mastery-toolbar {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--learn-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 18px 0 12px;
+  padding: 12px;
+}
+
+.mastery-toolbar label {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mastery-toolbar svg {
+  color: var(--learn-muted);
+  flex-shrink: 0;
+}
+
+.mastery-toolbar input {
+  border: 2px solid var(--learn-border);
+  border-radius: 7px;
+  min-height: 42px;
+  min-width: 0;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.mastery-toolbar input:focus {
+  border-color: var(--learn-blue);
+  outline: 0;
+}
+
+.mastery-toolbar strong {
+  color: var(--learn-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.mistake-list article {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(140px, .8fr) 90px auto;
+}
+
+.mistake-list article button {
+  align-items: center;
+  background: var(--answer-pink-soft);
+  border: 0;
+  border-radius: 7px;
+  color: #a85f66;
+  display: inline-flex;
+  font-weight: 850;
+  gap: 6px;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 12px;
+}
+
+.basic-romaji-hint {
+  color: #c97878 !important;
+  font-size: 21px !important;
+  letter-spacing: .03em !important;
+  margin-bottom: 8px;
+}
+
+.admin-lesson-create select {
+  background: #fff;
+  border: 2px solid #dfe4df;
+  border-radius: 6px;
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+.admin-lesson-edit > span {
+  color: #52615e;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+html.eye-care .mastery-progress--link,
+html.eye-care .mastery-toolbar {
+  background: var(--ec-surface) !important;
+  border-color: var(--ec-border) !important;
+}
+
+html.eye-care .mastery-toolbar input,
+html.eye-care .admin-lesson-create select {
+  background: var(--ec-card-bg) !important;
+  border-color: var(--ec-border) !important;
+  color: var(--ec-text) !important;
+}
+
 @media (max-width: 700px) {
   .mastery-progress__row {
     grid-template-columns: 64px minmax(0, 1fr) 58px;
@@ -75,6 +186,127 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   .mastery-progress__row > span,
   .mastery-progress__row > strong {
     font-size: 11px;
+  }
+
+  .overview-band {
+    min-height: 160px;
+  }
+
+  .mastery-progress {
+    margin: 12px;
+    padding: 14px;
+  }
+
+  .mastery-toolbar {
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+  }
+
+  .mastery-toolbar strong {
+    justify-self: start;
+  }
+
+  .mistake-list article {
+    grid-template-columns: 1fr;
+  }
+
+  .mistake-list article button {
+    justify-self: start;
+  }
+
+  .basic-page {
+    max-width: none;
+    padding-top: 10px;
+  }
+
+  .basic-page .practice-header {
+    margin: 0 10px 8px;
+  }
+
+  .basic-mode-grid {
+    gap: 6px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+
+  .basic-mode-grid button {
+    align-items: center;
+    gap: 3px;
+    justify-items: center;
+    min-height: 58px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  .basic-mode-grid button svg {
+    height: 17px;
+    width: 17px;
+  }
+
+  .basic-mode-grid button strong {
+    font-size: 12px;
+  }
+
+  .basic-mode-grid button span {
+    display: none;
+  }
+
+  .basic-filter {
+    gap: 5px;
+    margin-bottom: 8px;
+    padding: 6px 8px;
+  }
+
+  .basic-filter button {
+    min-height: 34px;
+    padding: 0 10px;
+  }
+
+  .basic-stage {
+    padding-top: 12px;
+  }
+
+  .basic-card {
+    margin: 10px 0;
+    min-height: 128px;
+    padding: 12px;
+  }
+
+  .basic-card h1 {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+
+  .basic-card p {
+    margin-top: 6px;
+  }
+
+  .basic-card .listen-command {
+    min-height: 48px;
+    padding: 0 18px;
+  }
+
+  .basic-romaji-hint {
+    font-size: 19px !important;
+    margin-bottom: 4px;
+  }
+
+  .kana-choice-grid {
+    gap: 7px;
+  }
+
+  .kana-choice-grid button {
+    min-height: 54px;
+  }
+
+  .kana-choice-grid--full button {
+    font-size: 22px;
+    min-height: 48px;
+  }
+
+  .admin-lesson-list .admin-lesson-create {
+    grid-template-columns: 86px minmax(0, 1fr);
   }
 }
 
@@ -262,6 +494,30 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   margin-top: 22px;
 }
 
+.admin-duolingo-workspace {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(260px, 310px) minmax(0, 1fr);
+  margin-top: 22px;
+}
+
+.admin-duolingo-main {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.admin-duolingo-main .admin-import,
+.admin-words-panel {
+  margin-top: 0;
+}
+
+.admin-lesson-list {
+  align-self: start;
+  position: sticky;
+  top: 86px;
+}
+
 .admin-import__controls {
   align-items: end;
   display: grid;
@@ -280,9 +536,18 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   padding-bottom: 14px;
 }
 
+.admin-lesson-list .admin-lesson-create {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.admin-lesson-list .admin-lesson-create button {
+  grid-column: 1 / -1;
+}
+
 .admin-lesson-create label {
   display: grid;
   gap: 7px;
+  min-width: 0;
 }
 
 .admin-import__controls label {
@@ -305,6 +570,7 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   border-radius: 6px;
   min-height: 46px;
   padding: 0 12px;
+  width: 100%;
 }
 
 .admin-lesson-create button,
@@ -331,6 +597,103 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   background: var(--learn-green);
   box-shadow: inset 0 -3px 0 var(--learn-green-dark);
   color: #fff;
+}
+
+.admin-lesson-filter {
+  display: grid;
+  gap: 8px;
+  max-height: 640px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.admin-lesson-filter article {
+  align-items: stretch;
+  border: 1px solid #dfe4df;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  overflow: hidden;
+}
+
+.admin-lesson-filter > button,
+.admin-lesson-filter__main,
+.admin-lesson-filter__edit,
+.admin-lesson-edit button {
+  border: 0;
+}
+
+.admin-lesson-filter > button,
+.admin-lesson-filter__main {
+  background: #fff;
+  color: #17211f;
+  display: grid;
+  gap: 3px;
+  min-height: 58px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.admin-lesson-filter > button {
+  border: 1px solid #dfe4df;
+  border-radius: 8px;
+  grid-template-columns: 1fr auto;
+}
+
+.admin-lesson-filter > button span,
+.admin-lesson-filter__main span,
+.admin-lesson-filter__main small {
+  color: #65716e;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.admin-lesson-filter > button strong,
+.admin-lesson-filter__main strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-lesson-filter > button.active,
+.admin-lesson-filter article.active .admin-lesson-filter__main {
+  background: #e0f2eb;
+}
+
+.admin-lesson-filter__edit {
+  align-items: center;
+  background: #edf0ed;
+  color: #52615e;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-lesson-edit {
+  display: grid;
+  gap: 8px;
+  grid-column: 1 / -1;
+  padding: 10px;
+}
+
+.admin-lesson-edit input {
+  border: 2px solid #dfe4df;
+  border-radius: 6px;
+  min-height: 42px;
+  padding: 0 10px;
+}
+
+.admin-lesson-edit button {
+  background: #e0f2eb;
+  border-radius: 6px;
+  color: #105a4d;
+  font-weight: 850;
+  min-height: 40px;
+}
+
+.admin-lesson-edit button.muted {
+  background: #edf0ed;
+  color: #52615e;
 }
 
 .admin-lesson-create button:disabled,
@@ -560,6 +923,26 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   width: 100%;
 }
 
+.admin-word-tools {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  margin-bottom: 14px;
+}
+
+.admin-word-tools select,
+.admin-word-tools input {
+  background: #fff;
+  border: 2px solid #dfe4df;
+  border-radius: 6px;
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+.admin-word-tools .admin-search {
+  margin-bottom: 0;
+}
+
 .admin-word-list {
   border-top: 1px solid #dfe4df;
   display: grid;
@@ -569,19 +952,19 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   align-items: center;
   border-bottom: 1px solid #edf0ed;
   display: grid;
-  gap: 14px;
-  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.2fr) minmax(160px, .8fr) auto;
-  padding: 14px 0;
+  gap: 9px;
+  grid-template-columns: minmax(150px, .95fr) minmax(190px, 1.2fr) minmax(130px, .75fr) auto;
+  padding: 8px 0;
 }
 
 .admin-word-list article:has(label) {
   align-items: end;
-  grid-template-columns: repeat(5, minmax(120px, 1fr)) auto;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
 }
 
 .admin-word-list article > div {
   display: grid;
-  gap: 3px;
+  gap: 1px;
   min-width: 0;
 }
 
@@ -619,7 +1002,7 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
 }
 
 .admin-word-list strong {
-  font-size: 17px;
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -627,18 +1010,22 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
 
 .admin-word-list p {
   color: #384642;
+  font-size: 13px;
+  line-height: 1.35;
   margin: 0;
 }
 
 .admin-word-list small {
   color: #71807c;
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.35;
 }
 
 .admin-word-list__actions,
 .admin-word-list__edit-actions {
   display: flex;
   gap: 8px;
+  grid-column: 1 / -1;
   justify-content: flex-end;
 }
 
@@ -650,10 +1037,11 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   color: #105a4d;
   display: inline-flex;
   font-weight: 850;
-  gap: 7px;
+  font-size: 12px;
+  gap: 5px;
   justify-content: center;
-  min-height: 40px;
-  padding: 0 12px;
+  min-height: 32px;
+  padding: 0 9px;
 }
 
 .admin-word-list button.danger {
@@ -671,7 +1059,10 @@ html.eye-care .admin-feedback,
 html.eye-care .admin-devices span,
 html.eye-care .admin-tabs,
 html.eye-care .admin-preview__summary span,
-html.eye-care .admin-preview__summary b {
+html.eye-care .admin-preview__summary b,
+html.eye-care .admin-lesson-filter > button,
+html.eye-care .admin-lesson-filter__main,
+html.eye-care .admin-lesson-edit button {
   background: var(--ec-surface) !important;
   border-color: var(--ec-border) !important;
 }
@@ -684,7 +1075,8 @@ html.eye-care .admin-preview,
 html.eye-care .admin-preview__table,
 html.eye-care .admin-preview__row,
 html.eye-care .admin-word-list,
-html.eye-care .admin-word-list article {
+html.eye-care .admin-word-list article,
+html.eye-care .admin-lesson-filter article {
   border-color: var(--ec-border) !important;
 }
 
@@ -696,7 +1088,9 @@ html.eye-care .admin-user-row span,
 html.eye-care .admin-devices,
 html.eye-care .admin-preview__row span,
 html.eye-care .admin-preview__row small,
-html.eye-care .admin-word-list small {
+html.eye-care .admin-word-list small,
+html.eye-care .admin-lesson-filter__main span,
+html.eye-care .admin-lesson-filter__main small {
   color: var(--ec-text-muted);
 }
 
@@ -739,7 +1133,23 @@ html.eye-care .admin-word-list small {
     grid-template-columns: 1fr;
   }
 
+  .admin-duolingo-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-lesson-list {
+    position: static;
+  }
+
   .admin-lesson-create {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-lesson-list .admin-lesson-create {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-word-tools {
     grid-template-columns: 1fr;
   }
 
@@ -853,6 +1263,58 @@ summary:focus-visible {
   border: 1px solid #dfe4df;
   margin-bottom: 14px;
   padding: 14px;
+}
+
+.practice-start-panel {
+  align-items: center;
+  border-top: 1px solid #e5e9e5;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.practice-start-panel > div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.practice-start-panel span {
+  color: #65716e;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.practice-start-panel strong {
+  color: #17211f;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.practice-start-panel button {
+  align-items: center;
+  background: var(--learn-green);
+  border: 0;
+  border-radius: 7px;
+  box-shadow: inset 0 -3px 0 var(--learn-green-dark);
+  color: #fff;
+  display: inline-flex;
+  font-weight: 850;
+  gap: 7px;
+  justify-content: center;
+  min-height: 46px;
+  min-width: 116px;
+  padding: 0 16px;
+}
+
+.practice-start-panel button:disabled {
+  background: #cfd7d3;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .practice-toolbar {
@@ -1158,6 +1620,31 @@ summary:focus-visible {
   text-align: center;
 }
 
+.practice-countdown {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dfe4df;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(23, 33, 31, 0.07);
+  display: grid;
+  justify-items: center;
+  min-height: 320px;
+  padding: 40px 24px;
+}
+
+.practice-countdown span {
+  color: #65716e;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.practice-countdown strong {
+  color: #176b5b;
+  font-size: 88px;
+  line-height: 1;
+  margin-top: 16px;
+}
+
 .practice-empty h1 {
   font-size: 20px;
 }
@@ -1273,6 +1760,14 @@ summary:focus-visible {
     max-width: 220px;
   }
 
+  .practice-start-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-start-panel button {
+    width: 100%;
+  }
+
   .practice-stage {
     border-left: 0;
     border-right: 0;
@@ -1334,6 +1829,18 @@ summary:focus-visible {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
+  }
+
+  .practice-countdown {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    box-shadow: none;
+    min-height: 260px;
+  }
+
+  .practice-countdown strong {
+    font-size: 74px;
   }
 }
 
@@ -1877,6 +2384,10 @@ html.eye-care .course-columns .lesson-list {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.kana-choice-grid--full {
+  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+}
+
 .kana-choice-grid button {
   background: #fff;
   border: 2px solid var(--learn-border);
@@ -1885,6 +2396,11 @@ html.eye-care .course-columns .lesson-list {
   font-size: 32px;
   font-weight: 900;
   min-height: 72px;
+}
+
+.kana-choice-grid--full button {
+  font-size: 26px;
+  min-height: 58px;
 }
 
 .kana-choice-grid button:active {
@@ -2028,9 +2544,19 @@ html.eye-care .basic-card .listen-command {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .kana-choice-grid--full {
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+  }
+
   .kana-choice-grid button {
     font-size: 28px;
     min-height: 64px;
+  }
+
+  .kana-choice-grid--full button {
+    font-size: 24px;
+    min-height: 54px;
   }
 }
 
@@ -2313,12 +2839,138 @@ body {
   width: 34px;
 }
 
+.topbar-icon-button {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--learn-border, #dfe4df);
+  border-radius: 6px;
+  color: var(--learn-muted, #65716e);
+  cursor: pointer;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  padding: 0;
+  transition: background 160ms ease, color 160ms ease;
+  width: 34px;
+}
+
 .eye-care-toggle:hover {
   background: #edf0ed;
 }
 
+.topbar-icon-button:hover {
+  background: #edf0ed;
+}
+
+.topbar-icon-button--danger {
+  color: #a34d43;
+}
+
+.topbar-icon-button--danger:hover {
+  background: #f8e4df;
+}
+
 .eye-care-toggle:active {
   background: #dfe4df;
+}
+
+.password-modal {
+  align-items: center;
+  background: rgba(23, 33, 31, 0.34);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  z-index: 80;
+}
+
+.password-dialog {
+  background: #fff;
+  border: 1px solid var(--learn-border, #dfe4df);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(23, 33, 31, 0.22);
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+  padding: 20px;
+  width: min(100%, 420px);
+}
+
+.password-dialog__heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.password-dialog__heading h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.password-dialog__close {
+  background: #edf0ed;
+  border: 0;
+  border-radius: 6px;
+  color: #52615e;
+  font-size: 13px;
+  font-weight: 850;
+  min-height: 36px;
+  padding: 0 12px;
+}
+
+.password-dialog label {
+  display: grid;
+  gap: 7px;
+}
+
+.password-dialog label span {
+  color: #52615e;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.password-dialog input {
+  border: 2px solid #dfe4df;
+  border-radius: 6px;
+  min-height: 48px;
+  padding: 0 12px;
+}
+
+.password-dialog input:focus {
+  border-color: #176b5b;
+  outline: 0;
+}
+
+.password-dialog > button[type="submit"] {
+  background: var(--learn-green, #176b5b);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: inset 0 -3px 0 var(--learn-green-dark, #105a4d);
+  color: #fff;
+  font-weight: 850;
+  min-height: 46px;
+}
+
+.password-dialog > button[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+.password-dialog__feedback {
+  background: #dff4e8;
+  border-radius: 6px;
+  color: #105a4d;
+  font-size: 13px;
+  font-weight: 850;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.password-dialog__feedback.is-error {
+  background: #f8e4df;
+  color: #893f31;
 }
 
 /* 护眼模式：降低饱和度 + 暗灰色背景 */
@@ -2367,8 +3019,25 @@ html.eye-care .eye-care-toggle {
   color: var(--ec-text-muted) !important;
 }
 
+html.eye-care .topbar-icon-button,
+html.eye-care .password-dialog {
+  background: var(--ec-surface) !important;
+  border-color: var(--ec-border) !important;
+  color: var(--ec-text-muted) !important;
+}
+
 html.eye-care .eye-care-toggle:hover {
   background: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.eye-care .topbar-icon-button:hover,
+html.eye-care .password-dialog__close {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .topbar-icon-button--danger {
+  color: #d99f8f !important;
 }
 
 html.eye-care .overview-band {
@@ -2433,10 +3102,31 @@ html.eye-care .review-entry span small {
 
 html.eye-care .practice-stage,
 html.eye-care .practice-setup,
+html.eye-care .practice-countdown,
 html.eye-care .course-picker,
 html.eye-care .sentence-list article {
   background: var(--ec-surface) !important;
   border-color: var(--ec-border) !important;
+}
+
+html.eye-care .practice-start-panel {
+  border-top-color: var(--ec-border) !important;
+}
+
+html.eye-care .practice-start-panel span,
+html.eye-care .practice-countdown span {
+  color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .practice-start-panel strong,
+html.eye-care .practice-countdown strong {
+  color: var(--ec-text) !important;
+}
+
+html.eye-care .practice-start-panel button {
+  background: var(--ec-accent) !important;
+  box-shadow: none !important;
+  color: #fff !important;
 }
 
 html.eye-care .practice-toolbar {

@@ -1,12 +1,12 @@
-import { Check, ChevronDown, Headphones, Home, RotateCcw, SkipForward, Star, Volume2 } from 'lucide-react';
+import { Check, ChevronDown, Headphones, Home, Play, RotateCcw, SkipForward, Star, Volume2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { lessons, sentences, vocabulary } from '../data/catalog';
 import type { PracticeMode } from '../domain/models';
 import type { Lesson, Vocabulary } from '../domain/models';
-import { loadDuolingoCourse, onVisible, sendProgressAttempt } from '../services/api';
+import { loadDuolingoCourse, onVisible, sendLessonProgress, sendMistake, sendProgressAttempt, sendRemoveMistake } from '../services/api';
 import { speakJapanese, stopJapaneseSpeech } from '../services/speech';
-import { mergeMasteryRecord, recordMasteryAttempt } from '../storage/mastery';
+import { isMastered, mergeMasteryRecord, readMastery, recordMasteryAttempt } from '../storage/mastery';
 import { readMistakes, recordMistake, removeMistake, type MistakeRecord } from '../storage/mistakes';
 
 const modeNames: Record<PracticeMode, string> = {
@@ -64,12 +64,14 @@ export function PracticePage() {
   const [selectedLessons, setSelectedLessons] = useState(() => new Set(requestedLesson ? [requestedLesson] : []));
   const [extraLessons, setExtraLessons] = useState<Lesson[]>([]);
   const [extraVocabulary, setExtraVocabulary] = useState<Vocabulary[]>([]);
-  const [reviewItems, setReviewItems] = useState<MistakeRecord[]>(readMistakes);
+  const [reviewItems, setReviewItems] = useState<MistakeRecord[]>(() => readMistakes().filter(item => item.lessonId.startsWith('duolingo-')));
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<'idle' | 'correct' | 'incorrect'>('idle');
   const [summary, setSummary] = useState({ correct: 0, incorrect: 0, skipped: 0 });
+  const [sessionState, setSessionState] = useState<'ready' | 'countdown' | 'active'>('ready');
+  const [countdown, setCountdown] = useState(3);
   const [autoSpeak, setAutoSpeak] = useState(true);
   const [showReference, setShowReference] = useState(false);
   const [keyboardActive, setKeyboardActive] = useState(false);
@@ -78,6 +80,8 @@ export function PracticePage() {
   const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
   const completionAudioRef = useRef<{ success: HTMLAudioElement; fail: HTMLAudioElement } | null>(null);
   const completionPlayedRef = useRef(false);
+  const questionStartedAtRef = useRef(Date.now());
+  const questionOutcomesRef = useRef<Record<string, 'correct' | 'incorrect' | 'skipped'>>({});
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
 
@@ -139,11 +143,25 @@ export function PracticePage() {
     setResult('idle');
     setShowReference(false);
     setSummary({ correct: 0, incorrect: 0, skipped: 0 });
+    questionOutcomesRef.current = {};
     completionPlayedRef.current = false;
+    setCountdown(3);
+    setSessionState(isReview ? 'active' : 'ready');
   }, [sourceQuestions]);
 
-  const completed = questions.length > 0 && index >= questions.length;
-  const current = !completed && questions.length ? questions[index] : null;
+  useEffect(() => {
+    if (sessionState !== 'countdown') return;
+    if (countdown <= 0) {
+      setSessionState('active');
+      return;
+    }
+    const timer = window.setTimeout(() => setCountdown(value => value - 1), 1000);
+    return () => window.clearTimeout(timer);
+  }, [countdown, sessionState]);
+
+  const sessionActive = sessionState === 'active';
+  const completed = sessionActive && questions.length > 0 && index >= questions.length;
+  const current = sessionActive && !completed && questions.length ? questions[index] : null;
   const activeMode = current?.mode || requestedMode;
   const selectedBeginnerCount = lessons.filter(lesson => selectedLessons.has(lesson.id)).length;
   const selectedDuolingoCount = extraLessons.filter(lesson => selectedLessons.has(lesson.id)).length;
@@ -153,10 +171,25 @@ export function PracticePage() {
     : selectedLessons.size === 1
         ? allLessons.find(item => selectedLessons.has(item.id))?.title || '第 1 课'
         : `${selectedLessons.size} 个课程`;
-  const completionTotal = Math.max(questions.length, 1);
+  const completionTotal = Math.max(summary.correct + summary.incorrect + summary.skipped, questions.length ? 1 : 0, 1);
   const completionAccuracy = summary.correct / completionTotal;
   const completionStars = Math.round(completionAccuracy * 5);
   const completionPassed = completionStars >= 4;
+
+  const startSession = () => {
+    if (!sourceQuestions.length) return;
+    stopJapaneseSpeech();
+    setQuestions(shuffle(sourceQuestions));
+    setIndex(0);
+    setAnswer('');
+    setResult('idle');
+    setShowReference(false);
+    setSummary({ correct: 0, incorrect: 0, skipped: 0 });
+    questionOutcomesRef.current = {};
+    completionPlayedRef.current = false;
+    setCountdown(3);
+    setSessionState('countdown');
+  };
 
   const resetQuestion = useCallback(() => {
     setAnswer('');
@@ -172,6 +205,49 @@ export function PracticePage() {
     if (!current) return;
     await speakJapanese(current.speech);
   }, [current]);
+
+  const syncLessonProgress = useCallback((lessonId: string) => {
+    if (!lessonId.startsWith('duolingo-')) return;
+    const lesson = allLessons.find(item => item.id === lessonId);
+    if (!lesson) return;
+    const records = readMastery();
+    const masteredVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && record.lessonId === lessonId && isMastered(record)).map(record => record.id));
+    const masteredSentenceIds = new Set(records.filter(record => record.kind === 'sentence' && record.lessonId === lessonId && isMastered(record)).map(record => record.id));
+    const total = lesson.vocabularyIds.length + lesson.sentenceIds.length;
+    void sendLessonProgress({
+      lessonId,
+      courseId: lessonId.startsWith('duolingo-') ? 'duolingo' : 'beginner-01',
+      vocabularyMasteredCount: lesson.vocabularyIds.filter(id => masteredVocabularyIds.has(id)).length,
+      sentenceMasteredCount: lesson.sentenceIds.filter(id => masteredSentenceIds.has(id)).length,
+      completed: total > 0
+        && lesson.vocabularyIds.every(id => masteredVocabularyIds.has(id))
+        && lesson.sentenceIds.every(id => masteredSentenceIds.has(id))
+    }).catch(() => undefined);
+  }, [allLessons]);
+
+  const submitProgress = useCallback((question: PracticeQuestion, correct: boolean, mastered: boolean) => {
+    if (isReview) return;
+    if (!question.lessonId.startsWith('duolingo-')) return;
+    const courseId = 'duolingo';
+    const kind = question.id.startsWith('s-') ? 'sentence' : 'vocabulary';
+    recordMasteryAttempt({
+      id: question.id,
+      lessonId: question.lessonId,
+      courseId,
+      kind
+    }, correct, mastered);
+    void sendProgressAttempt({
+      id: question.id,
+      lessonId: question.lessonId,
+      courseId,
+      kind,
+      correct,
+      mastered
+    }).then(response => {
+      mergeMasteryRecord(response.record);
+      syncLessonProgress(question.lessonId);
+    }).catch(() => undefined);
+  }, [isReview, syncLessonProgress]);
 
   const playSyntheticFeedback = (correct: boolean) => {
     const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
@@ -236,16 +312,27 @@ export function PracticePage() {
   }, [completed, completionPassed]);
 
   useEffect(() => {
+    if (!completed || isReview) return;
+    selectedLessons.forEach(lessonId => syncLessonProgress(lessonId));
+  }, [completed, isReview, selectedLessons, syncLessonProgress]);
+
+  useEffect(() => {
     if (!['dictation', 'cloze'].includes(activeMode) || !autoSpeak || !current) return;
     const timer = window.setTimeout(speak, 260);
     return () => window.clearTimeout(timer);
   }, [activeMode, autoSpeak, current, speak]);
 
   useEffect(() => {
+    if (!current) return;
+    questionStartedAtRef.current = Date.now();
+  }, [current?.key]);
+
+  useEffect(() => {
     if (result !== 'correct' || !current) return;
     const timer = window.setTimeout(() => {
       if (isReview) {
         removeMistake(current.key);
+        void sendRemoveMistake(current.key).catch(() => undefined);
         setReviewItems(items => items.filter(item => item.key !== current.key));
       } else {
         setIndex(value => value + 1);
@@ -305,31 +392,25 @@ export function PracticePage() {
     if (!current || !answer.trim() || result === 'correct') return;
     const normalized = normalizeAnswer(answer);
     const correct = current.answers.some(item => normalizeAnswer(item) === normalized);
+    const previousOutcome = questionOutcomesRef.current[current.key];
+    const firstAttempt = !previousOutcome;
+    const elapsedMs = Date.now() - questionStartedAtRef.current;
+    const mastered = correct && firstAttempt && elapsedMs <= 6000;
     setResult(correct ? 'correct' : 'incorrect');
-    setSummary(value => ({
-      ...value,
-      correct: value.correct + (correct ? 1 : 0),
-      incorrect: value.incorrect + (correct ? 0 : 1)
-    }));
+    if (firstAttempt) {
+      questionOutcomesRef.current[current.key] = correct ? 'correct' : 'incorrect';
+      setSummary(value => ({
+        ...value,
+        correct: value.correct + (correct ? 1 : 0),
+        incorrect: value.incorrect + (correct ? 0 : 1)
+      }));
+    }
     playFeedback(correct);
     if (!isReview) {
-      const courseId = current.lessonId.startsWith('duolingo-') ? 'duolingo' : 'beginner-01';
-      recordMasteryAttempt({
-        id: current.id,
-        lessonId: current.lessonId,
-        courseId,
-        kind: current.id.startsWith('s-') ? 'sentence' : 'vocabulary'
-      }, correct);
-      void sendProgressAttempt({
-        id: current.id,
-        lessonId: current.lessonId,
-        courseId,
-        kind: current.id.startsWith('s-') ? 'sentence' : 'vocabulary',
-        correct
-      }).then(response => mergeMasteryRecord(response.record)).catch(() => undefined);
+      submitProgress(current, correct, mastered);
     }
-    if (!correct) {
-      recordMistake({
+    if (!correct && current.lessonId.startsWith('duolingo-')) {
+      const mistake = recordMistake({
         id: current.id,
         mode: current.mode,
         lessonId: current.lessonId,
@@ -338,11 +419,15 @@ export function PracticePage() {
         speech: current.speech,
         answers: current.answers
       });
+      void sendMistake(mistake).catch(() => undefined);
     }
   };
 
   const skipQuestion = () => {
-    setSummary(value => ({ ...value, skipped: value.skipped + 1 }));
+    if (current && !questionOutcomesRef.current[current.key]) {
+      questionOutcomesRef.current[current.key] = 'skipped';
+      setSummary(value => ({ ...value, skipped: value.skipped + 1 }));
+    }
     if (questions.length) setIndex(value => value + 1);
     resetQuestion();
   };
@@ -389,10 +474,24 @@ export function PracticePage() {
               </div>
             </details>
           </div>
+          <div className="practice-start-panel">
+            <div>
+              <span>{selectedLabel}</span>
+              <strong>{sourceQuestions.length ? `${sourceQuestions.length} 题待练习` : '当前范围没有题目'}</strong>
+            </div>
+            <button type="button" onClick={startSession} disabled={!sourceQuestions.length || sessionState === 'countdown'}>
+              <Play size={18} />开始
+            </button>
+          </div>
         </section>
       )}
 
-      {completed ? (
+      {sessionState === 'countdown' ? (
+        <section className="practice-countdown" aria-live="polite">
+          <span>{selectedLabel}</span>
+          <strong>{countdown || '开始'}</strong>
+        </section>
+      ) : completed ? (
         <section className="practice-complete">
           <p className="eyebrow">SESSION COMPLETE</p>
           <h1>{completionPassed ? 'お疲れ様でした！！' : '次こそ頑張ろう！！！'}</h1>
@@ -412,6 +511,11 @@ export function PracticePage() {
             <Link to="/"><Home size={18} />返回首页</Link>
             <Link to="/review">查看错题本</Link>
           </div>
+        </section>
+      ) : !sessionActive ? (
+        <section className="practice-empty practice-ready">
+          <h1>选择课程后开始练习</h1>
+          <p>按下开始后会倒计时 3、2、1，再进入答题。</p>
         </section>
       ) : !current ? (
         <section className="practice-empty">

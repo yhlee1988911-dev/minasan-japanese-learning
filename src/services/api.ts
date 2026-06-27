@@ -1,6 +1,7 @@
 import fallbackDuolingo from '../data/generated/duolingo-fallback.json';
 import type { Lesson, Sentence, Vocabulary } from '../domain/models';
 import type { MasteryRecord } from '../storage/mastery';
+import type { MistakeRecord } from '../storage/mistakes';
 
 const TOKEN_KEY = 'minasan_auth_token_v1';
 const DEVICE_KEY = 'minasan_device_id_v1';
@@ -204,6 +205,11 @@ export const logout = async () => {
   }
 };
 
+export const changePassword = async (currentPassword: string, newPassword: string) => requestJson<{ ok: true }>('/api/password', {
+  method: 'POST',
+  body: JSON.stringify({ currentPassword, newPassword })
+});
+
 export const loadAdminUsers = async () => requestJson<AdminUsersPayload>('/api/admin/users');
 
 export const createAdminUser = async (username: string, password: string) => requestJson<AdminUsersPayload>('/api/admin/users', {
@@ -248,6 +254,15 @@ export const createAdminDuolingoLesson = async (payload: {
   body: JSON.stringify({ action: 'createLesson', ...payload })
 });
 
+export const updateAdminDuolingoLesson = async (payload: {
+  id: string;
+  title: string;
+  description?: string;
+}) => requestJson<AdminDuolingoPayload>('/api/admin/duolingo', {
+  method: 'POST',
+  body: JSON.stringify({ action: 'updateLesson', ...payload })
+});
+
 export const updateAdminDuolingoWord = async (payload: {
   id: string;
   term: string;
@@ -270,7 +285,7 @@ export const loadDuolingoCourse = async (): Promise<DuolingoPayload> => {
   }
 };
 
-export const loadRemoteProgress = async () => requestJson<{ records: MasteryRecord[]; lessons: unknown[] }>('/api/progress');
+export const loadRemoteProgress = async () => requestJson<{ records: MasteryRecord[]; lessons: unknown[]; mistakes: MistakeRecord[] }>('/api/progress');
 
 export const sendProgressAttempt = async (payload: {
   id: string;
@@ -278,6 +293,7 @@ export const sendProgressAttempt = async (payload: {
   courseId?: string;
   kind: 'vocabulary' | 'sentence';
   correct: boolean;
+  mastered?: boolean;
 }) => {
   return requestJson<{ ok: true; record: MasteryRecord }>('/api/progress', {
     method: 'POST',
@@ -296,6 +312,21 @@ export const sendRemoveMastery = async (payload: {
     body: JSON.stringify({ ...payload, action: 'removeMastery' })
   });
 };
+
+export const sendMistake = async (record: MistakeRecord) => requestJson<{ ok: true; record: MistakeRecord }>('/api/progress', {
+  method: 'POST',
+  body: JSON.stringify({
+    kind: 'mistake',
+    action: 'recordMistake',
+    ...record,
+    courseId: 'duolingo'
+  })
+});
+
+export const sendRemoveMistake = async (key: string) => requestJson<{ ok: true; key: string }>('/api/progress', {
+  method: 'POST',
+  body: JSON.stringify({ kind: 'mistake', action: 'removeMistake', key })
+});
 
 export const sendLessonProgress = async (payload: {
   lessonId: string;

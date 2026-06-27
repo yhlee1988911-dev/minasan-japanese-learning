@@ -1,4 +1,4 @@
-import { AlertTriangle, Database, FileSpreadsheet, KeyRound, Plus, RefreshCw, ShieldCheck, Trash2, UsersRound } from 'lucide-react';
+import { AlertTriangle, Database, FileSpreadsheet, KeyRound, Pencil, Plus, RefreshCw, ShieldCheck, Trash2, UsersRound } from 'lucide-react';
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import {
   clearAdminUserDevices,
@@ -10,6 +10,7 @@ import {
   loadAdminDuolingo,
   loadAdminUsers,
   previewAdminDuolingoImport,
+  updateAdminDuolingoLesson,
   updateAdminDuolingoWord,
   type AdminDevice,
   type AdminDuolingoLesson,
@@ -18,6 +19,8 @@ import {
   type AdminUser,
   type AdminUsersPayload
 } from '../services/api';
+
+const LESSON_ORDER_LIMIT = 200;
 
 const applyPayload = (
   payload: AdminUsersPayload,
@@ -42,11 +45,14 @@ export function AdminPage() {
   const [duolingoLessons, setDuolingoLessons] = useState<AdminDuolingoLesson[]>([]);
   const [duolingoWords, setDuolingoWords] = useState<AdminDuolingoWord[]>([]);
   const [duolingoSearch, setDuolingoSearch] = useState('');
+  const [duolingoLessonFilter, setDuolingoLessonFilter] = useState('all');
   const [importLessonId, setImportLessonId] = useState('duolingo-lesson-01');
   const [importText, setImportText] = useState('');
   const [preview, setPreview] = useState<AdminDuolingoPreviewPayload | null>(null);
   const [newLessonTitle, setNewLessonTitle] = useState('');
-  const [newLessonOrder, setNewLessonOrder] = useState('');
+  const [newLessonOrder, setNewLessonOrder] = useState('11');
+  const [editingLessonId, setEditingLessonId] = useState('');
+  const [lessonDraftTitle, setLessonDraftTitle] = useState('');
   const [editingWordId, setEditingWordId] = useState('');
   const [wordDraft, setWordDraft] = useState({
     term: '',
@@ -78,6 +84,9 @@ export function AdminPage() {
       setDuolingoLessons(payload.lessons);
       setDuolingoWords(payload.vocabulary);
       if (!payload.lessons.some(lesson => lesson.id === importLessonId) && payload.lessons[0]) setImportLessonId(payload.lessons[0].id);
+      if (duolingoLessonFilter !== 'all' && !payload.lessons.some(lesson => lesson.id === duolingoLessonFilter)) setDuolingoLessonFilter('all');
+      const maxOrder = Math.max(0, ...payload.lessons.map(lesson => Number(lesson.order_index || 0)));
+      setNewLessonOrder(String(Math.min(maxOrder + 1, LESSON_ORDER_LIMIT)));
       return;
     }
     const payload = await loadAdminUsers();
@@ -93,16 +102,25 @@ export function AdminPage() {
 
   const filteredWords = useMemo(() => {
     const keyword = duolingoSearch.trim().toLowerCase();
-    if (!keyword) return duolingoWords.filter(word => Number(word.is_active) === 1).slice(0, 120);
-    return duolingoWords.filter(word => Number(word.is_active) === 1 && [
+    return duolingoWords.filter(word => Number(word.is_active) === 1
+      && (duolingoLessonFilter === 'all' || word.lesson_id === duolingoLessonFilter)
+      && (!keyword || [
       word.term,
       word.reading,
       word.meaning,
       word.romaji,
       word.lesson_id,
       word.part_of_speech
-    ].some(value => String(value || '').toLowerCase().includes(keyword))).slice(0, 120);
-  }, [duolingoSearch, duolingoWords]);
+    ].some(value => String(value || '').toLowerCase().includes(keyword)))).slice(0, 160);
+  }, [duolingoLessonFilter, duolingoSearch, duolingoWords]);
+
+  const selectedLesson = useMemo(() => (
+    duolingoLessons.find(lesson => lesson.id === duolingoLessonFilter) || null
+  ), [duolingoLessonFilter, duolingoLessons]);
+  const availableLessonOrders = useMemo(() => {
+    const used = new Set(duolingoLessons.map(lesson => Number(lesson.order_index || 0)));
+    return Array.from({ length: LESSON_ORDER_LIMIT }, (_, index) => String(index + 1)).filter(order => !used.has(Number(order)) || order === newLessonOrder);
+  }, [duolingoLessons, newLessonOrder]);
 
   const submit = async (event: FormEvent) => {
     event.preventDefault();
@@ -206,10 +224,34 @@ export function AdminPage() {
       const created = payload.lessons.find(lesson => lesson.title === newLessonTitle) || payload.lessons[payload.lessons.length - 1];
       if (created) setImportLessonId(created.id);
       setNewLessonTitle('');
-      setNewLessonOrder('');
+      const nextOrder = Math.max(...payload.lessons.map(lesson => Number(lesson.order_index || 0)), Number(newLessonOrder || 0)) + 1;
+      setNewLessonOrder(String(Math.min(nextOrder, LESSON_ORDER_LIMIT)));
       setMessage('课时已添加，可在批量导入中选择');
     } catch (err) {
       setError(err instanceof Error ? err.message : '添加课时失败');
+    }
+  };
+
+  const startEditLesson = (lesson: AdminDuolingoLesson) => {
+    setEditingLessonId(lesson.id);
+    setLessonDraftTitle(lesson.title);
+  };
+
+  const saveLesson = async (lesson: AdminDuolingoLesson) => {
+    setMessage('');
+    setError('');
+    try {
+      const payload = await updateAdminDuolingoLesson({
+        id: lesson.id,
+        title: lessonDraftTitle,
+        description: lesson.description
+      });
+      setDuolingoLessons(payload.lessons);
+      setDuolingoWords(payload.vocabulary);
+      setEditingLessonId('');
+      setMessage(`${lessonDraftTitle} 已保存`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '保存课时名称失败');
     }
   };
 
@@ -356,98 +398,151 @@ export function AdminPage() {
             <div><Trash2 size={20} /><span>已移除</span><strong>{duolingoWords.filter(word => Number(word.is_active) !== 1).length}</strong></div>
           </section>
 
-          <section className="admin-panel admin-import">
-            <div className="admin-panel__title">
-              <FileSpreadsheet size={20} />
-              <div><h2>批量粘贴导入</h2><p>先添加或选择课时，再从 Excel 粘贴：日文、假名、罗马音、释义、词性。</p></div>
-            </div>
-            <form className="admin-lesson-create" onSubmit={createLesson}>
-              <label>
-                <span>新增课时名称</span>
-                <input value={newLessonTitle} onChange={event => setNewLessonTitle(event.target.value)} placeholder="duolingo 11" />
-              </label>
-              <label>
-                <span>排序</span>
-                <input value={newLessonOrder} onChange={event => setNewLessonOrder(event.target.value)} inputMode="numeric" placeholder="自动" />
-              </label>
-              <button type="submit" disabled={!newLessonTitle.trim()}>添加课时</button>
-            </form>
-            <div className="admin-import__controls">
-              <label>
-                <span>选择课时</span>
-                <select value={importLessonId} onChange={event => setImportLessonId(event.target.value)}>
-                  {duolingoLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.title} · {lesson.id}</option>)}
-                </select>
-              </label>
-              <button onClick={() => void previewImport()} disabled={!importText.trim()}>解析预览</button>
-              <button className="primary" onClick={() => void commitImport()} disabled={!preview || preview.summary.error > 0}>确认写入</button>
-            </div>
-            <textarea
-              value={importText}
-              onChange={event => {
-                setImportText(event.target.value);
-                setPreview(null);
-              }}
-              placeholder={'日文\t假名\t罗马音\t释义\t词性\n食べます\tたべます\ttabemasu\t吃\t动词\n飲みます\tのみます\tnomimasu\t喝\t动词'}
-            />
-            {preview && (
-              <div className="admin-preview">
-                <div className="admin-preview__summary">
-                  <span>总计 {preview.summary.total}</span>
-                  <b>新增 {preview.summary.create}</b>
-                  <b>更新 {preview.summary.update}</b>
-                  <b>无变化 {preview.summary.same}</b>
-                  <b className={preview.summary.error ? 'is-error' : ''}>错误 {preview.summary.error}</b>
+          <section className="admin-duolingo-workspace">
+            <aside className="admin-panel admin-lesson-list">
+              <div className="admin-panel__title">
+                <FileSpreadsheet size={20} />
+                <div><h2>课时</h2><p>选择课时后筛选词条，已有课时只允许修改名称。</p></div>
+              </div>
+              <form className="admin-lesson-create" onSubmit={createLesson}>
+                <label>
+                  <span>课时</span>
+                  <select value={newLessonOrder} onChange={event => setNewLessonOrder(event.target.value)} disabled={!availableLessonOrders.length}>
+                    {availableLessonOrders.map(order => (
+                      <option key={order} value={order}>第 {order} 课</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  <span>课程名称</span>
+                  <input value={newLessonTitle} onChange={event => setNewLessonTitle(event.target.value)} placeholder="duolingo 11" />
+                </label>
+                <button type="submit" disabled={!newLessonTitle.trim() || !availableLessonOrders.length}>添加</button>
+              </form>
+              <div className="admin-lesson-filter">
+                <button type="button" className={duolingoLessonFilter === 'all' ? 'active' : ''} onClick={() => setDuolingoLessonFilter('all')}>
+                  <span>全部课时</span>
+                  <strong>{duolingoLessons.length} 课</strong>
+                </button>
+                {duolingoLessons.map(lesson => (
+                  <article className={duolingoLessonFilter === lesson.id ? 'active' : ''} key={lesson.id}>
+                    {editingLessonId === lesson.id ? (
+                      <div className="admin-lesson-edit">
+                        <span>修改课时名称</span>
+                        <input value={lessonDraftTitle} onChange={event => setLessonDraftTitle(event.target.value)} />
+                        <button type="button" onClick={() => void saveLesson(lesson)} disabled={!lessonDraftTitle.trim()}>保存</button>
+                        <button type="button" className="muted" onClick={() => setEditingLessonId('')}>取消</button>
+                      </div>
+                    ) : (
+                      <>
+                        <button type="button" className="admin-lesson-filter__main" onClick={() => {
+                          setDuolingoLessonFilter(lesson.id);
+                          setImportLessonId(lesson.id);
+                        }}>
+                          <span>第 {lesson.order_index} 课</span>
+                          <strong>{lesson.title}</strong>
+                          <small>{lesson.vocabulary_count} 词</small>
+                        </button>
+                        <button type="button" className="admin-lesson-filter__edit" title="修改课时名称" onClick={() => startEditLesson(lesson)}>
+                          <Pencil size={16} />
+                        </button>
+                      </>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </aside>
+
+            <div className="admin-duolingo-main">
+              <section className="admin-panel admin-import">
+                <div className="admin-panel__title">
+                  <FileSpreadsheet size={20} />
+                  <div><h2>批量粘贴导入</h2><p>选择课时后，从 Excel 粘贴：日文、假名、罗马音、释义、词性。</p></div>
                 </div>
-                <div className="admin-preview__table">
-                  {preview.items.slice(0, 80).map(item => (
-                    <article className={`admin-preview__row is-${item.status}`} key={`${item.rowNumber}-${item.term}-${item.reading}`}>
-                      <span>{item.rowNumber}</span>
-                      <strong>{item.term || '缺少日文'}</strong>
-                      <small>{item.reading || '缺少假名'}</small>
-                      <small>{item.meaning || '缺少释义'}</small>
-                      <em>{item.errors.length ? item.errors.join('、') : item.status}</em>
+                <div className="admin-import__controls">
+                  <label>
+                    <span>写入课时</span>
+                    <select value={importLessonId} onChange={event => setImportLessonId(event.target.value)}>
+                      {duolingoLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.title} · {lesson.id}</option>)}
+                    </select>
+                  </label>
+                  <button onClick={() => void previewImport()} disabled={!importText.trim()}>解析预览</button>
+                  <button className="primary" onClick={() => void commitImport()} disabled={!preview || preview.summary.error > 0}>确认写入</button>
+                </div>
+                <textarea
+                  value={importText}
+                  onChange={event => {
+                    setImportText(event.target.value);
+                    setPreview(null);
+                  }}
+                  placeholder={'日文\t假名\t罗马音\t释义\t词性\n食べます\tたべます\ttabemasu\t吃\t动词\n飲みます\tのみます\tnomimasu\t喝\t动词'}
+                />
+                {preview && (
+                  <div className="admin-preview">
+                    <div className="admin-preview__summary">
+                      <span>总计 {preview.summary.total}</span>
+                      <b>新增 {preview.summary.create}</b>
+                      <b>更新 {preview.summary.update}</b>
+                      <b>无变化 {preview.summary.same}</b>
+                      <b className={preview.summary.error ? 'is-error' : ''}>错误 {preview.summary.error}</b>
+                    </div>
+                    <div className="admin-preview__table">
+                      {preview.items.slice(0, 80).map(item => (
+                        <article className={`admin-preview__row is-${item.status}`} key={`${item.rowNumber}-${item.term}-${item.reading}`}>
+                          <span>{item.rowNumber}</span>
+                          <strong>{item.term || '缺少日文'}</strong>
+                          <small>{item.reading || '缺少假名'}</small>
+                          <small>{item.meaning || '缺少释义'}</small>
+                          <em>{item.errors.length ? item.errors.join('、') : item.status}</em>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </section>
+
+              <section className="admin-panel admin-words-panel">
+                <div className="admin-panel__title">
+                  <Database size={20} />
+                  <div><h2>Duolingo 词汇</h2><p>{selectedLesson ? `${selectedLesson.title} · ${selectedLesson.vocabulary_count} 词` : '按课时或关键词筛选，最多显示前 160 条。'}</p></div>
+                </div>
+                <div className="admin-word-tools">
+                  <select value={duolingoLessonFilter} onChange={event => setDuolingoLessonFilter(event.target.value)}>
+                    <option value="all">全部课时</option>
+                    {duolingoLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.title}</option>)}
+                  </select>
+                  <input className="admin-search" value={duolingoSearch} onChange={event => setDuolingoSearch(event.target.value)} placeholder="搜索日文、假名、释义、罗马音、课时" />
+                </div>
+                <div className="admin-word-list">
+                  {filteredWords.map(word => (
+                    <article key={word.id}>
+                      {editingWordId === word.id ? (
+                        <>
+                          <label><span>日文</span><input value={wordDraft.term} onChange={event => setWordDraft(draft => ({ ...draft, term: event.target.value }))} /></label>
+                          <label><span>假名</span><input value={wordDraft.reading} onChange={event => setWordDraft(draft => ({ ...draft, reading: event.target.value }))} /></label>
+                          <label><span>释义</span><input value={wordDraft.meaning} onChange={event => setWordDraft(draft => ({ ...draft, meaning: event.target.value }))} /></label>
+                          <label><span>罗马音</span><input value={wordDraft.romaji} onChange={event => setWordDraft(draft => ({ ...draft, romaji: event.target.value }))} /></label>
+                          <label><span>课时</span><select value={wordDraft.lessonId} onChange={event => setWordDraft(draft => ({ ...draft, lessonId: event.target.value }))}>{duolingoLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.title}</option>)}</select></label>
+                          <div className="admin-word-list__edit-actions">
+                            <button onClick={() => void saveWord(word)} disabled={!wordDraft.term.trim() || !wordDraft.reading.trim() || !wordDraft.meaning.trim()}>保存</button>
+                            <button className="muted" onClick={() => setEditingWordId('')}>取消</button>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div><strong>{word.term}</strong><small>{word.reading} · {word.romaji || '无罗马音'}</small></div>
+                          <p>{word.meaning}</p>
+                          <small>{duolingoLessons.find(lesson => lesson.id === word.lesson_id)?.title || word.lesson_id} · {word.part_of_speech || '未分类'}</small>
+                          <div className="admin-word-list__actions">
+                            <button onClick={() => startEditWord(word)}>编辑</button>
+                            <button className="danger" onClick={() => void removeWord(word)}><Trash2 size={16} />移除</button>
+                          </div>
+                        </>
+                      )}
                     </article>
                   ))}
                 </div>
-              </div>
-            )}
-          </section>
-
-          <section className="admin-panel admin-users">
-            <div className="admin-panel__title">
-              <Database size={20} />
-              <div><h2>Duolingo 词汇</h2><p>搜索后最多显示前 120 条，删除为软删除。</p></div>
-            </div>
-            <input className="admin-search" value={duolingoSearch} onChange={event => setDuolingoSearch(event.target.value)} placeholder="搜索日文、假名、释义、罗马音、课时" />
-            <div className="admin-word-list">
-              {filteredWords.map(word => (
-                <article key={word.id}>
-                  {editingWordId === word.id ? (
-                    <>
-                      <label><span>日文</span><input value={wordDraft.term} onChange={event => setWordDraft(draft => ({ ...draft, term: event.target.value }))} /></label>
-                      <label><span>假名</span><input value={wordDraft.reading} onChange={event => setWordDraft(draft => ({ ...draft, reading: event.target.value }))} /></label>
-                      <label><span>释义</span><input value={wordDraft.meaning} onChange={event => setWordDraft(draft => ({ ...draft, meaning: event.target.value }))} /></label>
-                      <label><span>罗马音</span><input value={wordDraft.romaji} onChange={event => setWordDraft(draft => ({ ...draft, romaji: event.target.value }))} /></label>
-                      <label><span>课时</span><select value={wordDraft.lessonId} onChange={event => setWordDraft(draft => ({ ...draft, lessonId: event.target.value }))}>{duolingoLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.title}</option>)}</select></label>
-                      <div className="admin-word-list__edit-actions">
-                        <button onClick={() => void saveWord(word)} disabled={!wordDraft.term.trim() || !wordDraft.reading.trim() || !wordDraft.meaning.trim()}>保存</button>
-                        <button className="muted" onClick={() => setEditingWordId('')}>取消</button>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div><strong>{word.term}</strong><small>{word.reading} · {word.romaji || '无罗马音'}</small></div>
-                      <p>{word.meaning}</p>
-                      <small>{word.lesson_id} · {word.part_of_speech || '未分类'}</small>
-                      <div className="admin-word-list__actions">
-                        <button onClick={() => startEditWord(word)}>编辑</button>
-                        <button className="danger" onClick={() => void removeWord(word)}><Trash2 size={16} />移除</button>
-                      </div>
-                    </>
-                  )}
-                </article>
-              ))}
+              </section>
             </div>
           </section>
         </>

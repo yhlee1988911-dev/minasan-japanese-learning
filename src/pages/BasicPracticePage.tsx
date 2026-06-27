@@ -64,8 +64,10 @@ export function BasicPracticePage() {
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<'idle' | 'correct' | 'incorrect'>('idle');
   const [stats, setStats] = useState({ correct: 0, incorrect: 0 });
+  const [showRomajiHint, setShowRomajiHint] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const feedbackAudioRef = useRef<{ correct: HTMLAudioElement; incorrect: HTMLAudioElement } | null>(null);
+  const romajiTimerRef = useRef<number | null>(null);
 
   const pool = useMemo(() => {
     if (group === 'all') return allItems;
@@ -80,17 +82,31 @@ export function BasicPracticePage() {
     });
     setAnswer('');
     setResult('idle');
+    setShowRomajiHint(false);
+    if (romajiTimerRef.current !== null) {
+      window.clearTimeout(romajiTimerRef.current);
+      romajiTimerRef.current = null;
+    }
   }, [pool]);
 
   const speak = useCallback(async () => {
     await speakJapanese(current.hiragana);
   }, [current]);
 
+  const choiceValue = useCallback((item: KanaItem) => {
+    if (mode === 'kana-match') return item.katakana;
+    if (group === 'katakana') return item.katakana;
+    return item.hiragana;
+  }, [group, mode]);
+
   const choices = useMemo(() => {
-    const value = mode === 'kana-match' ? current.katakana : current.hiragana;
-    const rest = shuffle(pool.filter(item => item.id !== current.id)).slice(0, 5).map(item => mode === 'kana-match' ? item.katakana : item.hiragana);
+    const value = choiceValue(current);
+    if (mode === 'sound-choice' && group !== 'all') {
+      return pool.map(choiceValue);
+    }
+    const rest = shuffle(pool.filter(item => item.id !== current.id)).slice(0, 5).map(choiceValue);
     return shuffle([value, ...rest]);
-  }, [current, mode, pool]);
+  }, [choiceValue, current, group, mode, pool]);
 
   useEffect(() => {
     nextQuestion();
@@ -105,6 +121,7 @@ export function BasicPracticePage() {
     stopJapaneseSpeech();
     feedbackAudioRef.current?.correct.pause();
     feedbackAudioRef.current?.incorrect.pause();
+    if (romajiTimerRef.current !== null) window.clearTimeout(romajiTimerRef.current);
   }, []);
 
   const playFeedback = (correct: boolean) => {
@@ -130,7 +147,17 @@ export function BasicPracticePage() {
       correct: value.correct + (correct ? 1 : 0),
       incorrect: value.incorrect + (correct ? 0 : 1)
     }));
-    if (correct) window.setTimeout(nextQuestion, 2000);
+    if (correct) {
+      setShowRomajiHint(false);
+      window.setTimeout(nextQuestion, 2000);
+    } else {
+      setShowRomajiHint(true);
+      if (romajiTimerRef.current !== null) window.clearTimeout(romajiTimerRef.current);
+      romajiTimerRef.current = window.setTimeout(() => {
+        setShowRomajiHint(false);
+        romajiTimerRef.current = null;
+      }, 3000);
+    }
   };
 
   const submitInput = () => {
@@ -139,7 +166,7 @@ export function BasicPracticePage() {
   };
 
   const choose = (choice: string) => {
-    const correct = choice === (mode === 'kana-match' ? current.katakana : current.hiragana);
+    const correct = choice === choiceValue(current);
     record(correct);
   };
 
@@ -176,7 +203,7 @@ export function BasicPracticePage() {
         </div>
 
         <div className="basic-card">
-          <small>{current.romaji}</small>
+          {showRomajiHint && <small className="basic-romaji-hint">{current.romaji}</small>}
           {mode === 'kana-match' ? (
             <>
               <h1>{current.hiragana}</h1>
@@ -200,7 +227,7 @@ export function BasicPracticePage() {
             </div>
           </>
         ) : (
-          <div className="kana-choice-grid">
+          <div className={`kana-choice-grid ${mode === 'sound-choice' && group !== 'all' ? 'kana-choice-grid--full' : ''}`}>
             {choices.map(choice => <button type="button" key={choice} onClick={() => choose(choice)}>{choice}</button>)}
           </div>
         )}

@@ -41,7 +41,7 @@ export function CoursePage() {
                 <span className="lesson-order">{String(lesson.order).padStart(2, '0')}</span>
                 <div><h2>{lesson.title}</h2><p>{lesson.description}</p></div>
                 <div className="lesson-counts"><span><Rows3 size={15} />{lesson.vocabularyIds.length} 词</span><span><MessageSquareText size={15} />0 句</span></div>
-                <Link to={`/practice?mode=translation&lesson=${lesson.id}`}>进入练习 <ArrowRight size={17} /></Link>
+                <Link to={`/duolingo/${lesson.id}`}>进入课程 <ArrowRight size={17} /></Link>
               </article>
             ))}
           </div>
