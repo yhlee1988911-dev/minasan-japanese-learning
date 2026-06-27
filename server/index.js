@@ -84,6 +84,11 @@ const sendFetchResponse = async (outgoing, response) => {
   }
 };
 
+const isFetchResponse = (value) => value && typeof value === 'object'
+  && typeof value.status === 'number'
+  && typeof value.headers?.forEach === 'function'
+  && typeof value.arrayBuffer === 'function';
+
 const createExecutionContext = () => {
   const pending = [];
   return {
@@ -138,6 +143,10 @@ const main = async () => {
       const response = await worker.fetch(request, env, context);
       await sendFetchResponse(outgoing, response);
     } catch (error) {
+      if (isFetchResponse(error)) {
+        await sendFetchResponse(outgoing, error);
+        return;
+      }
       console.error('[minasan server]', error);
       if (!outgoing.headersSent) {
         outgoing.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
