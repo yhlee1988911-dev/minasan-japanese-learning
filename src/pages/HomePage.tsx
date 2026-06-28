@@ -1,8 +1,9 @@
 import { ArrowRight, BookMarked, BookOpenText, Headphones, Languages, Sparkles, TextCursorInput } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { course } from '../data/catalog';
-import { loadDuolingoCourse, onVisible } from '../services/api';
+import { getCourseTitle } from '../domain/catalogDisplay';
+import type { CatalogPayload } from '../services/api';
+import { loadCatalog, onVisible } from '../services/api';
 import { isMastered, readMastery } from '../storage/mastery';
 import { readMistakes } from '../storage/mistakes';
 
@@ -16,7 +17,7 @@ const modes = [
 export function HomePage() {
   const [masteryVersion, setMasteryVersion] = useState(0);
   const [mistakeVersion, setMistakeVersion] = useState(0);
-  const [duolingoTotal, setDuolingoTotal] = useState(0);
+  const [catalog, setCatalog] = useState<CatalogPayload>({ courses: [], lessons: [], vocabulary: [], sentences: [] });
 
   useEffect(() => {
     const refreshMastery = () => setMasteryVersion(version => version + 1);
@@ -32,58 +33,80 @@ export function HomePage() {
 
   useEffect(() => {
     const refresh = () => {
-      loadDuolingoCourse()
-        .then(data => setDuolingoTotal(data.vocabulary.length))
-        .catch(() => setDuolingoTotal(0));
+      loadCatalog()
+        .then(setCatalog)
+        .catch(() => setCatalog({ courses: [], lessons: [], vocabulary: [], sentences: [] }));
     };
     refresh();
     return onVisible(refresh);
   }, []);
 
-  const duolingoMastered = useMemo(() => {
-    return readMastery().filter(record => (
+  const courseProgress = useMemo(() => {
+    const visibleIds = new Set(catalog.vocabulary.map(word => word.id));
+    const masteredIds = new Set(readMastery().filter(record => (
       record.kind === 'vocabulary'
-      && record.courseId === 'duolingo'
+      && visibleIds.has(record.id)
       && isMastered(record)
-    )).length;
-  }, [masteryVersion]);
+    )).map(record => record.id));
 
-  const duolingoProgress = duolingoTotal
-    ? Math.round((duolingoMastered / duolingoTotal) * 100)
-    : 0;
-  const duolingoMistakes = useMemo(() => {
-    return readMistakes().filter(record => record.lessonId.startsWith('duolingo-')).length;
-  }, [mistakeVersion]);
+    return catalog.courses.map(course => {
+      const words = catalog.vocabulary.filter(word => word.courseId === course.id);
+      const mastered = words.filter(word => masteredIds.has(word.id)).length;
+      const total = words.length;
+      return {
+        course,
+        mastered,
+        total,
+        progress: total ? Math.round((mastered / total) * 100) : 0
+      };
+    }).filter(item => item.total > 0);
+  }, [catalog.courses, catalog.vocabulary, masteryVersion]);
+
+  const totalVocabulary = courseProgress.reduce((sum, item) => sum + item.total, 0);
+  const masteredCount = courseProgress.reduce((sum, item) => sum + item.mastered, 0);
+  const mistakeCount = useMemo(() => readMistakes().length, [mistakeVersion]);
 
   return (
     <main>
       <section className="overview-band">
         <div>
-          <p className="eyebrow">BEGINNER JAPANESE</p>
-          <h1>{course.title}</h1>
-          <p>{course.description}</p>
+          <p className="eyebrow">VOCABULARY MEMORY ENGINE</p>
+          <h1>日语词汇记忆引擎</h1>
+          <p>系统提供词汇记忆、听写、翻译和复习引擎；公共开源词库与用户自定义课件均以 SQL 目录保存，学习记录按用户独立同步。</p>
         </div>
         <Link className="primary-command" to="/course">继续学习 <ArrowRight size={18} /></Link>
       </section>
 
-      <Link className="mastery-progress mastery-progress--link" to="/mastery/vocabulary" aria-label="进入 Duolingo 已掌握词库">
+      <Link className="mastery-progress mastery-progress--link" to="/mastery/vocabulary" aria-label="进入已掌握词库">
         <div className="mastery-progress__heading">
-          <span>Duolingo 词汇掌握进度</span>
-          <strong>{duolingoMastered} / {duolingoTotal}</strong>
+          <span>词汇掌握进度</span>
+          <strong>{masteredCount} / {totalVocabulary}</strong>
         </div>
-        <div className="mastery-progress__row mastery-progress__row--duolingo">
-          <span>词库</span>
-          <div className="mastery-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={duolingoProgress}>
-            <div style={{ width: `${duolingoProgress}%` }} />
-          </div>
-          <strong>{duolingoProgress}%</strong>
+        <div className="mastery-progress__rows">
+          {courseProgress.length ? courseProgress.map(({ course, mastered, total, progress }) => (
+            <div className="mastery-progress__row mastery-progress__row--course" key={course.id}>
+              <span title={getCourseTitle(course)}>{getCourseTitle(course)}</span>
+              <div className="mastery-progress__track" role="progressbar" aria-label={`${getCourseTitle(course)} ${mastered}/${total}`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}>
+                <div style={{ width: `${progress}%` }} />
+              </div>
+              <strong>{mastered}/{total}</strong>
+            </div>
+          )) : (
+            <div className="mastery-progress__row mastery-progress__row--course">
+              <span>词库</span>
+              <div className="mastery-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={0}>
+                <div style={{ width: '0%' }} />
+              </div>
+              <strong>0/0</strong>
+            </div>
+          )}
         </div>
-        <p>{duolingoMastered === 0 ? '单词在 6 秒内首次答对，即可点亮词汇进度。' : '点击查看 Duolingo 已掌握词库。'}</p>
+        <p>{masteredCount === 0 ? '单词在 6 秒内首次答对，即可计入已掌握词汇。' : '点击查看已掌握词库。'}</p>
       </Link>
 
       <section className="review-entry">
-        <div><BookMarked size={22} /><span><strong>错题本</strong><small>仅统计 Duolingo 词库错题</small></span></div>
-        <b>{duolingoMistakes}</b>
+        <div><BookMarked size={22} /><span><strong>错题本</strong><small>按用户和课件独立保存</small></span></div>
+        <b>{mistakeCount}</b>
         <Link to="/review">进入错题本 <ArrowRight size={16} /></Link>
       </section>
 

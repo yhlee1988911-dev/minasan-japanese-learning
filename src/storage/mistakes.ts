@@ -5,6 +5,7 @@ export interface MistakeRecord {
   id: string;
   mode: PracticeMode;
   lessonId: string;
+  courseId?: string;
   prompt: string;
   meaning: string;
   speech: string;
@@ -44,7 +45,7 @@ export const mergeMistakeRecord = (record: MistakeRecord) => {
 };
 
 export const recordMistake = (question: Omit<MistakeRecord, 'key' | 'wrongCount' | 'lastWrongAt'>) => {
-  const key = `${question.mode}:${question.id}`;
+  const key = `${question.courseId || 'system-beginner-50'}:${question.mode}:${question.id}`;
   const items = readMistakes();
   const existing = items.find(item => item.key === key);
   const lastWrongAt = new Date().toISOString();
@@ -57,6 +58,7 @@ export const recordMistake = (question: Omit<MistakeRecord, 'key' | 'wrongCount'
     existing.speech = question.speech;
     existing.answers = question.answers;
     existing.lessonId = question.lessonId;
+    existing.courseId = question.courseId;
     record = existing;
   } else {
     record = { ...question, key, wrongCount: 1, lastWrongAt };

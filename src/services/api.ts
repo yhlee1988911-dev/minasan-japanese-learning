@@ -1,18 +1,18 @@
-import fallbackDuolingo from '../data/generated/duolingo-fallback.json';
-import type { Lesson, Sentence, Vocabulary } from '../domain/models';
+import type { Course, Lesson, Sentence, Vocabulary } from '../domain/models';
 import type { MasteryRecord } from '../storage/mastery';
 import type { MistakeRecord } from '../storage/mistakes';
 
 const TOKEN_KEY = 'minasan_auth_token_v1';
 const DEVICE_KEY = 'minasan_device_id_v1';
+const LAST_USERNAME_KEY = 'minasan_last_username_v1';
 
 export interface AuthUser {
   id: string;
   username: string;
 }
 
-export interface DuolingoPayload {
-  course: { id: string; title: string; description: string; lessonIds: string[] } | null;
+export interface CatalogPayload {
+  courses: Course[];
   lessons: Lesson[];
   vocabulary: Vocabulary[];
   sentences: Sentence[];
@@ -42,62 +42,6 @@ export interface AdminUsersPayload {
   devices: AdminDevice[];
 }
 
-export interface AdminDuolingoLesson {
-  id: string;
-  course_id: string;
-  title: string;
-  order_index: number;
-  description: string;
-  vocabulary_count: number;
-}
-
-export interface AdminDuolingoWord {
-  id: string;
-  course_id: string;
-  lesson_id: string;
-  term: string;
-  reading: string;
-  meaning: string;
-  romaji: string;
-  part_of_speech: string;
-  tags: string;
-  source_row: number;
-  updated_at: string;
-  is_active: number;
-  deleted_at: string | null;
-}
-
-export interface AdminDuolingoPayload {
-  course: { id: string; title: string; description: string } | null;
-  lessons: AdminDuolingoLesson[];
-  vocabulary: AdminDuolingoWord[];
-}
-
-export interface AdminDuolingoPreviewItem {
-  rowNumber: number;
-  id: string;
-  term: string;
-  reading: string;
-  romaji: string;
-  meaning: string;
-  partOfSpeech: string;
-  lessonId: string;
-  status: 'create' | 'update' | 'same' | 'error';
-  errors: string[];
-  previous: AdminDuolingoWord | null;
-}
-
-export interface AdminDuolingoPreviewPayload {
-  items: AdminDuolingoPreviewItem[];
-  summary: {
-    total: number;
-    create: number;
-    update: number;
-    same: number;
-    error: number;
-  };
-}
-
 export interface LessonProgressRecord {
   lessonId: string;
   courseId: string;
@@ -107,11 +51,47 @@ export interface LessonProgressRecord {
   lastStudiedAt: string;
 }
 
+export interface CatalogImportPreviewItem {
+  rowNumber: number;
+  lessonOrder: number;
+  lessonTitle: string;
+  term: string;
+  reading: string;
+  romaji: string;
+  meaning: string;
+  partOfSpeech: string;
+  tags: string;
+  lessonId: string;
+  status: 'create' | 'update' | 'same' | 'error';
+  errors: string[];
+}
+
+export interface CatalogImportPreview {
+  items: CatalogImportPreviewItem[];
+  mapping?: Record<string, { label: string; column: number | null }> | null;
+  lessonsToCreate: { order: number; title: string }[];
+  summary: {
+    total: number;
+    create: number;
+    update: number;
+    same: number;
+    error: number;
+    lessonsToCreate: number;
+  };
+}
+
 export const getAuthToken = () => localStorage.getItem(TOKEN_KEY) || '';
 
 export const setAuthToken = (token: string) => localStorage.setItem(TOKEN_KEY, token);
 
 export const clearAuthToken = () => localStorage.removeItem(TOKEN_KEY);
+
+export const getLastUsername = () => localStorage.getItem(LAST_USERNAME_KEY) || '';
+
+export const setLastUsername = (username: string) => {
+  const value = username.trim();
+  if (value) localStorage.setItem(LAST_USERNAME_KEY, value);
+};
 
 const createDeviceId = () => {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -192,6 +172,7 @@ export const login = async (username: string, password: string) => {
     })
   });
   setAuthToken(data.token);
+  setLastUsername(data.user.username || username);
   return data.user;
 };
 
@@ -222,68 +203,112 @@ export const clearAdminUserDevices = async (userId: string) => requestJson<Admin
   body: JSON.stringify({ action: 'clearDevices', userId })
 });
 
+export const resetAdminUserPassword = async (userId: string) => requestJson<AdminUsersPayload>('/api/admin/users', {
+  method: 'POST',
+  body: JSON.stringify({ action: 'resetPassword', userId })
+});
+
 export const deleteAdminUser = async (userId: string) => requestJson<AdminUsersPayload>('/api/admin/users', {
   method: 'POST',
   body: JSON.stringify({ action: 'delete', userId })
 });
 
-export const loadAdminDuolingo = async () => requestJson<AdminDuolingoPayload>('/api/admin/duolingo');
+export const loadCatalog = async (): Promise<CatalogPayload> => requestJson<CatalogPayload>(`/api/catalog?t=${Date.now()}`, { cache: 'no-store' });
 
-export const previewAdminDuolingoImport = async (text: string, lessonId: string) => requestJson<AdminDuolingoPreviewPayload>('/api/admin/duolingo', {
+export const manageCatalog = async <T = CatalogPayload>(payload: Record<string, unknown>) => requestJson<T>('/api/catalog', {
   method: 'POST',
-  body: JSON.stringify({ action: 'previewImport', text, lessonId })
+  body: JSON.stringify(payload)
 });
 
-export const commitAdminDuolingoImport = async (text: string, lessonId: string) => requestJson<{ ok: true; created: number; updated: number; skipped: number; errors: number }>('/api/admin/duolingo', {
-  method: 'POST',
-  body: JSON.stringify({ action: 'commitImport', text, lessonId })
+export const createCatalogCourse = async (title: string, description = '', ownerType: 'system' | 'user' = 'user') => manageCatalog({
+  action: 'createCourse',
+  title,
+  description,
+  ownerType
 });
 
-export const deleteAdminDuolingoWord = async (id: string) => requestJson<{ ok: true }>('/api/admin/duolingo', {
-  method: 'POST',
-  body: JSON.stringify({ action: 'deleteWord', id })
+export const updateCatalogCourse = async (courseId: string, title: string, description = '') => manageCatalog({
+  action: 'updateCourse',
+  courseId,
+  title,
+  description
 });
 
-export const createAdminDuolingoLesson = async (payload: {
-  lessonId?: string;
-  title: string;
-  order?: number;
-  description?: string;
-}) => requestJson<AdminDuolingoPayload>('/api/admin/duolingo', {
-  method: 'POST',
-  body: JSON.stringify({ action: 'createLesson', ...payload })
+export const deleteCatalogCourse = async (courseId: string) => manageCatalog({
+  action: 'deleteCourse',
+  courseId
 });
 
-export const updateAdminDuolingoLesson = async (payload: {
-  id: string;
-  title: string;
-  description?: string;
-}) => requestJson<AdminDuolingoPayload>('/api/admin/duolingo', {
-  method: 'POST',
-  body: JSON.stringify({ action: 'updateLesson', ...payload })
+export const shareCatalogCourse = async (courseId: string, targetUserIds: string) => manageCatalog<{
+  ok: true;
+  shared: Array<{ userId: string; username: string; courseId: string; title: string; lessons: number; vocabulary: number; sentences: number }>;
+  skipped: Array<{ target: string; userId?: string; username?: string; reason: string }>;
+  catalog: CatalogPayload;
+}>({
+  action: 'shareCourse',
+  courseId,
+  targetUserIds
 });
 
-export const updateAdminDuolingoWord = async (payload: {
-  id: string;
+export const createCatalogLesson = async (courseId: string, order: number, title: string, description = '') => manageCatalog({
+  action: 'createLesson',
+  courseId,
+  order,
+  title,
+  description
+});
+
+export const updateCatalogLesson = async (lessonId: string, title: string, description = '') => manageCatalog({
+  action: 'updateLesson',
+  lessonId,
+  title,
+  description
+});
+
+export const deleteCatalogLesson = async (lessonId: string) => manageCatalog({
+  action: 'deleteLesson',
+  lessonId
+});
+
+export const createCatalogWord = async (payload: {
+  lessonId: string;
   term: string;
   reading: string;
   meaning: string;
-  romaji: string;
-  partOfSpeech: string;
+  romaji?: string;
+  partOfSpeech?: string;
+  tags?: string;
+}) => manageCatalog({ action: 'createWord', ...payload });
+
+export const updateCatalogWord = async (payload: {
+  wordId: string;
   lessonId: string;
-}) => requestJson<AdminDuolingoPayload>('/api/admin/duolingo', {
-  method: 'POST',
-  body: JSON.stringify({ action: 'updateWord', ...payload })
+  term: string;
+  reading: string;
+  meaning: string;
+  romaji?: string;
+  partOfSpeech?: string;
+  tags?: string;
+}) => manageCatalog({ action: 'updateWord', ...payload });
+
+export const deleteCatalogWord = async (wordId: string) => manageCatalog({
+  action: 'deleteWord',
+  wordId
 });
 
-export const loadDuolingoCourse = async (): Promise<DuolingoPayload> => {
-  try {
-    const data = await requestJson<DuolingoPayload>(`/api/duolingo?t=${Date.now()}`, { cache: 'no-store' });
-    return data.course ? data : fallbackDuolingo as DuolingoPayload;
-  } catch {
-    return fallbackDuolingo as DuolingoPayload;
-  }
-};
+export const previewCatalogImport = async (courseId: string, text: string, lessonId = '') => manageCatalog<CatalogImportPreview>({
+  action: 'previewImport',
+  courseId,
+  lessonId,
+  text
+});
+
+export const commitCatalogImport = async (courseId: string, text: string, lessonId = '') => manageCatalog<{ ok: true; created: number; updated: number; skipped: number; lessonsCreated: number }>({
+  action: 'commitImport',
+  courseId,
+  lessonId,
+  text
+});
 
 export const loadRemoteProgress = async () => requestJson<{ records: MasteryRecord[]; lessons: unknown[]; mistakes: MistakeRecord[] }>('/api/progress');
 
@@ -318,8 +343,7 @@ export const sendMistake = async (record: MistakeRecord) => requestJson<{ ok: tr
   body: JSON.stringify({
     kind: 'mistake',
     action: 'recordMistake',
-    ...record,
-    courseId: 'duolingo'
+    ...record
   })
 });
 

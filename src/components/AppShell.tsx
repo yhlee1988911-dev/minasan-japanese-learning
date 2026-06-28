@@ -1,5 +1,5 @@
-import { BookOpenText, House, KeyRound, LogOut, Moon, ShieldCheck, Sun } from 'lucide-react';
-import { type FormEvent, type PropsWithChildren, useEffect, useState } from 'react';
+import { BookOpenText, ChevronDown, House, KeyRound, Library, LogOut, Moon, ShieldCheck, Sun, UserRound } from 'lucide-react';
+import { type FormEvent, type PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { changePassword, logout, type AuthUser } from '../services/api';
 
@@ -7,6 +7,7 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
   const location = useLocation();
   const isPractice = location.pathname === '/practice';
   const [eyeCare, setEyeCare] = useState(() => localStorage.getItem('minasan:eye-care') === 'true');
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [passwordOpen, setPasswordOpen] = useState(false);
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -14,11 +15,21 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
   const [passwordWorking, setPasswordWorking] = useState(false);
   const [passwordMessage, setPasswordMessage] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const accountMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     localStorage.setItem('minasan:eye-care', String(eyeCare));
     document.documentElement.classList.toggle('eye-care', eyeCare);
   }, [eyeCare]);
+
+  useEffect(() => {
+    if (!accountMenuOpen) return undefined;
+    const closeMenu = (event: MouseEvent) => {
+      if (!accountMenuRef.current?.contains(event.target as Node)) setAccountMenuOpen(false);
+    };
+    document.addEventListener('mousedown', closeMenu);
+    return () => document.removeEventListener('mousedown', closeMenu);
+  }, [accountMenuOpen]);
 
   const submitPassword = async (event: FormEvent) => {
     event.preventDefault();
@@ -34,7 +45,8 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
-      setPasswordMessage('密码已修改');
+      setPasswordOpen(false);
+      window.alert('密码修改成功');
     } catch (err) {
       setPasswordError(err instanceof Error ? err.message : '修改密码失败');
     } finally {
@@ -47,6 +59,13 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
     window.location.reload();
   };
 
+  const openPasswordDialog = () => {
+    setAccountMenuOpen(false);
+    setPasswordOpen(true);
+    setPasswordMessage('');
+    setPasswordError('');
+  };
+
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -56,32 +75,30 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
             <nav aria-label="主导航">
               <NavLink to="/"><House size={18} />首页</NavLink>
               <NavLink to="/course"><BookOpenText size={18} />课程</NavLink>
+              <NavLink to="/library"><Library size={18} />词库</NavLink>
               {user?.username === 'root' && <NavLink to="/admin"><ShieldCheck size={18} />后台</NavLink>}
             </nav>
           )}
           {user && (
-            <>
+            <div className="account-menu" ref={accountMenuRef}>
               <button
-                className="topbar-icon-button"
-                onClick={() => {
-                  setPasswordOpen(true);
-                  setPasswordMessage('');
-                  setPasswordError('');
-                }}
-                aria-label="修改密码"
-                title="修改密码"
+                className="account-menu__trigger"
+                type="button"
+                onClick={() => setAccountMenuOpen(value => !value)}
+                aria-expanded={accountMenuOpen}
+                aria-haspopup="menu"
               >
-                <KeyRound size={16} />
+                <UserRound size={16} />
+                <span>{user.username}</span>
+                <ChevronDown size={15} />
               </button>
-              <button
-                className="topbar-icon-button topbar-icon-button--danger"
-                onClick={() => void signOut()}
-                aria-label="退出登录"
-                title="退出登录"
-              >
-                <LogOut size={16} />
-              </button>
-            </>
+              {accountMenuOpen && (
+                <div className="account-menu__panel" role="menu">
+                  <button type="button" onClick={openPasswordDialog} role="menuitem"><KeyRound size={16} />修改密码</button>
+                  <button type="button" className="danger" onClick={() => void signOut()} role="menuitem"><LogOut size={16} />退出登录</button>
+                </div>
+              )}
+            </div>
           )}
           <button
             className="eye-care-toggle"
@@ -94,6 +111,12 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
         </div>
       </header>
       {children}
+      {!isPractice && (
+        <footer className="copyright-notice" aria-label="版权说明">
+          <strong>日语词汇记忆引擎</strong>
+          <span>本系统仅提供学习流程、记忆训练和个人词库管理工具。公共词库应使用开源或已授权内容；用户上传的课件与词条由上传者自行确认来源和使用权，不内置或分发第三方商业课程。</span>
+        </footer>
+      )}
       {passwordOpen && (
         <div className="password-modal" role="presentation">
           <form className="password-dialog" onSubmit={submitPassword}>

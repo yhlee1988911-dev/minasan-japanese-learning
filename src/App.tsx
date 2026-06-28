@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { AppShell } from './components/AppShell';
 import { AdminPage } from './pages/AdminPage';
 import { BasicPracticePage } from './pages/BasicPracticePage';
+import { CatalogManagerPage } from './pages/CatalogManagerPage';
 import { CoursePage } from './pages/CoursePage';
-import { DuolingoLessonPage } from './pages/DuolingoLessonPage';
 import { HomePage } from './pages/HomePage';
 import { LessonPage } from './pages/LessonPage';
 import { LoginPage } from './pages/LoginPage';
@@ -24,8 +24,7 @@ export default function App() {
     try {
       const progress = await loadRemoteProgress();
       replaceMastery(progress.records);
-      const remoteMistakes = (progress.mistakes || []).filter(item => item.lessonId.startsWith('duolingo-'));
-      replaceMistakes(remoteMistakes);
+      replaceMistakes(progress.mistakes || []);
     } catch {
       // Keep local fallback if remote progress is unavailable.
     }
@@ -46,5 +45,5 @@ export default function App() {
   if (!user) return <LoginPage admin={isAdminPath} onLogin={(activeUser) => { setUser(activeUser); void hydrateProgress(); }} />;
   if (isAdminPath && user.username !== 'root') return <main className="login-page"><section className="login-card"><h1>需要 root 管理员权限</h1></section></main>;
 
-  return <BrowserRouter><AppShell user={user}><Routes><Route path="/" element={<HomePage />} /><Route path="/course" element={<CoursePage />} /><Route path="/lesson/:lessonId" element={<LessonPage />} /><Route path="/duolingo/:lessonId" element={<DuolingoLessonPage />} /><Route path="/practice" element={<PracticePage />} /><Route path="/basic" element={<BasicPracticePage />} /><Route path="/review" element={<ReviewPage />} /><Route path="/mastery/:view" element={<MasteryPage />} /><Route path="/admin" element={<AdminPage />} /></Routes></AppShell></BrowserRouter>;
+  return <BrowserRouter><AppShell user={user}><Routes><Route path="/" element={<HomePage />} /><Route path="/course" element={<CoursePage />} /><Route path="/course/:courseId/lesson/:lessonId" element={<LessonPage />} /><Route path="/lesson/:lessonId" element={<LessonPage />} /><Route path="/library" element={<CatalogManagerPage user={user} />} /><Route path="/practice" element={<PracticePage />} /><Route path="/basic" element={<BasicPracticePage />} /><Route path="/review" element={<ReviewPage />} /><Route path="/mastery/:view" element={<MasteryPage />} /><Route path="/admin" element={<AdminPage />} /></Routes></AppShell></BrowserRouter>;
 }

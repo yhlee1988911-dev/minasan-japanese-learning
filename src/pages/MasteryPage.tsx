@@ -2,30 +2,30 @@ import { ArrowLeft, CheckCircle2, Search, Trash2 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Vocabulary } from '../domain/models';
-import { loadDuolingoCourse, sendRemoveMastery } from '../services/api';
+import type { CatalogPayload } from '../services/api';
+import { loadCatalog, sendRemoveMastery } from '../services/api';
 import { isMastered, readMastery, removeMasteryRecord } from '../storage/mastery';
 
 const PAGE_SIZE = 15;
 
 export function MasteryPage() {
   const [version, setVersion] = useState(0);
-  const [duolingoVocabulary, setDuolingoVocabulary] = useState<Vocabulary[]>([]);
+  const [catalog, setCatalog] = useState<CatalogPayload>({ courses: [], lessons: [], vocabulary: [], sentences: [] });
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    loadDuolingoCourse()
-      .then(data => setDuolingoVocabulary(data.vocabulary))
-      .catch(() => setDuolingoVocabulary([]));
+    loadCatalog()
+      .then(setCatalog)
+      .catch(() => setCatalog({ courses: [], lessons: [], vocabulary: [], sentences: [] }));
   }, []);
 
   const masteredWords = useMemo(() => {
     const masteredIds = new Set(readMastery().filter(record => (
       record.kind === 'vocabulary'
-      && record.courseId === 'duolingo'
       && isMastered(record)
     )).map(record => record.id));
-    return duolingoVocabulary.filter(word => masteredIds.has(word.id));
-  }, [duolingoVocabulary, version]);
+    return catalog.vocabulary.filter(word => masteredIds.has(word.id));
+  }, [catalog.vocabulary, version]);
 
   const filteredWords = useMemo(() => {
     const keyword = search.trim().toLowerCase();
@@ -35,9 +35,10 @@ export function MasteryPage() {
       word.reading,
       word.romaji,
       word.meanings.join('；'),
-      word.sourceLessonLabel || word.sourceLesson
+      word.sourceLessonLabel || word.sourceLesson,
+      catalog.courses.find(course => course.id === word.courseId)?.title || ''
     ].some(value => String(value || '').toLowerCase().includes(keyword)));
-  }, [masteredWords, search]);
+  }, [catalog.courses, masteredWords, search]);
 
   const removeWord = (word: Vocabulary) => {
     const removed = removeMasteryRecord('vocabulary', word.id);
@@ -45,7 +46,7 @@ export function MasteryPage() {
     void sendRemoveMastery({
       id: word.id,
       lessonId,
-      courseId: 'duolingo',
+      courseId: word.courseId,
       kind: 'vocabulary'
     }).catch(() => undefined);
     setVersion(value => value + 1);
@@ -55,9 +56,9 @@ export function MasteryPage() {
     <main className="content-section page-section mastery-page">
       <div className="page-heading">
         <Link className="back-link" to="/"><ArrowLeft size={17} />返回首页</Link>
-        <p className="eyebrow">DUOLINGO MASTERED WORDS</p>
+        <p className="eyebrow">MASTERED WORDS</p>
         <h1>已掌握词库</h1>
-        <p>这里仅显示 Duolingo 词库中已掌握的词条。默认显示 15 条，可通过搜索定位具体词汇。</p>
+        <p>这里显示当前账户已掌握的词条。默认显示 15 条，可通过搜索定位具体词汇。</p>
       </div>
 
       <section className="mastery-toolbar" aria-label="已掌握词库搜索">
@@ -84,7 +85,7 @@ export function MasteryPage() {
       ) : (
         <section className="mastery-empty">
           <CheckCircle2 size={34} />
-          <p>{search.trim() ? '没有找到匹配的已掌握词条。' : '还没有 Duolingo 已掌握词汇。'}</p>
+          <p>{search.trim() ? '没有找到匹配的已掌握词条。' : '还没有已掌握词汇。'}</p>
         </section>
       )}
     </main>

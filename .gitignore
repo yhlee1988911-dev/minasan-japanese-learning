@@ -12,5 +12,6 @@ vite.config.d.ts
 data/*.xlsx
 .wrangler/
 .aliyun/
+.baidu/
 *.sqlite
 *.sqlite-*

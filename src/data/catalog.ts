@@ -20,7 +20,7 @@ export const lessons: Lesson[] = generatedLessons.map(lesson => ({
 
 export const course: Course = {
   id: 'beginner-01',
-  title: '初级日本语',
-  description: '按 50 课课程顺序掌握词汇，并逐步补充经过审核的短句。',
+  title: 'N5-N4 词汇',
+  description: '系统默认 N5-N4 基础词汇，后续可按 N3、N2、N1 继续扩展。',
   lessonIds: lessons.map(item => item.id)
 };

@@ -1,10 +1,9 @@
 import { Check, ChevronDown, Headphones, Home, Play, RotateCcw, SkipForward, Star, Volume2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { lessons, sentences, vocabulary } from '../data/catalog';
-import type { PracticeMode } from '../domain/models';
-import type { Lesson, Vocabulary } from '../domain/models';
-import { loadDuolingoCourse, onVisible, sendLessonProgress, sendMistake, sendProgressAttempt, sendRemoveMistake } from '../services/api';
+import type { Course, Lesson, PracticeMode } from '../domain/models';
+import type { CatalogPayload } from '../services/api';
+import { loadCatalog, onVisible, sendLessonProgress, sendMistake, sendProgressAttempt, sendRemoveMistake } from '../services/api';
 import { speakJapanese, stopJapaneseSpeech } from '../services/speech';
 import { isMastered, mergeMasteryRecord, readMastery, recordMasteryAttempt } from '../storage/mastery';
 import { readMistakes, recordMistake, removeMistake, type MistakeRecord } from '../storage/mistakes';
@@ -23,12 +22,15 @@ interface PracticeQuestion {
   key: string;
   id: string;
   mode: PracticeMode;
+  courseId: string;
   lessonId: string;
   prompt: string;
   meaning: string;
   speech: string;
   answers: string[];
 }
+
+const emptyCatalog: CatalogPayload = { courses: [], lessons: [], vocabulary: [], sentences: [] };
 
 const shuffle = <T,>(items: T[]) => {
   const next = [...items];
@@ -39,16 +41,11 @@ const shuffle = <T,>(items: T[]) => {
   return next;
 };
 
-const getVocabularyLessonId = (sourceLesson: string) => {
-  if (sourceLesson.startsWith('duolingo-')) return sourceLesson;
-  const lesson = lessons.find(item => String(item.order) === sourceLesson.replace('补充', ''));
-  return lesson?.id || `lesson-${sourceLesson.padStart(2, '0')}`;
-};
-
 const fromMistake = (item: MistakeRecord): PracticeQuestion => ({
   key: item.key,
   id: item.id,
   mode: item.mode,
+  courseId: item.courseId || 'system-beginner-50',
   lessonId: item.lessonId,
   prompt: item.prompt,
   meaning: item.meaning,
@@ -56,15 +53,21 @@ const fromMistake = (item: MistakeRecord): PracticeQuestion => ({
   answers: item.answers
 });
 
+const getCourseCounts = (catalog: CatalogPayload, courseId: string) => ({
+  lessons: catalog.lessons.filter(lesson => lesson.courseId === courseId).length,
+  vocabulary: catalog.vocabulary.filter(word => word.courseId === courseId).length,
+  sentences: catalog.sentences.filter(sentence => sentence.courseId === courseId).length
+});
+
 export function PracticePage() {
   const [params] = useSearchParams();
   const requestedMode = (params.get('mode') || 'translation') as PracticeMode;
-  const requestedLesson = params.get('lesson');
+  const requestedCourse = params.get('course') || '';
+  const requestedLesson = params.get('lesson') || '';
   const isReview = params.get('review') === 'true';
+  const [catalog, setCatalog] = useState<CatalogPayload>(emptyCatalog);
   const [selectedLessons, setSelectedLessons] = useState(() => new Set(requestedLesson ? [requestedLesson] : []));
-  const [extraLessons, setExtraLessons] = useState<Lesson[]>([]);
-  const [extraVocabulary, setExtraVocabulary] = useState<Vocabulary[]>([]);
-  const [reviewItems, setReviewItems] = useState<MistakeRecord[]>(() => readMistakes().filter(item => item.lessonId.startsWith('duolingo-')));
+  const [reviewItems, setReviewItems] = useState<MistakeRecord[]>(() => readMistakes());
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
@@ -85,30 +88,35 @@ export function PracticePage() {
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
 
-  const allLessons = useMemo(() => [...lessons, ...extraLessons], [extraLessons]);
-  const allVocabulary = useMemo(() => [...vocabulary, ...extraVocabulary], [extraVocabulary]);
-
   useEffect(() => {
-    const refresh = () => loadDuolingoCourse().then(data => {
-      setExtraLessons(data.lessons);
-      setExtraVocabulary(data.vocabulary);
-      setSelectedLessons(previous => {
-        if (previous.size || !data.lessons.length) return previous;
-        return new Set([data.lessons[0].id]);
+    const refresh = () => {
+      loadCatalog().then(data => {
+        setCatalog(data);
+        setSelectedLessons(previous => {
+          if (previous.size) return previous;
+          const courseLessons = requestedCourse
+            ? data.lessons.filter(lesson => lesson.courseId === requestedCourse)
+            : data.lessons;
+          return new Set(courseLessons[0] ? [courseLessons[0].id] : []);
+        });
       });
-    });
+    };
     refresh();
     return onVisible(refresh);
-  }, []);
+  }, [requestedCourse]);
+
+  const lessonById = useMemo(() => new Map(catalog.lessons.map(lesson => [lesson.id, lesson])), [catalog.lessons]);
+  const courses = catalog.courses;
 
   const regularQuestions = useMemo<PracticeQuestion[]>(() => {
     if (requestedMode === 'cloze') {
-      return sentences
+      return catalog.sentences
         .filter(item => selectedLessons.has(item.lessonId))
         .map(item => ({
-          key: `${requestedMode}:${item.id}`,
+          key: `${item.courseId}:${requestedMode}:${item.id}`,
           id: item.id,
           mode: requestedMode,
+          courseId: item.courseId || lessonById.get(item.lessonId)?.courseId || 'system-beginner-50',
           lessonId: item.lessonId,
           prompt: item.clozeText,
           meaning: item.meaning,
@@ -117,19 +125,20 @@ export function PracticePage() {
         }));
     }
 
-    return allVocabulary
-      .filter(item => selectedLessons.has(getVocabularyLessonId(item.sourceLesson)))
+    return catalog.vocabulary
+      .filter(item => selectedLessons.has(item.sourceLesson))
       .map(item => ({
-        key: `${requestedMode}:${item.id}`,
+        key: `${item.courseId}:${requestedMode}:${item.id}`,
         id: item.id,
         mode: requestedMode,
-        lessonId: getVocabularyLessonId(item.sourceLesson),
+        courseId: item.courseId || lessonById.get(item.sourceLesson)?.courseId || 'system-beginner-50',
+        lessonId: item.sourceLesson,
         prompt: item.meanings[0],
         meaning: item.meanings.join('；'),
         speech: item.reading,
         answers: [item.term, item.reading]
       }));
-  }, [allVocabulary, requestedMode, selectedLessons]);
+  }, [catalog.sentences, catalog.vocabulary, lessonById, requestedMode, selectedLessons]);
 
   const sourceQuestions = useMemo(
     () => isReview ? reviewItems.map(fromMistake) : regularQuestions,
@@ -147,7 +156,7 @@ export function PracticePage() {
     completionPlayedRef.current = false;
     setCountdown(3);
     setSessionState(isReview ? 'active' : 'ready');
-  }, [sourceQuestions]);
+  }, [sourceQuestions, isReview]);
 
   useEffect(() => {
     if (sessionState !== 'countdown') return;
@@ -163,14 +172,11 @@ export function PracticePage() {
   const completed = sessionActive && questions.length > 0 && index >= questions.length;
   const current = sessionActive && !completed && questions.length ? questions[index] : null;
   const activeMode = current?.mode || requestedMode;
-  const selectedBeginnerCount = lessons.filter(lesson => selectedLessons.has(lesson.id)).length;
-  const selectedDuolingoCount = extraLessons.filter(lesson => selectedLessons.has(lesson.id)).length;
-  const activeScope = selectedDuolingoCount ? 'duolingo' : selectedBeginnerCount ? 'beginner' : 'none';
   const selectedLabel = isReview
     ? '错题巩固'
     : selectedLessons.size === 1
-        ? allLessons.find(item => selectedLessons.has(item.id))?.title || '第 1 课'
-        : `${selectedLessons.size} 个课程`;
+        ? catalog.lessons.find(item => selectedLessons.has(item.id))?.title || '第 1 课'
+        : `${selectedLessons.size} 个课时`;
   const completionTotal = Math.max(summary.correct + summary.incorrect + summary.skipped, questions.length ? 1 : 0, 1);
   const completionAccuracy = summary.correct / completionTotal;
   const completionStars = Math.round(completionAccuracy * 5);
@@ -207,8 +213,7 @@ export function PracticePage() {
   }, [current]);
 
   const syncLessonProgress = useCallback((lessonId: string) => {
-    if (!lessonId.startsWith('duolingo-')) return;
-    const lesson = allLessons.find(item => item.id === lessonId);
+    const lesson = lessonById.get(lessonId);
     if (!lesson) return;
     const records = readMastery();
     const masteredVocabularyIds = new Set(records.filter(record => record.kind === 'vocabulary' && record.lessonId === lessonId && isMastered(record)).map(record => record.id));
@@ -216,30 +221,28 @@ export function PracticePage() {
     const total = lesson.vocabularyIds.length + lesson.sentenceIds.length;
     void sendLessonProgress({
       lessonId,
-      courseId: lessonId.startsWith('duolingo-') ? 'duolingo' : 'beginner-01',
+      courseId: lesson.courseId,
       vocabularyMasteredCount: lesson.vocabularyIds.filter(id => masteredVocabularyIds.has(id)).length,
       sentenceMasteredCount: lesson.sentenceIds.filter(id => masteredSentenceIds.has(id)).length,
       completed: total > 0
         && lesson.vocabularyIds.every(id => masteredVocabularyIds.has(id))
         && lesson.sentenceIds.every(id => masteredSentenceIds.has(id))
     }).catch(() => undefined);
-  }, [allLessons]);
+  }, [lessonById]);
 
   const submitProgress = useCallback((question: PracticeQuestion, correct: boolean, mastered: boolean) => {
     if (isReview) return;
-    if (!question.lessonId.startsWith('duolingo-')) return;
-    const courseId = 'duolingo';
-    const kind = question.id.startsWith('s-') ? 'sentence' : 'vocabulary';
+    const kind = question.id.startsWith('system-s-') || question.id.startsWith('s-') ? 'sentence' : 'vocabulary';
     recordMasteryAttempt({
       id: question.id,
       lessonId: question.lessonId,
-      courseId,
+      courseId: question.courseId,
       kind
     }, correct, mastered);
     void sendProgressAttempt({
       id: question.id,
       lessonId: question.lessonId,
-      courseId,
+      courseId: question.courseId,
       kind,
       correct,
       mastered
@@ -340,7 +343,7 @@ export function PracticePage() {
       }
     }, 2000);
     return () => window.clearTimeout(timer);
-  }, [current, isReview, questions.length, resetQuestion, result]);
+  }, [current, isReview, resetQuestion, result]);
 
   useEffect(() => {
     const viewport = window.visualViewport;
@@ -373,19 +376,19 @@ export function PracticePage() {
     }, 3000);
   };
 
-  const toggleLesson = (lessonId: string, scope: 'beginner' | 'duolingo') => {
+  const toggleLesson = (lessonId: string, course: Course) => {
+    const courseLessons = catalog.lessons.filter(lesson => lesson.courseId === course.id);
     setSelectedLessons(previous => {
-      const scopeLessons = scope === 'beginner' ? lessons : extraLessons;
-      const next = new Set(scopeLessons.filter(lesson => previous.has(lesson.id)).map(lesson => lesson.id));
+      const next = new Set(courseLessons.filter(lesson => previous.has(lesson.id)).map(lesson => lesson.id));
       next.has(lessonId) ? next.delete(lessonId) : next.add(lessonId);
       return next;
     });
   };
 
-  const toggleScope = (scope: 'beginner' | 'duolingo') => {
-    const scopeLessons = scope === 'beginner' ? lessons : extraLessons;
-    const scopeSelected = scopeLessons.length > 0 && scopeLessons.every(lesson => selectedLessons.has(lesson.id));
-    setSelectedLessons(scopeSelected ? new Set() : new Set(scopeLessons.map(item => item.id)));
+  const toggleCourse = (course: Course) => {
+    const courseLessons = catalog.lessons.filter(lesson => lesson.courseId === course.id);
+    const allSelected = courseLessons.length > 0 && courseLessons.every(lesson => selectedLessons.has(lesson.id));
+    setSelectedLessons(allSelected ? new Set() : new Set(courseLessons.map(item => item.id)));
   };
 
   const checkAnswer = () => {
@@ -409,10 +412,11 @@ export function PracticePage() {
     if (!isReview) {
       submitProgress(current, correct, mastered);
     }
-    if (!correct && current.lessonId.startsWith('duolingo-')) {
+    if (!correct) {
       const mistake = recordMistake({
         id: current.id,
         mode: current.mode,
+        courseId: current.courseId,
         lessonId: current.lessonId,
         prompt: current.prompt,
         meaning: current.meaning,
@@ -455,24 +459,22 @@ export function PracticePage() {
       {!isReview && (
         <section className="practice-setup" aria-label="练习设置">
           <div className="course-picker-split">
-            <details className={`course-picker ${activeScope === 'beginner' ? 'is-active' : 'is-muted'}`}>
-              <summary><span>初级日语50课</span><strong>{selectedBeginnerCount ? `${selectedBeginnerCount} 课` : '未选择'}</strong><ChevronDown size={18} /></summary>
-              <div className="course-options">
-                <label className="select-all"><input type="checkbox" checked={selectedBeginnerCount === lessons.length} onChange={() => toggleScope('beginner')} /><span>初级全部课程</span><small>{vocabulary.length} 词 · {sentences.length} 句</small></label>
-                {lessons.map(lesson => (
-                  <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id, 'beginner')} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
-                ))}
-              </div>
-            </details>
-            <details className={`course-picker ${activeScope === 'duolingo' ? 'is-active' : 'is-muted'}`}>
-              <summary><span>duolingo</span><strong>{selectedDuolingoCount ? `${selectedDuolingoCount} 课` : '未选择'}</strong><ChevronDown size={18} /></summary>
-              <div className="course-options">
-                <label className="select-all"><input type="checkbox" checked={extraLessons.length > 0 && selectedDuolingoCount === extraLessons.length} onChange={() => toggleScope('duolingo')} /><span>duolingo 全部课程</span><small>{extraVocabulary.length} 词 · 0 句</small></label>
-                {extraLessons.map(lesson => (
-                  <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id, 'duolingo')} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
-                ))}
-              </div>
-            </details>
+            {courses.map(course => {
+              const courseLessons = catalog.lessons.filter(lesson => lesson.courseId === course.id);
+              const selectedCount = courseLessons.filter(lesson => selectedLessons.has(lesson.id)).length;
+              const counts = getCourseCounts(catalog, course.id);
+              return (
+                <details className={`course-picker ${selectedCount ? 'is-active' : 'is-muted'}`} key={course.id} open={requestedCourse === course.id || courses.length === 1}>
+                  <summary><span>{course.title}</span><strong>{selectedCount ? `${selectedCount} 课` : '未选择'}</strong><ChevronDown size={18} /></summary>
+                  <div className="course-options">
+                    <label className="select-all"><input type="checkbox" checked={courseLessons.length > 0 && selectedCount === courseLessons.length} onChange={() => toggleCourse(course)} /><span>{course.title} 全部课程</span><small>{counts.vocabulary} 词 · {counts.sentences} 句</small></label>
+                    {courseLessons.map((lesson: Lesson) => (
+                      <label key={lesson.id}><input type="checkbox" checked={selectedLessons.has(lesson.id)} onChange={() => toggleLesson(lesson.id, course)} /><span>第 {lesson.order} 课 · {lesson.title}</span><small>{lesson.vocabularyIds.length} 词 · {lesson.sentenceIds.length} 句</small></label>
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
           </div>
           <div className="practice-start-panel">
             <div>
@@ -532,7 +534,7 @@ export function PracticePage() {
             {activeMode === 'dictation' ? <button className="listen-command" type="button" onClick={speak}><Headphones size={24} />播放发音</button> : <h1>{current.prompt}</h1>}
             {activeMode !== 'dictation' && <button className="listen-link" type="button" onClick={speak}><Volume2 size={18} />播放发音</button>}
             <button className={`reference-peek ${showReference || result === 'correct' ? 'is-revealed' : ''}`} type="button" onClick={revealReference}>
-              <span>参考答案</span><strong>{showReference || result === 'correct' ? `${current.answers.join(' / ')} · ${current.meaning}` : '＊＊＊＊＊＊'}</strong>
+              <span>参考答案</span><strong>{showReference || result === 'correct' ? `${current.answers.join(' / ')} · ${current.meaning}` : '******'}</strong>
             </button>
           </div>
 

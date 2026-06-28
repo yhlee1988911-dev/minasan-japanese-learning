@@ -46,6 +46,11 @@ export interface Course {
   title: string;
   description: string;
   lessonIds: string[];
+  ownerType?: 'system' | 'user';
+  ownerUserId?: string | null;
+  sourceType?: string;
+  sortOrder?: number;
+  isSystem?: boolean;
 }
 
 export interface LearningProgress {

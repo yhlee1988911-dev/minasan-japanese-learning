@@ -1,5 +1,5 @@
 {
-  "name": "minasan-japanese-pwa",
+  "name": "baiduminasan-japanese-pwa",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -9,10 +9,9 @@
     "deploy": "npm run build && wrangler deploy",
     "preview": "vite preview",
     "server:start": "node server/index.js",
-    "server:dev": "npm run build && MINASAN_SQLITE_PATH=.aliyun/local.sqlite PORT=8788 node server/index.js",
+    "server:dev": "npm run build && MINASAN_SQLITE_PATH=.baidu/local.sqlite PORT=8788 node server/index.js",
     "data:import": "ruby scripts/import_ci.rb",
     "data:sentences": "ruby scripts/generate_sentences_11_50.rb",
-    "data:duolingo": "ruby scripts/import_online.rb",
     "d1:migrate:local": "wrangler d1 migrations apply minasan-learning-db --local",
     "d1:migrate:remote": "wrangler d1 migrations apply minasan-learning-db --remote"
   },
@@ -21,6 +20,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1",
+    "read-excel-file": "^9.2.0",
     "sql.js": "^1.14.1"
   },
   "devDependencies": {
