@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "baiduminasan-japanese-learning",
+  "name": "minasan-japanese-learning",
   "main": "worker/index.js",
   "compatibility_date": "2026-06-24",
   "workers_dev": true,
