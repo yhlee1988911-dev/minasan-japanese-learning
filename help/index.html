@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Minasan 用户操作指南</title>
+    <title>nihongo 用户操作指南</title>
     <style>
       :root {
         color: #17211f;
@@ -161,7 +161,7 @@
   <body>
     <main>
       <header>
-        <h1>Minasan 用户操作指南</h1>
+        <h1>nihongo 用户操作指南</h1>
         <p>面向学习用户和 root 管理员的图文演示说明。截图来自本地系统页面。</p>
       </header>
 
@@ -179,11 +179,11 @@
         <ul>
           <li>输入用户名和密码登录学习档案。</li>
           <li>首页顶部可进入首页、课程、后台，右上角可修改密码、退出登录、切换护眼模式。</li>
-          <li>点击 Duolingo 进度条进入已掌握词库。</li>
-          <li>错题本入口只统计 Duolingo 词库错题。</li>
+          <li>点击 课程词库 进度条进入已掌握词库。</li>
+          <li>错题本入口只统计 课程词库 词库错题。</li>
         </ul>
         <figure>
-          <img src="screenshots/01-home.png" alt="Minasan 首页截图" />
+          <img src="screenshots/01-home.png" alt="nihongo 首页截图" />
           <figcaption>首页：继续学习、掌握进度、错题本和练习模式入口。</figcaption>
         </figure>
       </section>
@@ -192,8 +192,8 @@
         <h2>2. 进入课程</h2>
         <ul>
           <li>点击首页“继续学习”进入课程页。</li>
-          <li>初级日语 50 课保留原课程内容；Duolingo 是独立词汇课程。</li>
-          <li>Duolingo 课程先进入词汇一览学习状态，再选择练习。</li>
+          <li>系统基础词库保留原课程内容；课程词库 是独立词汇课程。</li>
+          <li>课程词库 课程先进入词汇一览学习状态，再选择练习。</li>
         </ul>
         <figure>
           <img src="screenshots/02-course.png" alt="课程选择页截图" />
@@ -202,15 +202,15 @@
       </section>
 
       <section id="lesson">
-        <h2>3. Duolingo 词汇一览</h2>
+        <h2>3. 课程词库 词汇一览</h2>
         <ul>
           <li>查看日文、假名、释义、罗马音和词性。</li>
           <li>点击耳机按钮播放发音。</li>
           <li>从页面上方进入翻译练习或听写练习。</li>
         </ul>
         <figure>
-          <img src="screenshots/03-duolingo-lesson.png" alt="Duolingo 词汇一览截图" />
-          <figcaption>Duolingo 词汇一览：先学习，再答题。</figcaption>
+          <img src="screenshots/03-duolingo-lesson.png" alt="课程词库 词汇一览截图" />
+          <figcaption>课程词库 词汇一览：先学习，再答题。</figcaption>
         </figure>
       </section>
 
@@ -220,8 +220,8 @@
           <li>进入练习页后不会立即开始答题。</li>
           <li>先选择课程范围，再点击“开始”。</li>
           <li>点击开始后显示 3、2、1 倒计时，结束后进入答题。</li>
-          <li>Duolingo 单词首次答对且用时不超过 6 秒，会计入已掌握词汇。</li>
-          <li>答错的 Duolingo 单词会进入错题本并同步到 D1。</li>
+          <li>课程词库 单词首次答对且用时不超过 6 秒，会计入已掌握词汇。</li>
+          <li>答错的 课程词库 单词会进入错题本并同步到 数据库。</li>
         </ul>
         <figure>
           <img src="screenshots/04-practice-ready.png" alt="练习准备页截图" />
@@ -232,14 +232,14 @@
       <section id="review">
         <h2>5. 错题本</h2>
         <ul>
-          <li>错题本仅显示 Duolingo 词库练习中的错题。</li>
+          <li>错题本仅显示 课程词库 词库练习中的错题。</li>
           <li>默认显示 15 条，支持搜索。</li>
           <li>点击“开始巩固”进入错题巩固。</li>
-          <li>巩固中答对后，该错题会从错题本移除并同步到 D1。</li>
+          <li>巩固中答对后，该错题会从错题本移除并同步到 数据库。</li>
         </ul>
         <figure>
           <img src="screenshots/05-review.png" alt="错题本截图" />
-          <figcaption>错题本：集中处理 Duolingo 错题。</figcaption>
+          <figcaption>错题本：集中处理 课程词库 错题。</figcaption>
         </figure>
       </section>
 
@@ -248,7 +248,7 @@
         <ul>
           <li>root 用户可进入后台。</li>
           <li>账户页可添加用户、删除用户、清空设备登录码。</li>
-          <li>Duolingo 词库页可批量导入词汇、编辑词条、修改课时名称。</li>
+          <li>课程词库 词库页可批量导入词汇、编辑词条、修改课时名称。</li>
           <li>新增课时使用“第 1 课”到“第 200 课”的选择方式。</li>
         </ul>
         <figure>
@@ -262,7 +262,7 @@
         <ul class="address-list">
           <li>本地电脑：<code>http://127.0.0.1:8788</code></li>
           <li>同 WiFi 手机：<code>http://192.168.31.120:8788</code></li>
-          <li>公网：<code>https://minasan-japanese-learning.yh-lee1988911.workers.dev</code></li>
+          <li>公网：<code>http://47.83.169.130</code></li>
         </ul>
       </section>
 
@@ -271,7 +271,7 @@
         <ol>
           <li>先用 root 登录后台。</li>
           <li>在“账户”页创建普通用户。</li>
-          <li>在“Duolingo 词库”页确认课时和词汇。</li>
+          <li>在“课程词库 词库”页确认课时和词汇。</li>
           <li>批量新增词汇时，先选择课时，再粘贴日文、假名、罗马音、释义、词性，解析预览后确认写入。</li>
           <li>修改单个词汇时，先搜索词条，点击编辑，保存后会同步到用户端。</li>
         </ol>
@@ -282,7 +282,7 @@
         <ol>
           <li>登录账户。</li>
           <li>点击首页“继续学习”。</li>
-          <li>选择 Duolingo 课程，先看词汇一览。</li>
+          <li>选择 课程词库 课程，先看词汇一览。</li>
           <li>进入翻译或听写练习。</li>
           <li>选择课程范围，点击开始，倒计时后答题。</li>
           <li>练习后查看已掌握词库和错题本。</li>
@@ -293,7 +293,7 @@
         <h2>常见问题</h2>
         <ul>
           <li>手机打不开本地地址：确认手机和电脑在同一 WiFi，并使用 <code>http://192.168.31.120:8788</code>。</li>
-          <li>修改后台词汇后用户端没更新：用户端返回课程页或刷新页面后会重新读取 D1。</li>
+          <li>修改后台词汇后用户端没更新：用户端返回课程页或刷新页面后会重新读取 数据库。</li>
           <li>登录提示设备上限：请让 root 在后台清空该用户设备登录码。</li>
           <li>忘记密码：root 可创建新账户；普通用户可在登录后右上角修改密码。</li>
         </ul>

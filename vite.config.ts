@@ -9,16 +9,16 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['app-icon.svg'],
       manifest: {
-        name: 'Minasan 初级日语',
-        short_name: 'Minasan',
-        description: '课程、词汇与短句一体化的初级日语学习应用',
+        name: 'nihongo 日语词汇记忆引擎',
+        short_name: 'nihongo',
+        description: '日语词汇记忆、听写、翻译与复习引擎',
         theme_color: '#70b96b',
         background_color: '#f7f7f2',
         display: 'standalone',
         orientation: 'portrait-primary',
         start_url: '/',
         icons: [
-          { src: '/app-icon.svg?v=mi-4ac10c8', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }
+          { src: '/app-icon.svg?v=ni-20260629', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }
         ]
       },
       workbox: {

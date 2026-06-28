@@ -456,7 +456,7 @@ export function PracticePage() {
         <div><span>{isReview ? '错题巩固' : modeNames[activeMode]}</span><strong>{questions.length ? `${Math.min(index + 1, questions.length)} / ${questions.length}` : '0 / 0'}</strong></div>
       </header>
 
-      {!isReview && (
+      {!isReview && sessionState === 'ready' && (
         <section className="practice-setup" aria-label="练习设置">
           <div className="course-picker-split">
             {courses.map(course => {
@@ -481,7 +481,7 @@ export function PracticePage() {
               <span>{selectedLabel}</span>
               <strong>{sourceQuestions.length ? `${sourceQuestions.length} 题待练习` : '当前范围没有题目'}</strong>
             </div>
-            <button type="button" onClick={startSession} disabled={!sourceQuestions.length || sessionState === 'countdown'}>
+            <button type="button" onClick={startSession} disabled={!sourceQuestions.length}>
               <Play size={18} />开始
             </button>
           </div>

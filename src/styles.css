@@ -4526,7 +4526,8 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   width: 100%;
 }
 
-.catalog-import__help {
+.catalog-import__help,
+.catalog-import__example {
   align-items: center;
   background: #f7f8f4;
   border: 1px solid #dfe4df;
@@ -4538,7 +4539,8 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   padding: 10px 12px;
 }
 
-.catalog-import__help span {
+.catalog-import__help span,
+.catalog-import__example span {
   color: #65716e;
   font-size: 12px;
   font-weight: 850;
@@ -4547,6 +4549,12 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
 .catalog-import__help strong {
   font-size: 13px;
   line-height: 1.45;
+}
+
+.catalog-import__example code {
+  color: #384642;
+  font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
 }
 
 .file-button {
@@ -4593,6 +4601,9 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
 
 .catalog-word-list {
   border-top: 1px solid #dfe4df;
+  max-height: 430px;
+  overflow: auto;
+  padding-right: 4px;
 }
 
 .catalog-muted {
@@ -4665,6 +4676,7 @@ html.eye-care .catalog-lesson-strip article {
 
 html.eye-care .catalog-step__heading,
 html.eye-care .catalog-import__help,
+html.eye-care .catalog-import__example,
 html.eye-care .catalog-scope-tabs {
   background: var(--ec-panel-strong) !important;
   border-color: var(--ec-border) !important;
@@ -4682,10 +4694,15 @@ html.eye-care .catalog-share span,
 html.eye-care .catalog-step__heading p,
 html.eye-care .catalog-muted,
 html.eye-care .catalog-import__help span,
+html.eye-care .catalog-import__example span,
 html.eye-care .catalog-preview p,
 html.eye-care .catalog-word-list small,
 html.eye-care .catalog-word-list span {
   color: var(--ec-text-muted) !important;
+}
+
+html.eye-care .catalog-import__example code {
+  color: var(--ec-text) !important;
 }
 
 @media (max-width: 700px) {
@@ -4727,6 +4744,10 @@ html.eye-care .catalog-word-list span {
   .catalog-word-list article {
     align-items: stretch;
     grid-template-columns: 1fr;
+  }
+
+  .catalog-word-list {
+    max-height: 360px;
   }
 
   .catalog-word-list span {

@@ -32,7 +32,11 @@ const cellToImportText = (value: unknown) => {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return String(value ?? '').replace(/\t/g, ' ').replace(/\r?\n/g, ' ').trim();
 };
-const splitImportLine = (line: string) => line.includes('\t') ? line.split('\t') : line.split(',');
+const splitImportLine = (line: string) => {
+  if (line.includes('\t')) return line.split('\t');
+  if (line.includes(',')) return line.split(',');
+  return line.trim().split(/(?:　+| {2,})/);
+};
 const hasCompactHeader = (cells: string[]) => cells.some(cell => /日文|日语|日語|假名|罗马|羅馬|释义|釋義|中文|meaning/i.test(cell));
 const normalizeCompactImportText = (text: string, lesson?: Lesson | null) => {
   const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter(line => line.trim());
@@ -498,6 +502,10 @@ export function CatalogManagerPage({ user }: { user?: AuthUser | null }) {
                   <span>模板字段</span>
                   <strong>课时序号、课时名称可留空；留空时写入当前选中的课时。必填：日文、假名、释义。</strong>
                 </div>
+                <div className="catalog-import__example">
+                  <span>最基础粘贴示例</span>
+                  <code>水　　みず　　mizu　　水</code>
+                </div>
                 <textarea value={importText} onChange={event => { setImportText(event.target.value); setPreview(null); }} placeholder="上传 XLSX/CSV，或直接粘贴表格内容。课时序号和课时名称可留空，留空时写入当前选中的课时。系统会先解析预览，不会立即写入。" />
                 <div className="catalog-import-actions">
                   <label className="file-button"><Upload size={16} />上传 XLSX/CSV<input type="file" accept=".xlsx,.csv,.tsv,.txt,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv,text/tab-separated-values,text/plain" onChange={handleFile} /></label>
@@ -532,7 +540,7 @@ export function CatalogManagerPage({ user }: { user?: AuthUser | null }) {
                   <input value={wordForm.partOfSpeech} onChange={event => setWordForm(value => ({ ...value, partOfSpeech: event.target.value }))} placeholder="词性" />
                   <button type="submit" disabled={working || !selectedLesson || !wordForm.term || !wordForm.reading || !wordForm.meaning}>{editingWordId ? '保存词条' : '添加词条'}</button>
                 </form>
-                <div className="catalog-word-list">
+                <div className="catalog-word-list" aria-label="当前课时词条列表">
                   {words.map(word => (
                     <article key={word.id}>
                       <div><strong>{word.term}</strong><span>{word.reading} · {word.romaji || '无罗马音'} · {word.meanings.join('；')}</span></div>

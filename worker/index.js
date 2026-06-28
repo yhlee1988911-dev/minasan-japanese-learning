@@ -1395,6 +1395,9 @@ const deleteCatalogWord = async (db, user, payload) => {
 };
 
 const splitDelimitedLine = (line) => {
+  if (!line.includes('\t') && !line.includes(',') && /(?:　+| {2,})/.test(line.trim())) {
+    return line.trim().split(/(?:　+| {2,})/).map(cell => cell.trim());
+  }
   const delimiter = line.includes('\t') ? '\t' : ',';
   const cells = [];
   let current = '';

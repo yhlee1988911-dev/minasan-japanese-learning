@@ -69,7 +69,7 @@ export function AppShell({ children, user }: PropsWithChildren<{ user?: AuthUser
   return (
     <div className="app-shell">
       <header className="topbar">
-        <NavLink className="brand" to="/" aria-label="Minasan 首页"><span>み</span><strong>Minasan</strong></NavLink>
+        <NavLink className="brand" to="/" aria-label="nihongo 首页"><span>に</span><strong>nihongo</strong></NavLink>
         <div className="topbar-right">
           {!isPractice && (
             <nav aria-label="主导航">
