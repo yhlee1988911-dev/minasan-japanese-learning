@@ -87,6 +87,8 @@ export function PracticePage() {
   const questionOutcomesRef = useRef<Record<string, 'correct' | 'incorrect' | 'skipped'>>({});
   const inputRef = useRef<HTMLInputElement>(null);
   const stageRef = useRef<HTMLElement>(null);
+  const setupRef = useRef<HTMLElement>(null);
+  const startedByUserRef = useRef(false);
 
   useEffect(() => {
     const refresh = () => {
@@ -168,6 +170,15 @@ export function PracticePage() {
     return () => window.clearTimeout(timer);
   }, [countdown, sessionState]);
 
+  useEffect(() => {
+    if (!startedByUserRef.current || sessionState === 'ready') return;
+    const timer = window.setTimeout(() => {
+      const target = document.querySelector<HTMLElement>(sessionState === 'countdown' ? '.practice-countdown' : '.practice-stage');
+      target?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }, 40);
+    return () => window.clearTimeout(timer);
+  }, [sessionState]);
+
   const sessionActive = sessionState === 'active';
   const completed = sessionActive && questions.length > 0 && index >= questions.length;
   const current = sessionActive && !completed && questions.length ? questions[index] : null;
@@ -184,6 +195,10 @@ export function PracticePage() {
 
   const startSession = () => {
     if (!sourceQuestions.length) return;
+    startedByUserRef.current = true;
+    setupRef.current?.querySelectorAll('details[open]').forEach(item => {
+      (item as HTMLDetailsElement).open = false;
+    });
     stopJapaneseSpeech();
     setQuestions(shuffle(sourceQuestions));
     setIndex(0);
@@ -457,7 +472,7 @@ export function PracticePage() {
       </header>
 
       {!isReview && sessionState === 'ready' && (
-        <section className="practice-setup" aria-label="练习设置">
+        <section className="practice-setup" aria-label="练习设置" ref={setupRef}>
           <div className="course-picker-split">
             {courses.map(course => {
               const courseLessons = catalog.lessons.filter(lesson => lesson.courseId === course.id);

@@ -500,11 +500,12 @@ export function CatalogManagerPage({ user }: { user?: AuthUser | null }) {
                 <div className="section-title"><h2>批量导入词库</h2><a href={templateUrl} download><Download size={16} />下载 Excel 模板</a></div>
                 <div className="catalog-import__help">
                   <span>模板字段</span>
-                  <strong>课时序号、课时名称可留空；留空时写入当前选中的课时。必填：日文、假名、释义。</strong>
+                  <strong>可上传 Excel，也可直接粘贴表格。课时序号、课时名称可留空；留空时写入当前选中的课时。必填：日文、假名、释义。</strong>
                 </div>
                 <div className="catalog-import__example">
                   <span>最基础粘贴示例</span>
                   <code>水　　みず　　mizu　　水</code>
+                  <small>按“日文　假名　罗马音　释义”粘贴即可，空格或 Tab 分隔都可以。</small>
                 </div>
                 <textarea value={importText} onChange={event => { setImportText(event.target.value); setPreview(null); }} placeholder="上传 XLSX/CSV，或直接粘贴表格内容。课时序号和课时名称可留空，留空时写入当前选中的课时。系统会先解析预览，不会立即写入。" />
                 <div className="catalog-import-actions">

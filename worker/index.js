@@ -1814,7 +1814,7 @@ const handleCatalogTemplateCsv = () => {
     .join('\n');
   return textResponse(`\uFEFF${csv}\n`, {
     'Content-Type': 'text/csv; charset=utf-8',
-    'Content-Disposition': 'attachment; filename="baiduminasan-vocabulary-template.csv"'
+    'Content-Disposition': 'attachment; filename="nihongo-vocabulary-template.csv"'
   });
 };
 
@@ -1847,11 +1847,11 @@ const handleCatalogTemplate = () => {
     },
     {
       name: 'docProps/core.xml',
-      content: '<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>Baiduminasan Vocabulary Template</dc:title><dc:creator>Baiduminasan</dc:creator></cp:coreProperties>'
+      content: '<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>nihongo Vocabulary Template</dc:title><dc:creator>nihongo</dc:creator></cp:coreProperties>'
     },
     {
       name: 'docProps/app.xml',
-      content: '<?xml version="1.0" encoding="UTF-8"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>Baiduminasan</Application></Properties>'
+      content: '<?xml version="1.0" encoding="UTF-8"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>nihongo</Application></Properties>'
     },
     {
       name: 'xl/workbook.xml',
@@ -1868,7 +1868,7 @@ const handleCatalogTemplate = () => {
   ];
   return binaryResponse(createZip(files), {
     'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    'Content-Disposition': 'attachment; filename="baiduminasan-vocabulary-template.xlsx"'
+    'Content-Disposition': 'attachment; filename="nihongo-vocabulary-template.xlsx"'
   });
 };
 

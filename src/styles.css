@@ -4557,6 +4557,13 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   overflow-wrap: anywhere;
 }
 
+.catalog-import__example small {
+  color: #65716e;
+  font-size: 12px;
+  grid-column: 2;
+  line-height: 1.45;
+}
+
 .file-button {
   cursor: pointer;
   position: relative;
@@ -4592,18 +4599,20 @@ html.eye-care .mastery-progress__row .mastery-progress__track > div {
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .catalog-editor {
+  display: grid;
+  gap: 12px;
   padding: 16px;
 }
 
 .catalog-word-list {
   border-top: 1px solid #dfe4df;
-  max-height: 430px;
+  max-height: min(52vh, 560px);
   overflow: auto;
-  padding-right: 4px;
+  padding: 4px 4px 0 0;
 }
 
 .catalog-muted {
@@ -4705,6 +4714,10 @@ html.eye-care .catalog-import__example code {
   color: var(--ec-text) !important;
 }
 
+html.eye-care .catalog-import__example small {
+  color: var(--ec-text-muted) !important;
+}
+
 @media (max-width: 700px) {
   .catalog-manager {
     padding-left: 12px;
@@ -4726,6 +4739,15 @@ html.eye-care .catalog-import__example code {
   .catalog-import-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .catalog-import__help,
+  .catalog-import__example {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-import__example small {
+    grid-column: 1;
   }
 
   .course-lesson-grid {
