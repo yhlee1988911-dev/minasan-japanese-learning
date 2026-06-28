@@ -109,7 +109,7 @@ const getAppliedMigrationNames = (database) => {
 const applyMigrations = (database, migrationsDir) => {
   const applied = getAppliedMigrationNames(database);
   const files = fs.readdirSync(migrationsDir)
-    .filter((file) => file.endsWith('.sql'))
+    .filter((file) => file.endsWith('.sql') && !file.startsWith('._'))
     .sort();
 
   for (const file of files) {
